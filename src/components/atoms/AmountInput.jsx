@@ -47,13 +47,13 @@ const AmountInput = forwardRef(({
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-stretch items-stretch gap-2 px-4 py-[14.5px] bg-[#FF5733] rounded-[48px] h-[50px] flex-1">
+      <div className="flex flex-row justify-stretch items-stretch gap-2 px-4 py-[14.5px] bg-[rgba(224,191,184,0.12)] border border-[rgba(235,213,209,0.3)] rounded-[16px] h-[50px] flex-1">
         <input
           ref={ref}
           type="number"
           step="0.01"
           min="0"
-          placeholder="0"
+          placeholder="Enter amount"
           value={value}
           onChange={onChange}
           onBlur={onBlur}
@@ -62,7 +62,7 @@ const AmountInput = forwardRef(({
           required={required}
           aria-label={ariaLabel}
           aria-describedby={ariaDescribedBy}
-          className={`flex-1 bg-transparent border-none outline-none font-['Public_Sans'] font-medium text-[17px] leading-[1.35em] text-center text-[#000000] placeholder-[#000000] ${className}`}
+          className={`flex-1 bg-transparent border-none outline-none font-['Public_Sans'] font-medium text-[17px] leading-[1.35em] text-center text-[#E4DAD7] placeholder-[rgba(235,213,209,0.62)] ${className}`}
           {...props}
         />
       </div>

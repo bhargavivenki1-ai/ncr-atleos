@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/organisms/Header';
 import CardDetailsForm from '../components/organisms/CardDetailsForm';
 import AmountSelection from '../components/organisms/AmountSelection';
@@ -10,6 +11,7 @@ import GestureIndicator from '../components/atoms/GestureIndicator';
  * Main page for ATM cash withdrawal functionality
  */
 const ATMCashWithdrawal = () => {
+  const navigate = useNavigate();
   const [cardDetails, setCardDetails] = useState({
     cardNumber: '',
     expiryDate: '',
@@ -82,6 +84,10 @@ const ATMCashWithdrawal = () => {
     alert('Card scanning feature would open camera interface');
   };
 
+  const handleBackToDashboard = () => {
+    navigate('/dashboard');
+  };
+
   const handleStageWithdrawal = async () => {
     if (!validateForm()) {
       return;
@@ -116,6 +122,20 @@ const ATMCashWithdrawal = () => {
     <div className="flex flex-col min-h-screen bg-[#FFFBFA]">
       {/* Header */}
       <Header title="ATM Cash Withdrawal" />
+      
+      {/* Back to Dashboard Link */}
+      <div className="px-[18px] pt-4 pb-2">
+        <button
+          onClick={handleBackToDashboard}
+          className="flex items-center gap-2 text-[#1B281E] hover:text-[#277C3D] transition-colors"
+          aria-label="Back to Dashboard"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <span className="font-['Plus_Jakarta_Sans'] font-medium text-[16px]">Back to Dashboard</span>
+        </button>
+      </div>
       
       {/* Main Content */}
       <main className="flex flex-col self-stretch flex-1">

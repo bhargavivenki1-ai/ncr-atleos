@@ -4,14 +4,21 @@ import '@testing-library/jest-dom';
 import { BrowserRouter } from 'react-router-dom';
 import ATMCashWithdrawal from '../ATMCashWithdrawal';
 
+// Mock useNavigate
+const mockNavigate = jest.fn();
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => mockNavigate,
+}));
+
 // Mock the components to focus on page logic
-jest.mock('../components/organisms/Header', () => {
+jest.mock('../../components/organisms/Header', () => {
   return function MockHeader({ title }) {
     return <header data-testid="header">{title}</header>;
   };
 });
 
-jest.mock('../components/organisms/CardDetailsForm', () => {
+jest.mock('../../components/organisms/CardDetailsForm', () => {
   return function MockCardDetailsForm({ onCardDetailsChange, onScanCard, errors }) {
     return (
       <div data-testid="card-details-form">
@@ -35,7 +42,7 @@ jest.mock('../components/organisms/CardDetailsForm', () => {
   };
 });
 
-jest.mock('../components/organisms/AmountSelection', () => {
+jest.mock('../../components/organisms/AmountSelection', () => {
   return function MockAmountSelection({ onAmountChange, errors }) {
     return (
       <div data-testid="amount-selection">
@@ -57,7 +64,7 @@ jest.mock('../components/organisms/AmountSelection', () => {
   };
 });
 
-jest.mock('../components/atoms/Button', () => {
+jest.mock('../../components/atoms/Button', () => {
   return function MockButton({ children, onClick, disabled, loading }) {
     return (
       <button
@@ -71,7 +78,7 @@ jest.mock('../components/atoms/Button', () => {
   };
 });
 
-jest.mock('../components/atoms/GestureIndicator', () => {
+jest.mock('../../components/atoms/GestureIndicator', () => {
   return function MockGestureIndicator() {
     return <div data-testid="gesture-indicator" />;
   };
@@ -91,6 +98,26 @@ const renderWithRouter = (component) => {
 describe('ATMCashWithdrawal Page', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    mockNavigate.mockClear();
+  });
+
+  test('renders Back to Dashboard link', () => {
+    renderWithRouter(<ATMCashWithdrawal />);
+    const backLink = screen.getByRole('button', { name: /back to dashboard/i });
+    expect(backLink).toBeInTheDocument();
+  });
+
+  test('navigates to dashboard when Back to Dashboard is clicked', () => {
+    renderWithRouter(<ATMCashWithdrawal />);
+    const backLink = screen.getByRole('button', { name: /back to dashboard/i });
+    fireEvent.click(backLink);
+    expect(mockNavigate).toHaveBeenCalledWith('/dashboard');
+  });
+
+  test('Back to Dashboard link has proper accessibility attributes', () => {
+    renderWithRouter(<ATMCashWithdrawal />);
+    const backLink = screen.getByRole('button', { name: /back to dashboard/i });
+    expect(backLink).toHaveAttribute('aria-label', 'Back to Dashboard');
   });
 
   test('renders all main components', () => {

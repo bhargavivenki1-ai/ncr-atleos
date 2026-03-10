@@ -76,6 +76,13 @@ const CashDepositPage = () => {
   };
 
   /**
+   * Handles navigation back to dashboard
+   */
+  const handleBackToDashboard = () => {
+    navigate('/dashboard');
+  };
+
+  /**
    * Validates form inputs
    * @returns {boolean} True if form is valid
    */
@@ -117,9 +124,23 @@ const CashDepositPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background-dark flex flex-col">
+    <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <Header />
+      
+      {/* Back to Dashboard Link */}
+      <div className="px-[18px] pt-4 pb-2">
+        <button
+          onClick={handleBackToDashboard}
+          className="flex items-center gap-2 text-text-primary hover:text-button-primary transition-colors"
+          aria-label="Back to Dashboard"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <span className="font-['Plus_Jakarta_Sans'] font-medium text-[16px]">Back to Dashboard</span>
+        </button>
+      </div>
       
       {/* Main Content */}
       <main className="flex-1 flex flex-col" role="main">
@@ -127,7 +148,7 @@ const CashDepositPage = () => {
         <div className="px-[18px] pt-[28px] pb-1">
           <Title 
             text="Cash Deposit" 
-            className="text-[28px] font-bold leading-[1.26] tracking-[-2%] text-text-light font-jakarta"
+            className="text-[28px] font-bold leading-[1.26] tracking-[-2%] text-text-primary font-jakarta"
           />
         </div>
 
@@ -137,7 +158,7 @@ const CashDepositPage = () => {
           <div className="px-[18px] pt-1 pb-1">
             <Title 
               text="Enter Deposit Amount" 
-              className="text-[22px] font-bold leading-[1.30] tracking-[-2%] text-text-light font-jakarta"
+              className="text-[22px] font-bold leading-[1.30] tracking-[-2%] text-text-primary font-jakarta"
             />
           </div>
 
@@ -149,7 +170,7 @@ const CashDepositPage = () => {
                 value={cardNumber}
                 onChange={handleCardNumberChange}
                 icon="credit-card"
-                className="bg-input-background-dark border-0 rounded-[20px] text-text-placeholder"
+                className="bg-input-background border-0 rounded-[20px] text-text-primary"
                 aria-label="Card number input field"
                 aria-required="true"
               />
@@ -157,7 +178,7 @@ const CashDepositPage = () => {
             <RoundButton
               icon="camera"
               onClick={handleCameraScan}
-              className="bg-button-primary-dark w-12 h-12"
+              className="bg-button-primary w-12 h-12"
               aria-label="Scan card with camera"
             />
           </div>
@@ -169,7 +190,7 @@ const CashDepositPage = () => {
                 placeholder="MM/YY"
                 value={expiryDate}
                 onChange={handleExpiryDateChange}
-                className="bg-input-background-dark border-0 rounded-[20px] text-text-placeholder"
+                className="bg-input-background border-0 rounded-[20px] text-text-primary"
                 aria-label="Card expiry date"
               />
             </div>
@@ -178,7 +199,7 @@ const CashDepositPage = () => {
                 placeholder="CVV"
                 value={cvv}
                 onChange={handleCvvChange}
-                className="bg-input-background-dark border-0 rounded-[20px] text-text-placeholder"
+                className="bg-input-background border-0 rounded-[20px] text-text-primary"
                 aria-label="Card CVV"
                 type="password"
                 maxLength="4"
@@ -193,7 +214,7 @@ const CashDepositPage = () => {
               value={fullName}
               onChange={handleFullNameChange}
               icon="user"
-              className="bg-input-background-dark border-0 rounded-[20px] text-text-placeholder h-full"
+              className="bg-input-background border-0 rounded-[20px] text-text-primary h-full"
               aria-label="Cardholder full name"
             />
           </div>
@@ -214,7 +235,7 @@ const CashDepositPage = () => {
             text="Confirm Deposit"
             onClick={handleConfirmDeposit}
             disabled={isLoading}
-            className="w-full bg-button-primary-dark text-white h-[50px] rounded-[48px] font-medium text-[17px] leading-[1.35] disabled:opacity-50"
+            className="w-full bg-button-primary text-white h-[50px] rounded-[48px] font-medium text-[17px] leading-[1.35] disabled:opacity-50"
             aria-label="Confirm deposit transaction"
           />
         </div>
@@ -222,7 +243,7 @@ const CashDepositPage = () => {
 
       {/* Bottom Gesture Indicator */}
       <div className="flex justify-center pb-4">
-        <GestureIndicator className="bg-gesture-indicator-dark" />
+        <GestureIndicator className="bg-gesture-indicator" />
       </div>
     </div>
   );

@@ -31,7 +31,7 @@ const AccountSelector = forwardRef(({
 }, ref) => {
   return (
     <div className="flex flex-col p-2 px-4">
-      <div className="flex flex-row justify-stretch items-stretch self-stretch gap-2 py-[13.5px] px-[13px] bg-[rgba(224,191,184,0.12)] rounded-[16px]">
+      <div className="flex flex-row justify-stretch items-stretch self-stretch gap-2 py-[13.5px] px-[13px] bg-[rgba(224,191,184,0.12)] rounded-[16px] border border-[rgba(235,213,209,0.3)]">
         <select
           ref={ref}
           value={value}
@@ -42,16 +42,17 @@ const AccountSelector = forwardRef(({
           required={required}
           aria-label={ariaLabel}
           aria-describedby={ariaDescribedBy}
-          className={`flex-1 bg-transparent border-none outline-none font-['Public_Sans'] font-normal text-[17px] leading-[1.35em] tracking-[-0.5%] text-[rgba(235,213,209,0.62)] ${className}`}
+          className={`flex-1 bg-transparent border-none outline-none font-['Public_Sans'] font-normal text-[17px] leading-[1.35em] tracking-[-0.5%] text-[#E4DAD7] ${className}`}
+          style={{ color: value ? '#E4DAD7' : 'rgba(235,213,209,0.62)' }}
           {...props}
         >
           {placeholder && (
-            <option value="" disabled>
+            <option value="" disabled style={{ color: 'rgba(235,213,209,0.62)' }}>
               {placeholder}
             </option>
           )}
           {options.map((option) => (
-            <option key={option.value} value={option.value}>
+            <option key={option.value} value={option.value} style={{ color: '#000', backgroundColor: '#fff' }}>
               {option.label}
             </option>
           ))}

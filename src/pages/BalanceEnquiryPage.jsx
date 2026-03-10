@@ -92,6 +92,10 @@ const BalanceEnquiryPage = () => {
     // TODO: Implement tip navigation/actions
   };
 
+  const handleBackToDashboard = () => {
+    navigate('/dashboard');
+  };
+
   const handleTabChange = (tabIndex, tabId) => {
     console.log('Tab changed:', tabIndex, tabId);
     // Implement tab navigation
@@ -136,6 +140,20 @@ const BalanceEnquiryPage = () => {
         title="Balance Enquiry"
         className="bg-[#FBFEFC]"
       />
+      
+      {/* Back to Dashboard Link */}
+      <div className="px-[18px] pt-4 pb-2">
+        <button
+          onClick={handleBackToDashboard}
+          className="flex items-center gap-2 text-[#1B281E] hover:text-[#277C3D] transition-colors"
+          aria-label="Back to Dashboard"
+        >
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 12L6 8L10 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          </svg>
+          <span className="font-['Plus_Jakarta_Sans'] font-medium text-[16px]">Back to Dashboard</span>
+        </button>
+      </div>
       
       {/* Main Content */}
       <main className="flex-1 flex flex-col w-full">

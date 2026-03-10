@@ -17,36 +17,6 @@ const ActionButtons = ({
 }) => {
   return (
     <div className="flex flex-col self-stretch gap-4">
-      {/* Dual Buttons Row */}
-      <div className="flex flex-row justify-stretch items-stretch self-stretch gap-2 px-4">
-        <Button
-          variant="fundsTransferTertiary"
-          size="fundsTransferSmall"
-          onClick={onCancel}
-          disabled={isSubmitting}
-          ariaLabel="Cancel transfer"
-          className="flex-1"
-        >
-          <span className="flex items-center justify-center gap-2">
-            {/* Icon placeholder */}
-            <span>Cancel</span>
-          </span>
-        </Button>
-        <Button
-          variant="fundsTransferTertiary"
-          size="fundsTransferSmall"
-          onClick={() => {}}
-          disabled={isSubmitting}
-          ariaLabel="Additional action"
-          className="flex-1"
-        >
-          <span className="flex items-center justify-center gap-2">
-            {/* Icon placeholder */}
-            <span>Button Label</span>
-          </span>
-        </Button>
-      </div>
-      
       {/* Submit Button */}
       <div className="flex flex-row justify-stretch items-stretch self-stretch gap-4 px-4">
         <Button
