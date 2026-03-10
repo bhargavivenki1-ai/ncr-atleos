@@ -1,0 +1,348 @@
+{
+  "src/pages/BalanceEnquiryPage.jsx": {
+    "filename": "BalanceEnquiryPage.jsx",
+    "path": "src/pages/BalanceEnquiryPage.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "2c50c4": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773119624,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "fd5bd72a",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "b3d16b": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773119644,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "38d68558",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "94": {
+        "chunkId": "2c50c4",
+        "hash": "7e6dda48",
+        "encoded": "const%20handleBackToDashboard%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "2c50c4",
+        "hash": "c0cee165",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "2c50c4",
+        "hash": "e153936b",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "2c50c4",
+        "hash": "05a20efa",
+        "encoded": "const%20handleTabChange%20=%20(tabIndex,%20tabId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "2c50c4",
+        "hash": "363e6221",
+        "encoded": "console.log('Tab%20changed:',%20tabIndex,%20tabId);",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "2c50c4",
+        "hash": "11b1d972",
+        "encoded": "//%20Implement%20tab%20navigation",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "2c50c4",
+        "hash": "cdf49eff",
+        "encoded": "switch%20(tabId)%20%7B",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "2c50c4",
+        "hash": "4fe69c78",
+        "encoded": "case%20'home':",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "2c50c4",
+        "hash": "32cf3df2",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "2c50c4",
+        "hash": "f49fb88f",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "2c50c4",
+        "hash": "0a150c00",
+        "encoded": "case%20'transactions':",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "2c50c4",
+        "hash": "d58d6a59",
+        "encoded": "//%20TODO:%20Implement%20when%20transactions%20page%20is%20available",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "2c50c4",
+        "hash": "13b20c7b",
+        "encoded": "console.log('Transactions%20page%20not%20yet%20implemented');",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "2c50c4",
+        "hash": "aaaea430",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "2c50c4",
+        "hash": "70748996",
+        "encoded": "case%20'transfer':",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "2c50c4",
+        "hash": "902e849c",
+        "encoded": "//%20TODO:%20Implement%20when%20transfer%20page%20is%20available",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "2c50c4",
+        "hash": "58413972",
+        "encoded": "console.log('Transfer%20page%20not%20yet%20implemented');",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "2c50c4",
+        "hash": "227276ad",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "2c50c4",
+        "hash": "80a41dab",
+        "encoded": "case%20'settings':",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "2c50c4",
+        "hash": "d4c67ac2",
+        "encoded": "//%20TODO:%20Implement%20when%20settings%20page%20is%20available",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "2c50c4",
+        "hash": "c1f06dd1",
+        "encoded": "console.log('Settings%20page%20not%20yet%20implemented');",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "2c50c4",
+        "hash": "16967136",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "2c50c4",
+        "hash": "de83982b",
+        "encoded": "case%20'profile':",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "2c50c4",
+        "hash": "d439ce31",
+        "encoded": "//%20TODO:%20Implement%20when%20profile%20page%20is%20available",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "2c50c4",
+        "hash": "f8ebf5aa",
+        "encoded": "console.log('Profile%20page%20not%20yet%20implemented');",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "2c50c4",
+        "hash": "2d03736c",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "2c50c4",
+        "hash": "132b165d",
+        "encoded": "default:",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "2c50c4",
+        "hash": "42b9be9c",
+        "encoded": "console.log('Unknown%20tab:',%20tabId);",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "2c50c4",
+        "hash": "2bf02615",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "2c50c4",
+        "hash": "ddc133c6",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "b3d16b",
+        "hash": "ce1532ce",
+        "encoded": "%3Cdiv%20className=%22min-h-screen%20bg-%5B#FBFEFC%5D%20flex%20flex-col%22%3E",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "b3d16b",
+        "hash": "554c6f9c",
+        "encoded": "%7B/*%20Header%20*/%7D",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "b3d16b",
+        "hash": "3c1be675",
+        "encoded": "%3CHeader",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "b3d16b",
+        "hash": "cbde16e9",
+        "encoded": "title=%22Balance%20Enquiry%22",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "b3d16b",
+        "hash": "0ef58922",
+        "encoded": "className=%22bg-%5B#FBFEFC%5D%22",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "b3d16b",
+        "hash": "8308c0a9",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "b3d16b",
+        "hash": "98bfc65c",
+        "encoded": "%7B/*%20Back%20to%20Dashboard%20Link%20*/%7D",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "b3d16b",
+        "hash": "d276c119",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20pt-4%20pb-2%22%3E",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "b3d16b",
+        "hash": "59ef17d7",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "b3d16b",
+        "hash": "c2b26e90",
+        "encoded": "onClick=%7BhandleBackToDashboard%7D",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "b3d16b",
+        "hash": "23e55a72",
+        "encoded": "className=%22flex%20items-center%20gap-2%20text-%5B#1B281E%5D%20hover:text-%5B#277C3D%5D%20transition-colors%22",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "b3d16b",
+        "hash": "f57b3a01",
+        "encoded": "aria-label=%22Back%20to%20Dashboard%22",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "b3d16b",
+        "hash": "f3dbfe20",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "b3d16b",
+        "hash": "6c86845f",
+        "encoded": "%3Csvg%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "b3d16b",
+        "hash": "bc73f134",
+        "encoded": "%3Cpath%20d=%22M10%2012L6%208L10%204%22%20stroke=%22currentColor%22%20strokeWidth=%222%22%20strokeLinecap=%22round%22%20strokeLinejoin=%22round%22/%3E",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "b3d16b",
+        "hash": "130fbef9",
+        "encoded": "%3C/svg%3E",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "b3d16b",
+        "hash": "0d97274e",
+        "encoded": "%3Cspan%20className=%22font-%5B'Plus_Jakarta_Sans'%5D%20font-medium%20text-%5B16px%5D%22%3EBack%20to%20Dashboard%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "b3d16b",
+        "hash": "a9fd1bd4",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "b3d16b",
+        "hash": "d1c8c5f9",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "b3d16b",
+        "hash": "e280a9f4",
+        "encoded": "%7B/*%20Main%20Content%20*/%7D",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "b3d16b",
+        "hash": "6aa51176",
+        "encoded": "%3Cmain%20className=%22flex-1%20flex%20flex-col%20w-full%22%3E",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

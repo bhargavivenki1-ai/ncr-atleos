@@ -1,0 +1,831 @@
+{
+  "src/pages/__tests__/ATMCashWithdrawal.test.jsx": {
+    "filename": "ATMCashWithdrawal.test.jsx",
+    "path": "src/pages/__tests__/ATMCashWithdrawal.test.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "aa57f1": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773120066,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "1f571565",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "1f0763": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773120066,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "24441bba",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "a6aa0a": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773120128,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "b30879a5",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "6cac25": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773120128,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "0d4d73c4",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "708e7e": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773120128,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "c2693e26",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "40d036": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773120128,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "7f155d8d",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "796e7a": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773120128,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "303babb6",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "6cac25",
+        "hash": "98ac06df",
+        "encoded": "import%20React%20from%20'react';",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "1": {
+        "chunkId": "6cac25",
+        "hash": "4f2a951b",
+        "encoded": "import%20%7B%20render,%20screen,%20fireEvent,%20waitFor%20%7D%20from%20'@testing-library/react';",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "2": {
+        "chunkId": "6cac25",
+        "hash": "e03b5134",
+        "encoded": "import%20'@testing-library/jest-dom';",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "3": {
+        "chunkId": "6cac25",
+        "hash": "15cbde14",
+        "encoded": "import%20%7B%20BrowserRouter%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "4": {
+        "chunkId": "6cac25",
+        "hash": "e6086dc3",
+        "encoded": "import%20ATMCashWithdrawal%20from%20'../ATMCashWithdrawal';",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "6": {
+        "chunkId": "6cac25",
+        "hash": "4d6b3a9e",
+        "encoded": "//%20Mock%20useNavigate",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "7": {
+        "chunkId": "6cac25",
+        "hash": "459c73ff",
+        "encoded": "const%20mockNavigate%20=%20jest.fn();",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "8": {
+        "chunkId": "6cac25",
+        "hash": "ef23bcc6",
+        "encoded": "jest.mock('react-router-dom',%20()%20=%3E%20(%7B",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "9": {
+        "chunkId": "6cac25",
+        "hash": "4fdf738b",
+        "encoded": "...jest.requireActual('react-router-dom'),",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "10": {
+        "chunkId": "6cac25",
+        "hash": "64201ea1",
+        "encoded": "useNavigate:%20()%20=%3E%20mockNavigate,",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "11": {
+        "chunkId": "6cac25",
+        "hash": "3b3996d0",
+        "encoded": "%7D));",
+        "prevChunkIds": [
+          "6cac25"
+        ]
+      },
+      "13": {
+        "chunkId": "1f0763",
+        "hash": "da77233d",
+        "encoded": "//%20Mock%20the%20components%20to%20focus%20on%20page%20logic",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "1f0763",
+        "hash": "028ccb96",
+        "encoded": "jest.mock('../../components/organisms/Header',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "1f0763",
+        "hash": "3afc32e6",
+        "encoded": "return%20function%20MockHeader(%7B%20title%20%7D)%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "1f0763",
+        "hash": "f7ad4119",
+        "encoded": "return%20%3Cheader%20data-testid=%22header%22%3E%7Btitle%7D%3C/header%3E;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "1f0763",
+        "hash": "146d9b82",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "1f0763",
+        "hash": "ff07c7b3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "aa57f1",
+        "hash": "c0721c3e",
+        "encoded": "jest.mock('../../components/organisms/CardDetailsForm',%20()%20=%3E%20%7B",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "21": {
+        "chunkId": "aa57f1",
+        "hash": "fea93292",
+        "encoded": "return%20function%20MockCardDetailsForm(%7B%20onCardDetailsChange,%20onScanCard,%20errors%20%7D)%20%7B",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "22": {
+        "chunkId": "aa57f1",
+        "hash": "b2e3ee96",
+        "encoded": "return%20(",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "23": {
+        "chunkId": "aa57f1",
+        "hash": "68e42681",
+        "encoded": "%3Cdiv%20data-testid=%22card-details-form%22%3E",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "24": {
+        "chunkId": "aa57f1",
+        "hash": "770b6bbc",
+        "encoded": "%3Cinput",
+        "prevChunkIds": [
+          "1f0763",
+          "aa57f1"
+        ]
+      },
+      "25": {
+        "chunkId": "aa57f1",
+        "hash": "c884decd",
+        "encoded": "data-testid=%22card-number%22",
+        "prevChunkIds": [
+          "1f0763",
+          "aa57f1"
+        ]
+      },
+      "27": {
+        "chunkId": "aa57f1",
+        "hash": "2399d3fd",
+        "encoded": "onChange=%7B(e)%20=%3E%20onCardDetailsChange(%7B%20cardNumber:%20e.target.value%20%7D)%7D",
+        "prevChunkIds": [
+          "1f0763",
+          "aa57f1"
+        ]
+      },
+      "28": {
+        "chunkId": "aa57f1",
+        "hash": "dabd55e1",
+        "encoded": "/%3E",
+        "prevChunkIds": [
+          "1f0763",
+          "aa57f1"
+        ]
+      },
+      "29": {
+        "chunkId": "aa57f1",
+        "hash": "89cc167a",
+        "encoded": "%3Cinput",
+        "prevChunkIds": [
+          "1f0763",
+          "aa57f1"
+        ]
+      },
+      "30": {
+        "chunkId": "aa57f1",
+        "hash": "fa87f7aa",
+        "encoded": "data-testid=%22full-name%22",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "31": {
+        "chunkId": "aa57f1",
+        "hash": "3e5b3dc4",
+        "encoded": "placeholder=%22Full%20Name%22",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "32": {
+        "chunkId": "aa57f1",
+        "hash": "44d27567",
+        "encoded": "onChange=%7B(e)%20=%3E%20onCardDetailsChange(%7B%20fullName:%20e.target.value%20%7D)%7D",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "33": {
+        "chunkId": "aa57f1",
+        "hash": "15a37846",
+        "encoded": "/%3E",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "34": {
+        "chunkId": "aa57f1",
+        "hash": "d5258ea2",
+        "encoded": "%3Cbutton%20data-testid=%22scan-card%22%20onClick=%7BonScanCard%7D%3E",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "35": {
+        "chunkId": "aa57f1",
+        "hash": "72ccb5ea",
+        "encoded": "Scan%20Card",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "36": {
+        "chunkId": "796e7a",
+        "hash": "d48d4cbc",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "37": {
+        "chunkId": "aa57f1",
+        "hash": "8f406219",
+        "encoded": "%7Berrors.cardNumber%20&&%20%3Cdiv%20data-testid=%22card-number-error%22%3E%7Berrors.cardNumber%7D%3C/div%3E%7D",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "38": {
+        "chunkId": "aa57f1",
+        "hash": "9824e3fd",
+        "encoded": "%7Berrors.fullName%20&&%20%3Cdiv%20data-testid=%22full-name-error%22%3E%7Berrors.fullName%7D%3C/div%3E%7D",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "39": {
+        "chunkId": "796e7a",
+        "hash": "d31a7a42",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "40": {
+        "chunkId": "796e7a",
+        "hash": "f0f68145",
+        "encoded": ");",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "41": {
+        "chunkId": "796e7a",
+        "hash": "d54d591a",
+        "encoded": "%7D;",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "42": {
+        "chunkId": "796e7a",
+        "hash": "6f909b24",
+        "encoded": "%7D);",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "44": {
+        "chunkId": "796e7a",
+        "hash": "6ffe45f7",
+        "encoded": "jest.mock('../../components/organisms/AmountSelection',%20()%20=%3E%20%7B",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "45": {
+        "chunkId": "796e7a",
+        "hash": "75241047",
+        "encoded": "return%20function%20MockAmountSelection(%7B%20onAmountChange,%20errors%20%7D)%20%7B",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "46": {
+        "chunkId": "796e7a",
+        "hash": "4c08f2f5",
+        "encoded": "return%20(",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "47": {
+        "chunkId": "796e7a",
+        "hash": "3ea1dccf",
+        "encoded": "%3Cdiv%20data-testid=%22amount-selection%22%3E",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "48": {
+        "chunkId": "796e7a",
+        "hash": "691ba73a",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "49": {
+        "chunkId": "796e7a",
+        "hash": "4252d7e8",
+        "encoded": "data-testid=%22amount-20%22",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "50": {
+        "chunkId": "796e7a",
+        "hash": "3868d9d3",
+        "encoded": "onClick=%7B()%20=%3E%20onAmountChange('20')%7D",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "51": {
+        "chunkId": "796e7a",
+        "hash": "63cbb769",
+        "encoded": "%3E",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "52": {
+        "chunkId": "796e7a",
+        "hash": "917ae987",
+        "encoded": "$20",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "53": {
+        "chunkId": "796e7a",
+        "hash": "742da5a9",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": [
+          "aa57f1"
+        ]
+      },
+      "54": {
+        "chunkId": "796e7a",
+        "hash": "8ba64082",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "796e7a",
+        "hash": "31443583",
+        "encoded": "data-testid=%22amount-100%22",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "796e7a",
+        "hash": "b35cd101",
+        "encoded": "onClick=%7B()%20=%3E%20onAmountChange('100')%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "796e7a",
+        "hash": "a8235f5b",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "796e7a",
+        "hash": "14561b75",
+        "encoded": "$100",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "aa57f1",
+        "hash": "e25714b8",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": [
+          "40d036",
+          "aa57f1"
+        ]
+      },
+      "60": {
+        "chunkId": "796e7a",
+        "hash": "0cbab6b0",
+        "encoded": "%7Berrors.amount%20&&%20%3Cdiv%20data-testid=%22amount-error%22%3E%7Berrors.amount%7D%3C/div%3E%7D",
+        "prevChunkIds": [
+          "40d036"
+        ]
+      },
+      "61": {
+        "chunkId": "aa57f1",
+        "hash": "41b08537",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": [
+          "40d036",
+          "aa57f1"
+        ]
+      },
+      "62": {
+        "chunkId": "aa57f1",
+        "hash": "8bde6d40",
+        "encoded": ");",
+        "prevChunkIds": [
+          "40d036",
+          "aa57f1"
+        ]
+      },
+      "63": {
+        "chunkId": "aa57f1",
+        "hash": "9ab1c559",
+        "encoded": "%7D;",
+        "prevChunkIds": [
+          "40d036",
+          "aa57f1"
+        ]
+      },
+      "64": {
+        "chunkId": "aa57f1",
+        "hash": "da39c591",
+        "encoded": "%7D);",
+        "prevChunkIds": [
+          "40d036",
+          "aa57f1"
+        ]
+      },
+      "66": {
+        "chunkId": "40d036",
+        "hash": "331f8e61",
+        "encoded": "jest.mock('../../components/atoms/Button',%20()%20=%3E%20%7B",
+        "prevChunkIds": [
+          "40d036"
+        ]
+      },
+      "67": {
+        "chunkId": "40d036",
+        "hash": "1256442b",
+        "encoded": "return%20function%20MockButton(%7B%20children,%20onClick,%20disabled,%20loading%20%7D)%20%7B",
+        "prevChunkIds": [
+          "40d036"
+        ]
+      },
+      "68": {
+        "chunkId": "40d036",
+        "hash": "817755ee",
+        "encoded": "return%20(",
+        "prevChunkIds": [
+          "40d036"
+        ]
+      },
+      "69": {
+        "chunkId": "40d036",
+        "hash": "1db03b20",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": [
+          "40d036"
+        ]
+      },
+      "70": {
+        "chunkId": "40d036",
+        "hash": "0b04399e",
+        "encoded": "data-testid=%22proceed-button%22",
+        "prevChunkIds": [
+          "40d036"
+        ]
+      },
+      "71": {
+        "chunkId": "40d036",
+        "hash": "500113eb",
+        "encoded": "onClick=%7BonClick%7D",
+        "prevChunkIds": [
+          "40d036"
+        ]
+      },
+      "72": {
+        "chunkId": "40d036",
+        "hash": "ca1a952f",
+        "encoded": "disabled=%7Bdisabled%20%7C%7C%20loading%7D",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "40d036",
+        "hash": "87a3a036",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "40d036",
+        "hash": "301316e4",
+        "encoded": "%7Bloading%20?%20'Staging...'%20:%20children%7D",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "40d036",
+        "hash": "cd2d8b17",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "40d036",
+        "hash": "deaf3d1d",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "40d036",
+        "hash": "12aee0ed",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "708e7e",
+        "hash": "61f92be8",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "708e7e",
+        "hash": "bea86ab9",
+        "encoded": "jest.mock('../../components/atoms/GestureIndicator',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "708e7e",
+        "hash": "a19a8eee",
+        "encoded": "return%20function%20MockGestureIndicator()%20%7B",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "708e7e",
+        "hash": "aaf4f798",
+        "encoded": "return%20%3Cdiv%20data-testid=%22gesture-indicator%22%20/%3E;",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "708e7e",
+        "hash": "74fcb7ab",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "a6aa0a",
+        "hash": "34456457",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "40d036",
+        "hash": "131b33e4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "a6aa0a",
+        "hash": "c56b8ef8",
+        "encoded": "describe('ATMCashWithdrawal%20Page',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "a6aa0a",
+        "hash": "e98634ee",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "a6aa0a",
+        "hash": "e87b1ec8",
+        "encoded": "jest.clearAllMocks();",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "a6aa0a",
+        "hash": "e7812b89",
+        "encoded": "mockNavigate.mockClear();",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "a6aa0a",
+        "hash": "bcfcb921",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "a6aa0a",
+        "hash": "2dc16249",
+        "encoded": "test('renders%20Back%20to%20Dashboard%20link',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "a6aa0a",
+        "hash": "f6158712",
+        "encoded": "renderWithRouter(%3CATMCashWithdrawal%20/%3E);",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "a6aa0a",
+        "hash": "552bca59",
+        "encoded": "const%20backLink%20=%20screen.getByRole('button',%20%7B%20name:%20/back%20to%20dashboard/i%20%7D);",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "a6aa0a",
+        "hash": "db1f9d4c",
+        "encoded": "expect(backLink).toBeInTheDocument();",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "a6aa0a",
+        "hash": "312eceeb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "a6aa0a",
+        "hash": "2e6c7233",
+        "encoded": "test('navigates%20to%20dashboard%20when%20Back%20to%20Dashboard%20is%20clicked',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "a6aa0a",
+        "hash": "9daab0e9",
+        "encoded": "renderWithRouter(%3CATMCashWithdrawal%20/%3E);",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "a6aa0a",
+        "hash": "33e31f62",
+        "encoded": "const%20backLink%20=%20screen.getByRole('button',%20%7B%20name:%20/back%20to%20dashboard/i%20%7D);",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "a6aa0a",
+        "hash": "199f4a64",
+        "encoded": "fireEvent.click(backLink);",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "a6aa0a",
+        "hash": "7fcb5ff9",
+        "encoded": "expect(mockNavigate).toHaveBeenCalledWith('/dashboard');",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "a6aa0a",
+        "hash": "f825b8cd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "a6aa0a",
+        "hash": "68105f58",
+        "encoded": "test('Back%20to%20Dashboard%20link%20has%20proper%20accessibility%20attributes',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "a6aa0a",
+        "hash": "58335513",
+        "encoded": "renderWithRouter(%3CATMCashWithdrawal%20/%3E);",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "a6aa0a",
+        "hash": "77815c6a",
+        "encoded": "const%20backLink%20=%20screen.getByRole('button',%20%7B%20name:%20/back%20to%20dashboard/i%20%7D);",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "a6aa0a",
+        "hash": "d0ecf1a3",
+        "encoded": "expect(backLink).toHaveAttribute('aria-label',%20'Back%20to%20Dashboard');",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

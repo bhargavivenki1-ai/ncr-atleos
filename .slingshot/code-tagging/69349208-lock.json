@@ -1,0 +1,394 @@
+{
+  "src/pages/FundsTransferPage.jsx": {
+    "filename": "FundsTransferPage.jsx",
+    "path": "src/pages/FundsTransferPage.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "4e3527": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773119699,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "8a861b17",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "912bdc": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773119699,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "66999284",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "ec4168": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773121498,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "573c87e4",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "b976bb": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773121597,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "708ce49a",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "8cde0b": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773121597,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "f2711da7",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "fb50bc": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773121597,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "9fb10575",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "30": {
+        "chunkId": "4e3527",
+        "hash": "7a164af0",
+        "encoded": "const%20handleCancel%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": [
+          "4e3527"
+        ]
+      },
+      "31": {
+        "chunkId": "4e3527",
+        "hash": "ad79731d",
+        "encoded": "//%20Navigate%20back%20to%20dashboard%20or%20previous%20page",
+        "prevChunkIds": [
+          "4e3527"
+        ]
+      },
+      "32": {
+        "chunkId": "4e3527",
+        "hash": "d41cee72",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": [
+          "4e3527"
+        ]
+      },
+      "33": {
+        "chunkId": "4e3527",
+        "hash": "ab7c01dc",
+        "encoded": "%7D;",
+        "prevChunkIds": [
+          "4e3527"
+        ]
+      },
+      "35": {
+        "chunkId": "4e3527",
+        "hash": "137556bb",
+        "encoded": "const%20handleBackToDashboard%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": [
+          "4e3527"
+        ]
+      },
+      "36": {
+        "chunkId": "4e3527",
+        "hash": "a8742e6c",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": [
+          "4e3527"
+        ]
+      },
+      "37": {
+        "chunkId": "4e3527",
+        "hash": "5ef10871",
+        "encoded": "%7D;",
+        "prevChunkIds": [
+          "4e3527"
+        ]
+      },
+      "70": {
+        "chunkId": "ec4168",
+        "hash": "742bf63d",
+        "encoded": "%3Cdiv%20className=%22min-h-screen%20bg-background%20text-text-primary%20flex%20flex-col%22%3E",
+        "prevChunkIds": [
+          "ec4168"
+        ]
+      },
+      "71": {
+        "chunkId": "912bdc",
+        "hash": "89d31c9e",
+        "encoded": "%7B/*%20Header%20with%20Status%20Bar%20and%20Title%20*/%7D",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "72": {
+        "chunkId": "fb50bc",
+        "hash": "53b36727",
+        "encoded": "%3CHeader",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "73": {
+        "chunkId": "fb50bc",
+        "hash": "4a5d553c",
+        "encoded": "title=%22Transfer%20Funds%22",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "74": {
+        "chunkId": "fb50bc",
+        "hash": "3bb25bb6",
+        "encoded": "time=%2212:30%22",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "75": {
+        "chunkId": "fb50bc",
+        "hash": "8bd5a1c7",
+        "encoded": "batteryLevel=%7B85%7D",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "76": {
+        "chunkId": "fb50bc",
+        "hash": "9d7dcaae",
+        "encoded": "hasWifi=%7Btrue%7D",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "77": {
+        "chunkId": "fb50bc",
+        "hash": "02167c6e",
+        "encoded": "hasSignal=%7Btrue%7D",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "78": {
+        "chunkId": "fb50bc",
+        "hash": "19997c32",
+        "encoded": "className=%22bg-background%22",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "fb50bc",
+        "hash": "b1f20f6d",
+        "encoded": "/%3E",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "81": {
+        "chunkId": "912bdc",
+        "hash": "25e11f61",
+        "encoded": "%7B/*%20Back%20to%20Dashboard%20Link%20*/%7D",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "82": {
+        "chunkId": "912bdc",
+        "hash": "945c8265",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20pt-4%20pb-2%22%3E",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "83": {
+        "chunkId": "8cde0b",
+        "hash": "b2a5deba",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": [
+          "8cde0b"
+        ]
+      },
+      "84": {
+        "chunkId": "8cde0b",
+        "hash": "1e9f3a4d",
+        "encoded": "onClick=%7BhandleBackToDashboard%7D",
+        "prevChunkIds": [
+          "8cde0b"
+        ]
+      },
+      "85": {
+        "chunkId": "8cde0b",
+        "hash": "34720b64",
+        "encoded": "className=%22flex%20items-center%20gap-2%20text-text-primary%20hover:text-button-primary%20transition-colors%22",
+        "prevChunkIds": [
+          "8cde0b"
+        ]
+      },
+      "86": {
+        "chunkId": "8cde0b",
+        "hash": "c4e1ba41",
+        "encoded": "aria-label=%22Back%20to%20Dashboard%22",
+        "prevChunkIds": [
+          "8cde0b"
+        ]
+      },
+      "87": {
+        "chunkId": "8cde0b",
+        "hash": "cd8f04c3",
+        "encoded": "%3E",
+        "prevChunkIds": [
+          "8cde0b"
+        ]
+      },
+      "88": {
+        "chunkId": "912bdc",
+        "hash": "2c5ed38f",
+        "encoded": "%3Csvg%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "89": {
+        "chunkId": "912bdc",
+        "hash": "0e103190",
+        "encoded": "%3Cpath%20d=%22M10%2012L6%208L10%204%22%20stroke=%22currentColor%22%20strokeWidth=%222%22%20strokeLinecap=%22round%22%20strokeLinejoin=%22round%22/%3E",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "90": {
+        "chunkId": "912bdc",
+        "hash": "d707c851",
+        "encoded": "%3C/svg%3E",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "91": {
+        "chunkId": "912bdc",
+        "hash": "500461db",
+        "encoded": "%3Cspan%20className=%22font-%5B'Plus_Jakarta_Sans'%5D%20font-medium%20text-%5B16px%5D%22%3EBack%20to%20Dashboard%3C/span%3E",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "92": {
+        "chunkId": "912bdc",
+        "hash": "3243c829",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "93": {
+        "chunkId": "912bdc",
+        "hash": "fafe2e1c",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "95": {
+        "chunkId": "912bdc",
+        "hash": "5fd40c7d",
+        "encoded": "%7B/*%20Main%20Content%20*/%7D",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "96": {
+        "chunkId": "912bdc",
+        "hash": "0d586116",
+        "encoded": "%3Cmain%20className=%22flex-1%20flex%20flex-col%22%20role=%22main%22%3E",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "101": {
+        "chunkId": "912bdc",
+        "hash": "9ca51213",
+        "encoded": "/%3E",
+        "prevChunkIds": [
+          "912bdc"
+        ]
+      },
+      "105": {
+        "chunkId": "b976bb",
+        "hash": "09b55370",
+        "encoded": "%3Cdiv%20className=%22flex%20flex-col%20justify-end%20self-stretch%22%3E",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "b976bb",
+        "hash": "eb16eaa5",
+        "encoded": "%3Cdiv%20className=%22flex%20justify-center%22%3E",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "b976bb",
+        "hash": "c75dc8c5",
+        "encoded": "%3Cdiv%20className=%22w-%5B134px%5D%20h-%5B5px%5D%20bg-gesture-indicator%20rounded-full%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "b976bb",
+        "hash": "8052e42b",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "b976bb",
+        "hash": "32a49628",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -47,8 +47,7 @@ const DashboardGrid = ({
   return (
     <div 
       className={`
-        flex flex-row justify-stretch items-stretch self-stretch
-        flex-wrap gap-4 p-2 px-4 pb-4
+        grid grid-cols-2 gap-4 p-2 px-4 pb-4 self-stretch
         ${className}
       `}
       role="grid"
@@ -56,7 +55,7 @@ const DashboardGrid = ({
       {...props}
     >
       {/* Savings Tile */}
-      <div className="flex-1 min-w-[calc(50%-8px)]" role="gridcell">
+      <div className="aspect-square" role="gridcell">
         <DashboardTile
           title="Savings"
           subtitle="$0.00"
@@ -67,7 +66,7 @@ const DashboardGrid = ({
       </div>
 
       {/* Cash Deposit Tile */}
-      <div className="flex-1 min-w-[calc(50%-8px)]" role="gridcell">
+      <div className="aspect-square" role="gridcell">
         <DashboardTile
           title="Cash Deposit"
           icon={<CashDepositIcon />}
@@ -77,7 +76,7 @@ const DashboardGrid = ({
       </div>
 
       {/* Balance Enquiry Tile */}
-      <div className="flex-1 min-w-[calc(50%-8px)]" role="gridcell">
+      <div className="aspect-square" role="gridcell">
         <DashboardTile
           title="Balance Enquiry"
           icon={<BalanceEnquiryIcon />}
@@ -87,7 +86,7 @@ const DashboardGrid = ({
       </div>
 
       {/* Transfer Funds Tile */}
-      <div className="flex-1 min-w-[calc(50%-8px)]" role="gridcell">
+      <div className="aspect-square" role="gridcell">
         <DashboardTile
           title="Transfer Funds"
           icon={<TransferFundsIcon />}

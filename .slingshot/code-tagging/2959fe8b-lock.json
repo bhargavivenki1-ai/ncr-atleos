@@ -1,0 +1,321 @@
+{
+  "ncr-atleos/src/components/organisms/DashboardGrid.jsx": {
+    "filename": "DashboardGrid.jsx",
+    "path": "ncr-atleos/src/components/organisms/DashboardGrid.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "fd550b": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773126732,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "92d4388c",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "46": {
+        "chunkId": "fd550b",
+        "hash": "4c08f2f5",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "fd550b",
+        "hash": "f5c813b9",
+        "encoded": "%3Cdiv",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "fd550b",
+        "hash": "8833b1cb",
+        "encoded": "className=%7B%60",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "fd550b",
+        "hash": "43a1e4a2",
+        "encoded": "grid%20grid-cols-2%20gap-4%20p-2%20px-4%20pb-4%20self-stretch",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "fd550b",
+        "hash": "59db6cf5",
+        "encoded": "$%7BclassName%7D",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "fd550b",
+        "hash": "92ef843c",
+        "encoded": "%60%7D",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "fd550b",
+        "hash": "dd5b4aa0",
+        "encoded": "role=%22grid%22",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "fd550b",
+        "hash": "d755db55",
+        "encoded": "aria-label=%22Banking%20services%20navigation%22",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "fd550b",
+        "hash": "6e64c72d",
+        "encoded": "%7B...props%7D",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "fd550b",
+        "hash": "aae94e9d",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "fd550b",
+        "hash": "dac94018",
+        "encoded": "%7B/*%20Savings%20Tile%20*/%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "fd550b",
+        "hash": "29a75be0",
+        "encoded": "%3Cdiv%20className=%22aspect-square%22%20role=%22gridcell%22%3E",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "fd550b",
+        "hash": "30ad02bc",
+        "encoded": "%3CDashboardTile",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "fd550b",
+        "hash": "910ccae8",
+        "encoded": "title=%22Savings%22",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "fd550b",
+        "hash": "6215b91e",
+        "encoded": "subtitle=%22$0.00%22",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "fd550b",
+        "hash": "60781531",
+        "encoded": "icon=%7B%3CSavingsIcon%20/%3E%7D",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "fd550b",
+        "hash": "7f3cbe83",
+        "encoded": "onClick=%7BonSavingsTileClick%7D",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "fd550b",
+        "hash": "9fd802b6",
+        "encoded": "ariaLabel=%22Navigate%20to%20Savings%20account%22",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "fd550b",
+        "hash": "24ca9f3e",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "fd550b",
+        "hash": "66af96d7",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "fd550b",
+        "hash": "56b30571",
+        "encoded": "%7B/*%20Cash%20Deposit%20Tile%20*/%7D",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "fd550b",
+        "hash": "d1ad6262",
+        "encoded": "%3Cdiv%20className=%22aspect-square%22%20role=%22gridcell%22%3E",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "fd550b",
+        "hash": "8ca4a6c1",
+        "encoded": "%3CDashboardTile",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "fd550b",
+        "hash": "546bf3cf",
+        "encoded": "title=%22Cash%20Deposit%22",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "fd550b",
+        "hash": "5f820709",
+        "encoded": "icon=%7B%3CCashDepositIcon%20/%3E%7D",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "fd550b",
+        "hash": "a364cb1c",
+        "encoded": "onClick=%7BonCashDepositTileClick%7D",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "fd550b",
+        "hash": "0cb63e83",
+        "encoded": "ariaLabel=%22Navigate%20to%20Cash%20Deposit%22",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "fd550b",
+        "hash": "7461b8f4",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "fd550b",
+        "hash": "13168142",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "fd550b",
+        "hash": "87967258",
+        "encoded": "%7B/*%20Balance%20Enquiry%20Tile%20*/%7D",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "fd550b",
+        "hash": "c462fafa",
+        "encoded": "%3Cdiv%20className=%22aspect-square%22%20role=%22gridcell%22%3E",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "fd550b",
+        "hash": "106cad74",
+        "encoded": "%3CDashboardTile",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "fd550b",
+        "hash": "9096fe6f",
+        "encoded": "title=%22Balance%20Enquiry%22",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "fd550b",
+        "hash": "25a82478",
+        "encoded": "icon=%7B%3CBalanceEnquiryIcon%20/%3E%7D",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "fd550b",
+        "hash": "09b28969",
+        "encoded": "onClick=%7BonBalanceEnquiryTileClick%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "fd550b",
+        "hash": "7d526265",
+        "encoded": "ariaLabel=%22Navigate%20to%20Balance%20Enquiry%22",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "fd550b",
+        "hash": "e98ac65f",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "fd550b",
+        "hash": "f687fb74",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "fd550b",
+        "hash": "8c61d389",
+        "encoded": "%7B/*%20Transfer%20Funds%20Tile%20*/%7D",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "fd550b",
+        "hash": "307fadf7",
+        "encoded": "%3Cdiv%20className=%22aspect-square%22%20role=%22gridcell%22%3E",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "fd550b",
+        "hash": "ef156279",
+        "encoded": "%3CDashboardTile",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "fd550b",
+        "hash": "d86358b2",
+        "encoded": "title=%22Transfer%20Funds%22",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "fd550b",
+        "hash": "19908e0d",
+        "encoded": "icon=%7B%3CTransferFundsIcon%20/%3E%7D",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "fd550b",
+        "hash": "84c9d0ef",
+        "encoded": "onClick=%7BonTransferFundsTileClick%7D",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "fd550b",
+        "hash": "8f507f0d",
+        "encoded": "ariaLabel=%22Navigate%20to%20Transfer%20Funds%22",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "fd550b",
+        "hash": "568330d0",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "fd550b",
+        "hash": "27a53cb4",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "fd550b",
+        "hash": "1334f196",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "fd550b",
+        "hash": "ae271f8c",
+        "encoded": ");",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

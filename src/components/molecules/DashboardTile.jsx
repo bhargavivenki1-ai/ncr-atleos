@@ -46,8 +46,8 @@ const DashboardTile = ({
       className={`
         bg-card-background rounded-16 p-4 
         shadow-[0px_2px_7px_rgba(0,0,0,0.08)] 
-        flex flex-col justify-between gap-12
-        min-h-[120px] w-full
+        flex flex-col justify-between
+        h-full w-full
         transition-all duration-200
         ${disabled 
           ? 'opacity-50 cursor-not-allowed' 

@@ -1,0 +1,165 @@
+{
+  "public/index.html": {
+    "filename": "index.html",
+    "path": "public/index.html",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "33359f": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773116306,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "dbb003e7",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "33359f",
+        "hash": "e7340e15",
+        "encoded": "%3C!DOCTYPE%20html%3E",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "33359f",
+        "hash": "43684ad9",
+        "encoded": "%3Chtml%20lang=%22en%22%3E",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "33359f",
+        "hash": "8bf19007",
+        "encoded": "%3Chead%3E",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "33359f",
+        "hash": "a5074a41",
+        "encoded": "%3Cmeta%20charset=%22utf-8%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "33359f",
+        "hash": "73d3167d",
+        "encoded": "%3Clink%20rel=%22icon%22%20href=%22%25PUBLIC_URL%25/favicon.ico%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "33359f",
+        "hash": "431e1b45",
+        "encoded": "%3Cmeta%20name=%22viewport%22%20content=%22width=device-width,%20initial-scale=1%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "33359f",
+        "hash": "01e03dc1",
+        "encoded": "%3Cmeta%20name=%22theme-color%22%20content=%22#000000%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "33359f",
+        "hash": "82d22b33",
+        "encoded": "%3Cmeta",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "33359f",
+        "hash": "0a035f56",
+        "encoded": "name=%22description%22",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "33359f",
+        "hash": "62c485d1",
+        "encoded": "content=%22ATM%20Cash%20Withdrawal%20Journey%20-%20A%20modern,%20accessible,%20and%20responsive%20ATM%20interface%22",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "33359f",
+        "hash": "6d7b2aff",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "33359f",
+        "hash": "7f9b8037",
+        "encoded": "%3Clink%20rel=%22apple-touch-icon%22%20href=%22%25PUBLIC_URL%25/logo192.png%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "33359f",
+        "hash": "92556b0c",
+        "encoded": "%3Clink%20rel=%22manifest%22%20href=%22%25PUBLIC_URL%25/manifest.json%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "33359f",
+        "hash": "6babe420",
+        "encoded": "%3Clink%20rel=%22preconnect%22%20href=%22https://fonts.googleapis.com%22%3E",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "33359f",
+        "hash": "6df1d6f3",
+        "encoded": "%3Clink%20rel=%22preconnect%22%20href=%22https://fonts.gstatic.com%22%20crossorigin%3E",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "33359f",
+        "hash": "32a4acc2",
+        "encoded": "%3Clink%20href=%22https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap%22%20rel=%22stylesheet%22%3E",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "33359f",
+        "hash": "28d934d0",
+        "encoded": "%3Ctitle%3ENCR%20ATLEOS%20ATM%3C/title%3E",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "33359f",
+        "hash": "3dfbb4cf",
+        "encoded": "%3C/head%3E",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "33359f",
+        "hash": "3d498c97",
+        "encoded": "%3Cbody%3E",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "33359f",
+        "hash": "fd980fe5",
+        "encoded": "%3Cnoscript%3EYou%20need%20to%20enable%20JavaScript%20to%20run%20this%20app.%3C/noscript%3E",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "33359f",
+        "hash": "b0f14579",
+        "encoded": "%3Cdiv%20id=%22root%22%3E%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "33359f",
+        "hash": "1fdb8447",
+        "encoded": "%3C/body%3E",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "33359f",
+        "hash": "93b098d0",
+        "encoded": "%3C/html%3E",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

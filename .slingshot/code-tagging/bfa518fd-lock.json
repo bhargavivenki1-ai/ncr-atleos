@@ -1,0 +1,410 @@
+{
+  "src/pages/ATMCashWithdrawal.jsx": {
+    "filename": "ATMCashWithdrawal.jsx",
+    "path": "src/pages/ATMCashWithdrawal.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "5c043b": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773119547,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "e006fb4a",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "ba3365": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773119550,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "cf6fd653",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "861f88": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773119567,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "99977312",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "f5b3ae": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773119605,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "944c965f",
+        "messageId": "5285cb98-1d6b-4d74-ac80-33363f7a3165",
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "5c043b",
+        "hash": "0b9c5fc1",
+        "encoded": "import%20React,%20%7B%20useState%20%7D%20from%20'react';",
+        "prevChunkIds": [
+          "5c043b"
+        ]
+      },
+      "1": {
+        "chunkId": "5c043b",
+        "hash": "2abe3658",
+        "encoded": "import%20%7B%20useNavigate%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": [
+          "5c043b"
+        ]
+      },
+      "2": {
+        "chunkId": "5c043b",
+        "hash": "bae85b93",
+        "encoded": "import%20Header%20from%20'../components/organisms/Header';",
+        "prevChunkIds": [
+          "5c043b"
+        ]
+      },
+      "3": {
+        "chunkId": "5c043b",
+        "hash": "0125872f",
+        "encoded": "import%20CardDetailsForm%20from%20'../components/organisms/CardDetailsForm';",
+        "prevChunkIds": [
+          "5c043b"
+        ]
+      },
+      "4": {
+        "chunkId": "5c043b",
+        "hash": "8f57b54d",
+        "encoded": "import%20AmountSelection%20from%20'../components/organisms/AmountSelection';",
+        "prevChunkIds": [
+          "5c043b"
+        ]
+      },
+      "5": {
+        "chunkId": "5c043b",
+        "hash": "9f35a6d3",
+        "encoded": "import%20Button%20from%20'../components/atoms/Button';",
+        "prevChunkIds": [
+          "5c043b"
+        ]
+      },
+      "6": {
+        "chunkId": "5c043b",
+        "hash": "fe6be944",
+        "encoded": "import%20GestureIndicator%20from%20'../components/atoms/GestureIndicator';",
+        "prevChunkIds": [
+          "5c043b"
+        ]
+      },
+      "8": {
+        "chunkId": "ba3365",
+        "hash": "cfd8e328",
+        "encoded": "/**",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "9": {
+        "chunkId": "ba3365",
+        "hash": "40509879",
+        "encoded": "*%20ATMCashWithdrawal%20page%20component",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "10": {
+        "chunkId": "ba3365",
+        "hash": "5f8f6f43",
+        "encoded": "*%20Main%20page%20for%20ATM%20cash%20withdrawal%20functionality",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "11": {
+        "chunkId": "ba3365",
+        "hash": "c27421dc",
+        "encoded": "*/",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "12": {
+        "chunkId": "ba3365",
+        "hash": "db342503",
+        "encoded": "const%20ATMCashWithdrawal%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "13": {
+        "chunkId": "ba3365",
+        "hash": "16d96f97",
+        "encoded": "const%20navigate%20=%20useNavigate();",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "14": {
+        "chunkId": "ba3365",
+        "hash": "e6c95816",
+        "encoded": "const%20%5BcardDetails,%20setCardDetails%5D%20=%20useState(%7B",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "15": {
+        "chunkId": "ba3365",
+        "hash": "c7f967cd",
+        "encoded": "cardNumber:%20'',",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "16": {
+        "chunkId": "ba3365",
+        "hash": "5524358f",
+        "encoded": "expiryDate:%20'',",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "17": {
+        "chunkId": "ba3365",
+        "hash": "05809a3c",
+        "encoded": "cvv:%20'',",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "18": {
+        "chunkId": "ba3365",
+        "hash": "5e0d37d5",
+        "encoded": "fullName:%20''",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "19": {
+        "chunkId": "ba3365",
+        "hash": "1b686da9",
+        "encoded": "%7D);",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "20": {
+        "chunkId": "ba3365",
+        "hash": "f8325b4d",
+        "encoded": "const%20%5BselectedAmount,%20setSelectedAmount%5D%20=%20useState('');",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "21": {
+        "chunkId": "ba3365",
+        "hash": "519fb698",
+        "encoded": "const%20%5Berrors,%20setErrors%5D%20=%20useState(%7B%7D);",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "22": {
+        "chunkId": "ba3365",
+        "hash": "8d51349c",
+        "encoded": "const%20%5BisLoading,%20setIsLoading%5D%20=%20useState(false);",
+        "prevChunkIds": [
+          "ba3365"
+        ]
+      },
+      "79": {
+        "chunkId": "861f88",
+        "hash": "287d51e3",
+        "encoded": "const%20handleScanCard%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "861f88",
+        "hash": "a6ecc138",
+        "encoded": "//%20Mock%20card%20scanning%20functionality",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "861f88",
+        "hash": "b7df1ef1",
+        "encoded": "console.log('Card%20scanning%20initiated');",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "861f88",
+        "hash": "ee4725fc",
+        "encoded": "//%20In%20a%20real%20implementation,%20this%20would%20open%20the%20camera%20interface",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "861f88",
+        "hash": "3485e57c",
+        "encoded": "alert('Card%20scanning%20feature%20would%20open%20camera%20interface');",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "861f88",
+        "hash": "32ff0a6f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "861f88",
+        "hash": "2c073628",
+        "encoded": "const%20handleBackToDashboard%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "861f88",
+        "hash": "be1a2cc8",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "861f88",
+        "hash": "548cc23c",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "f5b3ae",
+        "hash": "5250285f",
+        "encoded": "%3Cdiv%20className=%22flex%20flex-col%20min-h-screen%20bg-%5B#FFFBFA%5D%22%3E",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "f5b3ae",
+        "hash": "4fa5d7ab",
+        "encoded": "%7B/*%20Header%20*/%7D",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "f5b3ae",
+        "hash": "aee62c91",
+        "encoded": "%3CHeader%20title=%22ATM%20Cash%20Withdrawal%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "f5b3ae",
+        "hash": "f82e7222",
+        "encoded": "%7B/*%20Back%20to%20Dashboard%20Link%20*/%7D",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "f5b3ae",
+        "hash": "8bedb44b",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20pt-4%20pb-2%22%3E",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "f5b3ae",
+        "hash": "1c81bbd8",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "f5b3ae",
+        "hash": "3e366fbb",
+        "encoded": "onClick=%7BhandleBackToDashboard%7D",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "f5b3ae",
+        "hash": "35ddde83",
+        "encoded": "className=%22flex%20items-center%20gap-2%20text-%5B#1B281E%5D%20hover:text-%5B#277C3D%5D%20transition-colors%22",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "f5b3ae",
+        "hash": "b3669df8",
+        "encoded": "aria-label=%22Back%20to%20Dashboard%22",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "f5b3ae",
+        "hash": "c13a99c9",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "f5b3ae",
+        "hash": "ec605fca",
+        "encoded": "%3Csvg%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "f5b3ae",
+        "hash": "17f7c0e8",
+        "encoded": "%3Cpath%20d=%22M10%2012L6%208L10%204%22%20stroke=%22currentColor%22%20strokeWidth=%222%22%20strokeLinecap=%22round%22%20strokeLinejoin=%22round%22/%3E",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "f5b3ae",
+        "hash": "f12adfbe",
+        "encoded": "%3C/svg%3E",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "f5b3ae",
+        "hash": "6b51545f",
+        "encoded": "%3Cspan%20className=%22font-%5B'Plus_Jakarta_Sans'%5D%20font-medium%20text-%5B16px%5D%22%3EBack%20to%20Dashboard%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "f5b3ae",
+        "hash": "c7fb7a62",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "f5b3ae",
+        "hash": "ad4b5bba",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "f5b3ae",
+        "hash": "d02cc935",
+        "encoded": "%7B/*%20Main%20Content%20*/%7D",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "f5b3ae",
+        "hash": "a0370799",
+        "encoded": "%3Cmain%20className=%22flex%20flex-col%20self-stretch%20flex-1%22%3E",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

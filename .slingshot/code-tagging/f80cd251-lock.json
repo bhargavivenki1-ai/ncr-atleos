@@ -1,0 +1,159 @@
+{
+  "ncr-atleos/src/components/molecules/DashboardTile.jsx": {
+    "filename": "DashboardTile.jsx",
+    "path": "ncr-atleos/src/components/molecules/DashboardTile.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "228180": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773126731,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "160cd9be",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "38": {
+        "chunkId": "228180",
+        "hash": "ee78afb6",
+        "encoded": "%3Cdiv",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "228180",
+        "hash": "a9b6cb16",
+        "encoded": "role=%22button%22",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "228180",
+        "hash": "d0057091",
+        "encoded": "tabIndex=%7Bdisabled%20?%20-1%20:%200%7D",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "228180",
+        "hash": "2ba9e928",
+        "encoded": "onClick=%7BhandleClick%7D",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "228180",
+        "hash": "80603c6e",
+        "encoded": "onKeyDown=%7BhandleKeyDown%7D",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "228180",
+        "hash": "a51bf41f",
+        "encoded": "aria-label=%7BariaLabel%20%7C%7C%20title%7D",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "228180",
+        "hash": "3772dcda",
+        "encoded": "aria-disabled=%7Bdisabled%7D",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "228180",
+        "hash": "409fe216",
+        "encoded": "className=%7B%60",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "228180",
+        "hash": "405bdf16",
+        "encoded": "bg-card-background%20rounded-16%20p-4",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "228180",
+        "hash": "7cc67f66",
+        "encoded": "shadow-%5B0px_2px_7px_rgba(0,0,0,0.08)%5D",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "228180",
+        "hash": "e853337f",
+        "encoded": "flex%20flex-col%20justify-between",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "228180",
+        "hash": "cc1ad145",
+        "encoded": "h-full%20w-full",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "228180",
+        "hash": "3b7f81ee",
+        "encoded": "transition-all%20duration-200",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "228180",
+        "hash": "f1880831",
+        "encoded": "$%7Bdisabled",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "228180",
+        "hash": "11dff975",
+        "encoded": "?%20'opacity-50%20cursor-not-allowed'",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "228180",
+        "hash": "fafecf71",
+        "encoded": ":%20'cursor-pointer%20hover:shadow-%5B0px_4px_14px_rgba(0,0,0,0.12)%5D%20active:scale-%5B0.98%5D'",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "228180",
+        "hash": "5c9d24d4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "228180",
+        "hash": "986ed587",
+        "encoded": "focus:outline-none%20focus:ring-2%20focus:ring-text-primary%20focus:ring-offset-2",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "228180",
+        "hash": "deed6535",
+        "encoded": "$%7BclassName%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "228180",
+        "hash": "cf53c98f",
+        "encoded": "%60%7D",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "228180",
+        "hash": "c1d11fd4",
+        "encoded": "%7B...props%7D",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "228180",
+        "hash": "1e7b9d54",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

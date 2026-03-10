@@ -1,0 +1,273 @@
+{
+  "ncr-atleos/src/components/molecules/ActionButtons.jsx": {
+    "filename": "ActionButtons.jsx",
+    "path": "ncr-atleos/src/components/molecules/ActionButtons.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "0cc572": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773122236,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentEditTool",
+        "extraContext": {},
+        "hash": "56f8cb8d",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "11": {
+        "chunkId": "0cc572",
+        "hash": "467e527c",
+        "encoded": "const%20ActionButtons%20=%20(%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "0cc572",
+        "hash": "a00122d4",
+        "encoded": "onSubmit,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "0cc572",
+        "hash": "28b21f64",
+        "encoded": "onCancel,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "0cc572",
+        "hash": "8227f559",
+        "encoded": "isSubmitting%20=%20false,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "0cc572",
+        "hash": "a89839ee",
+        "encoded": "isFormValid%20=%20false",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "0cc572",
+        "hash": "341de0e7",
+        "encoded": "%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "0cc572",
+        "hash": "56ef7880",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "0cc572",
+        "hash": "c6382a81",
+        "encoded": "%3Cdiv%20className=%22flex%20flex-col%20self-stretch%20gap-4%22%3E",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "0cc572",
+        "hash": "9ed85b53",
+        "encoded": "%7B/*%20Submit%20Button%20*/%7D",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "0cc572",
+        "hash": "6031ac26",
+        "encoded": "%3Cdiv%20className=%22flex%20flex-row%20justify-stretch%20items-stretch%20self-stretch%20gap-4%20px-4%22%3E",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "0cc572",
+        "hash": "0fb2f17b",
+        "encoded": "%3CButton",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "0cc572",
+        "hash": "422d0c93",
+        "encoded": "variant=%22fundsTransferPrimary%22",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "0cc572",
+        "hash": "9554e236",
+        "encoded": "size=%22fundsTransferLarge%22",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "0cc572",
+        "hash": "dfa13a50",
+        "encoded": "onClick=%7BonSubmit%7D",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "0cc572",
+        "hash": "5775e6a9",
+        "encoded": "disabled=%7B!isFormValid%20%7C%7C%20isSubmitting%7D",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "0cc572",
+        "hash": "39e7812a",
+        "encoded": "loading=%7BisSubmitting%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "0cc572",
+        "hash": "c96f806d",
+        "encoded": "type=%22submit%22",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "0cc572",
+        "hash": "44bacea3",
+        "encoded": "ariaLabel=%22Submit%20transfer%22",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "0cc572",
+        "hash": "34efd319",
+        "encoded": "className=%22flex-1%22",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "0cc572",
+        "hash": "342678df",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "0cc572",
+        "hash": "a23a9163",
+        "encoded": "Submit",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "0cc572",
+        "hash": "6516ea2b",
+        "encoded": "%3C/Button%3E",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "0cc572",
+        "hash": "3fd0b940",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "0cc572",
+        "hash": "c759af63",
+        "encoded": "%7B/*%20Cancel%20Button%20*/%7D",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "0cc572",
+        "hash": "095e2b51",
+        "encoded": "%3Cdiv%20className=%22flex%20flex-row%20justify-stretch%20items-stretch%20self-stretch%20gap-4%20px-4%22%3E",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "0cc572",
+        "hash": "dac6b2f4",
+        "encoded": "%3CButton",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "0cc572",
+        "hash": "4bed8ece",
+        "encoded": "variant=%22fundsTransferSecondary%22",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "0cc572",
+        "hash": "df94c2d3",
+        "encoded": "size=%22fundsTransferLarge%22",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "0cc572",
+        "hash": "759c72f4",
+        "encoded": "onClick=%7BonCancel%7D",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "0cc572",
+        "hash": "876f7c4e",
+        "encoded": "disabled=%7BisSubmitting%7D",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "0cc572",
+        "hash": "88511df5",
+        "encoded": "ariaLabel=%22Cancel%20transfer%22",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "0cc572",
+        "hash": "d375f2ab",
+        "encoded": "className=%22flex-1%22",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "0cc572",
+        "hash": "56d68204",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "0cc572",
+        "hash": "05cd5f21",
+        "encoded": "%3Cspan%20className=%22flex%20items-center%20justify-center%20gap-2%22%3E",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "0cc572",
+        "hash": "f61afa4f",
+        "encoded": "%7B/*%20Icon%20placeholder%20*/%7D",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "0cc572",
+        "hash": "1c07c373",
+        "encoded": "%3Cspan%3ECancel%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "0cc572",
+        "hash": "d9610f7d",
+        "encoded": "%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "0cc572",
+        "hash": "3bb37c70",
+        "encoded": "%3C/Button%3E",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "0cc572",
+        "hash": "0915f7af",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "0cc572",
+        "hash": "32726c3e",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "0cc572",
+        "hash": "977fc674",
+        "encoded": ");",
+        "prevChunkIds": []
+      }
+    }
+  }
+}
