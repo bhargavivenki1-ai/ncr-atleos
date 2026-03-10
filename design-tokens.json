@@ -1,0 +1,151 @@
+{
+  "colors": {
+    "background": {
+      "primary": "#FFFBFA",
+      "card": "#FFFFFC",
+      "input": "rgba(126, 52, 37, 0.09)",
+      "gestureIndicator": "rgba(126, 53, 37, 0.09)",
+      "dark": "#0D0402",
+      "inputDark": "rgba(224, 191, 184, 0.12)",
+      "gestureIndicatorDark": "rgba(218, 145, 129, 0.09)",
+      "balanceEnquiry": {
+        "primary": "#FBFEFC",
+        "card": "#FDFEFD",
+        "button": "rgba(39, 124, 61, 0.09)"
+      },
+      "fundsTransfer": {
+        "primary": "#0D0402",
+        "input": "rgba(224, 191, 184, 0.12)",
+        "gestureIndicator": "rgba(218, 145, 129, 0.09)"
+      }
+    },
+    "text": {
+      "primary": "#281D1B",
+      "secondary": "rgba(46, 24, 20, 0.62)",
+      "button": "#000000",
+      "white": "#FFFFFF",
+      "light": "#E4DAD7",
+      "placeholder": "rgba(235, 213, 209, 0.62)",
+      "icon": "#6E5049",
+      "iconDark": "#281D1B",
+      "balanceEnquiry": {
+        "primary": "#1B281E",
+        "secondary": "rgba(20, 46, 27, 0.62)",
+        "white": "#FFFFFF"
+      },
+      "fundsTransfer": {
+        "primary": "#E4DAD7",
+        "placeholder": "rgba(235, 213, 209, 0.62)",
+        "button": "#000000",
+        "buttonSecondary": "#E4DAD7"
+      }
+    },
+    "button": {
+      "primary": "#FF5733",
+      "primaryDark": "#F24822",
+      "balanceEnquiry": {
+        "secondary": "rgba(39, 124, 61, 0.09)"
+      },
+      "fundsTransfer": {
+        "primary": "#FF5733",
+        "secondary": "rgba(224, 191, 184, 0.12)",
+        "tertiary": "rgba(182, 151, 145, 0.2)"
+      }
+    },
+    "stroke": {
+      "primary": "#FF5733",
+      "iconDark": "#281D1B",
+      "iconMedium": "#6E5049",
+      "balanceEnquiry": {
+        "primary": "#1B2128"
+      },
+      "fundsTransfer": {
+        "tertiary": "rgba(182, 151, 145, 0.2)"
+      }
+    },
+    "shadow": {
+      "card": "0px 2px 7px rgba(0, 0, 0, 0.08)"
+    },
+    "battery": {
+      "outline": "rgba(46, 24, 20, 0.4)",
+      "fill": "#281D1B",
+      "balanceEnquiry": {
+        "outline": "rgba(20, 46, 27, 0.4)",
+        "fill": "#1B281E"
+      }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "primary": "Inter",
+      "secondary": "Public Sans",
+      "balanceEnquiry": "Plus Jakarta Sans"
+    },
+    "fontSize": {
+      "status": "17px",
+      "title": "17px",
+      "heading": "22px",
+      "input": "17px",
+      "button": "17px",
+      "small": "15px",
+      "balanceEnquiry": {
+        "status": "17px",
+        "title": "17px",
+        "balance": "34px",
+        "available": "15px",
+        "button": "17px",
+        "tipLabel": "17px"
+      },
+      "fundsTransfer": {
+        "status": "17px",
+        "title": "17px",
+        "input": "17px",
+        "button": "17px",
+        "small": "15px"
+      }
+    },
+    "fontWeight": {
+      "regular": 400,
+      "medium": 500,
+      "semibold": 600,
+      "bold": 700
+    },
+    "lineHeight": {
+      "tight": "1.21em",
+      "normal": "1.35em",
+      "heading": "1.30em",
+      "compact": "1.17em",
+      "balanceEnquiry": {
+        "tight": "1.21em",
+        "normal": "1.35em",
+        "title": "1.26em"
+      }
+    },
+    "letterSpacing": {
+      "tight": "-2%",
+      "normal": "-0.5%"
+    }
+  },
+  "spacing": {
+    "xs": "2px",
+    "sm": "8px",
+    "md": "13px",
+    "lg": "18px",
+    "xl": "28px"
+  },
+  "borderRadius": {
+    "sm": "4px",
+    "md": "6px",
+    "lg": "20px",
+    "xl": "48px",
+    "full": "360px"
+  },
+  "layout": {
+    "header": {
+      "height": "104px"
+    },
+    "button": {
+      "height": "50px"
+    }
+  }
+}
