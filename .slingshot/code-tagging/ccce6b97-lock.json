@@ -1,0 +1,3057 @@
+{
+  "backend/API_DOCUMENTATION.md": {
+    "filename": "API_DOCUMENTATION.md",
+    "path": "backend/API_DOCUMENTATION.md",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "ab2187": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773135477,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "dc5e6948",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ab2187",
+        "hash": "5f440f39",
+        "encoded": "#%20NCR%20ATLEOS%20ATM%20Backend%20API%20Documentation",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ab2187",
+        "hash": "c6dfc5b3",
+        "encoded": "##%20Base%20URL",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "ab2187",
+        "hash": "02cc302d",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "ab2187",
+        "hash": "9268f19a",
+        "encoded": "http://localhost:3001/api",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "ab2187",
+        "hash": "57e19d6c",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "ab2187",
+        "hash": "96c19468",
+        "encoded": "##%20Authentication",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ab2187",
+        "hash": "ed10c5a1",
+        "encoded": "Most%20endpoints%20require%20authentication%20using%20JWT%20tokens.%20Include%20the%20token%20in%20the%20Authorization%20header:",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "ab2187",
+        "hash": "be324ff5",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "ab2187",
+        "hash": "a23fe795",
+        "encoded": "Authorization:%20Bearer%20%3Cyour-jwt-token%3E",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "ab2187",
+        "hash": "585a461f",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "ab2187",
+        "hash": "bc1d8e73",
+        "encoded": "##%20Response%20Format",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "ab2187",
+        "hash": "d8f2cd00",
+        "encoded": "All%20API%20responses%20follow%20a%20consistent%20format:",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "ab2187",
+        "hash": "751d2057",
+        "encoded": "###%20Success%20Response",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "ab2187",
+        "hash": "6b8c459d",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "ab2187",
+        "hash": "52ce85a9",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "ab2187",
+        "hash": "2230ee66",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "ab2187",
+        "hash": "47bc3859",
+        "encoded": "%22data%22:%20%7B...%7D,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "ab2187",
+        "hash": "968b3d72",
+        "encoded": "%22message%22:%20%22Operation%20completed%20successfully%22",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "ab2187",
+        "hash": "840004ae",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "ab2187",
+        "hash": "d7b9acaf",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "ab2187",
+        "hash": "5d6dd8bc",
+        "encoded": "###%20Error%20Response",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "ab2187",
+        "hash": "2cfe76ce",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "ab2187",
+        "hash": "a508025f",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "ab2187",
+        "hash": "a90c3f89",
+        "encoded": "%22success%22:%20false,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "ab2187",
+        "hash": "136eb602",
+        "encoded": "%22error%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "ab2187",
+        "hash": "07778fa9",
+        "encoded": "%22type%22:%20%22ERROR_TYPE%22,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "ab2187",
+        "hash": "aff17298",
+        "encoded": "%22message%22:%20%22Error%20description%22",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "ab2187",
+        "hash": "da1b69e9",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "ab2187",
+        "hash": "2de68494",
+        "encoded": "%22timestamp%22:%20%222024-01-15T10:30:00.000Z%22",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "ab2187",
+        "hash": "880eeeff",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "ab2187",
+        "hash": "89af75d2",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "ab2187",
+        "hash": "b9bee443",
+        "encoded": "##%20Authentication%20Endpoints",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "ab2187",
+        "hash": "d08cfc6c",
+        "encoded": "###%20Login",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "ab2187",
+        "hash": "8cafb10c",
+        "encoded": "**POST**%20%60/auth/login%60",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "ab2187",
+        "hash": "79b6b612",
+        "encoded": "Authenticate%20user%20with%20PIN.",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "ab2187",
+        "hash": "ddef4b94",
+        "encoded": "**Request%20Body:**",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "ab2187",
+        "hash": "105de67a",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "ab2187",
+        "hash": "897b952a",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "ab2187",
+        "hash": "eff9fc01",
+        "encoded": "%22pin%22:%20%221234%22",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "ab2187",
+        "hash": "38b604dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "ab2187",
+        "hash": "b99b67e3",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "ab2187",
+        "hash": "598c3bba",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "ab2187",
+        "hash": "8b366a55",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "ab2187",
+        "hash": "e7c8cba0",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "ab2187",
+        "hash": "053b7642",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "ab2187",
+        "hash": "a2938e84",
+        "encoded": "%22message%22:%20%22Login%20successful%22,",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "ab2187",
+        "hash": "e153a244",
+        "encoded": "%22token%22:%20%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...%22,",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "ab2187",
+        "hash": "c8ce4790",
+        "encoded": "%22refreshToken%22:%20%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...%22,",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "ab2187",
+        "hash": "b8c7a5d0",
+        "encoded": "%22user%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "ab2187",
+        "hash": "4e613b50",
+        "encoded": "%22id%22:%20%22mock-user-12345%22,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "ab2187",
+        "hash": "3926f08c",
+        "encoded": "%22userId%22:%20%22mock-user-12345%22,",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "ab2187",
+        "hash": "44c16131",
+        "encoded": "%22name%22:%20%22John%20Doe%22,",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "ab2187",
+        "hash": "c4274e66",
+        "encoded": "%22accounts%22:%20%5B...%5D,",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "ab2187",
+        "hash": "cc55963f",
+        "encoded": "%22preferences%22:%20%7B...%7D,",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "ab2187",
+        "hash": "e48cbee2",
+        "encoded": "%22lastLogin%22:%20%222024-01-15T10:30:00.000Z%22",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "ab2187",
+        "hash": "8dec3385",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "ab2187",
+        "hash": "a3c41d86",
+        "encoded": "%22expiresIn%22:%20%221h%22",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "ab2187",
+        "hash": "352e9b23",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "ab2187",
+        "hash": "6edcfbbd",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "ab2187",
+        "hash": "0049faea",
+        "encoded": "**Error%20Codes:**",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "ab2187",
+        "hash": "8444bd72",
+        "encoded": "-%20%60400%60%20-%20Invalid%20PIN%20format",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "ab2187",
+        "hash": "883e8437",
+        "encoded": "-%20%60401%60%20-%20Incorrect%20PIN",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "ab2187",
+        "hash": "6be0ba68",
+        "encoded": "-%20%60403%60%20-%20Account%20locked",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "ab2187",
+        "hash": "e87baf60",
+        "encoded": "-%20%60429%60%20-%20Too%20many%20attempts",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "ab2187",
+        "hash": "e53473e7",
+        "encoded": "###%20Logout",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "ab2187",
+        "hash": "22ba57bb",
+        "encoded": "**POST**%20%60/auth/logout%60",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "ab2187",
+        "hash": "235680e9",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "ab2187",
+        "hash": "84cb8952",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "ab2187",
+        "hash": "67a903ab",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "ab2187",
+        "hash": "a26e8635",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "ab2187",
+        "hash": "f84ea324",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "ab2187",
+        "hash": "f0678ea9",
+        "encoded": "%22message%22:%20%22Logout%20successful%22",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "ab2187",
+        "hash": "9b477039",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "ab2187",
+        "hash": "772559c5",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "ab2187",
+        "hash": "e2bae7b4",
+        "encoded": "###%20Refresh%20Token",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "ab2187",
+        "hash": "d2d053aa",
+        "encoded": "**POST**%20%60/auth/refresh%60",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "ab2187",
+        "hash": "88621dfe",
+        "encoded": "Refresh%20authentication%20token%20using%20refresh%20token.",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "ab2187",
+        "hash": "dc21ee5b",
+        "encoded": "**Request%20Body:**",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "ab2187",
+        "hash": "2ae4cd5f",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "ab2187",
+        "hash": "b57d583d",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "ab2187",
+        "hash": "f9041874",
+        "encoded": "%22refreshToken%22:%20%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...%22",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "ab2187",
+        "hash": "6bf91891",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "ab2187",
+        "hash": "d31b20af",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "ab2187",
+        "hash": "153e3f6f",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "ab2187",
+        "hash": "a9c80876",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "ab2187",
+        "hash": "caa9b968",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "ab2187",
+        "hash": "883f3f29",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "ab2187",
+        "hash": "b22567e6",
+        "encoded": "%22token%22:%20%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...%22,",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "ab2187",
+        "hash": "959e2b00",
+        "encoded": "%22refreshToken%22:%20%22eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...%22,",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "ab2187",
+        "hash": "afd110f2",
+        "encoded": "%22expiresIn%22:%20%221h%22",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "ab2187",
+        "hash": "367981c3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "ab2187",
+        "hash": "2c0ea294",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "ab2187",
+        "hash": "840db671",
+        "encoded": "###%20Validate%20Session",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "ab2187",
+        "hash": "964ca36c",
+        "encoded": "**GET**%20%60/auth/validate%60",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "ab2187",
+        "hash": "35054c01",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "ab2187",
+        "hash": "8ab1cc9f",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "ab2187",
+        "hash": "dd52d560",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "ab2187",
+        "hash": "d4373d57",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "ab2187",
+        "hash": "81ed9849",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "ab2187",
+        "hash": "aa4699fb",
+        "encoded": "%22valid%22:%20true,",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "ab2187",
+        "hash": "1ff28a85",
+        "encoded": "%22user%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "ab2187",
+        "hash": "6e7eae86",
+        "encoded": "%22id%22:%20%22mock-user-12345%22,",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "ab2187",
+        "hash": "e818f268",
+        "encoded": "%22name%22:%20%22John%20Doe%22,",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "ab2187",
+        "hash": "4d780b30",
+        "encoded": "%22lastActivity%22:%20%222024-01-15T10:30:00.000Z%22",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "ab2187",
+        "hash": "74f7c40c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "ab2187",
+        "hash": "ff6991dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "ab2187",
+        "hash": "1dde459f",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "ab2187",
+        "hash": "33440497",
+        "encoded": "##%20ATM%20Transaction%20Endpoints",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "ab2187",
+        "hash": "110f07c4",
+        "encoded": "###%20Stage%20Withdrawal",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "ab2187",
+        "hash": "a220e060",
+        "encoded": "**POST**%20%60/atm/transactions/withdrawal%60",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "ab2187",
+        "hash": "86badc63",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "ab2187",
+        "hash": "7402ada3",
+        "encoded": "Stage%20a%20cash%20withdrawal%20transaction.",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "ab2187",
+        "hash": "1d6facee",
+        "encoded": "**Request%20Body:**",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "ab2187",
+        "hash": "a40a9fea",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "ab2187",
+        "hash": "15a0ec37",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "ab2187",
+        "hash": "28a274d6",
+        "encoded": "%22cardToken%22:%20%22tok_abc123def456ghi789%22,",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "ab2187",
+        "hash": "39668db2",
+        "encoded": "%22amount%22:%20100.00",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "ab2187",
+        "hash": "2d25e64b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "ab2187",
+        "hash": "05a4771b",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "ab2187",
+        "hash": "158fc71a",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "ab2187",
+        "hash": "d377bbf9",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "ab2187",
+        "hash": "f247405e",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "ab2187",
+        "hash": "4952fa47",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "ab2187",
+        "hash": "f7618a0c",
+        "encoded": "%22message%22:%20%22Transaction%20staged%20successfully%22,",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "ab2187",
+        "hash": "deaf3a81",
+        "encoded": "%22transactionId%22:%20%22txn_xyz789abc123%22,",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "ab2187",
+        "hash": "6a37c575",
+        "encoded": "%22status%22:%20%22staged%22,",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "ab2187",
+        "hash": "969530a2",
+        "encoded": "%22amount%22:%20100.00,",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "ab2187",
+        "hash": "b2c9b9a5",
+        "encoded": "%22externalTransactionId%22:%20%22atm_mock_def456ghi789%22,",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "ab2187",
+        "hash": "14596d25",
+        "encoded": "%22estimatedCompletionTime%22:%20%222024-01-15T10:35:00.000Z%22",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "ab2187",
+        "hash": "53cff946",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "ab2187",
+        "hash": "c681a864",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "ab2187",
+        "hash": "aa39a4be",
+        "encoded": "**Validation%20Rules:**",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "ab2187",
+        "hash": "db682021",
+        "encoded": "-%20%60cardToken%60:%20Required,%2010-64%20characters,%20alphanumeric%20with%20hyphens/underscores",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "ab2187",
+        "hash": "816b4e38",
+        "encoded": "-%20%60amount%60:%20Required,%200.01-1000.00,%20max%202%20decimal%20places",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "ab2187",
+        "hash": "6ed42afc",
+        "encoded": "###%20Stage%20Deposit",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "ab2187",
+        "hash": "2c3537c1",
+        "encoded": "**POST**%20%60/atm/transactions/deposit%60",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "ab2187",
+        "hash": "abfd1970",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "ab2187",
+        "hash": "1bd77579",
+        "encoded": "Stage%20a%20cash%20deposit%20transaction.",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "ab2187",
+        "hash": "d06d8e9d",
+        "encoded": "**Request%20Body:**",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "ab2187",
+        "hash": "262b826f",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "ab2187",
+        "hash": "403a6727",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "ab2187",
+        "hash": "f3ba8467",
+        "encoded": "%22cardToken%22:%20%22tok_abc123def456ghi789%22,",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "ab2187",
+        "hash": "09cf2838",
+        "encoded": "%22amount%22:%20200.00%20%20//%20Optional",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "ab2187",
+        "hash": "e0563286",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "ab2187",
+        "hash": "4febba7e",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "ab2187",
+        "hash": "68b189da",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "ab2187",
+        "hash": "ad398c64",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "ab2187",
+        "hash": "996a350e",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "ab2187",
+        "hash": "057c5dc0",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "ab2187",
+        "hash": "ee33ea4a",
+        "encoded": "%22message%22:%20%22Transaction%20staged%20successfully%22,",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "ab2187",
+        "hash": "91633011",
+        "encoded": "%22transactionId%22:%20%22txn_xyz789abc123%22,",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "ab2187",
+        "hash": "c7750ad9",
+        "encoded": "%22status%22:%20%22staged%22,",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "ab2187",
+        "hash": "fc4e491e",
+        "encoded": "%22amount%22:%20200.00,",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "ab2187",
+        "hash": "93aba40e",
+        "encoded": "%22externalTransactionId%22:%20%22atm_mock_def456ghi789%22,",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "ab2187",
+        "hash": "29d8cfc0",
+        "encoded": "%22estimatedCompletionTime%22:%20%222024-01-15T10:35:00.000Z%22",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "ab2187",
+        "hash": "0e2a48cb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "ab2187",
+        "hash": "82aa2141",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "ab2187",
+        "hash": "e95aed10",
+        "encoded": "###%20Get%20Transaction%20Status",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "ab2187",
+        "hash": "e5c42190",
+        "encoded": "**GET**%20%60/atm/transactions/%7BtransactionId%7D%60",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "ab2187",
+        "hash": "22e380f8",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "ab2187",
+        "hash": "3abd2326",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "ab2187",
+        "hash": "85fd4af4",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "ab2187",
+        "hash": "bd4f4c4d",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "ab2187",
+        "hash": "ed0d0ee9",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "ab2187",
+        "hash": "30218491",
+        "encoded": "%22transaction%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "ab2187",
+        "hash": "debad2ed",
+        "encoded": "%22transactionId%22:%20%22txn_xyz789abc123%22,",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "ab2187",
+        "hash": "d2806d30",
+        "encoded": "%22userId%22:%20%22mock-user-12345%22,",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "ab2187",
+        "hash": "4bd9b637",
+        "encoded": "%22type%22:%20%22withdrawal%22,",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "ab2187",
+        "hash": "9acac63b",
+        "encoded": "%22status%22:%20%22staged%22,",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "ab2187",
+        "hash": "04d17f34",
+        "encoded": "%22amount%22:%20100.00,",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "ab2187",
+        "hash": "f7856a5e",
+        "encoded": "%22createdAt%22:%20%222024-01-15T10:30:00.000Z%22,",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "ab2187",
+        "hash": "323d5013",
+        "encoded": "%22processingTime%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "ab2187",
+        "hash": "c5dd979c",
+        "encoded": "%22initiated%22:%20%222024-01-15T10:30:00.000Z%22,",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "ab2187",
+        "hash": "3d14dc23",
+        "encoded": "%22staged%22:%20%222024-01-15T10:30:01.000Z%22",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "ab2187",
+        "hash": "5328d41a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "ab2187",
+        "hash": "b9f9adb8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "ab2187",
+        "hash": "8da2b88b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "ab2187",
+        "hash": "ad151d44",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "ab2187",
+        "hash": "b1f03045",
+        "encoded": "###%20Get%20Transaction%20History",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "ab2187",
+        "hash": "b9ce1ea4",
+        "encoded": "**GET**%20%60/atm/transactions%60",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "ab2187",
+        "hash": "79ba69de",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "ab2187",
+        "hash": "75b8e117",
+        "encoded": "**Query%20Parameters:**",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "ab2187",
+        "hash": "8ec3bc7e",
+        "encoded": "-%20%60page%60:%20Page%20number%20(default:%201)",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "ab2187",
+        "hash": "618daabe",
+        "encoded": "-%20%60limit%60:%20Items%20per%20page%20(default:%2020,%20max:%2050)",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "ab2187",
+        "hash": "21be5de4",
+        "encoded": "-%20%60type%60:%20Filter%20by%20transaction%20type%20(withdrawal,%20deposit,%20transfer)",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "ab2187",
+        "hash": "b8685ad3",
+        "encoded": "-%20%60status%60:%20Filter%20by%20status%20(pending,%20staged,%20completed,%20failed)",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "ab2187",
+        "hash": "314d3587",
+        "encoded": "-%20%60startDate%60:%20Filter%20from%20date%20(ISO%208601)",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "ab2187",
+        "hash": "d2d76f0c",
+        "encoded": "-%20%60endDate%60:%20Filter%20to%20date%20(ISO%208601)",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "ab2187",
+        "hash": "b2be1aa8",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "ab2187",
+        "hash": "bf6b9576",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "ab2187",
+        "hash": "70fd64ea",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "ab2187",
+        "hash": "49a7fa9a",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "ab2187",
+        "hash": "2ed4e97c",
+        "encoded": "%22transactions%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "ab2187",
+        "hash": "bed4a21a",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "ab2187",
+        "hash": "15bf95e9",
+        "encoded": "%22transactionId%22:%20%22txn_mock_001%22,",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "ab2187",
+        "hash": "2f4788af",
+        "encoded": "%22type%22:%20%22withdrawal%22,",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "ab2187",
+        "hash": "e3fd71f5",
+        "encoded": "%22status%22:%20%22completed%22,",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "ab2187",
+        "hash": "b553ded1",
+        "encoded": "%22amount%22:%20100.00,",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "ab2187",
+        "hash": "ddee72d0",
+        "encoded": "%22createdAt%22:%20%222024-01-14T10:30:00.000Z%22",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "ab2187",
+        "hash": "606d46a9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "ab2187",
+        "hash": "0b00f206",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "ab2187",
+        "hash": "da9ec2c9",
+        "encoded": "%22pagination%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "ab2187",
+        "hash": "76e45502",
+        "encoded": "%22page%22:%201,",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "ab2187",
+        "hash": "17a434d5",
+        "encoded": "%22limit%22:%2020,",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "ab2187",
+        "hash": "2c08326b",
+        "encoded": "%22total%22:%202,",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "ab2187",
+        "hash": "86f06ac6",
+        "encoded": "%22pages%22:%201",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "ab2187",
+        "hash": "2aa52ef0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "ab2187",
+        "hash": "8381033a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "ab2187",
+        "hash": "f235f25a",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "ab2187",
+        "hash": "bfcc866c",
+        "encoded": "###%20Cancel%20Transaction",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "ab2187",
+        "hash": "f8064ea2",
+        "encoded": "**DELETE**%20%60/atm/transactions/%7BtransactionId%7D%60",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "ab2187",
+        "hash": "18ea146f",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "ab2187",
+        "hash": "2b05fa0c",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "ab2187",
+        "hash": "c5f3fed2",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "ab2187",
+        "hash": "83e7aa05",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "ab2187",
+        "hash": "381ea97c",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "ab2187",
+        "hash": "16992462",
+        "encoded": "%22message%22:%20%22Transaction%20cancelled%20successfully%22,",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "ab2187",
+        "hash": "588c1f1e",
+        "encoded": "%22transactionId%22:%20%22txn_xyz789abc123%22,",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "ab2187",
+        "hash": "dd75ed1f",
+        "encoded": "%22status%22:%20%22cancelled%22",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "ab2187",
+        "hash": "2b3722a1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "ab2187",
+        "hash": "825bf4f1",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "ab2187",
+        "hash": "903ea772",
+        "encoded": "###%20Simulate%20Card%20Scan",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "ab2187",
+        "hash": "e456c0e0",
+        "encoded": "**POST**%20%60/atm/scan-card%60",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "ab2187",
+        "hash": "4ca1f546",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "ab2187",
+        "hash": "c5ddee87",
+        "encoded": "Simulate%20card%20scanning%20for%20testing%20purposes.",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "ab2187",
+        "hash": "1340b055",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "ab2187",
+        "hash": "01aa9aff",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "ab2187",
+        "hash": "b6568d6d",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "ab2187",
+        "hash": "993e9c19",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "ab2187",
+        "hash": "94175dee",
+        "encoded": "%22message%22:%20%22Card%20scanned%20successfully%22,",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "ab2187",
+        "hash": "47e463cf",
+        "encoded": "%22cardToken%22:%20%22tok_abc123def456ghi789%22,",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "ab2187",
+        "hash": "8df9b4be",
+        "encoded": "%22cardDetails%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "ab2187",
+        "hash": "bc4b6603",
+        "encoded": "%22maskedNumber%22:%20%22****%20****%20****%201234%22,",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "ab2187",
+        "hash": "300c7f92",
+        "encoded": "%22type%22:%20%22DEBIT%22,",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "ab2187",
+        "hash": "adcedc40",
+        "encoded": "%22bank%22:%20%22NCR%20Bank%22",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "ab2187",
+        "hash": "43651e39",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "ab2187",
+        "hash": "40b784f3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "ab2187",
+        "hash": "6f3cb00a",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "ab2187",
+        "hash": "c1c27948",
+        "encoded": "##%20Banking%20Endpoints",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "ab2187",
+        "hash": "4c7c2605",
+        "encoded": "###%20Get%20Account%20Balances",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "ab2187",
+        "hash": "e88bcb4b",
+        "encoded": "**GET**%20%60/banking/accounts/balance%60",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "ab2187",
+        "hash": "fd9b44a7",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "ab2187",
+        "hash": "de565bdd",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "ab2187",
+        "hash": "ced1fca3",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "ab2187",
+        "hash": "da446203",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "ab2187",
+        "hash": "fefbeb04",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "ab2187",
+        "hash": "dd441f46",
+        "encoded": "%22message%22:%20%22Balance%20retrieved%20successfully%22,",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "ab2187",
+        "hash": "39831383",
+        "encoded": "%22accounts%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "ab2187",
+        "hash": "34091fb7",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "ab2187",
+        "hash": "b0db0c03",
+        "encoded": "%22id%22:%20%22acc-savings-001%22,",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "ab2187",
+        "hash": "f4234fd8",
+        "encoded": "%22type%22:%20%22savings%22,",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "ab2187",
+        "hash": "3ca68091",
+        "encoded": "%22name%22:%20%22Savings%20Account%22,",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "ab2187",
+        "hash": "8be01e57",
+        "encoded": "%22balance%22:%205000.00,",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "ab2187",
+        "hash": "fff2d5d9",
+        "encoded": "%22accountNumber%22:%20%22****1234%22,",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "ab2187",
+        "hash": "41a077b4",
+        "encoded": "%22lastUpdated%22:%20%222024-01-15T10:30:00.000Z%22",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "ab2187",
+        "hash": "4a6cfa90",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "ab2187",
+        "hash": "63c39848",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "ab2187",
+        "hash": "80ba77a9",
+        "encoded": "%22id%22:%20%22acc-checking-001%22,",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "ab2187",
+        "hash": "b3adc878",
+        "encoded": "%22type%22:%20%22checking%22,",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "ab2187",
+        "hash": "05dd0654",
+        "encoded": "%22name%22:%20%22Checking%20Account%22,",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "ab2187",
+        "hash": "84db3dda",
+        "encoded": "%22balance%22:%202500.00,",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "ab2187",
+        "hash": "d2e894fb",
+        "encoded": "%22accountNumber%22:%20%22****5678%22,",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "ab2187",
+        "hash": "1ab059e3",
+        "encoded": "%22lastUpdated%22:%20%222024-01-15T10:30:00.000Z%22",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "ab2187",
+        "hash": "7daf7dab",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "ab2187",
+        "hash": "cdfcefef",
+        "encoded": "%5D",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "ab2187",
+        "hash": "9fadf0fc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "ab2187",
+        "hash": "5cd06880",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "ab2187",
+        "hash": "0c826a91",
+        "encoded": "###%20Get%20User%20Accounts",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "ab2187",
+        "hash": "214f5a3a",
+        "encoded": "**GET**%20%60/banking/accounts%60",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "ab2187",
+        "hash": "591b061e",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "ab2187",
+        "hash": "a7037f47",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "ab2187",
+        "hash": "f9cdd74f",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "ab2187",
+        "hash": "e9f0ab01",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "ab2187",
+        "hash": "98922e3f",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "ab2187",
+        "hash": "72ca5f09",
+        "encoded": "%22accounts%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "ab2187",
+        "hash": "505c5379",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "ab2187",
+        "hash": "d6a2097d",
+        "encoded": "%22id%22:%20%22acc-savings-001%22,",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "ab2187",
+        "hash": "e85c08f7",
+        "encoded": "%22type%22:%20%22savings%22,",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "ab2187",
+        "hash": "4199c72b",
+        "encoded": "%22name%22:%20%22Savings%20Account%22,",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "ab2187",
+        "hash": "510aa6bc",
+        "encoded": "%22balance%22:%205000.00,",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "ab2187",
+        "hash": "64bc96e2",
+        "encoded": "%22accountNumber%22:%20%22****1234%22",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "ab2187",
+        "hash": "c1fcfe49",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "ab2187",
+        "hash": "90ef4a11",
+        "encoded": "%5D",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "ab2187",
+        "hash": "5d666166",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "ab2187",
+        "hash": "2dcfb628",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "ab2187",
+        "hash": "c6758dae",
+        "encoded": "###%20Transfer%20Funds",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "ab2187",
+        "hash": "b13c35e4",
+        "encoded": "**POST**%20%60/banking/transfers%60",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "ab2187",
+        "hash": "b937c9ff",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "ab2187",
+        "hash": "fd08e484",
+        "encoded": "**Request%20Body:**",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "ab2187",
+        "hash": "52a7e3f8",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "ab2187",
+        "hash": "4a9f2c32",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "ab2187",
+        "hash": "f9d215af",
+        "encoded": "%22fromAccountId%22:%20%22acc-savings-001%22,",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "ab2187",
+        "hash": "e202887d",
+        "encoded": "%22toAccountId%22:%20%22acc-checking-001%22,",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "ab2187",
+        "hash": "a32c1184",
+        "encoded": "%22amount%22:%20500.00,",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "ab2187",
+        "hash": "daaa3654",
+        "encoded": "%22description%22:%20%22Monthly%20transfer%22",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "ab2187",
+        "hash": "a3fee69b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "ab2187",
+        "hash": "af7421cb",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "ab2187",
+        "hash": "10f79887",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "ab2187",
+        "hash": "b7970c66",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "ab2187",
+        "hash": "e244694e",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "ab2187",
+        "hash": "7758b140",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "ab2187",
+        "hash": "bf5753a0",
+        "encoded": "%22message%22:%20%22Transfer%20completed%20successfully%22,",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "ab2187",
+        "hash": "ad1d58ee",
+        "encoded": "%22transactionId%22:%20%22txn_transfer_123%22,",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "ab2187",
+        "hash": "41fe5f87",
+        "encoded": "%22status%22:%20%22completed%22,",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "ab2187",
+        "hash": "e4cc2fe6",
+        "encoded": "%22amount%22:%20500.00,",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "ab2187",
+        "hash": "12af6a28",
+        "encoded": "%22fromAccountId%22:%20%22acc-savings-001%22,",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "ab2187",
+        "hash": "36ed5591",
+        "encoded": "%22toAccountId%22:%20%22acc-checking-001%22,",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "ab2187",
+        "hash": "14ddb491",
+        "encoded": "%22externalTransactionId%22:%20%22cbs_mock_abc123%22,",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "ab2187",
+        "hash": "a0fc0b13",
+        "encoded": "%22completedAt%22:%20%222024-01-15T10:30:00.000Z%22",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "ab2187",
+        "hash": "4d8336e7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "ab2187",
+        "hash": "b35b68d4",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "ab2187",
+        "hash": "16234705",
+        "encoded": "**Validation%20Rules:**",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "ab2187",
+        "hash": "2e5c33b3",
+        "encoded": "-%20%60fromAccountId%60:%20Required,%205-50%20characters",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "ab2187",
+        "hash": "2d8ac008",
+        "encoded": "-%20%60toAccountId%60:%20Required,%205-50%20characters,%20cannot%20be%20same%20as%20fromAccountId",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "ab2187",
+        "hash": "52da5ab8",
+        "encoded": "-%20%60amount%60:%20Required,%200.01-5000.00",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "ab2187",
+        "hash": "c7de3b38",
+        "encoded": "-%20%60description%60:%20Optional,%20max%20255%20characters",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "ab2187",
+        "hash": "b07ef7ee",
+        "encoded": "###%20Get%20Transfer%20History",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "ab2187",
+        "hash": "df941c18",
+        "encoded": "**GET**%20%60/banking/transfers%60",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "ab2187",
+        "hash": "900d6041",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "ab2187",
+        "hash": "3f66f22a",
+        "encoded": "**Query%20Parameters:**",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "ab2187",
+        "hash": "b1a8bd8f",
+        "encoded": "-%20%60page%60:%20Page%20number%20(default:%201)",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "ab2187",
+        "hash": "f817fa1f",
+        "encoded": "-%20%60limit%60:%20Items%20per%20page%20(default:%2020)",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "ab2187",
+        "hash": "ac3624fa",
+        "encoded": "-%20%60startDate%60:%20Filter%20from%20date",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "ab2187",
+        "hash": "15b2e973",
+        "encoded": "-%20%60endDate%60:%20Filter%20to%20date",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "ab2187",
+        "hash": "437a970a",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "ab2187",
+        "hash": "22533209",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "ab2187",
+        "hash": "6bb03adc",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "ab2187",
+        "hash": "4412c1d8",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "ab2187",
+        "hash": "a62dbe7b",
+        "encoded": "%22transfers%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "ab2187",
+        "hash": "6c98a3bb",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "ab2187",
+        "hash": "2cf0d61e",
+        "encoded": "%22transactionId%22:%20%22txn_transfer_001%22,",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "ab2187",
+        "hash": "e62e6210",
+        "encoded": "%22type%22:%20%22transfer%22,",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "ab2187",
+        "hash": "04edcc09",
+        "encoded": "%22status%22:%20%22completed%22,",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "ab2187",
+        "hash": "977ff5e1",
+        "encoded": "%22amount%22:%20500.00,",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "ab2187",
+        "hash": "e15ebd2c",
+        "encoded": "%22fromAccount%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "ab2187",
+        "hash": "ac3e5177",
+        "encoded": "%22accountId%22:%20%22acc-savings-001%22,",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "ab2187",
+        "hash": "90f2c013",
+        "encoded": "%22name%22:%20%22Savings%20Account%22",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "ab2187",
+        "hash": "8fc032e6",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "ab2187",
+        "hash": "18cdbc4e",
+        "encoded": "%22toAccount%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "ab2187",
+        "hash": "e6848c8d",
+        "encoded": "%22accountId%22:%20%22acc-checking-001%22,",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "ab2187",
+        "hash": "b37b5392",
+        "encoded": "%22name%22:%20%22Checking%20Account%22",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "ab2187",
+        "hash": "0dd50a06",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "ab2187",
+        "hash": "26643896",
+        "encoded": "%22description%22:%20%22Monthly%20transfer%22,",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "ab2187",
+        "hash": "4a1f928e",
+        "encoded": "%22createdAt%22:%20%222024-01-14T10:30:00.000Z%22",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "ab2187",
+        "hash": "640802f7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "ab2187",
+        "hash": "e272e2f5",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "ab2187",
+        "hash": "529d445f",
+        "encoded": "%22pagination%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "ab2187",
+        "hash": "e18e6464",
+        "encoded": "%22page%22:%201,",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "ab2187",
+        "hash": "f0d247bd",
+        "encoded": "%22limit%22:%2020,",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "ab2187",
+        "hash": "e9c8aec9",
+        "encoded": "%22total%22:%201,",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "ab2187",
+        "hash": "dc02ac40",
+        "encoded": "%22pages%22:%201",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "ab2187",
+        "hash": "46c44e63",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "ab2187",
+        "hash": "23b808fb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "ab2187",
+        "hash": "ce0e1b46",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "ab2187",
+        "hash": "ef969437",
+        "encoded": "###%20Get%20Service%20Limits",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "ab2187",
+        "hash": "e4b713c2",
+        "encoded": "**GET**%20%60/banking/limits%60",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "ab2187",
+        "hash": "bb6f068c",
+        "encoded": "*Requires%20Authentication*",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "ab2187",
+        "hash": "b8bc9580",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "ab2187",
+        "hash": "627d479b",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "428": {
+        "chunkId": "ab2187",
+        "hash": "68f95c48",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "ab2187",
+        "hash": "f5005d34",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "ab2187",
+        "hash": "893f6efc",
+        "encoded": "%22limits%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "ab2187",
+        "hash": "7b8b5f52",
+        "encoded": "%22daily%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "ab2187",
+        "hash": "0df934c6",
+        "encoded": "%22withdrawal%22:%201000.00,",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "ab2187",
+        "hash": "09c206b8",
+        "encoded": "%22transfer%22:%205000.00",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "ab2187",
+        "hash": "499848ea",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "ab2187",
+        "hash": "453a1fc7",
+        "encoded": "%22transaction%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "436": {
+        "chunkId": "ab2187",
+        "hash": "6bb82460",
+        "encoded": "%22minAmount%22:%200.01,",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "ab2187",
+        "hash": "982dc339",
+        "encoded": "%22maxAmount%22:%2010000.00",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "ab2187",
+        "hash": "16a7992b",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "ab2187",
+        "hash": "8ca98caa",
+        "encoded": "%22user%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "ab2187",
+        "hash": "d7c04d94",
+        "encoded": "%22dailyWithdrawalUsed%22:%200,",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "ab2187",
+        "hash": "f0177a99",
+        "encoded": "%22dailyTransferUsed%22:%200,",
+        "prevChunkIds": []
+      },
+      "442": {
+        "chunkId": "ab2187",
+        "hash": "c1263c07",
+        "encoded": "%22lastReset%22:%20%222024-01-15%22",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "ab2187",
+        "hash": "4b900776",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "ab2187",
+        "hash": "b22d8b13",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "ab2187",
+        "hash": "7341866d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "ab2187",
+        "hash": "13652393",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "448": {
+        "chunkId": "ab2187",
+        "hash": "540c0354",
+        "encoded": "##%20Health%20Check%20Endpoints",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "ab2187",
+        "hash": "022818e3",
+        "encoded": "###%20Basic%20Health%20Check",
+        "prevChunkIds": []
+      },
+      "451": {
+        "chunkId": "ab2187",
+        "hash": "89bfe756",
+        "encoded": "**GET**%20%60/health%60",
+        "prevChunkIds": []
+      },
+      "453": {
+        "chunkId": "ab2187",
+        "hash": "13b9ffee",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "454": {
+        "chunkId": "ab2187",
+        "hash": "ec36ffa2",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "455": {
+        "chunkId": "ab2187",
+        "hash": "102074f9",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "456": {
+        "chunkId": "ab2187",
+        "hash": "f3c5d085",
+        "encoded": "%22status%22:%20%22OK%22,",
+        "prevChunkIds": []
+      },
+      "457": {
+        "chunkId": "ab2187",
+        "hash": "4b7df1e9",
+        "encoded": "%22timestamp%22:%20%222024-01-15T10:30:00.000Z%22,",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "ab2187",
+        "hash": "b4bc4ce3",
+        "encoded": "%22uptime%22:%203600.5,",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "ab2187",
+        "hash": "efde93c8",
+        "encoded": "%22environment%22:%20%22development%22,",
+        "prevChunkIds": []
+      },
+      "460": {
+        "chunkId": "ab2187",
+        "hash": "67c1cd0a",
+        "encoded": "%22version%22:%20%221.0.0%22,",
+        "prevChunkIds": []
+      },
+      "461": {
+        "chunkId": "ab2187",
+        "hash": "1199b67b",
+        "encoded": "%22services%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "ab2187",
+        "hash": "1d13c896",
+        "encoded": "%22api%22:%20%22healthy%22,",
+        "prevChunkIds": []
+      },
+      "463": {
+        "chunkId": "ab2187",
+        "hash": "396a86b6",
+        "encoded": "%22database%22:%20%22connected%22",
+        "prevChunkIds": []
+      },
+      "464": {
+        "chunkId": "ab2187",
+        "hash": "76a375c0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "465": {
+        "chunkId": "ab2187",
+        "hash": "26c302bf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "ab2187",
+        "hash": "3735db1a",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "ab2187",
+        "hash": "0a997f8c",
+        "encoded": "###%20Detailed%20Health%20Check",
+        "prevChunkIds": []
+      },
+      "469": {
+        "chunkId": "ab2187",
+        "hash": "f537bb28",
+        "encoded": "**GET**%20%60/health/detailed%60",
+        "prevChunkIds": []
+      },
+      "471": {
+        "chunkId": "ab2187",
+        "hash": "f04956d6",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "ab2187",
+        "hash": "7d8291ab",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "473": {
+        "chunkId": "ab2187",
+        "hash": "2c873b83",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "ab2187",
+        "hash": "8832cc24",
+        "encoded": "%22status%22:%20%22OK%22,",
+        "prevChunkIds": []
+      },
+      "475": {
+        "chunkId": "ab2187",
+        "hash": "56ebd553",
+        "encoded": "%22timestamp%22:%20%222024-01-15T10:30:00.000Z%22,",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "ab2187",
+        "hash": "3f7f4521",
+        "encoded": "%22uptime%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "477": {
+        "chunkId": "ab2187",
+        "hash": "7011b91f",
+        "encoded": "%22seconds%22:%203600.5,",
+        "prevChunkIds": []
+      },
+      "478": {
+        "chunkId": "ab2187",
+        "hash": "abbc360b",
+        "encoded": "%22formatted%22:%20%221h%200m%200s%22",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "ab2187",
+        "hash": "756709d8",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "480": {
+        "chunkId": "ab2187",
+        "hash": "d0bff727",
+        "encoded": "%22environment%22:%20%22development%22,",
+        "prevChunkIds": []
+      },
+      "481": {
+        "chunkId": "ab2187",
+        "hash": "55fce9aa",
+        "encoded": "%22version%22:%20%221.0.0%22,",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "ab2187",
+        "hash": "1cf5a0f1",
+        "encoded": "%22node%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "ab2187",
+        "hash": "3ef6dc4c",
+        "encoded": "%22version%22:%20%22v18.17.0%22,",
+        "prevChunkIds": []
+      },
+      "484": {
+        "chunkId": "ab2187",
+        "hash": "33007776",
+        "encoded": "%22platform%22:%20%22darwin%22,",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "ab2187",
+        "hash": "de036be5",
+        "encoded": "%22arch%22:%20%22x64%22",
+        "prevChunkIds": []
+      },
+      "486": {
+        "chunkId": "ab2187",
+        "hash": "78dc307e",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "ab2187",
+        "hash": "3895ba8f",
+        "encoded": "%22memory%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "ab2187",
+        "hash": "9f12dbb2",
+        "encoded": "%22rss%22:%20%2245%20MB%22,",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "ab2187",
+        "hash": "3ba4be42",
+        "encoded": "%22heapTotal%22:%20%2220%20MB%22,",
+        "prevChunkIds": []
+      },
+      "490": {
+        "chunkId": "ab2187",
+        "hash": "db27112d",
+        "encoded": "%22heapUsed%22:%20%2215%20MB%22,",
+        "prevChunkIds": []
+      },
+      "491": {
+        "chunkId": "ab2187",
+        "hash": "e255860e",
+        "encoded": "%22external%22:%20%222%20MB%22",
+        "prevChunkIds": []
+      },
+      "492": {
+        "chunkId": "ab2187",
+        "hash": "3d0d8682",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "493": {
+        "chunkId": "ab2187",
+        "hash": "b631f250",
+        "encoded": "%22services%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "494": {
+        "chunkId": "ab2187",
+        "hash": "49f25556",
+        "encoded": "%22api%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "495": {
+        "chunkId": "ab2187",
+        "hash": "54ae1cdf",
+        "encoded": "%22status%22:%20%22healthy%22,",
+        "prevChunkIds": []
+      },
+      "496": {
+        "chunkId": "ab2187",
+        "hash": "cc5e65bb",
+        "encoded": "%22responseTime%22:%20%22%3C%20100ms%22",
+        "prevChunkIds": []
+      },
+      "497": {
+        "chunkId": "ab2187",
+        "hash": "642fb1c6",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "498": {
+        "chunkId": "ab2187",
+        "hash": "edbb419e",
+        "encoded": "%22database%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "499": {
+        "chunkId": "ab2187",
+        "hash": "6f932c34",
+        "encoded": "%22status%22:%20%22connected%22,",
+        "prevChunkIds": []
+      },
+      "500": {
+        "chunkId": "ab2187",
+        "hash": "7a1beda9",
+        "encoded": "%22type%22:%20%22MongoDB%22",
+        "prevChunkIds": []
+      },
+      "501": {
+        "chunkId": "ab2187",
+        "hash": "cc64434d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "502": {
+        "chunkId": "ab2187",
+        "hash": "39d97913",
+        "encoded": "%22externalServices%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "503": {
+        "chunkId": "ab2187",
+        "hash": "5a47d095",
+        "encoded": "%22atmStagingService%22:%20%22mock%22,",
+        "prevChunkIds": []
+      },
+      "504": {
+        "chunkId": "ab2187",
+        "hash": "8879bd13",
+        "encoded": "%22coreBankingService%22:%20%22mock%22,",
+        "prevChunkIds": []
+      },
+      "505": {
+        "chunkId": "ab2187",
+        "hash": "021c24b9",
+        "encoded": "%22visionService%22:%20%22mock%22",
+        "prevChunkIds": []
+      },
+      "506": {
+        "chunkId": "ab2187",
+        "hash": "ed348022",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "507": {
+        "chunkId": "ab2187",
+        "hash": "3c6c415b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "508": {
+        "chunkId": "ab2187",
+        "hash": "f326e1f5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "509": {
+        "chunkId": "ab2187",
+        "hash": "785758bc",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "511": {
+        "chunkId": "ab2187",
+        "hash": "c22f54f5",
+        "encoded": "##%20Error%20Codes",
+        "prevChunkIds": []
+      },
+      "513": {
+        "chunkId": "ab2187",
+        "hash": "ee771f52",
+        "encoded": "###%20HTTP%20Status%20Codes",
+        "prevChunkIds": []
+      },
+      "514": {
+        "chunkId": "ab2187",
+        "hash": "4bd9181a",
+        "encoded": "-%20%60200%60%20-%20OK",
+        "prevChunkIds": []
+      },
+      "515": {
+        "chunkId": "ab2187",
+        "hash": "1efbcfa8",
+        "encoded": "-%20%60201%60%20-%20Created",
+        "prevChunkIds": []
+      },
+      "516": {
+        "chunkId": "ab2187",
+        "hash": "e54e1cd7",
+        "encoded": "-%20%60400%60%20-%20Bad%20Request",
+        "prevChunkIds": []
+      },
+      "517": {
+        "chunkId": "ab2187",
+        "hash": "4611bf00",
+        "encoded": "-%20%60401%60%20-%20Unauthorized",
+        "prevChunkIds": []
+      },
+      "518": {
+        "chunkId": "ab2187",
+        "hash": "bf60cd74",
+        "encoded": "-%20%60403%60%20-%20Forbidden",
+        "prevChunkIds": []
+      },
+      "519": {
+        "chunkId": "ab2187",
+        "hash": "9861a4cf",
+        "encoded": "-%20%60404%60%20-%20Not%20Found",
+        "prevChunkIds": []
+      },
+      "520": {
+        "chunkId": "ab2187",
+        "hash": "a21b7645",
+        "encoded": "-%20%60409%60%20-%20Conflict",
+        "prevChunkIds": []
+      },
+      "521": {
+        "chunkId": "ab2187",
+        "hash": "62821855",
+        "encoded": "-%20%60422%60%20-%20Unprocessable%20Entity",
+        "prevChunkIds": []
+      },
+      "522": {
+        "chunkId": "ab2187",
+        "hash": "e0cfaf16",
+        "encoded": "-%20%60429%60%20-%20Too%20Many%20Requests",
+        "prevChunkIds": []
+      },
+      "523": {
+        "chunkId": "ab2187",
+        "hash": "23bb28e2",
+        "encoded": "-%20%60500%60%20-%20Internal%20Server%20Error",
+        "prevChunkIds": []
+      },
+      "524": {
+        "chunkId": "ab2187",
+        "hash": "4b91f302",
+        "encoded": "-%20%60503%60%20-%20Service%20Unavailable",
+        "prevChunkIds": []
+      },
+      "526": {
+        "chunkId": "ab2187",
+        "hash": "26180377",
+        "encoded": "###%20Error%20Types",
+        "prevChunkIds": []
+      },
+      "527": {
+        "chunkId": "ab2187",
+        "hash": "45f4fa19",
+        "encoded": "-%20%60VALIDATION_ERROR%60%20-%20Input%20validation%20failed",
+        "prevChunkIds": []
+      },
+      "528": {
+        "chunkId": "ab2187",
+        "hash": "de8f27de",
+        "encoded": "-%20%60AUTHENTICATION_ERROR%60%20-%20Authentication%20failed",
+        "prevChunkIds": []
+      },
+      "529": {
+        "chunkId": "ab2187",
+        "hash": "97d85c8f",
+        "encoded": "-%20%60AUTHORIZATION_ERROR%60%20-%20Insufficient%20permissions",
+        "prevChunkIds": []
+      },
+      "530": {
+        "chunkId": "ab2187",
+        "hash": "c725b2e5",
+        "encoded": "-%20%60NOT_FOUND_ERROR%60%20-%20Resource%20not%20found",
+        "prevChunkIds": []
+      },
+      "531": {
+        "chunkId": "ab2187",
+        "hash": "45186de0",
+        "encoded": "-%20%60CONFLICT_ERROR%60%20-%20Resource%20conflict",
+        "prevChunkIds": []
+      },
+      "532": {
+        "chunkId": "ab2187",
+        "hash": "ce87705c",
+        "encoded": "-%20%60SERVICE_ERROR%60%20-%20Internal%20service%20error",
+        "prevChunkIds": []
+      },
+      "533": {
+        "chunkId": "ab2187",
+        "hash": "b0103b67",
+        "encoded": "-%20%60NETWORK_ERROR%60%20-%20Network%20connectivity%20error",
+        "prevChunkIds": []
+      },
+      "534": {
+        "chunkId": "ab2187",
+        "hash": "8bd83d0e",
+        "encoded": "-%20%60TIMEOUT_ERROR%60%20-%20Request%20timeout",
+        "prevChunkIds": []
+      },
+      "536": {
+        "chunkId": "ab2187",
+        "hash": "a155d541",
+        "encoded": "##%20Rate%20Limiting",
+        "prevChunkIds": []
+      },
+      "538": {
+        "chunkId": "ab2187",
+        "hash": "dd752ef7",
+        "encoded": "API%20endpoints%20are%20rate%20limited%20to%20prevent%20abuse:",
+        "prevChunkIds": []
+      },
+      "540": {
+        "chunkId": "ab2187",
+        "hash": "b9699297",
+        "encoded": "-%20**General%20Endpoints**:%20100%20requests%20per%2015%20minutes%20per%20IP",
+        "prevChunkIds": []
+      },
+      "541": {
+        "chunkId": "ab2187",
+        "hash": "0bb879f6",
+        "encoded": "-%20**Authentication%20Endpoints**:%205%20requests%20per%2015%20minutes%20per%20IP",
+        "prevChunkIds": []
+      },
+      "543": {
+        "chunkId": "ab2187",
+        "hash": "0fc1f0d0",
+        "encoded": "When%20rate%20limit%20is%20exceeded:",
+        "prevChunkIds": []
+      },
+      "544": {
+        "chunkId": "ab2187",
+        "hash": "c0a95170",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "545": {
+        "chunkId": "ab2187",
+        "hash": "bff7fd0b",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "546": {
+        "chunkId": "ab2187",
+        "hash": "f45ed62b",
+        "encoded": "%22success%22:%20false,",
+        "prevChunkIds": []
+      },
+      "547": {
+        "chunkId": "ab2187",
+        "hash": "36c98159",
+        "encoded": "%22error%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "548": {
+        "chunkId": "ab2187",
+        "hash": "1a829b2b",
+        "encoded": "%22type%22:%20%22AUTHENTICATION_ERROR%22,",
+        "prevChunkIds": []
+      },
+      "549": {
+        "chunkId": "ab2187",
+        "hash": "6116e13f",
+        "encoded": "%22message%22:%20%22Too%20many%20requests%20from%20this%20IP,%20please%20try%20again%20later.%22",
+        "prevChunkIds": []
+      },
+      "550": {
+        "chunkId": "ab2187",
+        "hash": "570f687f",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "551": {
+        "chunkId": "ab2187",
+        "hash": "ef800701",
+        "encoded": "%22retryAfter%22:%20900",
+        "prevChunkIds": []
+      },
+      "552": {
+        "chunkId": "ab2187",
+        "hash": "db67d48a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "553": {
+        "chunkId": "ab2187",
+        "hash": "428aa20f",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "555": {
+        "chunkId": "ab2187",
+        "hash": "68879043",
+        "encoded": "##%20Development%20Mode",
+        "prevChunkIds": []
+      },
+      "557": {
+        "chunkId": "ab2187",
+        "hash": "564e9a08",
+        "encoded": "When%20%60USE_MOCK_SERVICES=true%60,%20the%20API%20uses%20mock%20implementations:",
+        "prevChunkIds": []
+      },
+      "559": {
+        "chunkId": "ab2187",
+        "hash": "dba50cdc",
+        "encoded": "-%20**Default%20PIN**:%20%601234%60",
+        "prevChunkIds": []
+      },
+      "560": {
+        "chunkId": "ab2187",
+        "hash": "56963741",
+        "encoded": "-%20**Mock%20Accounts**:%202%20accounts%20(Savings:%20$5000,%20Checking:%20$2500)",
+        "prevChunkIds": []
+      },
+      "561": {
+        "chunkId": "ab2187",
+        "hash": "c268ede1",
+        "encoded": "-%20**Network%20Delays**:%20500ms-2s%20simulation",
+        "prevChunkIds": []
+      },
+      "562": {
+        "chunkId": "ab2187",
+        "hash": "05aa34d1",
+        "encoded": "-%20**Failure%20Rate**:%202-5%25%20random%20failures",
+        "prevChunkIds": []
+      },
+      "563": {
+        "chunkId": "ab2187",
+        "hash": "66e49f94",
+        "encoded": "-%20**Card%20Tokens**:%20Generated%20with%20%60tok_%60%20prefix",
+        "prevChunkIds": []
+      },
+      "565": {
+        "chunkId": "ab2187",
+        "hash": "59be1da9",
+        "encoded": "##%20Testing",
+        "prevChunkIds": []
+      },
+      "567": {
+        "chunkId": "ab2187",
+        "hash": "f0169b14",
+        "encoded": "Use%20the%20following%20test%20data%20for%20development:",
+        "prevChunkIds": []
+      },
+      "569": {
+        "chunkId": "ab2187",
+        "hash": "c2ec34f1",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "570": {
+        "chunkId": "ab2187",
+        "hash": "e136d0e1",
+        "encoded": "#%20Login",
+        "prevChunkIds": []
+      },
+      "571": {
+        "chunkId": "ab2187",
+        "hash": "287030c9",
+        "encoded": "curl%20-X%20POST%20http://localhost:3001/api/auth/login%20%5C",
+        "prevChunkIds": []
+      },
+      "572": {
+        "chunkId": "ab2187",
+        "hash": "a0830848",
+        "encoded": "-H%20%22Content-Type:%20application/json%22%20%5C",
+        "prevChunkIds": []
+      },
+      "573": {
+        "chunkId": "ab2187",
+        "hash": "646fe4d3",
+        "encoded": "-d%20'%7B%22pin%22:%20%221234%22%7D'",
+        "prevChunkIds": []
+      },
+      "575": {
+        "chunkId": "ab2187",
+        "hash": "1f50e105",
+        "encoded": "#%20Stage%20Withdrawal",
+        "prevChunkIds": []
+      },
+      "576": {
+        "chunkId": "ab2187",
+        "hash": "bc0fee17",
+        "encoded": "curl%20-X%20POST%20http://localhost:3001/api/atm/transactions/withdrawal%20%5C",
+        "prevChunkIds": []
+      },
+      "577": {
+        "chunkId": "ab2187",
+        "hash": "25d6c617",
+        "encoded": "-H%20%22Content-Type:%20application/json%22%20%5C",
+        "prevChunkIds": []
+      },
+      "578": {
+        "chunkId": "ab2187",
+        "hash": "8228870c",
+        "encoded": "-H%20%22Authorization:%20Bearer%20YOUR_TOKEN%22%20%5C",
+        "prevChunkIds": []
+      },
+      "579": {
+        "chunkId": "ab2187",
+        "hash": "72b93214",
+        "encoded": "-d%20'%7B%22cardToken%22:%20%22tok_test_card_123%22,%20%22amount%22:%20100.00%7D'",
+        "prevChunkIds": []
+      },
+      "581": {
+        "chunkId": "ab2187",
+        "hash": "0f7880ed",
+        "encoded": "#%20Transfer%20Funds",
+        "prevChunkIds": []
+      },
+      "582": {
+        "chunkId": "ab2187",
+        "hash": "4a1a3573",
+        "encoded": "curl%20-X%20POST%20http://localhost:3001/api/banking/transfers%20%5C",
+        "prevChunkIds": []
+      },
+      "583": {
+        "chunkId": "ab2187",
+        "hash": "c6f3b8fc",
+        "encoded": "-H%20%22Content-Type:%20application/json%22%20%5C",
+        "prevChunkIds": []
+      },
+      "584": {
+        "chunkId": "ab2187",
+        "hash": "60868d58",
+        "encoded": "-H%20%22Authorization:%20Bearer%20YOUR_TOKEN%22%20%5C",
+        "prevChunkIds": []
+      },
+      "585": {
+        "chunkId": "ab2187",
+        "hash": "386bcf06",
+        "encoded": "-d%20'%7B%22fromAccountId%22:%20%22acc-savings-001%22,%20%22toAccountId%22:%20%22acc-checking-001%22,%20%22amount%22:%20100.00%7D'",
+        "prevChunkIds": []
+      },
+      "586": {
+        "chunkId": "ab2187",
+        "hash": "dd1caff0",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "588": {
+        "chunkId": "ab2187",
+        "hash": "aa959d6d",
+        "encoded": "##%20Support",
+        "prevChunkIds": []
+      },
+      "590": {
+        "chunkId": "ab2187",
+        "hash": "c70bdcf3",
+        "encoded": "For%20API%20support:",
+        "prevChunkIds": []
+      },
+      "591": {
+        "chunkId": "ab2187",
+        "hash": "9306f965",
+        "encoded": "1.%20Check%20the%20health%20endpoint:%20%60/api/health%60",
+        "prevChunkIds": []
+      },
+      "592": {
+        "chunkId": "ab2187",
+        "hash": "ce106e5e",
+        "encoded": "2.%20Review%20server%20logs%20in%20%60./logs/%60",
+        "prevChunkIds": []
+      },
+      "593": {
+        "chunkId": "ab2187",
+        "hash": "e582457c",
+        "encoded": "3.%20Validate%20request%20format%20against%20this%20documentation",
+        "prevChunkIds": []
+      },
+      "594": {
+        "chunkId": "ab2187",
+        "hash": "3a75324c",
+        "encoded": "4.%20Ensure%20proper%20authentication%20headers",
+        "prevChunkIds": []
+      },
+      "595": {
+        "chunkId": "ab2187",
+        "hash": "65d3aac4",
+        "encoded": "5.%20Check%20rate%20limiting%20status",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "backend/scripts/init-mongo.js": {
+    "filename": "init-mongo.js",
+    "path": "backend/scripts/init-mongo.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "8f5edf": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134921,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "a17ad774",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8f5edf",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "8f5edf",
+        "hash": "1ef1154f",
+        "encoded": "*%20MongoDB%20initialization%20script",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8f5edf",
+        "hash": "bc1ce6b6",
+        "encoded": "*%20Creates%20initial%20database%20structure%20and%20indexes",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "8f5edf",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "8f5edf",
+        "hash": "29ef1a2b",
+        "encoded": "//%20Switch%20to%20the%20application%20database",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "8f5edf",
+        "hash": "7b57e3e7",
+        "encoded": "db%20=%20db.getSiblingDB('ncr-atleos-atm');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8f5edf",
+        "hash": "a9288158",
+        "encoded": "//%20Create%20collections",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8f5edf",
+        "hash": "6201e375",
+        "encoded": "db.createCollection('users');",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "8f5edf",
+        "hash": "883c862f",
+        "encoded": "db.createCollection('transactions');",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "8f5edf",
+        "hash": "fdeea071",
+        "encoded": "//%20Create%20indexes%20for%20users%20collection",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8f5edf",
+        "hash": "fc5d12f2",
+        "encoded": "db.users.createIndex(%7B%20userId:%201%20%7D,%20%7B%20unique:%20true%20%7D);",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8f5edf",
+        "hash": "590d607d",
+        "encoded": "db.users.createIndex(%7B%20'currentSession.token':%201%20%7D);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "8f5edf",
+        "hash": "64924471",
+        "encoded": "db.users.createIndex(%7B%20'refreshTokens.token':%201%20%7D);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "8f5edf",
+        "hash": "d9b34a91",
+        "encoded": "db.users.createIndex(%7B%20isActive:%201,%20isLocked:%201%20%7D);",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "8f5edf",
+        "hash": "0c4d2b2d",
+        "encoded": "//%20Create%20indexes%20for%20transactions%20collection",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "8f5edf",
+        "hash": "c6d3689c",
+        "encoded": "db.transactions.createIndex(%7B%20transactionId:%201%20%7D,%20%7B%20unique:%20true%20%7D);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "8f5edf",
+        "hash": "86a0b2d1",
+        "encoded": "db.transactions.createIndex(%7B%20userId:%201,%20createdAt:%20-1%20%7D);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "8f5edf",
+        "hash": "2e750e42",
+        "encoded": "db.transactions.createIndex(%7B%20type:%201,%20status:%201%20%7D);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "8f5edf",
+        "hash": "304e1cd4",
+        "encoded": "db.transactions.createIndex(%7B%20status:%201,%20createdAt:%20-1%20%7D);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "8f5edf",
+        "hash": "02a30ecd",
+        "encoded": "db.transactions.createIndex(%7B%20'externalReferences.atmStagingServiceId':%201%20%7D);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "8f5edf",
+        "hash": "9211feb8",
+        "encoded": "db.transactions.createIndex(%7B%20'externalReferences.coreBankingServiceId':%201%20%7D);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "8f5edf",
+        "hash": "9ad3b7d0",
+        "encoded": "//%20Create%20TTL%20index%20for%20transactions%20(30%20days)",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "8f5edf",
+        "hash": "8b45e885",
+        "encoded": "db.transactions.createIndex(%7B%20createdAt:%201%20%7D,%20%7B%20expireAfterSeconds:%202592000%20%7D);",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "8f5edf",
+        "hash": "21a84eec",
+        "encoded": "//%20Create%20a%20test%20user%20(for%20development/testing)",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "8f5edf",
+        "hash": "92317a0a",
+        "encoded": "db.users.insertOne(%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "8f5edf",
+        "hash": "54d32c77",
+        "encoded": "userId:%20'test-user-001',",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "8f5edf",
+        "hash": "4b6d4173",
+        "encoded": "name:%20'Test%20User',",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "8f5edf",
+        "hash": "fce99e81",
+        "encoded": "pin:%20'$2b$12$LQv3c1yqBWVHxkd0LHAkCOYz6TtxMQJqhN8/LewdBPj6ukXLrfy4K',%20//%20hashed%20'1234'",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "8f5edf",
+        "hash": "d5e79bb1",
+        "encoded": "isActive:%20true,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "8f5edf",
+        "hash": "07042a99",
+        "encoded": "isLocked:%20false,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "8f5edf",
+        "hash": "96b49cfa",
+        "encoded": "failedLoginAttempts:%200,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "8f5edf",
+        "hash": "474f7815",
+        "encoded": "accounts:%20%5B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "8f5edf",
+        "hash": "b4bb8156",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "8f5edf",
+        "hash": "67c57f8f",
+        "encoded": "accountId:%20'acc-savings-001',",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "8f5edf",
+        "hash": "d4f76add",
+        "encoded": "accountType:%20'savings',",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "8f5edf",
+        "hash": "7f31ba39",
+        "encoded": "accountName:%20'Savings%20Account',",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "8f5edf",
+        "hash": "d38b380a",
+        "encoded": "accountNumber:%20'****1234',",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "8f5edf",
+        "hash": "c19095de",
+        "encoded": "balance:%205000.00,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "8f5edf",
+        "hash": "2d1901d4",
+        "encoded": "isActive:%20true",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "8f5edf",
+        "hash": "0f7a0d79",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "8f5edf",
+        "hash": "dce7bfad",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "8f5edf",
+        "hash": "6414af8d",
+        "encoded": "accountId:%20'acc-checking-001',",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "8f5edf",
+        "hash": "2143d38b",
+        "encoded": "accountType:%20'checking',",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "8f5edf",
+        "hash": "e69fd79b",
+        "encoded": "accountName:%20'Checking%20Account',",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "8f5edf",
+        "hash": "127e2075",
+        "encoded": "accountNumber:%20'****5678',",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "8f5edf",
+        "hash": "d1dd1bd8",
+        "encoded": "balance:%202500.00,",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "8f5edf",
+        "hash": "e0e37047",
+        "encoded": "isActive:%20true",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "8f5edf",
+        "hash": "e392f376",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "8f5edf",
+        "hash": "8b2475d7",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "8f5edf",
+        "hash": "84be6095",
+        "encoded": "dailyLimits:%20%7B",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "8f5edf",
+        "hash": "6cf8aa31",
+        "encoded": "withdrawal:%201000.00,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "8f5edf",
+        "hash": "899e150f",
+        "encoded": "transfer:%205000.00",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "8f5edf",
+        "hash": "f31f7ed2",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "8f5edf",
+        "hash": "a373f644",
+        "encoded": "preferences:%20%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "8f5edf",
+        "hash": "20298d89",
+        "encoded": "language:%20'en',",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "8f5edf",
+        "hash": "63f1f7c0",
+        "encoded": "notifications:%20true,",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "8f5edf",
+        "hash": "b504fde4",
+        "encoded": "theme:%20'dark'",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "8f5edf",
+        "hash": "a7917065",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "8f5edf",
+        "hash": "80e01f7b",
+        "encoded": "createdAt:%20new%20Date(),",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "8f5edf",
+        "hash": "996dd132",
+        "encoded": "updatedAt:%20new%20Date()",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "8f5edf",
+        "hash": "7a9bc11e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "8f5edf",
+        "hash": "448bca03",
+        "encoded": "print('Database%20initialization%20completed%20successfully!');",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "8f5edf",
+        "hash": "93a38cf0",
+        "encoded": "print('Created%20collections:%20users,%20transactions');",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "8f5edf",
+        "hash": "b5e2ec71",
+        "encoded": "print('Created%20indexes%20for%20performance%20optimization');",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "8f5edf",
+        "hash": "c07d9931",
+        "encoded": "print('Inserted%20test%20user%20with%20PIN:%201234');",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,2181 @@
+{
+  "backend/src/services/atmStagingService.js": {
+    "filename": "atmStagingService.js",
+    "path": "backend/src/services/atmStagingService.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "5fe2e7": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134654,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "1c79dac1",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "5fe2e7",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "5fe2e7",
+        "hash": "9d2cdb33",
+        "encoded": "*%20ATM%20Staging%20Service%20integration",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "5fe2e7",
+        "hash": "b1a6d5e9",
+        "encoded": "*%20Handles%20communication%20with%20the%20external%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "5fe2e7",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "5fe2e7",
+        "hash": "43ec61a4",
+        "encoded": "const%20%7B%20v4:%20uuidv4%20%7D%20=%20require('uuid');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "5fe2e7",
+        "hash": "9b89d2f4",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../middleware/errorHandler');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "5fe2e7",
+        "hash": "ee012dec",
+        "encoded": "const%20%7B%20HTTP_STATUS,%20ERROR_TYPES,%20ERROR_MESSAGES,%20API_TIMEOUTS,%20MOCK_CONFIG%20%7D%20=%20require('../config/constants');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "5fe2e7",
+        "hash": "e8e62a8a",
+        "encoded": "const%20logger%20=%20require('../utils/logger');",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "5fe2e7",
+        "hash": "87707c3e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "5fe2e7",
+        "hash": "a74100c9",
+        "encoded": "*%20Stage%20a%20withdrawal%20transaction%20with%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "5fe2e7",
+        "hash": "d6e18aea",
+        "encoded": "*%20@param%20%7BObject%7D%20params%20-%20Transaction%20parameters",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "5fe2e7",
+        "hash": "72643ed9",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.transactionId%20-%20Internal%20transaction%20ID",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "5fe2e7",
+        "hash": "1c51f8c4",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.cardToken%20-%20Tokenized%20card%20data",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "5fe2e7",
+        "hash": "9dc09d0d",
+        "encoded": "*%20@param%20%7Bnumber%7D%20params.amount%20-%20Withdrawal%20amount",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "5fe2e7",
+        "hash": "e5cbac88",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.userId%20-%20User%20ID",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "5fe2e7",
+        "hash": "7e10082b",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Staging%20response",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "5fe2e7",
+        "hash": "f12acb0c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "5fe2e7",
+        "hash": "0f7e8e57",
+        "encoded": "const%20stageWithdrawal%20=%20async%20(%7B%20transactionId,%20cardToken,%20amount,%20userId%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "5fe2e7",
+        "hash": "8bd408a2",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "5fe2e7",
+        "hash": "a02c2f79",
+        "encoded": "logger.info('ATM%20Staging%20Service%20-%20Withdrawal%20request',%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "5fe2e7",
+        "hash": "6e3f8cc3",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "5fe2e7",
+        "hash": "350d00b7",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "5fe2e7",
+        "hash": "601f0673",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "5fe2e7",
+        "hash": "ce9add71",
+        "encoded": "service:%20'atmStagingService'",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "5fe2e7",
+        "hash": "6e3edb2d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "5fe2e7",
+        "hash": "a80b9080",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "5fe2e7",
+        "hash": "2cf4033c",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "5fe2e7",
+        "hash": "ea002516",
+        "encoded": "//%20Mock%20implementation",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "5fe2e7",
+        "hash": "ef59d8f3",
+        "encoded": "return%20await%20mockStageWithdrawal(%7B%20transactionId,%20cardToken,%20amount,%20userId%20%7D);",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "5fe2e7",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "5fe2e7",
+        "hash": "dafc381d",
+        "encoded": "//%20Real%20implementation%20would%20make%20HTTP%20request%20to%20external%20service",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "5fe2e7",
+        "hash": "a89ade2d",
+        "encoded": "const%20requestPayload%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "5fe2e7",
+        "hash": "7cd202d0",
+        "encoded": "transactionType:%20'withdrawal',",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "5fe2e7",
+        "hash": "1f106677",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "5fe2e7",
+        "hash": "2c0deeb1",
+        "encoded": "cardToken,",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "5fe2e7",
+        "hash": "241d3f86",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "5fe2e7",
+        "hash": "6fbc5123",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "5fe2e7",
+        "hash": "5e6c3e22",
+        "encoded": "timestamp:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "5fe2e7",
+        "hash": "ebf5e4a4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "5fe2e7",
+        "hash": "99aebbcb",
+        "encoded": "//%20TODO:%20Implement%20actual%20HTTP%20client%20call%20to%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "5fe2e7",
+        "hash": "138454bf",
+        "encoded": "//%20const%20response%20=%20await%20httpClient.post('/transactions/withdrawal',%20requestPayload,%20%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "5fe2e7",
+        "hash": "16ee4bd0",
+        "encoded": "//%20%20%20timeout:%20API_TIMEOUTS.ATM_STAGING_SERVICE,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "5fe2e7",
+        "hash": "090c6de4",
+        "encoded": "//%20%20%20headers:%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "5fe2e7",
+        "hash": "981deaac",
+        "encoded": "//%20%20%20%20%20'Authorization':%20%60Bearer%20$%7Bprocess.env.ATM_STAGING_API_KEY%7D%60,",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "5fe2e7",
+        "hash": "c52c2ac6",
+        "encoded": "//%20%20%20%20%20'Content-Type':%20'application/json'",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "5fe2e7",
+        "hash": "38c0bcd6",
+        "encoded": "//%20%20%20%7D",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "5fe2e7",
+        "hash": "35dc3c64",
+        "encoded": "//%20%7D);",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "5fe2e7",
+        "hash": "00b2eb81",
+        "encoded": "//%20For%20now,%20return%20mock%20response",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "5fe2e7",
+        "hash": "b69701cb",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "5fe2e7",
+        "hash": "9d2d6632",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'stageWithdrawal',%20201,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "5fe2e7",
+        "hash": "23c92be0",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "5fe2e7",
+        "hash": "e9961b7c",
+        "encoded": "amount",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "5fe2e7",
+        "hash": "22ea84c9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "5fe2e7",
+        "hash": "a8163eb9",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "5fe2e7",
+        "hash": "1b1c4657",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "5fe2e7",
+        "hash": "3ec735c4",
+        "encoded": "externalTransactionId:%20%60atm_$%7Buuidv4().replace(/-/g,%20'').substring(0,%2016)%7D%60,",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "5fe2e7",
+        "hash": "7e7259b5",
+        "encoded": "status:%20'staged',",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "5fe2e7",
+        "hash": "43e6b653",
+        "encoded": "message:%20'Withdrawal%20staged%20successfully'",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "5fe2e7",
+        "hash": "a3b0d34c",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "5fe2e7",
+        "hash": "d9be88d6",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "5fe2e7",
+        "hash": "d079f1c4",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "5fe2e7",
+        "hash": "e359c76a",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'stageWithdrawal',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "5fe2e7",
+        "hash": "2f018149",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "5fe2e7",
+        "hash": "95659a77",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "5fe2e7",
+        "hash": "9dfae3e3",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "5fe2e7",
+        "hash": "6538520c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "5fe2e7",
+        "hash": "5ba2035a",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "5fe2e7",
+        "hash": "a2f89ad7",
+        "encoded": "ERROR_MESSAGES.STAGING_FAILED,",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "5fe2e7",
+        "hash": "b4fe8614",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "5fe2e7",
+        "hash": "9080d54b",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "5fe2e7",
+        "hash": "a679d6c2",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "5fe2e7",
+        "hash": "74977a35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "5fe2e7",
+        "hash": "74fcb7ab",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "5fe2e7",
+        "hash": "a5bc466c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "5fe2e7",
+        "hash": "65fdee67",
+        "encoded": "*%20Stage%20a%20deposit%20transaction%20with%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "5fe2e7",
+        "hash": "5db26314",
+        "encoded": "*%20@param%20%7BObject%7D%20params%20-%20Transaction%20parameters",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "5fe2e7",
+        "hash": "3d6b5ca2",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.transactionId%20-%20Internal%20transaction%20ID",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "5fe2e7",
+        "hash": "c57b7b58",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.cardToken%20-%20Tokenized%20card%20data",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "5fe2e7",
+        "hash": "38edc5b4",
+        "encoded": "*%20@param%20%7Bnumber%7D%20%5Bparams.amount%5D%20-%20Deposit%20amount%20(optional%20for%20deposits)",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "5fe2e7",
+        "hash": "11ea5f2a",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.userId%20-%20User%20ID",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "5fe2e7",
+        "hash": "86e81081",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Staging%20response",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "5fe2e7",
+        "hash": "804c941f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "5fe2e7",
+        "hash": "de0d77d9",
+        "encoded": "const%20stageDeposit%20=%20async%20(%7B%20transactionId,%20cardToken,%20amount,%20userId%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "5fe2e7",
+        "hash": "398009cf",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "5fe2e7",
+        "hash": "8a131699",
+        "encoded": "logger.info('ATM%20Staging%20Service%20-%20Deposit%20request',%20%7B",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "5fe2e7",
+        "hash": "f289c0ec",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "5fe2e7",
+        "hash": "5d17d747",
+        "encoded": "amount:%20amount%20%7C%7C%20'not%20specified',",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "5fe2e7",
+        "hash": "9ca259c1",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "5fe2e7",
+        "hash": "96a51355",
+        "encoded": "service:%20'atmStagingService'",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "5fe2e7",
+        "hash": "530a7fe5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "5fe2e7",
+        "hash": "058a5f6a",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "5fe2e7",
+        "hash": "2f413068",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "5fe2e7",
+        "hash": "49c853cb",
+        "encoded": "//%20Mock%20implementation",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "5fe2e7",
+        "hash": "99346f02",
+        "encoded": "return%20await%20mockStageDeposit(%7B%20transactionId,%20cardToken,%20amount,%20userId%20%7D);",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "5fe2e7",
+        "hash": "c146bd79",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "5fe2e7",
+        "hash": "ddbf0376",
+        "encoded": "//%20Real%20implementation%20would%20make%20HTTP%20request%20to%20external%20service",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "5fe2e7",
+        "hash": "8c60888f",
+        "encoded": "const%20requestPayload%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "5fe2e7",
+        "hash": "5dcecae4",
+        "encoded": "transactionType:%20'deposit',",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "5fe2e7",
+        "hash": "5a2e7b74",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "5fe2e7",
+        "hash": "9edf7729",
+        "encoded": "cardToken,",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "5fe2e7",
+        "hash": "710e018b",
+        "encoded": "amount:%20amount%20%7C%7C%20null,",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "5fe2e7",
+        "hash": "0b647dba",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "5fe2e7",
+        "hash": "3a22fbe4",
+        "encoded": "timestamp:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "5fe2e7",
+        "hash": "cc3f6ac3",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "5fe2e7",
+        "hash": "57a22b40",
+        "encoded": "//%20TODO:%20Implement%20actual%20HTTP%20client%20call%20to%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "5fe2e7",
+        "hash": "1469e537",
+        "encoded": "//%20const%20response%20=%20await%20httpClient.post('/transactions/deposit',%20requestPayload,%20%7B",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "5fe2e7",
+        "hash": "c1a47fbb",
+        "encoded": "//%20%20%20timeout:%20API_TIMEOUTS.ATM_STAGING_SERVICE,",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "5fe2e7",
+        "hash": "8036b9c0",
+        "encoded": "//%20%20%20headers:%20%7B",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "5fe2e7",
+        "hash": "baf5d637",
+        "encoded": "//%20%20%20%20%20'Authorization':%20%60Bearer%20$%7Bprocess.env.ATM_STAGING_API_KEY%7D%60,",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "5fe2e7",
+        "hash": "2ff20193",
+        "encoded": "//%20%20%20%20%20'Content-Type':%20'application/json'",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "5fe2e7",
+        "hash": "2a18e7cd",
+        "encoded": "//%20%20%20%7D",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "5fe2e7",
+        "hash": "ccf023d5",
+        "encoded": "//%20%7D);",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "5fe2e7",
+        "hash": "fdc135ee",
+        "encoded": "//%20For%20now,%20return%20mock%20response",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "5fe2e7",
+        "hash": "51a19d19",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "5fe2e7",
+        "hash": "3a4b2ad8",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'stageDeposit',%20201,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "5fe2e7",
+        "hash": "1bb6c0bc",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "5fe2e7",
+        "hash": "b0ce9639",
+        "encoded": "amount:%20amount%20%7C%7C%20'not%20specified'",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "5fe2e7",
+        "hash": "c9e7ebd5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "5fe2e7",
+        "hash": "66cee77a",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "5fe2e7",
+        "hash": "20581e22",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "5fe2e7",
+        "hash": "3ff25cf1",
+        "encoded": "externalTransactionId:%20%60atm_$%7Buuidv4().replace(/-/g,%20'').substring(0,%2016)%7D%60,",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "5fe2e7",
+        "hash": "748b6063",
+        "encoded": "status:%20'staged',",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "5fe2e7",
+        "hash": "35ef9288",
+        "encoded": "message:%20'Deposit%20staged%20successfully'",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "5fe2e7",
+        "hash": "dee089a5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "5fe2e7",
+        "hash": "c1bf793c",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "5fe2e7",
+        "hash": "c35d2fd2",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "5fe2e7",
+        "hash": "b10cbe3e",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'stageDeposit',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "5fe2e7",
+        "hash": "ffb74b8b",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "5fe2e7",
+        "hash": "6603a3d3",
+        "encoded": "amount:%20amount%20%7C%7C%20'not%20specified',",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "5fe2e7",
+        "hash": "5a939a49",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "5fe2e7",
+        "hash": "f6490669",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "5fe2e7",
+        "hash": "0812c219",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "5fe2e7",
+        "hash": "cea07afc",
+        "encoded": "ERROR_MESSAGES.STAGING_FAILED,",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "5fe2e7",
+        "hash": "e4abdf5d",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "5fe2e7",
+        "hash": "8a5a02d5",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "5fe2e7",
+        "hash": "3f39bb97",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "5fe2e7",
+        "hash": "d8893271",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "5fe2e7",
+        "hash": "b77dad7a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "5fe2e7",
+        "hash": "65d61fa4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "5fe2e7",
+        "hash": "9d3e3772",
+        "encoded": "*%20Get%20transaction%20status%20from%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "5fe2e7",
+        "hash": "83c84ab3",
+        "encoded": "*%20@param%20%7Bstring%7D%20externalTransactionId%20-%20External%20transaction%20ID",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "5fe2e7",
+        "hash": "8a59c304",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Transaction%20status",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "5fe2e7",
+        "hash": "0d6b9842",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "5fe2e7",
+        "hash": "e15e6e55",
+        "encoded": "const%20getTransactionStatus%20=%20async%20(externalTransactionId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "5fe2e7",
+        "hash": "203ed3cc",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "5fe2e7",
+        "hash": "a1f337e9",
+        "encoded": "logger.info('ATM%20Staging%20Service%20-%20Get%20transaction%20status',%20%7B",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "5fe2e7",
+        "hash": "91861603",
+        "encoded": "externalTransactionId,",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "5fe2e7",
+        "hash": "19248a8c",
+        "encoded": "service:%20'atmStagingService'",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "5fe2e7",
+        "hash": "67f8879c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "5fe2e7",
+        "hash": "b1412f1f",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "5fe2e7",
+        "hash": "d3ed6db2",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "5fe2e7",
+        "hash": "bcff0685",
+        "encoded": "//%20Mock%20implementation",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "5fe2e7",
+        "hash": "aa1dd5ff",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20500));%20//%20Simulate%20network%20delay",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "5fe2e7",
+        "hash": "2f76c4ac",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "5fe2e7",
+        "hash": "1cff2c40",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'getTransactionStatus',%20200,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "5fe2e7",
+        "hash": "489954b3",
+        "encoded": "externalTransactionId",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "5fe2e7",
+        "hash": "c9587b39",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "5fe2e7",
+        "hash": "b7c5d4d7",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "5fe2e7",
+        "hash": "4e41169c",
+        "encoded": "externalTransactionId,",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "5fe2e7",
+        "hash": "84bd3ee2",
+        "encoded": "status:%20'completed',",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "5fe2e7",
+        "hash": "5e0c29ae",
+        "encoded": "completedAt:%20new%20Date().toISOString(),",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "5fe2e7",
+        "hash": "630f1ae9",
+        "encoded": "message:%20'Transaction%20completed%20successfully'",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "5fe2e7",
+        "hash": "eeec4a42",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "5fe2e7",
+        "hash": "00c06a24",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "5fe2e7",
+        "hash": "218acad4",
+        "encoded": "//%20TODO:%20Implement%20actual%20HTTP%20client%20call%20to%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "5fe2e7",
+        "hash": "a9004f19",
+        "encoded": "//%20const%20response%20=%20await%20httpClient.get(%60/transactions/$%7BexternalTransactionId%7D%60,%20%7B",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "5fe2e7",
+        "hash": "1e9e6c83",
+        "encoded": "//%20%20%20timeout:%20API_TIMEOUTS.ATM_STAGING_SERVICE,",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "5fe2e7",
+        "hash": "b2f8d1d4",
+        "encoded": "//%20%20%20headers:%20%7B",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "5fe2e7",
+        "hash": "62f70d72",
+        "encoded": "//%20%20%20%20%20'Authorization':%20%60Bearer%20$%7Bprocess.env.ATM_STAGING_API_KEY%7D%60,",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "5fe2e7",
+        "hash": "6ced4c9a",
+        "encoded": "//%20%20%20%20%20'Content-Type':%20'application/json'",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "5fe2e7",
+        "hash": "a94664ae",
+        "encoded": "//%20%20%20%7D",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "5fe2e7",
+        "hash": "1574a908",
+        "encoded": "//%20%7D);",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "5fe2e7",
+        "hash": "4e19a9ef",
+        "encoded": "//%20For%20now,%20return%20mock%20response",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "5fe2e7",
+        "hash": "1f2389f0",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "5fe2e7",
+        "hash": "f8687ec4",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'getTransactionStatus',%20200,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "5fe2e7",
+        "hash": "335a3386",
+        "encoded": "externalTransactionId",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "5fe2e7",
+        "hash": "fd2fe27f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "5fe2e7",
+        "hash": "c7336203",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "5fe2e7",
+        "hash": "cb62f56f",
+        "encoded": "externalTransactionId,",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "5fe2e7",
+        "hash": "6e068f54",
+        "encoded": "status:%20'completed',",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "5fe2e7",
+        "hash": "e557f83c",
+        "encoded": "completedAt:%20new%20Date().toISOString(),",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "5fe2e7",
+        "hash": "33d64e79",
+        "encoded": "message:%20'Transaction%20completed%20successfully'",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "5fe2e7",
+        "hash": "88ed1e83",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "5fe2e7",
+        "hash": "98ad416a",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "5fe2e7",
+        "hash": "3a98387a",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "5fe2e7",
+        "hash": "872c3d04",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'getTransactionStatus',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "5fe2e7",
+        "hash": "38c780ab",
+        "encoded": "externalTransactionId,",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "5fe2e7",
+        "hash": "e398ebd1",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "5fe2e7",
+        "hash": "a6b9bef7",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "5fe2e7",
+        "hash": "5be8682e",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "5fe2e7",
+        "hash": "6f9ec9b2",
+        "encoded": "ERROR_MESSAGES.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "5fe2e7",
+        "hash": "508f7229",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "5fe2e7",
+        "hash": "4e32de27",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "5fe2e7",
+        "hash": "585becfd",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "5fe2e7",
+        "hash": "e196358d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "5fe2e7",
+        "hash": "6a3bce67",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "5fe2e7",
+        "hash": "124e8f08",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "5fe2e7",
+        "hash": "0cc52486",
+        "encoded": "*%20Cancel%20a%20staged%20transaction",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "5fe2e7",
+        "hash": "621a82e1",
+        "encoded": "*%20@param%20%7Bstring%7D%20externalTransactionId%20-%20External%20transaction%20ID",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "5fe2e7",
+        "hash": "679b8ed2",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Cancellation%20response",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "5fe2e7",
+        "hash": "dd6c3a25",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "5fe2e7",
+        "hash": "881368c8",
+        "encoded": "const%20cancelTransaction%20=%20async%20(externalTransactionId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "5fe2e7",
+        "hash": "80545824",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "5fe2e7",
+        "hash": "d88b6ba6",
+        "encoded": "logger.info('ATM%20Staging%20Service%20-%20Cancel%20transaction',%20%7B",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "5fe2e7",
+        "hash": "ce6e5f63",
+        "encoded": "externalTransactionId,",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "5fe2e7",
+        "hash": "411f4f4d",
+        "encoded": "service:%20'atmStagingService'",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "5fe2e7",
+        "hash": "3abfadf4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "5fe2e7",
+        "hash": "69c3025b",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "5fe2e7",
+        "hash": "980983c3",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "5fe2e7",
+        "hash": "25a2279b",
+        "encoded": "//%20Mock%20implementation",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "5fe2e7",
+        "hash": "b1a03928",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20300));%20//%20Simulate%20network%20delay",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "5fe2e7",
+        "hash": "194227d0",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "5fe2e7",
+        "hash": "704a560e",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'cancelTransaction',%20200,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "5fe2e7",
+        "hash": "d053526f",
+        "encoded": "externalTransactionId",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "5fe2e7",
+        "hash": "61cc6be4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "5fe2e7",
+        "hash": "f1cf852b",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "5fe2e7",
+        "hash": "f8e73c6f",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "5fe2e7",
+        "hash": "e5de7337",
+        "encoded": "externalTransactionId,",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "5fe2e7",
+        "hash": "5c3c1313",
+        "encoded": "status:%20'cancelled',",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "5fe2e7",
+        "hash": "fa98df59",
+        "encoded": "message:%20'Transaction%20cancelled%20successfully'",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "5fe2e7",
+        "hash": "b4bb1184",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "5fe2e7",
+        "hash": "41edc21c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "5fe2e7",
+        "hash": "97af3cd7",
+        "encoded": "//%20TODO:%20Implement%20actual%20HTTP%20client%20call%20to%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "5fe2e7",
+        "hash": "54d6290e",
+        "encoded": "//%20const%20response%20=%20await%20httpClient.delete(%60/transactions/$%7BexternalTransactionId%7D%60,%20%7B",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "5fe2e7",
+        "hash": "e1c6d74a",
+        "encoded": "//%20%20%20timeout:%20API_TIMEOUTS.ATM_STAGING_SERVICE,",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "5fe2e7",
+        "hash": "0a6d89cd",
+        "encoded": "//%20%20%20headers:%20%7B",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "5fe2e7",
+        "hash": "7dd4c97e",
+        "encoded": "//%20%20%20%20%20'Authorization':%20%60Bearer%20$%7Bprocess.env.ATM_STAGING_API_KEY%7D%60,",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "5fe2e7",
+        "hash": "48e1741b",
+        "encoded": "//%20%20%20%20%20'Content-Type':%20'application/json'",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "5fe2e7",
+        "hash": "bac45491",
+        "encoded": "//%20%20%20%7D",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "5fe2e7",
+        "hash": "cea02fdd",
+        "encoded": "//%20%7D);",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "5fe2e7",
+        "hash": "3a757db9",
+        "encoded": "//%20For%20now,%20return%20mock%20response",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "5fe2e7",
+        "hash": "e0ab66f6",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "5fe2e7",
+        "hash": "acb065ca",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'cancelTransaction',%20200,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "5fe2e7",
+        "hash": "cfcca395",
+        "encoded": "externalTransactionId",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "5fe2e7",
+        "hash": "74719792",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "5fe2e7",
+        "hash": "f877c482",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "5fe2e7",
+        "hash": "0d823fc7",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "5fe2e7",
+        "hash": "2fa0d1f5",
+        "encoded": "externalTransactionId,",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "5fe2e7",
+        "hash": "32cbb08a",
+        "encoded": "status:%20'cancelled',",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "5fe2e7",
+        "hash": "2e596b20",
+        "encoded": "message:%20'Transaction%20cancelled%20successfully'",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "5fe2e7",
+        "hash": "925aee39",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "5fe2e7",
+        "hash": "1a94787e",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "5fe2e7",
+        "hash": "76140437",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "5fe2e7",
+        "hash": "5160c47d",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'cancelTransaction',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "5fe2e7",
+        "hash": "c664fdba",
+        "encoded": "externalTransactionId,",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "5fe2e7",
+        "hash": "c360ac23",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "5fe2e7",
+        "hash": "e889f6f1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "5fe2e7",
+        "hash": "1b074f95",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "5fe2e7",
+        "hash": "d1549500",
+        "encoded": "ERROR_MESSAGES.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "5fe2e7",
+        "hash": "73607c7c",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "5fe2e7",
+        "hash": "d44e111f",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "5fe2e7",
+        "hash": "bec111d4",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "5fe2e7",
+        "hash": "522d2419",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "5fe2e7",
+        "hash": "4c21c6c8",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "5fe2e7",
+        "hash": "1b44b2f3",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "5fe2e7",
+        "hash": "54625d34",
+        "encoded": "*%20Mock%20withdrawal%20staging%20implementation",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "5fe2e7",
+        "hash": "8a2110a8",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "5fe2e7",
+        "hash": "15885d49",
+        "encoded": "const%20mockStageWithdrawal%20=%20async%20(%7B%20transactionId,%20cardToken,%20amount,%20userId%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "5fe2e7",
+        "hash": "2b933dbc",
+        "encoded": "//%20Simulate%20network%20delay",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "5fe2e7",
+        "hash": "b04fa0cf",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%201000));",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "5fe2e7",
+        "hash": "d1efbb40",
+        "encoded": "//%20Simulate%20random%20failures%20(5%25%20chance)",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "5fe2e7",
+        "hash": "9efe7cea",
+        "encoded": "if%20(Math.random()%20%3C%20MOCK_CONFIG.NETWORK_FAILURE_RATE)%20%7B",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "5fe2e7",
+        "hash": "fffd196b",
+        "encoded": "throw%20new%20Error('ATM%20Staging%20Service%20temporarily%20unavailable');",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "5fe2e7",
+        "hash": "759cd168",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "5fe2e7",
+        "hash": "c3358b6f",
+        "encoded": "//%20Simulate%20timeout%20(1%25%20chance)",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "5fe2e7",
+        "hash": "20087a74",
+        "encoded": "if%20(Math.random()%20%3C%200.01)%20%7B",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "5fe2e7",
+        "hash": "6b35efc2",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20API_TIMEOUTS.ATM_STAGING_SERVICE%20+%201000));",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "5fe2e7",
+        "hash": "c847809e",
+        "encoded": "throw%20new%20Error('Request%20timeout');",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "5fe2e7",
+        "hash": "b31bc060",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "5fe2e7",
+        "hash": "2afac4d2",
+        "encoded": "logger.info('Mock%20ATM%20Staging%20Service%20-%20Withdrawal%20staged',%20%7B",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "5fe2e7",
+        "hash": "fa95913c",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "5fe2e7",
+        "hash": "96e359e7",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "5fe2e7",
+        "hash": "7555a522",
+        "encoded": "userId",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "5fe2e7",
+        "hash": "2cd5f06d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "5fe2e7",
+        "hash": "8fe672fe",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "5fe2e7",
+        "hash": "c046fae1",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "5fe2e7",
+        "hash": "922ec0ea",
+        "encoded": "externalTransactionId:%20%60atm_mock_$%7Buuidv4().replace(/-/g,%20'').substring(0,%2012)%7D%60,",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "5fe2e7",
+        "hash": "e4084da4",
+        "encoded": "status:%20'staged',",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "5fe2e7",
+        "hash": "c30dccae",
+        "encoded": "message:%20'Withdrawal%20staged%20successfully%20(mock)'",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "5fe2e7",
+        "hash": "567e4c49",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "5fe2e7",
+        "hash": "36aad8ab",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "5fe2e7",
+        "hash": "e382646c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "5fe2e7",
+        "hash": "b95931d1",
+        "encoded": "*%20Mock%20deposit%20staging%20implementation",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "5fe2e7",
+        "hash": "34dff7c6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "5fe2e7",
+        "hash": "afb47586",
+        "encoded": "const%20mockStageDeposit%20=%20async%20(%7B%20transactionId,%20cardToken,%20amount,%20userId%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "5fe2e7",
+        "hash": "e3555e74",
+        "encoded": "//%20Simulate%20network%20delay",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "5fe2e7",
+        "hash": "97f0d5f1",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20800));",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "5fe2e7",
+        "hash": "ac554140",
+        "encoded": "//%20Simulate%20random%20failures%20(5%25%20chance)",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "5fe2e7",
+        "hash": "6bd6432e",
+        "encoded": "if%20(Math.random()%20%3C%20MOCK_CONFIG.NETWORK_FAILURE_RATE)%20%7B",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "5fe2e7",
+        "hash": "a4901ee2",
+        "encoded": "throw%20new%20Error('ATM%20Staging%20Service%20temporarily%20unavailable');",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "5fe2e7",
+        "hash": "5d666166",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "5fe2e7",
+        "hash": "56d91dfe",
+        "encoded": "//%20Simulate%20timeout%20(1%25%20chance)",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "5fe2e7",
+        "hash": "73de19c9",
+        "encoded": "if%20(Math.random()%20%3C%200.01)%20%7B",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "5fe2e7",
+        "hash": "357c4bcf",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20API_TIMEOUTS.ATM_STAGING_SERVICE%20+%201000));",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "5fe2e7",
+        "hash": "5384a245",
+        "encoded": "throw%20new%20Error('Request%20timeout');",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "5fe2e7",
+        "hash": "b0d56384",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "5fe2e7",
+        "hash": "76171097",
+        "encoded": "logger.info('Mock%20ATM%20Staging%20Service%20-%20Deposit%20staged',%20%7B",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "5fe2e7",
+        "hash": "6b40a2d9",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "5fe2e7",
+        "hash": "ece56934",
+        "encoded": "amount:%20amount%20%7C%7C%20'not%20specified',",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "5fe2e7",
+        "hash": "d2f8bc7e",
+        "encoded": "userId",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "5fe2e7",
+        "hash": "1f50a7c6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "5fe2e7",
+        "hash": "8f3322c7",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "5fe2e7",
+        "hash": "6bed535c",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "5fe2e7",
+        "hash": "bd93ed52",
+        "encoded": "externalTransactionId:%20%60atm_mock_$%7Buuidv4().replace(/-/g,%20'').substring(0,%2012)%7D%60,",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "5fe2e7",
+        "hash": "92d3287f",
+        "encoded": "status:%20'staged',",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "5fe2e7",
+        "hash": "24be3c5a",
+        "encoded": "message:%20'Deposit%20staged%20successfully%20(mock)'",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "5fe2e7",
+        "hash": "9f6c3116",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "5fe2e7",
+        "hash": "59606bb2",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "5fe2e7",
+        "hash": "50f1f661",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "5fe2e7",
+        "hash": "373f2dc9",
+        "encoded": "*%20Health%20check%20for%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "5fe2e7",
+        "hash": "193cae17",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Service%20health%20status",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "5fe2e7",
+        "hash": "b08e904a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "5fe2e7",
+        "hash": "0dc2c2ee",
+        "encoded": "const%20healthCheck%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "5fe2e7",
+        "hash": "c6ab0efc",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "369": {
+        "chunkId": "5fe2e7",
+        "hash": "45b7f74b",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "5fe2e7",
+        "hash": "5642cd57",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "5fe2e7",
+        "hash": "238868f2",
+        "encoded": "//%20Mock%20health%20check",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "5fe2e7",
+        "hash": "2bf4e708",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20100));",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "5fe2e7",
+        "hash": "07f144bc",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "5fe2e7",
+        "hash": "a819d06f",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'healthCheck',%20200,%20duration);",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "5fe2e7",
+        "hash": "29403f62",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "5fe2e7",
+        "hash": "944fbe0a",
+        "encoded": "status:%20'healthy',",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "5fe2e7",
+        "hash": "0ea644f4",
+        "encoded": "responseTime:%20%60$%7Bduration%7Dms%60,",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "5fe2e7",
+        "hash": "5a656ac0",
+        "encoded": "service:%20'mock',",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "5fe2e7",
+        "hash": "8ecdd694",
+        "encoded": "timestamp:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "5fe2e7",
+        "hash": "d3682ee8",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "5fe2e7",
+        "hash": "94e63a84",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "5fe2e7",
+        "hash": "92c9bb30",
+        "encoded": "//%20TODO:%20Implement%20actual%20health%20check",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "5fe2e7",
+        "hash": "b30b527e",
+        "encoded": "//%20const%20response%20=%20await%20httpClient.get('/health',%20%7B",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "5fe2e7",
+        "hash": "799fe335",
+        "encoded": "//%20%20%20timeout:%205000",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "5fe2e7",
+        "hash": "c705d5fc",
+        "encoded": "//%20%7D);",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "5fe2e7",
+        "hash": "b019e951",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "5fe2e7",
+        "hash": "e36cab3f",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'healthCheck',%20200,%20duration);",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "5fe2e7",
+        "hash": "2b22304f",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "5fe2e7",
+        "hash": "193e654c",
+        "encoded": "status:%20'healthy',",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "5fe2e7",
+        "hash": "24d5cf44",
+        "encoded": "responseTime:%20%60$%7Bduration%7Dms%60,",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "5fe2e7",
+        "hash": "8b11b984",
+        "encoded": "service:%20'real',",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "5fe2e7",
+        "hash": "4559f443",
+        "encoded": "timestamp:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "5fe2e7",
+        "hash": "09468975",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "5fe2e7",
+        "hash": "d9c1392b",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "5fe2e7",
+        "hash": "5d1e3638",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "5fe2e7",
+        "hash": "aae60232",
+        "encoded": "logger.logExternalService('ATM%20Staging%20Service',%20'healthCheck',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "5fe2e7",
+        "hash": "2cd4d817",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "5fe2e7",
+        "hash": "813e48de",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "5fe2e7",
+        "hash": "5987ca9b",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "5fe2e7",
+        "hash": "3b17d1a1",
+        "encoded": "status:%20'unhealthy',",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "5fe2e7",
+        "hash": "9e079dbf",
+        "encoded": "responseTime:%20%60$%7Bduration%7Dms%60,",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "5fe2e7",
+        "hash": "2ee8a6e4",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "5fe2e7",
+        "hash": "65a9a4a7",
+        "encoded": "timestamp:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "5fe2e7",
+        "hash": "de887561",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "5fe2e7",
+        "hash": "4f70d819",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "5fe2e7",
+        "hash": "cb696106",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "5fe2e7",
+        "hash": "26d4ba32",
+        "encoded": "module.exports%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "5fe2e7",
+        "hash": "3e0d01c6",
+        "encoded": "stageWithdrawal,",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "5fe2e7",
+        "hash": "0616f300",
+        "encoded": "stageDeposit,",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "5fe2e7",
+        "hash": "16d99821",
+        "encoded": "getTransactionStatus,",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "5fe2e7",
+        "hash": "13cd3229",
+        "encoded": "cancelTransaction,",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "5fe2e7",
+        "hash": "25a9e598",
+        "encoded": "healthCheck",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "5fe2e7",
+        "hash": "b5b326e1",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

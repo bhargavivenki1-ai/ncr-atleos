@@ -1,0 +1,579 @@
+{
+  "backend/src/routes/atm.js": {
+    "filename": "atm.js",
+    "path": "backend/src/routes/atm.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "50f6fe": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134458,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "61124353",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "50f6fe",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "50f6fe",
+        "hash": "0a2a76b7",
+        "encoded": "*%20ATM%20service%20routes",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "50f6fe",
+        "hash": "596e0f05",
+        "encoded": "*%20Handles%20ATM%20transactions%20including%20withdrawals,%20deposits,%20and%20staging",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "50f6fe",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "50f6fe",
+        "hash": "e4593fda",
+        "encoded": "const%20express%20=%20require('express');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "50f6fe",
+        "hash": "3787b752",
+        "encoded": "const%20%7B%20catchAsync%20%7D%20=%20require('../middleware/errorHandler');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "50f6fe",
+        "hash": "d6eddcb5",
+        "encoded": "const%20%7B%20authenticate%20%7D%20=%20require('../middleware/auth');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "50f6fe",
+        "hash": "66883619",
+        "encoded": "const%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "50f6fe",
+        "hash": "932d680f",
+        "encoded": "validateWithdrawal,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "50f6fe",
+        "hash": "b60a1168",
+        "encoded": "validateDeposit,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "50f6fe",
+        "hash": "824749eb",
+        "encoded": "validateTransactionId,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "50f6fe",
+        "hash": "bd356c2e",
+        "encoded": "validatePagination,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "50f6fe",
+        "hash": "c7e0f758",
+        "encoded": "validateDateRange,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "50f6fe",
+        "hash": "969c5340",
+        "encoded": "sanitizeInput",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "50f6fe",
+        "hash": "1d87b111",
+        "encoded": "%7D%20=%20require('../middleware/validation');",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "50f6fe",
+        "hash": "06dc071e",
+        "encoded": "const%20atmController%20=%20require('../controllers/atmController');",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "50f6fe",
+        "hash": "6c402809",
+        "encoded": "const%20router%20=%20express.Router();",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "50f6fe",
+        "hash": "7d08eda5",
+        "encoded": "//%20Apply%20authentication%20and%20sanitization%20to%20all%20routes",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "50f6fe",
+        "hash": "ef60ee7f",
+        "encoded": "router.use(authenticate);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "50f6fe",
+        "hash": "25a054c8",
+        "encoded": "router.use(sanitizeInput);",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "50f6fe",
+        "hash": "a1f7b1b8",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "50f6fe",
+        "hash": "95911557",
+        "encoded": "*%20Stage%20a%20cash%20withdrawal%20transaction",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "50f6fe",
+        "hash": "4a7bf22c",
+        "encoded": "*%20POST%20/api/atm/transactions/withdrawal",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "50f6fe",
+        "hash": "d7e56af4",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "50f6fe",
+        "hash": "595847f4",
+        "encoded": "router.post('/transactions/withdrawal',",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "50f6fe",
+        "hash": "13c8e76d",
+        "encoded": "validateWithdrawal,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "50f6fe",
+        "hash": "c3808914",
+        "encoded": "catchAsync(atmController.stageWithdrawal)",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "50f6fe",
+        "hash": "070912cb",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "50f6fe",
+        "hash": "a2d434cb",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "50f6fe",
+        "hash": "e357fcc1",
+        "encoded": "*%20Stage%20a%20cash%20deposit%20transaction",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "50f6fe",
+        "hash": "3561f4bf",
+        "encoded": "*%20POST%20/api/atm/transactions/deposit",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "50f6fe",
+        "hash": "ca9f8ba0",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "50f6fe",
+        "hash": "9f6a6e67",
+        "encoded": "router.post('/transactions/deposit',",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "50f6fe",
+        "hash": "8e290f74",
+        "encoded": "validateDeposit,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "50f6fe",
+        "hash": "240aafb8",
+        "encoded": "catchAsync(atmController.stageDeposit)",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "50f6fe",
+        "hash": "f0f68145",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "50f6fe",
+        "hash": "6599f70a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "50f6fe",
+        "hash": "f936e101",
+        "encoded": "*%20Get%20transaction%20status%20by%20ID",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "50f6fe",
+        "hash": "33946d0d",
+        "encoded": "*%20GET%20/api/atm/transactions/:transactionId",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "50f6fe",
+        "hash": "fa6de1f2",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "50f6fe",
+        "hash": "253e340c",
+        "encoded": "router.get('/transactions/:transactionId',",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "50f6fe",
+        "hash": "45e76f0b",
+        "encoded": "validateTransactionId,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "50f6fe",
+        "hash": "8112fbd4",
+        "encoded": "catchAsync(atmController.getTransactionStatus)",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "50f6fe",
+        "hash": "59f18b0f",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "50f6fe",
+        "hash": "09dfcb49",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "50f6fe",
+        "hash": "b292e2ad",
+        "encoded": "*%20Get%20user%20transaction%20history",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "50f6fe",
+        "hash": "132cb4e0",
+        "encoded": "*%20GET%20/api/atm/transactions",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "50f6fe",
+        "hash": "43449f3f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "50f6fe",
+        "hash": "a6bdde1d",
+        "encoded": "router.get('/transactions',",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "50f6fe",
+        "hash": "af553995",
+        "encoded": "validatePagination,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "50f6fe",
+        "hash": "1ebe38c2",
+        "encoded": "validateDateRange,",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "50f6fe",
+        "hash": "c44fee2a",
+        "encoded": "catchAsync(atmController.getTransactionHistory)",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "50f6fe",
+        "hash": "3323728d",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "50f6fe",
+        "hash": "725e598b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "50f6fe",
+        "hash": "9b6e01f8",
+        "encoded": "*%20Cancel%20a%20pending%20transaction",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "50f6fe",
+        "hash": "11122770",
+        "encoded": "*%20DELETE%20/api/atm/transactions/:transactionId",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "50f6fe",
+        "hash": "63411be4",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "50f6fe",
+        "hash": "cfa12888",
+        "encoded": "router.delete('/transactions/:transactionId',",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "50f6fe",
+        "hash": "ffbc5f48",
+        "encoded": "validateTransactionId,",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "50f6fe",
+        "hash": "9d956212",
+        "encoded": "catchAsync(atmController.cancelTransaction)",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "50f6fe",
+        "hash": "5883bb7d",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "50f6fe",
+        "hash": "b5d2d83c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "50f6fe",
+        "hash": "4ab724a8",
+        "encoded": "*%20Retry%20a%20failed%20transaction",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "50f6fe",
+        "hash": "bb0b1782",
+        "encoded": "*%20POST%20/api/atm/transactions/:transactionId/retry",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "50f6fe",
+        "hash": "fe9dbdbf",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "50f6fe",
+        "hash": "b87a7913",
+        "encoded": "router.post('/transactions/:transactionId/retry',",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "50f6fe",
+        "hash": "c123bc53",
+        "encoded": "validateTransactionId,",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "50f6fe",
+        "hash": "3d3bd98b",
+        "encoded": "catchAsync(atmController.retryTransaction)",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "50f6fe",
+        "hash": "0afea6a9",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "50f6fe",
+        "hash": "dd348e66",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "50f6fe",
+        "hash": "8723bfde",
+        "encoded": "*%20Get%20transaction%20statistics",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "50f6fe",
+        "hash": "f814b3a1",
+        "encoded": "*%20GET%20/api/atm/statistics",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "50f6fe",
+        "hash": "ce43e997",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "50f6fe",
+        "hash": "28699694",
+        "encoded": "router.get('/statistics',",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "50f6fe",
+        "hash": "1b67e776",
+        "encoded": "validateDateRange,",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "50f6fe",
+        "hash": "f4749e9a",
+        "encoded": "catchAsync(atmController.getTransactionStatistics)",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "50f6fe",
+        "hash": "9dc58a69",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "50f6fe",
+        "hash": "5fea1916",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "50f6fe",
+        "hash": "46d49ed8",
+        "encoded": "*%20Simulate%20card%20scanning%20(for%20testing)",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "50f6fe",
+        "hash": "599fb2a4",
+        "encoded": "*%20POST%20/api/atm/scan-card",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "50f6fe",
+        "hash": "c35ef544",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "50f6fe",
+        "hash": "f3739824",
+        "encoded": "router.post('/scan-card',",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "50f6fe",
+        "hash": "8a01f905",
+        "encoded": "catchAsync(atmController.simulateCardScan)",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "50f6fe",
+        "hash": "0cce519e",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "50f6fe",
+        "hash": "d1bf473f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "50f6fe",
+        "hash": "6d98dcf4",
+        "encoded": "*%20Get%20ATM%20service%20status",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "50f6fe",
+        "hash": "03aaefb6",
+        "encoded": "*%20GET%20/api/atm/status",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "50f6fe",
+        "hash": "c07fdc3d",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "50f6fe",
+        "hash": "237b9e4c",
+        "encoded": "router.get('/status',",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "50f6fe",
+        "hash": "37cf21e5",
+        "encoded": "catchAsync(atmController.getServiceStatus)",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "50f6fe",
+        "hash": "31977b8c",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "50f6fe",
+        "hash": "084d9b0b",
+        "encoded": "module.exports%20=%20router;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

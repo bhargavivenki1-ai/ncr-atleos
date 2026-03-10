@@ -1,0 +1,93 @@
+{
+  "backend/tests/globalTeardown.js": {
+    "filename": "globalTeardown.js",
+    "path": "backend/tests/globalTeardown.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "e4663c": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134866,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "171ba6a5",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "e4663c",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "e4663c",
+        "hash": "221241ea",
+        "encoded": "*%20Jest%20global%20teardown",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "e4663c",
+        "hash": "86649de8",
+        "encoded": "*%20Runs%20once%20after%20all%20tests",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "e4663c",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "e4663c",
+        "hash": "d12a20a5",
+        "encoded": "module.exports%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "e4663c",
+        "hash": "650c8e42",
+        "encoded": "//%20Stop%20in-memory%20MongoDB",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "e4663c",
+        "hash": "92757153",
+        "encoded": "if%20(global.__MONGOD__)%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "e4663c",
+        "hash": "758e3435",
+        "encoded": "await%20global.__MONGOD__.stop();",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "e4663c",
+        "hash": "b858f09b",
+        "encoded": "console.log('Test%20MongoDB%20stopped');",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "e4663c",
+        "hash": "c2f1edd6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "e4663c",
+        "hash": "9658cd33",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

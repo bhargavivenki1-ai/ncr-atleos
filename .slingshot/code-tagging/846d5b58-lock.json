@@ -1,0 +1,3069 @@
+{
+  "backend/src/services/coreBankingService.js": {
+    "filename": "coreBankingService.js",
+    "path": "backend/src/services/coreBankingService.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "7440f9": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134794,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "1dd60ee0",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "7440f9",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "7440f9",
+        "hash": "f9059687",
+        "encoded": "*%20Core%20Banking%20Service%20integration",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "7440f9",
+        "hash": "6f76a6a1",
+        "encoded": "*%20Handles%20communication%20with%20the%20external%20Core%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "7440f9",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "7440f9",
+        "hash": "43ec61a4",
+        "encoded": "const%20%7B%20v4:%20uuidv4%20%7D%20=%20require('uuid');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "7440f9",
+        "hash": "9b89d2f4",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../middleware/errorHandler');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "7440f9",
+        "hash": "ee012dec",
+        "encoded": "const%20%7B%20HTTP_STATUS,%20ERROR_TYPES,%20ERROR_MESSAGES,%20API_TIMEOUTS,%20MOCK_CONFIG%20%7D%20=%20require('../config/constants');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "7440f9",
+        "hash": "e8e62a8a",
+        "encoded": "const%20logger%20=%20require('../utils/logger');",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "7440f9",
+        "hash": "87707c3e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "7440f9",
+        "hash": "10e59690",
+        "encoded": "*%20Get%20account%20balances%20from%20Core%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "7440f9",
+        "hash": "9e655a89",
+        "encoded": "*%20@param%20%7Bstring%7D%20userId%20-%20User%20ID",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "7440f9",
+        "hash": "ca351cf3",
+        "encoded": "*%20@returns%20%7BPromise%3CArray%3E%7D%20Array%20of%20account%20balances",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "7440f9",
+        "hash": "8080ad43",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "7440f9",
+        "hash": "346fd772",
+        "encoded": "const%20getAccountBalances%20=%20async%20(userId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "7440f9",
+        "hash": "0e1f1205",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "7440f9",
+        "hash": "0da60aa8",
+        "encoded": "logger.info('Core%20Banking%20Service%20-%20Get%20account%20balances',%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "7440f9",
+        "hash": "08d08419",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "7440f9",
+        "hash": "f99a50f3",
+        "encoded": "service:%20'coreBankingService'",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "7440f9",
+        "hash": "76a9f041",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "7440f9",
+        "hash": "ed34a8fb",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "7440f9",
+        "hash": "ee1b2367",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "7440f9",
+        "hash": "694a9e6a",
+        "encoded": "//%20Mock%20implementation",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "7440f9",
+        "hash": "c2b4b9e7",
+        "encoded": "return%20await%20mockGetAccountBalances(userId);",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "7440f9",
+        "hash": "a7947416",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "7440f9",
+        "hash": "56f276fc",
+        "encoded": "//%20Real%20implementation%20would%20make%20HTTP%20request%20to%20external%20service",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "7440f9",
+        "hash": "326a81fa",
+        "encoded": "const%20requestPayload%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "7440f9",
+        "hash": "49d3cabb",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "7440f9",
+        "hash": "ff61fec2",
+        "encoded": "requestType:%20'account_balances',",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "7440f9",
+        "hash": "95727da1",
+        "encoded": "timestamp:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "7440f9",
+        "hash": "b2fa52a5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "7440f9",
+        "hash": "8df7c045",
+        "encoded": "//%20TODO:%20Implement%20actual%20HTTP%20client%20call%20to%20Core%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "7440f9",
+        "hash": "af6bbc84",
+        "encoded": "//%20const%20response%20=%20await%20httpClient.get(%60/accounts/$%7BuserId%7D/balances%60,%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "7440f9",
+        "hash": "675df417",
+        "encoded": "//%20%20%20timeout:%20API_TIMEOUTS.CORE_BANKING_SERVICE,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "7440f9",
+        "hash": "c91a3263",
+        "encoded": "//%20%20%20headers:%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "7440f9",
+        "hash": "8bf9fd21",
+        "encoded": "//%20%20%20%20%20'Authorization':%20%60Bearer%20$%7Bprocess.env.CORE_BANKING_API_KEY%7D%60,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "7440f9",
+        "hash": "d1f5d41a",
+        "encoded": "//%20%20%20%20%20'Content-Type':%20'application/json'",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "7440f9",
+        "hash": "773b03de",
+        "encoded": "//%20%20%20%7D",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "7440f9",
+        "hash": "871ee471",
+        "encoded": "//%20%7D);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "7440f9",
+        "hash": "74cd84d3",
+        "encoded": "//%20For%20now,%20return%20mock%20response",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "7440f9",
+        "hash": "50804aba",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "7440f9",
+        "hash": "4ed8beb5",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'getAccountBalances',%20200,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "7440f9",
+        "hash": "691777ad",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "7440f9",
+        "hash": "121c18ab",
+        "encoded": "accountCount:%20MOCK_CONFIG.MOCK_ACCOUNTS.length",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "7440f9",
+        "hash": "d4fc8746",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "7440f9",
+        "hash": "828c1e32",
+        "encoded": "return%20MOCK_CONFIG.MOCK_ACCOUNTS.map(account%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "7440f9",
+        "hash": "da0e050d",
+        "encoded": "...account,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "7440f9",
+        "hash": "1375c616",
+        "encoded": "lastUpdated:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "7440f9",
+        "hash": "f782fc59",
+        "encoded": "%7D));",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "7440f9",
+        "hash": "45086940",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "7440f9",
+        "hash": "b61918fd",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "7440f9",
+        "hash": "3d43e1e7",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'getAccountBalances',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "7440f9",
+        "hash": "e6e7b6d4",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "7440f9",
+        "hash": "65b31172",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "7440f9",
+        "hash": "841a9c8c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "7440f9",
+        "hash": "8f1dbf68",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "7440f9",
+        "hash": "cf840b52",
+        "encoded": "ERROR_MESSAGES.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "7440f9",
+        "hash": "019424ac",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "7440f9",
+        "hash": "1c483356",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "7440f9",
+        "hash": "6f127df0",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "7440f9",
+        "hash": "352e9b23",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "7440f9",
+        "hash": "ea435f95",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "7440f9",
+        "hash": "f1aac305",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "7440f9",
+        "hash": "ddb4c5c1",
+        "encoded": "*%20Get%20specific%20account%20balance%20from%20Core%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "7440f9",
+        "hash": "4213b2dd",
+        "encoded": "*%20@param%20%7Bstring%7D%20userId%20-%20User%20ID",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "7440f9",
+        "hash": "e31d46f0",
+        "encoded": "*%20@param%20%7Bstring%7D%20accountId%20-%20Account%20ID",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "7440f9",
+        "hash": "5c3966b6",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Account%20balance%20information",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "7440f9",
+        "hash": "9de63012",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "7440f9",
+        "hash": "476035cf",
+        "encoded": "const%20getAccountBalance%20=%20async%20(userId,%20accountId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "7440f9",
+        "hash": "20a918d2",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "7440f9",
+        "hash": "2afbb4d1",
+        "encoded": "logger.info('Core%20Banking%20Service%20-%20Get%20account%20balance',%20%7B",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "7440f9",
+        "hash": "0f01abdd",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "7440f9",
+        "hash": "c75eadad",
+        "encoded": "accountId,",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "7440f9",
+        "hash": "10ec2995",
+        "encoded": "service:%20'coreBankingService'",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "7440f9",
+        "hash": "82716009",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "7440f9",
+        "hash": "c6482d0e",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "7440f9",
+        "hash": "5c7d13fd",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "7440f9",
+        "hash": "338a1c6c",
+        "encoded": "//%20Mock%20implementation",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "7440f9",
+        "hash": "7050f0bc",
+        "encoded": "return%20await%20mockGetAccountBalance(userId,%20accountId);",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "7440f9",
+        "hash": "06a855c2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "7440f9",
+        "hash": "b38183c9",
+        "encoded": "//%20Real%20implementation%20would%20make%20HTTP%20request%20to%20external%20service",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "7440f9",
+        "hash": "746f36d7",
+        "encoded": "//%20TODO:%20Implement%20actual%20HTTP%20client%20call",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "7440f9",
+        "hash": "523fa98b",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "7440f9",
+        "hash": "1a2cf463",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'getAccountBalance',%20200,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "7440f9",
+        "hash": "20018173",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "7440f9",
+        "hash": "7b05c4f1",
+        "encoded": "accountId",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "7440f9",
+        "hash": "bcfcb921",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "7440f9",
+        "hash": "0892e05f",
+        "encoded": "//%20Mock%20response%20for%20now",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "7440f9",
+        "hash": "67edf6f3",
+        "encoded": "const%20account%20=%20MOCK_CONFIG.MOCK_ACCOUNTS.find(acc%20=%3E%20acc.id%20===%20accountId);",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "7440f9",
+        "hash": "b28bd620",
+        "encoded": "if%20(!account)%20%7B",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "7440f9",
+        "hash": "bc927fe3",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "7440f9",
+        "hash": "dba6e302",
+        "encoded": "'Account%20not%20found',",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "7440f9",
+        "hash": "dd6b109b",
+        "encoded": "HTTP_STATUS.NOT_FOUND,",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "7440f9",
+        "hash": "2e45d314",
+        "encoded": "ERROR_TYPES.NOT_FOUND_ERROR",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "7440f9",
+        "hash": "caa4e59c",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "7440f9",
+        "hash": "3674f723",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "7440f9",
+        "hash": "14d818f4",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "7440f9",
+        "hash": "e93f1315",
+        "encoded": "...account,",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "7440f9",
+        "hash": "e2534485",
+        "encoded": "lastUpdated:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "7440f9",
+        "hash": "ab195260",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "7440f9",
+        "hash": "dc8832c5",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "7440f9",
+        "hash": "a092806b",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "7440f9",
+        "hash": "380d196a",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'getAccountBalance',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "7440f9",
+        "hash": "3ec13418",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "7440f9",
+        "hash": "8e3455ea",
+        "encoded": "accountId,",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "7440f9",
+        "hash": "0a6ee847",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "7440f9",
+        "hash": "f9bbf6da",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "7440f9",
+        "hash": "902f0af4",
+        "encoded": "if%20(error%20instanceof%20AppError)%20%7B",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "7440f9",
+        "hash": "2c9a3cfc",
+        "encoded": "throw%20error;",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "7440f9",
+        "hash": "14fa0baa",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "7440f9",
+        "hash": "54ab6171",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "7440f9",
+        "hash": "2c9d8b1b",
+        "encoded": "ERROR_MESSAGES.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "7440f9",
+        "hash": "788d3651",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "7440f9",
+        "hash": "c3d9d026",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "7440f9",
+        "hash": "416b7244",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "7440f9",
+        "hash": "1dc2599e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "7440f9",
+        "hash": "62bba58d",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "7440f9",
+        "hash": "05b0cbab",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "7440f9",
+        "hash": "0a11c43d",
+        "encoded": "*%20Get%20user%20accounts%20from%20Core%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "7440f9",
+        "hash": "b11809f7",
+        "encoded": "*%20@param%20%7Bstring%7D%20userId%20-%20User%20ID",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "7440f9",
+        "hash": "dbc97c29",
+        "encoded": "*%20@returns%20%7BPromise%3CArray%3E%7D%20Array%20of%20user%20accounts",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "7440f9",
+        "hash": "02826879",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "7440f9",
+        "hash": "999b0868",
+        "encoded": "const%20getUserAccounts%20=%20async%20(userId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "7440f9",
+        "hash": "8612fe65",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "7440f9",
+        "hash": "68366570",
+        "encoded": "logger.info('Core%20Banking%20Service%20-%20Get%20user%20accounts',%20%7B",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "7440f9",
+        "hash": "a3c8d39a",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "7440f9",
+        "hash": "7445e8cd",
+        "encoded": "service:%20'coreBankingService'",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "7440f9",
+        "hash": "e7e1c8d1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "7440f9",
+        "hash": "6181d098",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "7440f9",
+        "hash": "aa252a50",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "7440f9",
+        "hash": "18b85bdc",
+        "encoded": "//%20Mock%20implementation",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "7440f9",
+        "hash": "d6db19df",
+        "encoded": "return%20await%20mockGetUserAccounts(userId);",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "7440f9",
+        "hash": "d8893271",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "7440f9",
+        "hash": "8736a9f8",
+        "encoded": "//%20Real%20implementation%20would%20make%20HTTP%20request%20to%20external%20service",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "7440f9",
+        "hash": "018c8095",
+        "encoded": "//%20TODO:%20Implement%20actual%20HTTP%20client%20call",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "7440f9",
+        "hash": "60a112fb",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "7440f9",
+        "hash": "edc38732",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'getUserAccounts',%20200,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "7440f9",
+        "hash": "cd5945b0",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "7440f9",
+        "hash": "53a17ab5",
+        "encoded": "accountCount:%20MOCK_CONFIG.MOCK_ACCOUNTS.length",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "7440f9",
+        "hash": "cc284540",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "7440f9",
+        "hash": "77fa3b48",
+        "encoded": "return%20MOCK_CONFIG.MOCK_ACCOUNTS;",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "7440f9",
+        "hash": "d209dafd",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "7440f9",
+        "hash": "df1b7969",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "7440f9",
+        "hash": "76397be4",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'getUserAccounts',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "7440f9",
+        "hash": "bf678cc0",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "7440f9",
+        "hash": "7ec4a461",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "7440f9",
+        "hash": "9a650e63",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "7440f9",
+        "hash": "c66c152e",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "7440f9",
+        "hash": "68321ab0",
+        "encoded": "ERROR_MESSAGES.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "7440f9",
+        "hash": "395ada3f",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "7440f9",
+        "hash": "6b10ca20",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "7440f9",
+        "hash": "414bca52",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "7440f9",
+        "hash": "98787a28",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "7440f9",
+        "hash": "bc371310",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "7440f9",
+        "hash": "07d81c5e",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "7440f9",
+        "hash": "1dfed882",
+        "encoded": "*%20Transfer%20funds%20between%20accounts",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "7440f9",
+        "hash": "636ee59b",
+        "encoded": "*%20@param%20%7BObject%7D%20params%20-%20Transfer%20parameters",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "7440f9",
+        "hash": "44602df0",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.transactionId%20-%20Internal%20transaction%20ID",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "7440f9",
+        "hash": "de97108c",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.fromAccountId%20-%20Source%20account%20ID",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "7440f9",
+        "hash": "dbd991c7",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.toAccountId%20-%20Destination%20account%20ID",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "7440f9",
+        "hash": "ff4e8924",
+        "encoded": "*%20@param%20%7Bnumber%7D%20params.amount%20-%20Transfer%20amount",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "7440f9",
+        "hash": "c9112ab0",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.description%20-%20Transfer%20description",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "7440f9",
+        "hash": "cd39e03e",
+        "encoded": "*%20@param%20%7Bstring%7D%20params.userId%20-%20User%20ID",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "7440f9",
+        "hash": "93189ff8",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Transfer%20response",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "7440f9",
+        "hash": "cfbba28c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "7440f9",
+        "hash": "a908c72b",
+        "encoded": "const%20transferFunds%20=%20async%20(%7B%20transactionId,%20fromAccountId,%20toAccountId,%20amount,%20description,%20userId%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "7440f9",
+        "hash": "ddfa3f02",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "7440f9",
+        "hash": "74773924",
+        "encoded": "logger.info('Core%20Banking%20Service%20-%20Transfer%20funds',%20%7B",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "7440f9",
+        "hash": "14810f0b",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "7440f9",
+        "hash": "c0fef721",
+        "encoded": "fromAccountId,",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "7440f9",
+        "hash": "8365fc96",
+        "encoded": "toAccountId,",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "7440f9",
+        "hash": "331cd9bb",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "7440f9",
+        "hash": "4a1db13a",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "7440f9",
+        "hash": "3f086afe",
+        "encoded": "service:%20'coreBankingService'",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "7440f9",
+        "hash": "b7c047e0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "7440f9",
+        "hash": "ff494b73",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "7440f9",
+        "hash": "93a5c409",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "7440f9",
+        "hash": "60bd4cfa",
+        "encoded": "//%20Mock%20implementation",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "7440f9",
+        "hash": "8adc5c45",
+        "encoded": "return%20await%20mockTransferFunds(%7B%20transactionId,%20fromAccountId,%20toAccountId,%20amount,%20description,%20userId%20%7D);",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "7440f9",
+        "hash": "5328d41a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "7440f9",
+        "hash": "f78ef73b",
+        "encoded": "//%20Real%20implementation%20would%20make%20HTTP%20request%20to%20external%20service",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "7440f9",
+        "hash": "5a02c65b",
+        "encoded": "const%20requestPayload%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "7440f9",
+        "hash": "605a0bb3",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "7440f9",
+        "hash": "ae2fa910",
+        "encoded": "fromAccountId,",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "7440f9",
+        "hash": "a57106f3",
+        "encoded": "toAccountId,",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "7440f9",
+        "hash": "f78e724c",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "7440f9",
+        "hash": "8d09541f",
+        "encoded": "description,",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "7440f9",
+        "hash": "d2c05f66",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "7440f9",
+        "hash": "22e27cc0",
+        "encoded": "timestamp:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "7440f9",
+        "hash": "088ac6fd",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "7440f9",
+        "hash": "66f967d5",
+        "encoded": "//%20TODO:%20Implement%20actual%20HTTP%20client%20call%20to%20Core%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "7440f9",
+        "hash": "8749067d",
+        "encoded": "//%20const%20response%20=%20await%20httpClient.post('/transfers',%20requestPayload,%20%7B",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "7440f9",
+        "hash": "7ad075d7",
+        "encoded": "//%20%20%20timeout:%20API_TIMEOUTS.CORE_BANKING_SERVICE,",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "7440f9",
+        "hash": "f5bfd060",
+        "encoded": "//%20%20%20headers:%20%7B",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "7440f9",
+        "hash": "d4e7cada",
+        "encoded": "//%20%20%20%20%20'Authorization':%20%60Bearer%20$%7Bprocess.env.CORE_BANKING_API_KEY%7D%60,",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "7440f9",
+        "hash": "932f634e",
+        "encoded": "//%20%20%20%20%20'Content-Type':%20'application/json'",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "7440f9",
+        "hash": "3fa3533d",
+        "encoded": "//%20%20%20%7D",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "7440f9",
+        "hash": "73d6fad1",
+        "encoded": "//%20%7D);",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "7440f9",
+        "hash": "d9998502",
+        "encoded": "//%20For%20now,%20return%20mock%20response",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "7440f9",
+        "hash": "848783c6",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "7440f9",
+        "hash": "f2493f80",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'transferFunds',%20201,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "7440f9",
+        "hash": "5f3a70d9",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "7440f9",
+        "hash": "26c943bf",
+        "encoded": "amount",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "7440f9",
+        "hash": "3abfadf4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "7440f9",
+        "hash": "cf769be9",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "7440f9",
+        "hash": "b2b48c1e",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "7440f9",
+        "hash": "6b009e47",
+        "encoded": "externalTransactionId:%20%60cbs_$%7Buuidv4().replace(/-/g,%20'').substring(0,%2016)%7D%60,",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "7440f9",
+        "hash": "e863387d",
+        "encoded": "status:%20'completed',",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "7440f9",
+        "hash": "863cc679",
+        "encoded": "message:%20'Transfer%20completed%20successfully'",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "7440f9",
+        "hash": "3b2c2325",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "7440f9",
+        "hash": "9a4903fb",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "7440f9",
+        "hash": "bee6d112",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "7440f9",
+        "hash": "8df655db",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'transferFunds',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "7440f9",
+        "hash": "a0cf5b59",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "7440f9",
+        "hash": "7999f263",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "7440f9",
+        "hash": "617b9c7f",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "7440f9",
+        "hash": "9b77e7e9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "7440f9",
+        "hash": "962b226a",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "7440f9",
+        "hash": "8b3e903f",
+        "encoded": "ERROR_MESSAGES.TRANSFER_FAILED,",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "7440f9",
+        "hash": "ae75e175",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "7440f9",
+        "hash": "c60e1ebe",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "7440f9",
+        "hash": "cdf3d875",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "7440f9",
+        "hash": "ed68a824",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "7440f9",
+        "hash": "f00833d0",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "7440f9",
+        "hash": "55efb841",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "7440f9",
+        "hash": "b4ed91c8",
+        "encoded": "*%20Get%20account%20statement%20from%20Core%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "7440f9",
+        "hash": "3bcea8ee",
+        "encoded": "*%20@param%20%7Bstring%7D%20userId%20-%20User%20ID",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "7440f9",
+        "hash": "6db467a1",
+        "encoded": "*%20@param%20%7Bstring%7D%20accountId%20-%20Account%20ID",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "7440f9",
+        "hash": "9b748b7e",
+        "encoded": "*%20@param%20%7BObject%7D%20options%20-%20Statement%20options",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "7440f9",
+        "hash": "26b94b15",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Account%20statement",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "7440f9",
+        "hash": "796718ce",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "7440f9",
+        "hash": "34ca0228",
+        "encoded": "const%20getAccountStatement%20=%20async%20(userId,%20accountId,%20options%20=%20%7B%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "7440f9",
+        "hash": "624eabdf",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "7440f9",
+        "hash": "95f0d3aa",
+        "encoded": "logger.info('Core%20Banking%20Service%20-%20Get%20account%20statement',%20%7B",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "7440f9",
+        "hash": "8e9db578",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "7440f9",
+        "hash": "fa3ee350",
+        "encoded": "accountId,",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "7440f9",
+        "hash": "34e6f155",
+        "encoded": "options,",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "7440f9",
+        "hash": "53f2432c",
+        "encoded": "service:%20'coreBankingService'",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "7440f9",
+        "hash": "d10ad09d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "7440f9",
+        "hash": "104229d4",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "7440f9",
+        "hash": "599d1188",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "7440f9",
+        "hash": "ff830f9b",
+        "encoded": "//%20Mock%20implementation",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "7440f9",
+        "hash": "de7d9b2e",
+        "encoded": "return%20await%20mockGetAccountStatement(userId,%20accountId,%20options);",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "7440f9",
+        "hash": "c89f6ffc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "7440f9",
+        "hash": "97c42e25",
+        "encoded": "//%20Real%20implementation%20would%20make%20HTTP%20request%20to%20external%20service",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "7440f9",
+        "hash": "a3cf570f",
+        "encoded": "//%20TODO:%20Implement%20actual%20HTTP%20client%20call",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "7440f9",
+        "hash": "33604d87",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "7440f9",
+        "hash": "e1eb55ee",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'getAccountStatement',%20200,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "7440f9",
+        "hash": "681cb09a",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "7440f9",
+        "hash": "341d758c",
+        "encoded": "accountId",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "7440f9",
+        "hash": "72ca0ddf",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "7440f9",
+        "hash": "115afb04",
+        "encoded": "//%20Mock%20response%20for%20now",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "7440f9",
+        "hash": "fde3f4bc",
+        "encoded": "const%20account%20=%20MOCK_CONFIG.MOCK_ACCOUNTS.find(acc%20=%3E%20acc.id%20===%20accountId);",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "7440f9",
+        "hash": "bbd2ca69",
+        "encoded": "if%20(!account)%20%7B",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "7440f9",
+        "hash": "122b5bd5",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "7440f9",
+        "hash": "fbf97fd2",
+        "encoded": "'Account%20not%20found',",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "7440f9",
+        "hash": "f2a6af3e",
+        "encoded": "HTTP_STATUS.NOT_FOUND,",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "7440f9",
+        "hash": "66b223f7",
+        "encoded": "ERROR_TYPES.NOT_FOUND_ERROR",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "7440f9",
+        "hash": "3975af08",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "7440f9",
+        "hash": "a5e1e4c3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "7440f9",
+        "hash": "933806d2",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "7440f9",
+        "hash": "3ce27c32",
+        "encoded": "account:%20%7B",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "7440f9",
+        "hash": "cfab0f2f",
+        "encoded": "accountId:%20account.id,",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "7440f9",
+        "hash": "fe4c6201",
+        "encoded": "accountName:%20account.name,",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "7440f9",
+        "hash": "2b9f613e",
+        "encoded": "accountNumber:%20account.accountNumber,",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "7440f9",
+        "hash": "76303f77",
+        "encoded": "currentBalance:%20account.balance",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "7440f9",
+        "hash": "7ccde4d3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "7440f9",
+        "hash": "d3be8562",
+        "encoded": "transactions:%20%5B",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "7440f9",
+        "hash": "7ff83891",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "7440f9",
+        "hash": "5f7e5abf",
+        "encoded": "date:%20new%20Date(Date.now()%20-%2086400000).toISOString(),",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "7440f9",
+        "hash": "fe529005",
+        "encoded": "description:%20'ATM%20Withdrawal',",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "7440f9",
+        "hash": "487f9e63",
+        "encoded": "amount:%20-100.00,",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "7440f9",
+        "hash": "41f63d05",
+        "encoded": "balance:%20account.balance%20+%20100.00",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "7440f9",
+        "hash": "ac9df7d0",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "7440f9",
+        "hash": "e1df8837",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "7440f9",
+        "hash": "b440c8d4",
+        "encoded": "date:%20new%20Date(Date.now()%20-%20172800000).toISOString(),",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "7440f9",
+        "hash": "056e4bec",
+        "encoded": "description:%20'Direct%20Deposit',",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "7440f9",
+        "hash": "c3fbc1b1",
+        "encoded": "amount:%202000.00,",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "7440f9",
+        "hash": "ca7a9088",
+        "encoded": "balance:%20account.balance%20+%202100.00",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "7440f9",
+        "hash": "869f71d8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "7440f9",
+        "hash": "ac14a42a",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "7440f9",
+        "hash": "caadb205",
+        "encoded": "period:%20%7B",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "7440f9",
+        "hash": "6ec9c833",
+        "encoded": "startDate:%20options.startDate%20%7C%7C%20new%20Date(Date.now()%20-%2030%20*%2024%20*%2060%20*%2060%20*%201000).toISOString(),",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "7440f9",
+        "hash": "d573f8d8",
+        "encoded": "endDate:%20options.endDate%20%7C%7C%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "7440f9",
+        "hash": "d9b48a24",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "7440f9",
+        "hash": "2b936222",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "7440f9",
+        "hash": "c106113c",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "7440f9",
+        "hash": "4c7b8967",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "7440f9",
+        "hash": "5fe3851f",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'getAccountStatement',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "7440f9",
+        "hash": "572534be",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "7440f9",
+        "hash": "e315a89c",
+        "encoded": "accountId,",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "7440f9",
+        "hash": "926e0d23",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "7440f9",
+        "hash": "aedf8e19",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "7440f9",
+        "hash": "efcc3d90",
+        "encoded": "if%20(error%20instanceof%20AppError)%20%7B",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "7440f9",
+        "hash": "fec3748a",
+        "encoded": "throw%20error;",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "7440f9",
+        "hash": "15bfe668",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "7440f9",
+        "hash": "f530ebc5",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "7440f9",
+        "hash": "588639de",
+        "encoded": "ERROR_MESSAGES.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "7440f9",
+        "hash": "72cbb536",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "7440f9",
+        "hash": "b3d56c58",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "353": {
+        "chunkId": "7440f9",
+        "hash": "5c931104",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "7440f9",
+        "hash": "bb5dc0a7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "7440f9",
+        "hash": "88340670",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "7440f9",
+        "hash": "1ef5f816",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "7440f9",
+        "hash": "a96f77a6",
+        "encoded": "*%20Mock%20implementations",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "7440f9",
+        "hash": "7e4934e6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "7440f9",
+        "hash": "c315e8c4",
+        "encoded": "const%20mockGetAccountBalances%20=%20async%20(userId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "7440f9",
+        "hash": "7a9cfa9c",
+        "encoded": "//%20Simulate%20network%20delay",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "7440f9",
+        "hash": "c6146372",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20800));",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "7440f9",
+        "hash": "13ec4521",
+        "encoded": "//%20Simulate%20random%20failures%20(3%25%20chance)",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "7440f9",
+        "hash": "ded55e3a",
+        "encoded": "if%20(Math.random()%20%3C%200.03)%20%7B",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "7440f9",
+        "hash": "4773c85a",
+        "encoded": "throw%20new%20Error('Core%20Banking%20Service%20temporarily%20unavailable');",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "7440f9",
+        "hash": "0dbc34f0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "7440f9",
+        "hash": "1bf94a71",
+        "encoded": "logger.info('Mock%20Core%20Banking%20Service%20-%20Account%20balances%20retrieved',%20%7B",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "7440f9",
+        "hash": "c63030c8",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "7440f9",
+        "hash": "0d3a9282",
+        "encoded": "accountCount:%20MOCK_CONFIG.MOCK_ACCOUNTS.length",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "7440f9",
+        "hash": "2cc7cea3",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "7440f9",
+        "hash": "4a560372",
+        "encoded": "return%20MOCK_CONFIG.MOCK_ACCOUNTS.map(account%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "7440f9",
+        "hash": "3892316b",
+        "encoded": "...account,",
+        "prevChunkIds": []
+      },
+      "377": {
+        "chunkId": "7440f9",
+        "hash": "b3824e09",
+        "encoded": "lastUpdated:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "7440f9",
+        "hash": "78969261",
+        "encoded": "%7D));",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "7440f9",
+        "hash": "0b01e6e1",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "7440f9",
+        "hash": "3319d7bd",
+        "encoded": "const%20mockGetAccountBalance%20=%20async%20(userId,%20accountId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "7440f9",
+        "hash": "e830a9f1",
+        "encoded": "//%20Simulate%20network%20delay",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "7440f9",
+        "hash": "4eb4b9d3",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20600));",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "7440f9",
+        "hash": "08a44235",
+        "encoded": "//%20Simulate%20random%20failures%20(3%25%20chance)",
+        "prevChunkIds": []
+      },
+      "386": {
+        "chunkId": "7440f9",
+        "hash": "2457f9f8",
+        "encoded": "if%20(Math.random()%20%3C%200.03)%20%7B",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "7440f9",
+        "hash": "580d36a7",
+        "encoded": "throw%20new%20Error('Core%20Banking%20Service%20temporarily%20unavailable');",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "7440f9",
+        "hash": "5e87b7c4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "390": {
+        "chunkId": "7440f9",
+        "hash": "2d1b79ac",
+        "encoded": "const%20account%20=%20MOCK_CONFIG.MOCK_ACCOUNTS.find(acc%20=%3E%20acc.id%20===%20accountId);",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "7440f9",
+        "hash": "4b316cc8",
+        "encoded": "if%20(!account)%20%7B",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "7440f9",
+        "hash": "6ba21f68",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "7440f9",
+        "hash": "d5c1af93",
+        "encoded": "'Account%20not%20found',",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "7440f9",
+        "hash": "9fbdbab8",
+        "encoded": "HTTP_STATUS.NOT_FOUND,",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "7440f9",
+        "hash": "88ff178b",
+        "encoded": "ERROR_TYPES.NOT_FOUND_ERROR",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "7440f9",
+        "hash": "4109a97f",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "7440f9",
+        "hash": "5272bb64",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "7440f9",
+        "hash": "e30a3e8f",
+        "encoded": "logger.info('Mock%20Core%20Banking%20Service%20-%20Account%20balance%20retrieved',%20%7B",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "7440f9",
+        "hash": "34f4b71b",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "7440f9",
+        "hash": "aa21ccf4",
+        "encoded": "accountId,",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "7440f9",
+        "hash": "da59a311",
+        "encoded": "balance:%20account.balance",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "7440f9",
+        "hash": "8afa7fbe",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "7440f9",
+        "hash": "15c0af42",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "7440f9",
+        "hash": "7603a8b8",
+        "encoded": "...account,",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "7440f9",
+        "hash": "869904b7",
+        "encoded": "lastUpdated:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "7440f9",
+        "hash": "737eba17",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "7440f9",
+        "hash": "8b188d93",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "7440f9",
+        "hash": "907ed531",
+        "encoded": "const%20mockGetUserAccounts%20=%20async%20(userId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "7440f9",
+        "hash": "f3f1ea78",
+        "encoded": "//%20Simulate%20network%20delay",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "7440f9",
+        "hash": "5262f683",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20500));",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "7440f9",
+        "hash": "4cf6af2b",
+        "encoded": "//%20Simulate%20random%20failures%20(2%25%20chance)",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "7440f9",
+        "hash": "4b4b7898",
+        "encoded": "if%20(Math.random()%20%3C%200.02)%20%7B",
+        "prevChunkIds": []
+      },
+      "418": {
+        "chunkId": "7440f9",
+        "hash": "318b4d79",
+        "encoded": "throw%20new%20Error('Core%20Banking%20Service%20temporarily%20unavailable');",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "7440f9",
+        "hash": "31390138",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "7440f9",
+        "hash": "f9b45273",
+        "encoded": "logger.info('Mock%20Core%20Banking%20Service%20-%20User%20accounts%20retrieved',%20%7B",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "7440f9",
+        "hash": "52cf6e82",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "7440f9",
+        "hash": "bcdee240",
+        "encoded": "accountCount:%20MOCK_CONFIG.MOCK_ACCOUNTS.length",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "7440f9",
+        "hash": "fc2569eb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "7440f9",
+        "hash": "91cbd913",
+        "encoded": "return%20MOCK_CONFIG.MOCK_ACCOUNTS;",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "7440f9",
+        "hash": "934e3377",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "429": {
+        "chunkId": "7440f9",
+        "hash": "de8b1957",
+        "encoded": "const%20mockTransferFunds%20=%20async%20(%7B%20transactionId,%20fromAccountId,%20toAccountId,%20amount,%20description,%20userId%20%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "7440f9",
+        "hash": "d4218c5b",
+        "encoded": "//%20Simulate%20network%20delay",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "7440f9",
+        "hash": "d7913426",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%201200));",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "7440f9",
+        "hash": "3a1f5877",
+        "encoded": "//%20Simulate%20random%20failures%20(4%25%20chance)",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "7440f9",
+        "hash": "c38b092f",
+        "encoded": "if%20(Math.random()%20%3C%200.04)%20%7B",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "7440f9",
+        "hash": "447d906a",
+        "encoded": "throw%20new%20Error('Transfer%20failed%20due%20to%20insufficient%20funds%20or%20system%20error');",
+        "prevChunkIds": []
+      },
+      "436": {
+        "chunkId": "7440f9",
+        "hash": "d8c51278",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "7440f9",
+        "hash": "03de7b7c",
+        "encoded": "//%20Simulate%20timeout%20(1%25%20chance)",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "7440f9",
+        "hash": "91281d23",
+        "encoded": "if%20(Math.random()%20%3C%200.01)%20%7B",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "7440f9",
+        "hash": "d6938b99",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20API_TIMEOUTS.CORE_BANKING_SERVICE%20+%201000));",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "7440f9",
+        "hash": "f99c0f2d",
+        "encoded": "throw%20new%20Error('Request%20timeout');",
+        "prevChunkIds": []
+      },
+      "442": {
+        "chunkId": "7440f9",
+        "hash": "5bf33b9e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "7440f9",
+        "hash": "094e02c6",
+        "encoded": "//%20Validate%20accounts%20exist",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "7440f9",
+        "hash": "5e7bcf01",
+        "encoded": "const%20fromAccount%20=%20MOCK_CONFIG.MOCK_ACCOUNTS.find(acc%20=%3E%20acc.id%20===%20fromAccountId);",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "7440f9",
+        "hash": "b1be202c",
+        "encoded": "const%20toAccount%20=%20MOCK_CONFIG.MOCK_ACCOUNTS.find(acc%20=%3E%20acc.id%20===%20toAccountId);",
+        "prevChunkIds": []
+      },
+      "448": {
+        "chunkId": "7440f9",
+        "hash": "edf2d50c",
+        "encoded": "if%20(!fromAccount%20%7C%7C%20!toAccount)%20%7B",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "7440f9",
+        "hash": "42b3a739",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "7440f9",
+        "hash": "3939a3b8",
+        "encoded": "'One%20or%20more%20accounts%20not%20found',",
+        "prevChunkIds": []
+      },
+      "451": {
+        "chunkId": "7440f9",
+        "hash": "adf4d083",
+        "encoded": "HTTP_STATUS.NOT_FOUND,",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "7440f9",
+        "hash": "c7867a6f",
+        "encoded": "ERROR_TYPES.NOT_FOUND_ERROR",
+        "prevChunkIds": []
+      },
+      "453": {
+        "chunkId": "7440f9",
+        "hash": "c026e55b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "454": {
+        "chunkId": "7440f9",
+        "hash": "8e7a08bb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "456": {
+        "chunkId": "7440f9",
+        "hash": "5e6cf916",
+        "encoded": "//%20Check%20sufficient%20funds",
+        "prevChunkIds": []
+      },
+      "457": {
+        "chunkId": "7440f9",
+        "hash": "9f84658d",
+        "encoded": "if%20(fromAccount.balance%20%3C%20amount)%20%7B",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "7440f9",
+        "hash": "f71feecd",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "7440f9",
+        "hash": "521ee5b5",
+        "encoded": "ERROR_MESSAGES.INSUFFICIENT_FUNDS,",
+        "prevChunkIds": []
+      },
+      "460": {
+        "chunkId": "7440f9",
+        "hash": "85e463fc",
+        "encoded": "HTTP_STATUS.BAD_REQUEST,",
+        "prevChunkIds": []
+      },
+      "461": {
+        "chunkId": "7440f9",
+        "hash": "97dfd2e0",
+        "encoded": "ERROR_TYPES.VALIDATION_ERROR",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "7440f9",
+        "hash": "35cb1b49",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "463": {
+        "chunkId": "7440f9",
+        "hash": "0f4ac0f9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "465": {
+        "chunkId": "7440f9",
+        "hash": "10513a82",
+        "encoded": "logger.info('Mock%20Core%20Banking%20Service%20-%20Transfer%20completed',%20%7B",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "7440f9",
+        "hash": "073ba357",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "467": {
+        "chunkId": "7440f9",
+        "hash": "595de02e",
+        "encoded": "fromAccountId,",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "7440f9",
+        "hash": "7c9b7a32",
+        "encoded": "toAccountId,",
+        "prevChunkIds": []
+      },
+      "469": {
+        "chunkId": "7440f9",
+        "hash": "30a1b4ea",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "470": {
+        "chunkId": "7440f9",
+        "hash": "388520db",
+        "encoded": "userId",
+        "prevChunkIds": []
+      },
+      "471": {
+        "chunkId": "7440f9",
+        "hash": "3ba672b1",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "473": {
+        "chunkId": "7440f9",
+        "hash": "15cb0164",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "7440f9",
+        "hash": "95400fb0",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "475": {
+        "chunkId": "7440f9",
+        "hash": "e091f034",
+        "encoded": "externalTransactionId:%20%60cbs_mock_$%7Buuidv4().replace(/-/g,%20'').substring(0,%2012)%7D%60,",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "7440f9",
+        "hash": "59af8b61",
+        "encoded": "status:%20'completed',",
+        "prevChunkIds": []
+      },
+      "477": {
+        "chunkId": "7440f9",
+        "hash": "495c014c",
+        "encoded": "message:%20'Transfer%20completed%20successfully%20(mock)'",
+        "prevChunkIds": []
+      },
+      "478": {
+        "chunkId": "7440f9",
+        "hash": "6658b9a6",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "7440f9",
+        "hash": "da751ad3",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "481": {
+        "chunkId": "7440f9",
+        "hash": "df5e9c50",
+        "encoded": "const%20mockGetAccountStatement%20=%20async%20(userId,%20accountId,%20options%20=%20%7B%7D)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "7440f9",
+        "hash": "b8242db9",
+        "encoded": "//%20Simulate%20network%20delay",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "7440f9",
+        "hash": "d565e536",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20900));",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "7440f9",
+        "hash": "2e9f69eb",
+        "encoded": "//%20Simulate%20random%20failures%20(2%25%20chance)",
+        "prevChunkIds": []
+      },
+      "486": {
+        "chunkId": "7440f9",
+        "hash": "6df43284",
+        "encoded": "if%20(Math.random()%20%3C%200.02)%20%7B",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "7440f9",
+        "hash": "63f4b028",
+        "encoded": "throw%20new%20Error('Core%20Banking%20Service%20temporarily%20unavailable');",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "7440f9",
+        "hash": "58e03eb2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "490": {
+        "chunkId": "7440f9",
+        "hash": "0a453b0a",
+        "encoded": "const%20account%20=%20MOCK_CONFIG.MOCK_ACCOUNTS.find(acc%20=%3E%20acc.id%20===%20accountId);",
+        "prevChunkIds": []
+      },
+      "492": {
+        "chunkId": "7440f9",
+        "hash": "e713d5e7",
+        "encoded": "if%20(!account)%20%7B",
+        "prevChunkIds": []
+      },
+      "493": {
+        "chunkId": "7440f9",
+        "hash": "b0e4e358",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "494": {
+        "chunkId": "7440f9",
+        "hash": "0a5b63d8",
+        "encoded": "'Account%20not%20found',",
+        "prevChunkIds": []
+      },
+      "495": {
+        "chunkId": "7440f9",
+        "hash": "4c36019f",
+        "encoded": "HTTP_STATUS.NOT_FOUND,",
+        "prevChunkIds": []
+      },
+      "496": {
+        "chunkId": "7440f9",
+        "hash": "3981c71b",
+        "encoded": "ERROR_TYPES.NOT_FOUND_ERROR",
+        "prevChunkIds": []
+      },
+      "497": {
+        "chunkId": "7440f9",
+        "hash": "cb19b144",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "498": {
+        "chunkId": "7440f9",
+        "hash": "1aadd2e8",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "500": {
+        "chunkId": "7440f9",
+        "hash": "3aacee54",
+        "encoded": "logger.info('Mock%20Core%20Banking%20Service%20-%20Account%20statement%20retrieved',%20%7B",
+        "prevChunkIds": []
+      },
+      "501": {
+        "chunkId": "7440f9",
+        "hash": "a6b14e3b",
+        "encoded": "userId,",
+        "prevChunkIds": []
+      },
+      "502": {
+        "chunkId": "7440f9",
+        "hash": "5852c89c",
+        "encoded": "accountId",
+        "prevChunkIds": []
+      },
+      "503": {
+        "chunkId": "7440f9",
+        "hash": "cf9953d5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "505": {
+        "chunkId": "7440f9",
+        "hash": "b2c62ce6",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "506": {
+        "chunkId": "7440f9",
+        "hash": "b9b86035",
+        "encoded": "account:%20%7B",
+        "prevChunkIds": []
+      },
+      "507": {
+        "chunkId": "7440f9",
+        "hash": "37d75c41",
+        "encoded": "accountId:%20account.id,",
+        "prevChunkIds": []
+      },
+      "508": {
+        "chunkId": "7440f9",
+        "hash": "eaea1780",
+        "encoded": "accountName:%20account.name,",
+        "prevChunkIds": []
+      },
+      "509": {
+        "chunkId": "7440f9",
+        "hash": "11f9f740",
+        "encoded": "accountNumber:%20account.accountNumber,",
+        "prevChunkIds": []
+      },
+      "510": {
+        "chunkId": "7440f9",
+        "hash": "c546200a",
+        "encoded": "currentBalance:%20account.balance",
+        "prevChunkIds": []
+      },
+      "511": {
+        "chunkId": "7440f9",
+        "hash": "bd5759e6",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "512": {
+        "chunkId": "7440f9",
+        "hash": "ebba93ee",
+        "encoded": "transactions:%20%5B",
+        "prevChunkIds": []
+      },
+      "513": {
+        "chunkId": "7440f9",
+        "hash": "f26824d3",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "514": {
+        "chunkId": "7440f9",
+        "hash": "53d5772d",
+        "encoded": "date:%20new%20Date(Date.now()%20-%2086400000).toISOString(),",
+        "prevChunkIds": []
+      },
+      "515": {
+        "chunkId": "7440f9",
+        "hash": "1af647db",
+        "encoded": "description:%20'ATM%20Withdrawal',",
+        "prevChunkIds": []
+      },
+      "516": {
+        "chunkId": "7440f9",
+        "hash": "2c99338d",
+        "encoded": "amount:%20-100.00,",
+        "prevChunkIds": []
+      },
+      "517": {
+        "chunkId": "7440f9",
+        "hash": "f62ded51",
+        "encoded": "balance:%20account.balance%20+%20100.00",
+        "prevChunkIds": []
+      },
+      "518": {
+        "chunkId": "7440f9",
+        "hash": "dcc242bf",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "519": {
+        "chunkId": "7440f9",
+        "hash": "1ed6650f",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "520": {
+        "chunkId": "7440f9",
+        "hash": "da1dbc29",
+        "encoded": "date:%20new%20Date(Date.now()%20-%20172800000).toISOString(),",
+        "prevChunkIds": []
+      },
+      "521": {
+        "chunkId": "7440f9",
+        "hash": "1b4d9be0",
+        "encoded": "description:%20'Direct%20Deposit',",
+        "prevChunkIds": []
+      },
+      "522": {
+        "chunkId": "7440f9",
+        "hash": "571f8d18",
+        "encoded": "amount:%202000.00,",
+        "prevChunkIds": []
+      },
+      "523": {
+        "chunkId": "7440f9",
+        "hash": "d242e7e1",
+        "encoded": "balance:%20account.balance%20+%202100.00",
+        "prevChunkIds": []
+      },
+      "524": {
+        "chunkId": "7440f9",
+        "hash": "73b79fbd",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "525": {
+        "chunkId": "7440f9",
+        "hash": "de608989",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "526": {
+        "chunkId": "7440f9",
+        "hash": "827159be",
+        "encoded": "date:%20new%20Date(Date.now()%20-%20259200000).toISOString(),",
+        "prevChunkIds": []
+      },
+      "527": {
+        "chunkId": "7440f9",
+        "hash": "0ca3246a",
+        "encoded": "description:%20'Online%20Transfer',",
+        "prevChunkIds": []
+      },
+      "528": {
+        "chunkId": "7440f9",
+        "hash": "56a6ff9d",
+        "encoded": "amount:%20-250.00,",
+        "prevChunkIds": []
+      },
+      "529": {
+        "chunkId": "7440f9",
+        "hash": "8c365658",
+        "encoded": "balance:%20account.balance%20+%202350.00",
+        "prevChunkIds": []
+      },
+      "530": {
+        "chunkId": "7440f9",
+        "hash": "317a51cd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "531": {
+        "chunkId": "7440f9",
+        "hash": "000410b8",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "532": {
+        "chunkId": "7440f9",
+        "hash": "17d8a8b5",
+        "encoded": "period:%20%7B",
+        "prevChunkIds": []
+      },
+      "533": {
+        "chunkId": "7440f9",
+        "hash": "8587d2b3",
+        "encoded": "startDate:%20options.startDate%20%7C%7C%20new%20Date(Date.now()%20-%2030%20*%2024%20*%2060%20*%2060%20*%201000).toISOString(),",
+        "prevChunkIds": []
+      },
+      "534": {
+        "chunkId": "7440f9",
+        "hash": "7049b107",
+        "encoded": "endDate:%20options.endDate%20%7C%7C%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "535": {
+        "chunkId": "7440f9",
+        "hash": "60ad2182",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "536": {
+        "chunkId": "7440f9",
+        "hash": "2e6b46d9",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "537": {
+        "chunkId": "7440f9",
+        "hash": "08667b5f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "539": {
+        "chunkId": "7440f9",
+        "hash": "6f8a5be2",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "540": {
+        "chunkId": "7440f9",
+        "hash": "b4a026f7",
+        "encoded": "*%20Health%20check%20for%20Core%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "541": {
+        "chunkId": "7440f9",
+        "hash": "c40ff2ee",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Service%20health%20status",
+        "prevChunkIds": []
+      },
+      "542": {
+        "chunkId": "7440f9",
+        "hash": "b8dfe3c6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "543": {
+        "chunkId": "7440f9",
+        "hash": "91638c5a",
+        "encoded": "const%20healthCheck%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "544": {
+        "chunkId": "7440f9",
+        "hash": "2f4464a6",
+        "encoded": "const%20startTime%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "546": {
+        "chunkId": "7440f9",
+        "hash": "bb1393bc",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "547": {
+        "chunkId": "7440f9",
+        "hash": "afb670b4",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "548": {
+        "chunkId": "7440f9",
+        "hash": "05a20a46",
+        "encoded": "//%20Mock%20health%20check",
+        "prevChunkIds": []
+      },
+      "549": {
+        "chunkId": "7440f9",
+        "hash": "6f1dac1e",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20150));",
+        "prevChunkIds": []
+      },
+      "551": {
+        "chunkId": "7440f9",
+        "hash": "fe96d956",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "552": {
+        "chunkId": "7440f9",
+        "hash": "c3d27c04",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'healthCheck',%20200,%20duration);",
+        "prevChunkIds": []
+      },
+      "554": {
+        "chunkId": "7440f9",
+        "hash": "22c9b26a",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "555": {
+        "chunkId": "7440f9",
+        "hash": "516160fc",
+        "encoded": "status:%20'healthy',",
+        "prevChunkIds": []
+      },
+      "556": {
+        "chunkId": "7440f9",
+        "hash": "17b31791",
+        "encoded": "responseTime:%20%60$%7Bduration%7Dms%60,",
+        "prevChunkIds": []
+      },
+      "557": {
+        "chunkId": "7440f9",
+        "hash": "0d4064df",
+        "encoded": "service:%20'mock',",
+        "prevChunkIds": []
+      },
+      "558": {
+        "chunkId": "7440f9",
+        "hash": "b1f4257a",
+        "encoded": "timestamp:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "559": {
+        "chunkId": "7440f9",
+        "hash": "89e4a375",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "560": {
+        "chunkId": "7440f9",
+        "hash": "132eb306",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "562": {
+        "chunkId": "7440f9",
+        "hash": "541d4c70",
+        "encoded": "//%20TODO:%20Implement%20actual%20health%20check",
+        "prevChunkIds": []
+      },
+      "563": {
+        "chunkId": "7440f9",
+        "hash": "5f85247d",
+        "encoded": "//%20const%20response%20=%20await%20httpClient.get('/health',%20%7B",
+        "prevChunkIds": []
+      },
+      "564": {
+        "chunkId": "7440f9",
+        "hash": "b00bc826",
+        "encoded": "//%20%20%20timeout:%205000",
+        "prevChunkIds": []
+      },
+      "565": {
+        "chunkId": "7440f9",
+        "hash": "ca4946fa",
+        "encoded": "//%20%7D);",
+        "prevChunkIds": []
+      },
+      "567": {
+        "chunkId": "7440f9",
+        "hash": "2c4ce3a4",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "568": {
+        "chunkId": "7440f9",
+        "hash": "b2f0e831",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'healthCheck',%20200,%20duration);",
+        "prevChunkIds": []
+      },
+      "570": {
+        "chunkId": "7440f9",
+        "hash": "503dcab1",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "571": {
+        "chunkId": "7440f9",
+        "hash": "80c69db5",
+        "encoded": "status:%20'healthy',",
+        "prevChunkIds": []
+      },
+      "572": {
+        "chunkId": "7440f9",
+        "hash": "3f0cb5f2",
+        "encoded": "responseTime:%20%60$%7Bduration%7Dms%60,",
+        "prevChunkIds": []
+      },
+      "573": {
+        "chunkId": "7440f9",
+        "hash": "27bcabd7",
+        "encoded": "service:%20'real',",
+        "prevChunkIds": []
+      },
+      "574": {
+        "chunkId": "7440f9",
+        "hash": "8476dc66",
+        "encoded": "timestamp:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "575": {
+        "chunkId": "7440f9",
+        "hash": "0c6ec9c3",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "577": {
+        "chunkId": "7440f9",
+        "hash": "2811b207",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "578": {
+        "chunkId": "7440f9",
+        "hash": "36e1f40a",
+        "encoded": "const%20duration%20=%20Date.now()%20-%20startTime;",
+        "prevChunkIds": []
+      },
+      "580": {
+        "chunkId": "7440f9",
+        "hash": "dd72a8cf",
+        "encoded": "logger.logExternalService('Core%20Banking%20Service',%20'healthCheck',%20error.status%20%7C%7C%20500,%20duration,%20%7B",
+        "prevChunkIds": []
+      },
+      "581": {
+        "chunkId": "7440f9",
+        "hash": "e643c66e",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "582": {
+        "chunkId": "7440f9",
+        "hash": "d4a32a3d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "584": {
+        "chunkId": "7440f9",
+        "hash": "e00d5e7b",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "585": {
+        "chunkId": "7440f9",
+        "hash": "40ba2678",
+        "encoded": "status:%20'unhealthy',",
+        "prevChunkIds": []
+      },
+      "586": {
+        "chunkId": "7440f9",
+        "hash": "8c83ce0f",
+        "encoded": "responseTime:%20%60$%7Bduration%7Dms%60,",
+        "prevChunkIds": []
+      },
+      "587": {
+        "chunkId": "7440f9",
+        "hash": "c2771c2b",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "588": {
+        "chunkId": "7440f9",
+        "hash": "02228984",
+        "encoded": "timestamp:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "589": {
+        "chunkId": "7440f9",
+        "hash": "2161391c",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "590": {
+        "chunkId": "7440f9",
+        "hash": "c7cddbff",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "591": {
+        "chunkId": "7440f9",
+        "hash": "cd2b847a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "593": {
+        "chunkId": "7440f9",
+        "hash": "35804049",
+        "encoded": "module.exports%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "594": {
+        "chunkId": "7440f9",
+        "hash": "a370272e",
+        "encoded": "getAccountBalances,",
+        "prevChunkIds": []
+      },
+      "595": {
+        "chunkId": "7440f9",
+        "hash": "e1c24321",
+        "encoded": "getAccountBalance,",
+        "prevChunkIds": []
+      },
+      "596": {
+        "chunkId": "7440f9",
+        "hash": "3b9b0e30",
+        "encoded": "getUserAccounts,",
+        "prevChunkIds": []
+      },
+      "597": {
+        "chunkId": "7440f9",
+        "hash": "45c96d21",
+        "encoded": "transferFunds,",
+        "prevChunkIds": []
+      },
+      "598": {
+        "chunkId": "7440f9",
+        "hash": "9ce588f1",
+        "encoded": "getAccountStatement,",
+        "prevChunkIds": []
+      },
+      "599": {
+        "chunkId": "7440f9",
+        "hash": "a1490060",
+        "encoded": "healthCheck",
+        "prevChunkIds": []
+      },
+      "600": {
+        "chunkId": "7440f9",
+        "hash": "b9bc7eef",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

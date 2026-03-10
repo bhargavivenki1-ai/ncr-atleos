@@ -1,0 +1,411 @@
+{
+  "backend/.eslintrc.js": {
+    "filename": ".eslintrc.js",
+    "path": "backend/.eslintrc.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "a40ae1": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134813,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "5901d07d",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "a40ae1",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "a40ae1",
+        "hash": "6bf1c931",
+        "encoded": "*%20ESLint%20configuration%20for%20NCR%20ATLEOS%20ATM%20Backend%20Services",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "a40ae1",
+        "hash": "fe772869",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "a40ae1",
+        "hash": "80f97d15",
+        "encoded": "module.exports%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "a40ae1",
+        "hash": "3719363a",
+        "encoded": "env:%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "a40ae1",
+        "hash": "14724b02",
+        "encoded": "node:%20true,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "a40ae1",
+        "hash": "710ae5df",
+        "encoded": "es2021:%20true,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "a40ae1",
+        "hash": "b9f032e0",
+        "encoded": "jest:%20true",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "a40ae1",
+        "hash": "e58a5dfb",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "a40ae1",
+        "hash": "4885a9c3",
+        "encoded": "extends:%20%5B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "a40ae1",
+        "hash": "c9b5dec0",
+        "encoded": "'airbnb-base'",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "a40ae1",
+        "hash": "40872abb",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "a40ae1",
+        "hash": "e6028b26",
+        "encoded": "parserOptions:%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "a40ae1",
+        "hash": "cb02c689",
+        "encoded": "ecmaVersion:%2012,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "a40ae1",
+        "hash": "4f8e45ac",
+        "encoded": "sourceType:%20'module'",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "a40ae1",
+        "hash": "e0024018",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "a40ae1",
+        "hash": "457da874",
+        "encoded": "rules:%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "a40ae1",
+        "hash": "6ea0aa3e",
+        "encoded": "//%20Allow%20console.log%20in%20development",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "a40ae1",
+        "hash": "c6819dac",
+        "encoded": "'no-console':%20process.env.NODE_ENV%20===%20'production'%20?%20'error'%20:%20'warn',",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "a40ae1",
+        "hash": "a3c0b50e",
+        "encoded": "//%20Allow%20unused%20vars%20that%20start%20with%20underscore",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "a40ae1",
+        "hash": "76e32ecb",
+        "encoded": "'no-unused-vars':%20%5B'error',%20%7B%20argsIgnorePattern:%20'%5E_'%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "a40ae1",
+        "hash": "03803e91",
+        "encoded": "//%20Allow%20function%20declarations%20to%20be%20used%20before%20they%20are%20defined",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "a40ae1",
+        "hash": "35af0033",
+        "encoded": "'no-use-before-define':%20%5B'error',%20%7B%20functions:%20false%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "a40ae1",
+        "hash": "8ba911f2",
+        "encoded": "//%20Allow%20async%20functions%20without%20await",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "a40ae1",
+        "hash": "300c7f0a",
+        "encoded": "'require-await':%20'off',",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "a40ae1",
+        "hash": "5290ba82",
+        "encoded": "//%20Allow%20dangling%20underscores%20in%20identifiers",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "a40ae1",
+        "hash": "7d24c1d8",
+        "encoded": "'no-underscore-dangle':%20'off',",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "a40ae1",
+        "hash": "5794cae6",
+        "encoded": "//%20Allow%20param%20reassignment",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "a40ae1",
+        "hash": "606aa9e1",
+        "encoded": "'no-param-reassign':%20'off',",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "a40ae1",
+        "hash": "e54311f4",
+        "encoded": "//%20Allow%20nested%20ternary",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "a40ae1",
+        "hash": "e810e0de",
+        "encoded": "'no-nested-ternary':%20'off',",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "a40ae1",
+        "hash": "a17e8452",
+        "encoded": "//%20Allow%20multiple%20classes%20per%20file",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "a40ae1",
+        "hash": "60db1281",
+        "encoded": "'max-classes-per-file':%20'off',",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "a40ae1",
+        "hash": "e4d7275f",
+        "encoded": "//%20Line%20length",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "a40ae1",
+        "hash": "a087b548",
+        "encoded": "'max-len':%20%5B'error',%20%7B%20code:%20120,%20ignoreUrls:%20true,%20ignoreStrings:%20true%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "a40ae1",
+        "hash": "e47625f7",
+        "encoded": "//%20Allow%20object%20property%20shorthand",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "a40ae1",
+        "hash": "1ee4fbb7",
+        "encoded": "'object-shorthand':%20'off',",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "a40ae1",
+        "hash": "31b374f9",
+        "encoded": "//%20Allow%20function%20expressions",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "a40ae1",
+        "hash": "a5d9ea45",
+        "encoded": "'func-names':%20'off',",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "a40ae1",
+        "hash": "aa701136",
+        "encoded": "//%20Allow%20anonymous%20functions",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "a40ae1",
+        "hash": "8fa67b59",
+        "encoded": "'prefer-arrow-callback':%20'off',",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "a40ae1",
+        "hash": "c0cdc2f7",
+        "encoded": "//%20Import%20rules",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "a40ae1",
+        "hash": "82ea46c0",
+        "encoded": "'import/no-extraneous-dependencies':%20%5B'error',%20%7B%20devDependencies:%20true%20%7D%5D,",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "a40ae1",
+        "hash": "94b20681",
+        "encoded": "'import/prefer-default-export':%20'off',",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "a40ae1",
+        "hash": "8e119f6d",
+        "encoded": "//%20Allow%20certain%20globals",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "a40ae1",
+        "hash": "b4fa55d2",
+        "encoded": "'no-restricted-globals':%20'off',",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "a40ae1",
+        "hash": "53789ec3",
+        "encoded": "//%20Allow%20continue%20statements",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "a40ae1",
+        "hash": "3323bc09",
+        "encoded": "'no-continue':%20'off',",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "a40ae1",
+        "hash": "5ab0bd67",
+        "encoded": "//%20Allow%20for...of%20loops",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "a40ae1",
+        "hash": "d761ad13",
+        "encoded": "'no-restricted-syntax':%20'off',",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "a40ae1",
+        "hash": "960acfd3",
+        "encoded": "//%20Allow%20await%20in%20loops",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "a40ae1",
+        "hash": "ce05fe5a",
+        "encoded": "'no-await-in-loop':%20'off'",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "a40ae1",
+        "hash": "91a1ba9e",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "a40ae1",
+        "hash": "8b4c58aa",
+        "encoded": "//%20Override%20rules%20for%20test%20files",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "a40ae1",
+        "hash": "1300884d",
+        "encoded": "overrides:%20%5B",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "a40ae1",
+        "hash": "757e09bb",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "a40ae1",
+        "hash": "839425ad",
+        "encoded": "files:%20%5B'**/*.test.js',%20'**/tests/**/*.js'%5D,",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "a40ae1",
+        "hash": "d1173f8e",
+        "encoded": "rules:%20%7B",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "a40ae1",
+        "hash": "86f89da4",
+        "encoded": "'no-console':%20'off',",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "a40ae1",
+        "hash": "89cb9fcf",
+        "encoded": "'max-len':%20'off'",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "a40ae1",
+        "hash": "c46ffadb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "a40ae1",
+        "hash": "8aac2494",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "a40ae1",
+        "hash": "69c148ec",
+        "encoded": "%5D",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "a40ae1",
+        "hash": "93e776f6",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

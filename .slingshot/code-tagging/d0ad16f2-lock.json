@@ -1,0 +1,1173 @@
+{
+  "backend/README.md": {
+    "filename": "README.md",
+    "path": "backend/README.md",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "128de8": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773133378,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "5148d972",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "128de8",
+        "hash": "6d7215d7",
+        "encoded": "#%20NCR%20ATLEOS%20ATM%20Backend%20Services",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "128de8",
+        "hash": "adf0a998",
+        "encoded": "A%20secure,%20scalable%20backend%20service%20for%20the%20NCR%20ATLEOS%20ATM%20Customer%20Journey%20Application.%20Built%20with%20Node.js,%20Express.js,%20and%20MongoDB.",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "128de8",
+        "hash": "dd241c0f",
+        "encoded": "##%20%F0%9F%9A%80%20Features",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "128de8",
+        "hash": "72a3d2bd",
+        "encoded": "-%20**Secure%20Authentication**:%20JWT-based%20authentication%20with%20refresh%20tokens",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "128de8",
+        "hash": "64d09608",
+        "encoded": "-%20**ATM%20Transaction%20Services**:%20Cash%20withdrawal,%20deposit,%20and%20staging%20services",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "128de8",
+        "hash": "eb9a9f01",
+        "encoded": "-%20**Banking%20Integration**:%20Account%20balance,%20fund%20transfers,%20and%20core%20banking%20services",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "128de8",
+        "hash": "8f52517b",
+        "encoded": "-%20**Security%20First**:%20Helmet,%20CORS,%20rate%20limiting,%20input%20validation",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "128de8",
+        "hash": "911778d0",
+        "encoded": "-%20**Comprehensive%20Logging**:%20Winston-based%20structured%20logging",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "128de8",
+        "hash": "c4419681",
+        "encoded": "-%20**Error%20Handling**:%20Centralized%20error%20handling%20with%20proper%20HTTP%20status%20codes",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "128de8",
+        "hash": "d28a1d83",
+        "encoded": "-%20**Testing**:%20Unit%20and%20integration%20tests%20with%20Jest",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "128de8",
+        "hash": "672a96e9",
+        "encoded": "-%20**Code%20Quality**:%20ESLint,%20Prettier,%20and%20comprehensive%20linting",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "128de8",
+        "hash": "52c01520",
+        "encoded": "##%20%F0%9F%93%8B%20Prerequisites",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "128de8",
+        "hash": "ccb1f78f",
+        "encoded": "-%20Node.js%20%3E=%2016.0.0",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "128de8",
+        "hash": "a2d60b40",
+        "encoded": "-%20MongoDB%20%3E=%204.4",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "128de8",
+        "hash": "b9ea5323",
+        "encoded": "-%20npm%20or%20yarn",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "128de8",
+        "hash": "789706dc",
+        "encoded": "##%20%F0%9F%9B%A0%EF%B8%8F%20Installation",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "128de8",
+        "hash": "1252ad41",
+        "encoded": "1.%20**Clone%20the%20repository**",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "128de8",
+        "hash": "9c2c5f93",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "128de8",
+        "hash": "a3f11385",
+        "encoded": "git%20clone%20%3Crepository-url%3E",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "128de8",
+        "hash": "8292a893",
+        "encoded": "cd%20backend",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "128de8",
+        "hash": "ebfd5a89",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "128de8",
+        "hash": "e64ff541",
+        "encoded": "2.%20**Install%20dependencies**",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "128de8",
+        "hash": "00e90ba6",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "128de8",
+        "hash": "4f924e0d",
+        "encoded": "npm%20install",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "128de8",
+        "hash": "41512291",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "128de8",
+        "hash": "23e30445",
+        "encoded": "3.%20**Environment%20Setup**",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "128de8",
+        "hash": "a01c0fa8",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "128de8",
+        "hash": "887a531a",
+        "encoded": "cp%20.env.example%20.env",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "128de8",
+        "hash": "8741e29e",
+        "encoded": "#%20Edit%20.env%20with%20your%20configuration",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "128de8",
+        "hash": "89af75d2",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "128de8",
+        "hash": "7ef84715",
+        "encoded": "4.%20**Start%20MongoDB**",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "128de8",
+        "hash": "bf35539b",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "128de8",
+        "hash": "af36fb00",
+        "encoded": "#%20Using%20Docker",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "128de8",
+        "hash": "33f7711b",
+        "encoded": "docker%20run%20-d%20-p%2027017:27017%20--name%20mongodb%20mongo:latest",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "128de8",
+        "hash": "407f852e",
+        "encoded": "#%20Or%20using%20local%20installation",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "128de8",
+        "hash": "90f389f8",
+        "encoded": "mongod",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "128de8",
+        "hash": "36690986",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "128de8",
+        "hash": "40502422",
+        "encoded": "5.%20**Start%20the%20server**",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "128de8",
+        "hash": "064b94c1",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "128de8",
+        "hash": "e6bd3a19",
+        "encoded": "#%20Development%20mode",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "128de8",
+        "hash": "4f0e24e2",
+        "encoded": "npm%20run%20dev",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "128de8",
+        "hash": "ce750a2d",
+        "encoded": "#%20Production%20mode",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "128de8",
+        "hash": "3532bf0f",
+        "encoded": "npm%20start",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "128de8",
+        "hash": "4864eb05",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "128de8",
+        "hash": "6763395f",
+        "encoded": "##%20%F0%9F%94%A7%20Configuration",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "128de8",
+        "hash": "72145e44",
+        "encoded": "###%20Environment%20Variables",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "128de8",
+        "hash": "6e614730",
+        "encoded": "%7C%20Variable%20%7C%20Description%20%7C%20Default%20%7C",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "128de8",
+        "hash": "260852c0",
+        "encoded": "%7C----------%7C-------------%7C---------%7C",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "128de8",
+        "hash": "d6ec1d91",
+        "encoded": "%7C%20%60PORT%60%20%7C%20Server%20port%20%7C%20%603001%60%20%7C",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "128de8",
+        "hash": "baf6a817",
+        "encoded": "%7C%20%60NODE_ENV%60%20%7C%20Environment%20%7C%20%60development%60%20%7C",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "128de8",
+        "hash": "97b3ae11",
+        "encoded": "%7C%20%60MONGODB_URI%60%20%7C%20MongoDB%20connection%20string%20%7C%20%60mongodb://localhost:27017/ncr-atleos-atm%60%20%7C",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "128de8",
+        "hash": "9e4f7835",
+        "encoded": "%7C%20%60JWT_SECRET%60%20%7C%20JWT%20signing%20secret%20%7C%20Required%20%7C",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "128de8",
+        "hash": "e0afed13",
+        "encoded": "%7C%20%60JWT_EXPIRES_IN%60%20%7C%20JWT%20expiration%20time%20%7C%20%601h%60%20%7C",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "128de8",
+        "hash": "ccb5ab57",
+        "encoded": "%7C%20%60ALLOWED_ORIGINS%60%20%7C%20CORS%20allowed%20origins%20%7C%20%60http://localhost:3000%60%20%7C",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "128de8",
+        "hash": "12bae4cc",
+        "encoded": "%7C%20%60USE_MOCK_SERVICES%60%20%7C%20Use%20mock%20external%20services%20%7C%20%60true%60%20%7C",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "128de8",
+        "hash": "8bfaf3c3",
+        "encoded": "See%20%60.env.example%60%20for%20complete%20configuration%20options.",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "128de8",
+        "hash": "8e13fc98",
+        "encoded": "##%20%F0%9F%93%9A%20API%20Documentation",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "128de8",
+        "hash": "296749b1",
+        "encoded": "###%20Authentication%20Endpoints",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "128de8",
+        "hash": "8b67d4b9",
+        "encoded": "####%20POST%20/api/auth/login",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "128de8",
+        "hash": "28f0c0d7",
+        "encoded": "Authenticate%20user%20with%20PIN",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "128de8",
+        "hash": "6fe88d59",
+        "encoded": "**Request:**",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "128de8",
+        "hash": "8af2a6d1",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "128de8",
+        "hash": "18da1bab",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "128de8",
+        "hash": "7ee44e07",
+        "encoded": "%22pin%22:%20%221234%22",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "128de8",
+        "hash": "7bb00016",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "128de8",
+        "hash": "42c44123",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "128de8",
+        "hash": "b08b8345",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "128de8",
+        "hash": "56c9b748",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "128de8",
+        "hash": "47eb0fc4",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "128de8",
+        "hash": "2be8e495",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "128de8",
+        "hash": "592cf499",
+        "encoded": "%22token%22:%20%22jwt-token%22,",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "128de8",
+        "hash": "4e1555d7",
+        "encoded": "%22refreshToken%22:%20%22refresh-token%22,",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "128de8",
+        "hash": "c5087504",
+        "encoded": "%22user%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "128de8",
+        "hash": "1bdcf88b",
+        "encoded": "%22id%22:%20%22user-id%22,",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "128de8",
+        "hash": "99222e2d",
+        "encoded": "%22name%22:%20%22John%20Doe%22",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "128de8",
+        "hash": "21cc0f70",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "128de8",
+        "hash": "998d938c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "128de8",
+        "hash": "dcb64610",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "128de8",
+        "hash": "fe973866",
+        "encoded": "####%20POST%20/api/auth/refresh",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "128de8",
+        "hash": "7ce52d41",
+        "encoded": "Refresh%20authentication%20token",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "128de8",
+        "hash": "60bf413b",
+        "encoded": "####%20POST%20/api/auth/logout",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "128de8",
+        "hash": "b7c0b089",
+        "encoded": "Logout%20and%20invalidate%20tokens",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "128de8",
+        "hash": "a7d0529a",
+        "encoded": "###%20ATM%20Services%20Endpoints",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "128de8",
+        "hash": "8a2f9e6c",
+        "encoded": "####%20POST%20/api/atm/transactions/withdrawal",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "128de8",
+        "hash": "8190c2a3",
+        "encoded": "Stage%20a%20cash%20withdrawal%20transaction",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "128de8",
+        "hash": "be9046a3",
+        "encoded": "**Request:**",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "128de8",
+        "hash": "e246c277",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "128de8",
+        "hash": "93c1331b",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "128de8",
+        "hash": "8cb73133",
+        "encoded": "%22cardToken%22:%20%22tok_123abc...%22,",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "128de8",
+        "hash": "86c1ed1e",
+        "encoded": "%22amount%22:%20100.00",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "128de8",
+        "hash": "056477bc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "128de8",
+        "hash": "34ee810d",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "128de8",
+        "hash": "a902575b",
+        "encoded": "**Response:**",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "128de8",
+        "hash": "2ba8123c",
+        "encoded": "%60%60%60json",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "128de8",
+        "hash": "8606b228",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "128de8",
+        "hash": "2e57dea7",
+        "encoded": "%22success%22:%20true,",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "128de8",
+        "hash": "d83b09bd",
+        "encoded": "%22transactionId%22:%20%22txn_xyz789...%22,",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "128de8",
+        "hash": "cf57d411",
+        "encoded": "%22status%22:%20%22staged%22",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "128de8",
+        "hash": "5513b7ee",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "128de8",
+        "hash": "b23b66af",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "128de8",
+        "hash": "067f614a",
+        "encoded": "####%20POST%20/api/atm/transactions/deposit",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "128de8",
+        "hash": "6202e1c5",
+        "encoded": "Stage%20a%20cash%20deposit%20transaction",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "128de8",
+        "hash": "d2db2a8f",
+        "encoded": "####%20GET%20/api/atm/transactions/:id",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "128de8",
+        "hash": "b9a0caf1",
+        "encoded": "Get%20transaction%20status",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "128de8",
+        "hash": "c6986822",
+        "encoded": "###%20Banking%20Services%20Endpoints",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "128de8",
+        "hash": "fc85be42",
+        "encoded": "####%20GET%20/api/banking/accounts/balance",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "128de8",
+        "hash": "a26d4157",
+        "encoded": "Get%20account%20balance",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "128de8",
+        "hash": "c8a39f83",
+        "encoded": "####%20POST%20/api/banking/transfers",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "128de8",
+        "hash": "09574b01",
+        "encoded": "Transfer%20funds%20between%20accounts",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "128de8",
+        "hash": "1329f1cb",
+        "encoded": "####%20GET%20/api/banking/accounts",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "128de8",
+        "hash": "7f33753b",
+        "encoded": "Get%20user%20accounts",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "128de8",
+        "hash": "aa20612a",
+        "encoded": "###%20Health%20Check",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "128de8",
+        "hash": "d1cd9742",
+        "encoded": "####%20GET%20/api/health",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "128de8",
+        "hash": "a005c74c",
+        "encoded": "Health%20check%20endpoint",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "128de8",
+        "hash": "70423a32",
+        "encoded": "##%20%F0%9F%A7%AA%20Testing",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "128de8",
+        "hash": "6ab54b6c",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "128de8",
+        "hash": "3e1f7532",
+        "encoded": "#%20Run%20all%20tests",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "128de8",
+        "hash": "62478e69",
+        "encoded": "npm%20test",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "128de8",
+        "hash": "4becbeba",
+        "encoded": "#%20Run%20tests%20in%20watch%20mode",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "128de8",
+        "hash": "3255f7e7",
+        "encoded": "npm%20run%20test:watch",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "128de8",
+        "hash": "16f548ba",
+        "encoded": "#%20Run%20tests%20with%20coverage",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "128de8",
+        "hash": "280fa8c3",
+        "encoded": "npm%20run%20test:coverage",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "128de8",
+        "hash": "a93485b4",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "128de8",
+        "hash": "10b99dee",
+        "encoded": "##%20%F0%9F%94%8D%20Code%20Quality",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "128de8",
+        "hash": "30460160",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "128de8",
+        "hash": "1b73b0e4",
+        "encoded": "#%20Lint%20code",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "128de8",
+        "hash": "b87d5ad0",
+        "encoded": "npm%20run%20lint",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "128de8",
+        "hash": "dc1f40c7",
+        "encoded": "#%20Fix%20linting%20issues",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "128de8",
+        "hash": "2f24f7e5",
+        "encoded": "npm%20run%20lint:fix",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "128de8",
+        "hash": "d687c03c",
+        "encoded": "#%20Format%20code",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "128de8",
+        "hash": "78281198",
+        "encoded": "npm%20run%20format",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "128de8",
+        "hash": "8cf1243a",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "128de8",
+        "hash": "f767b839",
+        "encoded": "##%20%F0%9F%8F%97%EF%B8%8F%20Project%20Structure",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "128de8",
+        "hash": "4febba7e",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "128de8",
+        "hash": "3a55bf21",
+        "encoded": "backend/",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "128de8",
+        "hash": "7e005ba6",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20src/",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "128de8",
+        "hash": "d1e655a0",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20config/%20%20%20%20%20%20%20%20%20%20%20#%20Configuration%20files",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "128de8",
+        "hash": "b6eb87f5",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20controllers/%20%20%20%20%20%20#%20Route%20controllers",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "128de8",
+        "hash": "8f82530b",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20middleware/%20%20%20%20%20%20%20#%20Custom%20middleware",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "128de8",
+        "hash": "6633036a",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20models/%20%20%20%20%20%20%20%20%20%20#%20Database%20models",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "128de8",
+        "hash": "8d4950bd",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20routes/%20%20%20%20%20%20%20%20%20%20#%20API%20routes",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "128de8",
+        "hash": "d75aef41",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20services/%20%20%20%20%20%20%20%20#%20Business%20logic%20services",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "128de8",
+        "hash": "e339056c",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20utils/%20%20%20%20%20%20%20%20%20%20%20#%20Utility%20functions",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "128de8",
+        "hash": "f0b8370a",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20validators/%20%20%20%20%20%20#%20Input%20validation%20schemas",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "128de8",
+        "hash": "f3228bd4",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20server.js%20%20%20%20%20%20%20%20#%20Main%20server%20file",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "128de8",
+        "hash": "2c927d94",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20tests/%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Test%20files",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "128de8",
+        "hash": "4957c33f",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20logs/%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Log%20files",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "128de8",
+        "hash": "237c769a",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20.env.example%20%20%20%20%20%20%20%20#%20Environment%20variables%20template",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "128de8",
+        "hash": "041f498e",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20.gitignore%20%20%20%20%20%20%20%20%20#%20Git%20ignore%20rules",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "128de8",
+        "hash": "361b4838",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20package.json%20%20%20%20%20%20%20#%20Dependencies%20and%20scripts",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "128de8",
+        "hash": "6ca91312",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20README.md%20%20%20%20%20%20%20%20%20#%20This%20file",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "128de8",
+        "hash": "77444ad1",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "128de8",
+        "hash": "0caf09f5",
+        "encoded": "##%20%F0%9F%94%92%20Security%20Features",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "128de8",
+        "hash": "0535a4ec",
+        "encoded": "-%20**Helmet**:%20Security%20headers",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "128de8",
+        "hash": "b1c82288",
+        "encoded": "-%20**CORS**:%20Cross-origin%20resource%20sharing%20protection",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "128de8",
+        "hash": "ca23918d",
+        "encoded": "-%20**Rate%20Limiting**:%20Prevent%20brute%20force%20attacks",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "128de8",
+        "hash": "7e7140d1",
+        "encoded": "-%20**Input%20Validation**:%20Joi-based%20request%20validation",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "128de8",
+        "hash": "375ffc8e",
+        "encoded": "-%20**JWT%20Authentication**:%20Secure%20token-based%20auth",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "128de8",
+        "hash": "fd681a11",
+        "encoded": "-%20**Password%20Hashing**:%20bcrypt%20for%20PIN%20hashing",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "128de8",
+        "hash": "9797f93a",
+        "encoded": "-%20**Environment%20Variables**:%20Secure%20configuration%20management",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "128de8",
+        "hash": "9efafc04",
+        "encoded": "##%20%F0%9F%93%8A%20Monitoring%20&%20Logging",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "128de8",
+        "hash": "eef5554c",
+        "encoded": "-%20**Winston**:%20Structured%20logging",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "128de8",
+        "hash": "62c3f7a8",
+        "encoded": "-%20**Request%20Logging**:%20HTTP%20request/response%20logging",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "128de8",
+        "hash": "9c5da908",
+        "encoded": "-%20**Error%20Tracking**:%20Comprehensive%20error%20logging",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "128de8",
+        "hash": "a4745418",
+        "encoded": "-%20**Health%20Checks**:%20System%20health%20monitoring",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "128de8",
+        "hash": "ea3e14fb",
+        "encoded": "##%20%F0%9F%9A%80%20Deployment",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "128de8",
+        "hash": "63d05750",
+        "encoded": "###%20Docker",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "128de8",
+        "hash": "ba03d137",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "128de8",
+        "hash": "fc6814ec",
+        "encoded": "#%20Build%20image",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "128de8",
+        "hash": "742711d8",
+        "encoded": "docker%20build%20-t%20ncr-atleos-backend%20.",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "128de8",
+        "hash": "ba945757",
+        "encoded": "#%20Run%20container",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "128de8",
+        "hash": "79d6ff03",
+        "encoded": "docker%20run%20-p%203001:3001%20--env-file%20.env%20ncr-atleos-backend",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "128de8",
+        "hash": "83245c39",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "128de8",
+        "hash": "f5876093",
+        "encoded": "###%20Production%20Considerations",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "128de8",
+        "hash": "f7960079",
+        "encoded": "1.%20**Environment%20Variables**:%20Use%20secure%20secret%20management",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "128de8",
+        "hash": "c48ef750",
+        "encoded": "2.%20**Database**:%20Use%20MongoDB%20Atlas%20or%20managed%20MongoDB",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "128de8",
+        "hash": "e88a0b54",
+        "encoded": "3.%20**Logging**:%20Configure%20log%20aggregation%20(ELK%20stack,%20CloudWatch)",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "128de8",
+        "hash": "75f2e11a",
+        "encoded": "4.%20**Monitoring**:%20Set%20up%20application%20monitoring%20(New%20Relic,%20DataDog)",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "128de8",
+        "hash": "a44b8463",
+        "encoded": "5.%20**Load%20Balancing**:%20Use%20nginx%20or%20cloud%20load%20balancers",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "128de8",
+        "hash": "19f78c54",
+        "encoded": "6.%20**SSL/TLS**:%20Configure%20HTTPS%20certificates",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "128de8",
+        "hash": "8de7c65a",
+        "encoded": "##%20%F0%9F%A4%9D%20Contributing",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "128de8",
+        "hash": "c35542f8",
+        "encoded": "1.%20Fork%20the%20repository",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "128de8",
+        "hash": "e855c9f5",
+        "encoded": "2.%20Create%20a%20feature%20branch",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "128de8",
+        "hash": "5c57cd85",
+        "encoded": "3.%20Make%20your%20changes",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "128de8",
+        "hash": "b234b1e2",
+        "encoded": "4.%20Add%20tests%20for%20new%20features",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "128de8",
+        "hash": "33923b70",
+        "encoded": "5.%20Ensure%20all%20tests%20pass",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "128de8",
+        "hash": "d2d5f4fc",
+        "encoded": "6.%20Submit%20a%20pull%20request",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "128de8",
+        "hash": "a86de9d9",
+        "encoded": "##%20%F0%9F%93%84%20License",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "128de8",
+        "hash": "83b07b26",
+        "encoded": "MIT%20License%20-%20see%20LICENSE%20file%20for%20details",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "128de8",
+        "hash": "e555c8f5",
+        "encoded": "##%20%F0%9F%86%98%20Support",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "128de8",
+        "hash": "0dee1989",
+        "encoded": "For%20support%20and%20questions,%20please%20contact%20the%20NCR%20ATLEOS%20development%20team.",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

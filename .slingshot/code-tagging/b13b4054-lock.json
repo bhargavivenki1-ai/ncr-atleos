@@ -1,0 +1,111 @@
+{
+  "backend/tests/globalSetup.js": {
+    "filename": "globalSetup.js",
+    "path": "backend/tests/globalSetup.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "8a5c16": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134866,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "3690c399",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8a5c16",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "8a5c16",
+        "hash": "b8cf75e7",
+        "encoded": "*%20Jest%20global%20setup",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8a5c16",
+        "hash": "dbf085cd",
+        "encoded": "*%20Runs%20once%20before%20all%20tests",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "8a5c16",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "8a5c16",
+        "hash": "95ada815",
+        "encoded": "const%20%7B%20MongoMemoryServer%20%7D%20=%20require('mongodb-memory-server');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "8a5c16",
+        "hash": "ca0552a1",
+        "encoded": "module.exports%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8a5c16",
+        "hash": "0a54ee1d",
+        "encoded": "//%20Start%20in-memory%20MongoDB%20for%20testing",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8a5c16",
+        "hash": "f30ad58b",
+        "encoded": "const%20mongod%20=%20await%20MongoMemoryServer.create();",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "8a5c16",
+        "hash": "16ff6c3a",
+        "encoded": "const%20uri%20=%20mongod.getUri();",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "8a5c16",
+        "hash": "0c8595d1",
+        "encoded": "//%20Store%20the%20URI%20and%20server%20instance%20for%20cleanup",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8a5c16",
+        "hash": "b179581c",
+        "encoded": "process.env.MONGODB_TEST_URI%20=%20uri;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8a5c16",
+        "hash": "1000e77e",
+        "encoded": "global.__MONGOD__%20=%20mongod;",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "8a5c16",
+        "hash": "25687d09",
+        "encoded": "console.log('Test%20MongoDB%20started%20at:',%20uri);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "8a5c16",
+        "hash": "146d9b82",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,417 @@
+{
+  "backend/tests/setup.js": {
+    "filename": "setup.js",
+    "path": "backend/tests/setup.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "4acb23": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134866,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "781d06f7",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "4acb23",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "4acb23",
+        "hash": "5a742f68",
+        "encoded": "*%20Jest%20setup%20file",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "4acb23",
+        "hash": "d55eea89",
+        "encoded": "*%20Configures%20test%20environment%20and%20global%20test%20utilities",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "4acb23",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "4acb23",
+        "hash": "065b6b52",
+        "encoded": "//%20Set%20test%20environment%20variables",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "4acb23",
+        "hash": "da75e17a",
+        "encoded": "process.env.NODE_ENV%20=%20'test';",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "4acb23",
+        "hash": "35561c90",
+        "encoded": "process.env.USE_MOCK_SERVICES%20=%20'true';",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "4acb23",
+        "hash": "cbb6fd58",
+        "encoded": "process.env.JWT_SECRET%20=%20'test-jwt-secret';",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "4acb23",
+        "hash": "a8d015b3",
+        "encoded": "process.env.JWT_REFRESH_SECRET%20=%20'test-refresh-secret';",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "4acb23",
+        "hash": "7babaf89",
+        "encoded": "process.env.MONGODB_TEST_URI%20=%20'mongodb://localhost:27017/ncr-atleos-atm-test';",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "4acb23",
+        "hash": "00ba31ba",
+        "encoded": "process.env.LOG_LEVEL%20=%20'error';%20//%20Reduce%20log%20noise%20during%20tests",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "4acb23",
+        "hash": "1744875e",
+        "encoded": "//%20Global%20test%20timeout",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "4acb23",
+        "hash": "ea675626",
+        "encoded": "jest.setTimeout(10000);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "4acb23",
+        "hash": "d2bae695",
+        "encoded": "//%20Mock%20external%20services",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "4acb23",
+        "hash": "f32580eb",
+        "encoded": "jest.mock('../src/services/atmStagingService');",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "4acb23",
+        "hash": "8c257bd1",
+        "encoded": "jest.mock('../src/services/coreBankingService');",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "4acb23",
+        "hash": "48ea3a99",
+        "encoded": "//%20Global%20test%20utilities",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "4acb23",
+        "hash": "8f06f3b7",
+        "encoded": "global.testUtils%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "4acb23",
+        "hash": "4340857f",
+        "encoded": "//%20Mock%20user%20for%20testing",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "4acb23",
+        "hash": "0fdbc166",
+        "encoded": "mockUser:%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "4acb23",
+        "hash": "15946e07",
+        "encoded": "id:%20'test-user-123',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "4acb23",
+        "hash": "cba0f9bd",
+        "encoded": "name:%20'Test%20User',",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "4acb23",
+        "hash": "98af43d8",
+        "encoded": "sessionToken:%20'mock-session-token'",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "4acb23",
+        "hash": "3b955d05",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "4acb23",
+        "hash": "d5046a84",
+        "encoded": "//%20Mock%20request%20object",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "4acb23",
+        "hash": "753352e5",
+        "encoded": "mockRequest:%20(overrides%20=%20%7B%7D)%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "4acb23",
+        "hash": "5051f302",
+        "encoded": "ip:%20'127.0.0.1',",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "4acb23",
+        "hash": "ca1c5856",
+        "encoded": "get:%20jest.fn().mockReturnValue('test-user-agent'),",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "4acb23",
+        "hash": "53e289ed",
+        "encoded": "user:%20global.testUtils.mockUser,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "4acb23",
+        "hash": "a01fefd1",
+        "encoded": "body:%20%7B%7D,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "4acb23",
+        "hash": "191746c0",
+        "encoded": "params:%20%7B%7D,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "4acb23",
+        "hash": "06fa9a1f",
+        "encoded": "query:%20%7B%7D,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "4acb23",
+        "hash": "2e867e60",
+        "encoded": "...overrides",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "4acb23",
+        "hash": "5bb04f0c",
+        "encoded": "%7D),",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "4acb23",
+        "hash": "66f65de6",
+        "encoded": "//%20Mock%20response%20object",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "4acb23",
+        "hash": "9b7d22f6",
+        "encoded": "mockResponse:%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "4acb23",
+        "hash": "d39b6526",
+        "encoded": "const%20res%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "4acb23",
+        "hash": "bd2a7792",
+        "encoded": "status:%20jest.fn().mockReturnThis(),",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "4acb23",
+        "hash": "accf3242",
+        "encoded": "json:%20jest.fn().mockReturnThis(),",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "4acb23",
+        "hash": "e83845f7",
+        "encoded": "send:%20jest.fn().mockReturnThis(),",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "4acb23",
+        "hash": "9d300aab",
+        "encoded": "cookie:%20jest.fn().mockReturnThis(),",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "4acb23",
+        "hash": "42da0ed3",
+        "encoded": "clearCookie:%20jest.fn().mockReturnThis()",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "4acb23",
+        "hash": "e88aa46e",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "4acb23",
+        "hash": "6acd43bc",
+        "encoded": "return%20res;",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "4acb23",
+        "hash": "41dd60dc",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "4acb23",
+        "hash": "a0033108",
+        "encoded": "//%20Mock%20next%20function",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "4acb23",
+        "hash": "32249ff6",
+        "encoded": "mockNext:%20()%20=%3E%20jest.fn(),",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "4acb23",
+        "hash": "6026bbc2",
+        "encoded": "//%20Wait%20utility%20for%20async%20tests",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "4acb23",
+        "hash": "34fa1d07",
+        "encoded": "wait:%20(ms%20=%20100)%20=%3E%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20ms))",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "4acb23",
+        "hash": "7930ae6f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "4acb23",
+        "hash": "48e4afca",
+        "encoded": "//%20Suppress%20console%20output%20during%20tests%20unless%20explicitly%20needed",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "4acb23",
+        "hash": "8fae74d1",
+        "encoded": "const%20originalConsole%20=%20%7B%20...console%20%7D;",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "4acb23",
+        "hash": "3b517e1d",
+        "encoded": "beforeEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "4acb23",
+        "hash": "67a6cfaa",
+        "encoded": "console.log%20=%20jest.fn();",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "4acb23",
+        "hash": "1d26f987",
+        "encoded": "console.info%20=%20jest.fn();",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "4acb23",
+        "hash": "45a6eb5a",
+        "encoded": "console.warn%20=%20jest.fn();",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "4acb23",
+        "hash": "0b927b6b",
+        "encoded": "console.error%20=%20jest.fn();",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "4acb23",
+        "hash": "7a9bc11e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "4acb23",
+        "hash": "ad964d0d",
+        "encoded": "afterEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "4acb23",
+        "hash": "a42a30c0",
+        "encoded": "Object.assign(console,%20originalConsole);",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "4acb23",
+        "hash": "ebaf9923",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "4acb23",
+        "hash": "a9f34cbd",
+        "encoded": "//%20Clean%20up%20after%20each%20test",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "4acb23",
+        "hash": "93683f74",
+        "encoded": "afterEach(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "4acb23",
+        "hash": "2628cbc0",
+        "encoded": "jest.clearAllMocks();",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "4acb23",
+        "hash": "6538520c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,1419 @@
+{
+  "backend/src/middleware/auth.js": {
+    "filename": "auth.js",
+    "path": "backend/src/middleware/auth.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "239fdf": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134198,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "c1c91817",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "239fdf",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "239fdf",
+        "hash": "c35e2885",
+        "encoded": "*%20Authentication%20and%20authorization%20middleware",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "239fdf",
+        "hash": "79aeab9a",
+        "encoded": "*%20Handles%20JWT%20token%20validation%20and%20user%20authentication",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "239fdf",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "239fdf",
+        "hash": "8bd7a635",
+        "encoded": "const%20jwt%20=%20require('jsonwebtoken');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "239fdf",
+        "hash": "6e6dca1e",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('./errorHandler');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "239fdf",
+        "hash": "8ede9e53",
+        "encoded": "const%20%7B%20HTTP_STATUS,%20ERROR_TYPES,%20ERROR_MESSAGES%20%7D%20=%20require('../config/constants');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "239fdf",
+        "hash": "e8e62a8a",
+        "encoded": "const%20logger%20=%20require('../utils/logger');",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "239fdf",
+        "hash": "cdb01e2b",
+        "encoded": "const%20User%20=%20require('../models/User');",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "239fdf",
+        "hash": "bf22ba36",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "239fdf",
+        "hash": "3bb2f830",
+        "encoded": "*%20Generate%20JWT%20token",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "239fdf",
+        "hash": "998b625c",
+        "encoded": "*%20@param%20%7Bstring%7D%20userId%20-%20User%20ID%20to%20encode%20in%20token",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "239fdf",
+        "hash": "bfef1dfd",
+        "encoded": "*%20@returns%20%7Bstring%7D%20JWT%20token",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "239fdf",
+        "hash": "97c602ba",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "239fdf",
+        "hash": "1a8c9c72",
+        "encoded": "const%20generateToken%20=%20(userId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "239fdf",
+        "hash": "bc96e260",
+        "encoded": "return%20jwt.sign(",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "239fdf",
+        "hash": "4bfbc094",
+        "encoded": "%7B%20userId%20%7D,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "239fdf",
+        "hash": "0780ae92",
+        "encoded": "process.env.JWT_SECRET,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "239fdf",
+        "hash": "6f784cd4",
+        "encoded": "%7B%20expiresIn:%20process.env.JWT_EXPIRES_IN%20%7C%7C%20'1h'%20%7D",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "239fdf",
+        "hash": "05a8f1d5",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "239fdf",
+        "hash": "4da7dd63",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "239fdf",
+        "hash": "a1f7b1b8",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "239fdf",
+        "hash": "099836eb",
+        "encoded": "*%20Generate%20refresh%20token",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "239fdf",
+        "hash": "00c466c8",
+        "encoded": "*%20@param%20%7Bstring%7D%20userId%20-%20User%20ID%20to%20encode%20in%20token",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "239fdf",
+        "hash": "befd59ff",
+        "encoded": "*%20@returns%20%7Bstring%7D%20Refresh%20token",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "239fdf",
+        "hash": "6a472b85",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "239fdf",
+        "hash": "342ed83b",
+        "encoded": "const%20generateRefreshToken%20=%20(userId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "239fdf",
+        "hash": "41287d08",
+        "encoded": "return%20jwt.sign(",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "239fdf",
+        "hash": "d2f0c93f",
+        "encoded": "%7B%20userId,%20type:%20'refresh'%20%7D,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "239fdf",
+        "hash": "3e437752",
+        "encoded": "process.env.JWT_REFRESH_SECRET,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "239fdf",
+        "hash": "bcea8f24",
+        "encoded": "%7B%20expiresIn:%20process.env.JWT_REFRESH_EXPIRES_IN%20%7C%7C%20'7d'%20%7D",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "239fdf",
+        "hash": "8f3e1974",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "239fdf",
+        "hash": "ba0e82eb",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "239fdf",
+        "hash": "be8af006",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "239fdf",
+        "hash": "0da0104f",
+        "encoded": "*%20Verify%20JWT%20token",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "239fdf",
+        "hash": "69fced2e",
+        "encoded": "*%20@param%20%7Bstring%7D%20token%20-%20JWT%20token%20to%20verify",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "239fdf",
+        "hash": "c2049b49",
+        "encoded": "*%20@returns%20%7BObject%7D%20Decoded%20token%20payload",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "239fdf",
+        "hash": "ac7fba9c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "239fdf",
+        "hash": "b959f1c4",
+        "encoded": "const%20verifyToken%20=%20(token)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "239fdf",
+        "hash": "fe84eae3",
+        "encoded": "return%20jwt.verify(token,%20process.env.JWT_SECRET);",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "239fdf",
+        "hash": "29e944cd",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "239fdf",
+        "hash": "fe10bc0c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "239fdf",
+        "hash": "7aed32c1",
+        "encoded": "*%20Verify%20refresh%20token",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "239fdf",
+        "hash": "9ddffc36",
+        "encoded": "*%20@param%20%7Bstring%7D%20token%20-%20Refresh%20token%20to%20verify",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "239fdf",
+        "hash": "b6434784",
+        "encoded": "*%20@returns%20%7BObject%7D%20Decoded%20token%20payload",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "239fdf",
+        "hash": "2afef828",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "239fdf",
+        "hash": "802f88e6",
+        "encoded": "const%20verifyRefreshToken%20=%20(token)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "239fdf",
+        "hash": "298d201c",
+        "encoded": "return%20jwt.verify(token,%20process.env.JWT_REFRESH_SECRET);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "239fdf",
+        "hash": "4b3011e5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "239fdf",
+        "hash": "0941b36b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "239fdf",
+        "hash": "934676f6",
+        "encoded": "*%20Extract%20token%20from%20request%20headers",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "239fdf",
+        "hash": "e4745e90",
+        "encoded": "*%20@param%20%7BObject%7D%20req%20-%20Express%20request%20object",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "239fdf",
+        "hash": "6e0be6ea",
+        "encoded": "*%20@returns%20%7Bstring%7Cnull%7D%20Extracted%20token%20or%20null",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "239fdf",
+        "hash": "1c9b97a2",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "239fdf",
+        "hash": "66d5633e",
+        "encoded": "const%20extractToken%20=%20(req)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "239fdf",
+        "hash": "90241054",
+        "encoded": "const%20authHeader%20=%20req.headers.authorization;",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "239fdf",
+        "hash": "748b9f46",
+        "encoded": "if%20(authHeader%20&&%20authHeader.startsWith('Bearer%20'))%20%7B",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "239fdf",
+        "hash": "107d7aa6",
+        "encoded": "return%20authHeader.substring(7);",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "239fdf",
+        "hash": "912d88e4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "239fdf",
+        "hash": "eb50a7ab",
+        "encoded": "return%20null;",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "239fdf",
+        "hash": "8e1a2c97",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "239fdf",
+        "hash": "b5d2d83c",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "239fdf",
+        "hash": "36a45260",
+        "encoded": "*%20Authentication%20middleware",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "239fdf",
+        "hash": "fa4e1dec",
+        "encoded": "*%20Validates%20JWT%20token%20and%20attaches%20user%20to%20request",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "239fdf",
+        "hash": "fe9dbdbf",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "239fdf",
+        "hash": "2ace83c5",
+        "encoded": "const%20authenticate%20=%20async%20(req,%20res,%20next)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "239fdf",
+        "hash": "af48e4e0",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "239fdf",
+        "hash": "ef223456",
+        "encoded": "const%20token%20=%20extractToken(req);",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "239fdf",
+        "hash": "e7c01bb9",
+        "encoded": "if%20(!token)%20%7B",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "239fdf",
+        "hash": "7779077f",
+        "encoded": "logger.logSecurity('Missing%20authentication%20token',%20%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "239fdf",
+        "hash": "bf850cd8",
+        "encoded": "ip:%20req.ip,",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "239fdf",
+        "hash": "5da1d552",
+        "encoded": "userAgent:%20req.get('User-Agent'),",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "239fdf",
+        "hash": "ac0292ee",
+        "encoded": "url:%20req.originalUrl",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "239fdf",
+        "hash": "fa0b9a5c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "239fdf",
+        "hash": "24379a7e",
+        "encoded": "return%20next(new%20AppError(",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "239fdf",
+        "hash": "eda6b1c3",
+        "encoded": "ERROR_MESSAGES.INVALID_TOKEN,",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "239fdf",
+        "hash": "6117301c",
+        "encoded": "HTTP_STATUS.UNAUTHORIZED,",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "239fdf",
+        "hash": "ffe6e55d",
+        "encoded": "ERROR_TYPES.AUTHENTICATION_ERROR",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "239fdf",
+        "hash": "9baee339",
+        "encoded": "));",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "239fdf",
+        "hash": "1a9d363f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "239fdf",
+        "hash": "9d5b960f",
+        "encoded": "//%20Verify%20token",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "239fdf",
+        "hash": "1827fb4d",
+        "encoded": "const%20decoded%20=%20verifyToken(token);",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "239fdf",
+        "hash": "abd5db96",
+        "encoded": "//%20Check%20if%20user%20still%20exists%20(in%20a%20real%20app,%20you'd%20query%20the%20database)",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "239fdf",
+        "hash": "a57dd534",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "239fdf",
+        "hash": "28966fad",
+        "encoded": "//%20Mock%20user%20validation",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "239fdf",
+        "hash": "76e8520f",
+        "encoded": "req.user%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "239fdf",
+        "hash": "78f31ba4",
+        "encoded": "id:%20decoded.userId,",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "239fdf",
+        "hash": "cac2152b",
+        "encoded": "name:%20'John%20Doe',",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "239fdf",
+        "hash": "1634c571",
+        "encoded": "sessionToken:%20token",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "239fdf",
+        "hash": "345d244f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "239fdf",
+        "hash": "5161fa08",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "239fdf",
+        "hash": "b05309dd",
+        "encoded": "//%20Real%20user%20validation",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "239fdf",
+        "hash": "7e44f9f3",
+        "encoded": "const%20user%20=%20await%20User.findById(decoded.userId).select('-pin');",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "239fdf",
+        "hash": "2ec71d13",
+        "encoded": "if%20(!user)%20%7B",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "239fdf",
+        "hash": "b96f6da2",
+        "encoded": "logger.logSecurity('Token%20for%20non-existent%20user',%20%7B",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "239fdf",
+        "hash": "bbe414bc",
+        "encoded": "userId:%20decoded.userId,",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "239fdf",
+        "hash": "e71153b3",
+        "encoded": "ip:%20req.ip,",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "239fdf",
+        "hash": "2a7d8353",
+        "encoded": "userAgent:%20req.get('User-Agent')",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "239fdf",
+        "hash": "dd6b3e73",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "239fdf",
+        "hash": "e78b75d3",
+        "encoded": "return%20next(new%20AppError(",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "239fdf",
+        "hash": "2c89f3ed",
+        "encoded": "ERROR_MESSAGES.INVALID_TOKEN,",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "239fdf",
+        "hash": "78b11a7a",
+        "encoded": "HTTP_STATUS.UNAUTHORIZED,",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "239fdf",
+        "hash": "eff0ebcf",
+        "encoded": "ERROR_TYPES.AUTHENTICATION_ERROR",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "239fdf",
+        "hash": "06795bd7",
+        "encoded": "));",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "239fdf",
+        "hash": "beea77ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "239fdf",
+        "hash": "372b0e22",
+        "encoded": "req.user%20=%20user;",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "239fdf",
+        "hash": "2d0864bf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "239fdf",
+        "hash": "f696a4b6",
+        "encoded": "logger.info('User%20authenticated',%20%7B",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "239fdf",
+        "hash": "14165dcd",
+        "encoded": "userId:%20req.user.id,",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "239fdf",
+        "hash": "956e4cbb",
+        "encoded": "ip:%20req.ip,",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "239fdf",
+        "hash": "6f38bf92",
+        "encoded": "userAgent:%20req.get('User-Agent'),",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "239fdf",
+        "hash": "de21a083",
+        "encoded": "url:%20req.originalUrl",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "239fdf",
+        "hash": "a67eb14c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "239fdf",
+        "hash": "1499afa0",
+        "encoded": "next();",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "239fdf",
+        "hash": "c04e9990",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "239fdf",
+        "hash": "05ba8ef3",
+        "encoded": "logger.logSecurity('Authentication%20failed',%20%7B",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "239fdf",
+        "hash": "5f7724d0",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "239fdf",
+        "hash": "c3d3564c",
+        "encoded": "ip:%20req.ip,",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "239fdf",
+        "hash": "e2d55a9a",
+        "encoded": "userAgent:%20req.get('User-Agent'),",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "239fdf",
+        "hash": "e5788e19",
+        "encoded": "url:%20req.originalUrl",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "239fdf",
+        "hash": "2be22c18",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "239fdf",
+        "hash": "158cdbe3",
+        "encoded": "if%20(error.name%20===%20'JsonWebTokenError')%20%7B",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "239fdf",
+        "hash": "b3e55e8e",
+        "encoded": "return%20next(new%20AppError(",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "239fdf",
+        "hash": "b2c998d3",
+        "encoded": "ERROR_MESSAGES.INVALID_TOKEN,",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "239fdf",
+        "hash": "2216492e",
+        "encoded": "HTTP_STATUS.UNAUTHORIZED,",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "239fdf",
+        "hash": "114d7301",
+        "encoded": "ERROR_TYPES.AUTHENTICATION_ERROR",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "239fdf",
+        "hash": "72fc9229",
+        "encoded": "));",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "239fdf",
+        "hash": "f787a6d1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "239fdf",
+        "hash": "8e2dbd6e",
+        "encoded": "if%20(error.name%20===%20'TokenExpiredError')%20%7B",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "239fdf",
+        "hash": "06dea992",
+        "encoded": "return%20next(new%20AppError(",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "239fdf",
+        "hash": "b168256a",
+        "encoded": "ERROR_MESSAGES.SESSION_EXPIRED,",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "239fdf",
+        "hash": "85966313",
+        "encoded": "HTTP_STATUS.UNAUTHORIZED,",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "239fdf",
+        "hash": "a00dd4dc",
+        "encoded": "ERROR_TYPES.AUTHENTICATION_ERROR",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "239fdf",
+        "hash": "65684ec1",
+        "encoded": "));",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "239fdf",
+        "hash": "0b3cc65a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "239fdf",
+        "hash": "d2e000d4",
+        "encoded": "return%20next(new%20AppError(",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "239fdf",
+        "hash": "38e0f21c",
+        "encoded": "ERROR_MESSAGES.INVALID_TOKEN,",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "239fdf",
+        "hash": "0323fd0a",
+        "encoded": "HTTP_STATUS.UNAUTHORIZED,",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "239fdf",
+        "hash": "ca98acba",
+        "encoded": "ERROR_TYPES.AUTHENTICATION_ERROR",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "239fdf",
+        "hash": "a9c7efd4",
+        "encoded": "));",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "239fdf",
+        "hash": "9f3096f5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "239fdf",
+        "hash": "15b0cbdc",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "239fdf",
+        "hash": "0382488a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "239fdf",
+        "hash": "3b577cbf",
+        "encoded": "*%20Optional%20authentication%20middleware",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "239fdf",
+        "hash": "efc608ab",
+        "encoded": "*%20Attaches%20user%20to%20request%20if%20token%20is%20valid,%20but%20doesn't%20fail%20if%20no%20token",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "239fdf",
+        "hash": "3fb59be9",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "239fdf",
+        "hash": "432a2924",
+        "encoded": "const%20optionalAuth%20=%20async%20(req,%20res,%20next)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "239fdf",
+        "hash": "372f3eb6",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "239fdf",
+        "hash": "3d36b250",
+        "encoded": "const%20token%20=%20extractToken(req);",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "239fdf",
+        "hash": "9ab4d22e",
+        "encoded": "if%20(token)%20%7B",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "239fdf",
+        "hash": "3fdf718a",
+        "encoded": "const%20decoded%20=%20verifyToken(token);",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "239fdf",
+        "hash": "c1596769",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "239fdf",
+        "hash": "8734684e",
+        "encoded": "req.user%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "239fdf",
+        "hash": "bab54244",
+        "encoded": "id:%20decoded.userId,",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "239fdf",
+        "hash": "3d7c7527",
+        "encoded": "name:%20'John%20Doe',",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "239fdf",
+        "hash": "1adad31e",
+        "encoded": "sessionToken:%20token",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "239fdf",
+        "hash": "19f77c41",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "239fdf",
+        "hash": "d9e676ab",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "239fdf",
+        "hash": "d799619f",
+        "encoded": "const%20user%20=%20await%20User.findById(decoded.userId).select('-pin');",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "239fdf",
+        "hash": "d72f8d96",
+        "encoded": "if%20(user)%20%7B",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "239fdf",
+        "hash": "7f9202ec",
+        "encoded": "req.user%20=%20user;",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "239fdf",
+        "hash": "92ab12a1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "239fdf",
+        "hash": "aab5eeb9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "239fdf",
+        "hash": "acd7fbb9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "239fdf",
+        "hash": "6666c81a",
+        "encoded": "next();",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "239fdf",
+        "hash": "4b1f1707",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "239fdf",
+        "hash": "23c3a6bc",
+        "encoded": "//%20Ignore%20authentication%20errors%20for%20optional%20auth",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "239fdf",
+        "hash": "d5ce1ee6",
+        "encoded": "next();",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "239fdf",
+        "hash": "ca78192d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "239fdf",
+        "hash": "75c71439",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "239fdf",
+        "hash": "6cca99d2",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "239fdf",
+        "hash": "5a1c47bc",
+        "encoded": "*%20Rate%20limiting%20for%20authentication%20attempts",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "239fdf",
+        "hash": "30f63129",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "239fdf",
+        "hash": "22a49b45",
+        "encoded": "const%20authRateLimit%20=%20%7B%7D;",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "239fdf",
+        "hash": "a0aec513",
+        "encoded": "const%20checkAuthRateLimit%20=%20(req,%20res,%20next)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "239fdf",
+        "hash": "0566b037",
+        "encoded": "const%20ip%20=%20req.ip;",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "239fdf",
+        "hash": "358e77b9",
+        "encoded": "const%20now%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "239fdf",
+        "hash": "5211895f",
+        "encoded": "const%20windowMs%20=%2015%20*%2060%20*%201000;%20//%2015%20minutes",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "239fdf",
+        "hash": "d6588de1",
+        "encoded": "const%20maxAttempts%20=%205;",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "239fdf",
+        "hash": "b72c43b7",
+        "encoded": "if%20(!authRateLimit%5Bip%5D)%20%7B",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "239fdf",
+        "hash": "e2c1100d",
+        "encoded": "authRateLimit%5Bip%5D%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "239fdf",
+        "hash": "e34857ec",
+        "encoded": "attempts:%201,",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "239fdf",
+        "hash": "ae36b86a",
+        "encoded": "firstAttempt:%20now",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "239fdf",
+        "hash": "4864d6c9",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "239fdf",
+        "hash": "46a4f58f",
+        "encoded": "return%20next();",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "239fdf",
+        "hash": "8da2b88b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "239fdf",
+        "hash": "21f04d1c",
+        "encoded": "const%20timeWindow%20=%20now%20-%20authRateLimit%5Bip%5D.firstAttempt;",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "239fdf",
+        "hash": "1ad8e333",
+        "encoded": "if%20(timeWindow%20%3E%20windowMs)%20%7B",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "239fdf",
+        "hash": "bb91d8ec",
+        "encoded": "//%20Reset%20window",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "239fdf",
+        "hash": "4c6f19ab",
+        "encoded": "authRateLimit%5Bip%5D%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "239fdf",
+        "hash": "6194836c",
+        "encoded": "attempts:%201,",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "239fdf",
+        "hash": "638ebadb",
+        "encoded": "firstAttempt:%20now",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "239fdf",
+        "hash": "088ac6fd",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "239fdf",
+        "hash": "94154985",
+        "encoded": "return%20next();",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "239fdf",
+        "hash": "e196358d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "239fdf",
+        "hash": "c1fd7cbd",
+        "encoded": "if%20(authRateLimit%5Bip%5D.attempts%20%3E=%20maxAttempts)%20%7B",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "239fdf",
+        "hash": "26fc6b14",
+        "encoded": "logger.logSecurity('Authentication%20rate%20limit%20exceeded',%20%7B",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "239fdf",
+        "hash": "ce18f20a",
+        "encoded": "ip,",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "239fdf",
+        "hash": "e07ab659",
+        "encoded": "attempts:%20authRateLimit%5Bip%5D.attempts,",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "239fdf",
+        "hash": "33495e4a",
+        "encoded": "timeWindow",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "239fdf",
+        "hash": "4ee4b9a9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "239fdf",
+        "hash": "5992a8eb",
+        "encoded": "return%20next(new%20AppError(",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "239fdf",
+        "hash": "7c1d0600",
+        "encoded": "'Too%20many%20authentication%20attempts.%20Please%20try%20again%20later.',",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "239fdf",
+        "hash": "7b0d9adb",
+        "encoded": "HTTP_STATUS.TOO_MANY_REQUESTS,",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "239fdf",
+        "hash": "db10f174",
+        "encoded": "ERROR_TYPES.AUTHENTICATION_ERROR",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "239fdf",
+        "hash": "c63f98ca",
+        "encoded": "));",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "239fdf",
+        "hash": "b7fe04d4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "239fdf",
+        "hash": "712d1979",
+        "encoded": "authRateLimit%5Bip%5D.attempts++;",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "239fdf",
+        "hash": "c3ca7316",
+        "encoded": "next();",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "239fdf",
+        "hash": "eaf0b789",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "239fdf",
+        "hash": "22597c63",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "239fdf",
+        "hash": "9818a66c",
+        "encoded": "*%20Clean%20up%20expired%20rate%20limit%20entries",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "239fdf",
+        "hash": "3231225e",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "239fdf",
+        "hash": "8155295a",
+        "encoded": "setInterval(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "239fdf",
+        "hash": "d87d087f",
+        "encoded": "const%20now%20=%20Date.now();",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "239fdf",
+        "hash": "d10e517c",
+        "encoded": "const%20windowMs%20=%2015%20*%2060%20*%201000;",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "239fdf",
+        "hash": "5add29f3",
+        "encoded": "Object.keys(authRateLimit).forEach(ip%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "239fdf",
+        "hash": "3d18ce82",
+        "encoded": "if%20(now%20-%20authRateLimit%5Bip%5D.firstAttempt%20%3E%20windowMs)%20%7B",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "239fdf",
+        "hash": "92f1b603",
+        "encoded": "delete%20authRateLimit%5Bip%5D;",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "239fdf",
+        "hash": "9cd32fde",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "239fdf",
+        "hash": "c57f914f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "239fdf",
+        "hash": "f02c93ef",
+        "encoded": "%7D,%205%20*%2060%20*%201000);%20//%20Clean%20up%20every%205%20minutes",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "239fdf",
+        "hash": "cf4e88a3",
+        "encoded": "module.exports%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "239fdf",
+        "hash": "ad5e9168",
+        "encoded": "generateToken,",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "239fdf",
+        "hash": "dfa906ce",
+        "encoded": "generateRefreshToken,",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "239fdf",
+        "hash": "8d6bedaf",
+        "encoded": "verifyToken,",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "239fdf",
+        "hash": "880e58f4",
+        "encoded": "verifyRefreshToken,",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "239fdf",
+        "hash": "ece01e0f",
+        "encoded": "extractToken,",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "239fdf",
+        "hash": "76ad5f10",
+        "encoded": "authenticate,",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "239fdf",
+        "hash": "2e75867f",
+        "encoded": "optionalAuth,",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "239fdf",
+        "hash": "6296f542",
+        "encoded": "checkAuthRateLimit",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "239fdf",
+        "hash": "b67fae09",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,1227 @@
+{
+  "backend/src/routes/health.js": {
+    "filename": "health.js",
+    "path": "backend/src/routes/health.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "b9dd4c": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134344,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "0f120f1f",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "b9dd4c",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "b9dd4c",
+        "hash": "2a3fd819",
+        "encoded": "*%20Health%20check%20routes",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "b9dd4c",
+        "hash": "8fb917e9",
+        "encoded": "*%20Provides%20system%20health%20and%20status%20endpoints",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "b9dd4c",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "b9dd4c",
+        "hash": "e4593fda",
+        "encoded": "const%20express%20=%20require('express');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "b9dd4c",
+        "hash": "d47e7bc5",
+        "encoded": "const%20%7B%20getConnectionStatus%20%7D%20=%20require('../config/database');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "b9dd4c",
+        "hash": "2b7fffbf",
+        "encoded": "const%20logger%20=%20require('../utils/logger');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "b9dd4c",
+        "hash": "fbb55742",
+        "encoded": "const%20%7B%20HTTP_STATUS%20%7D%20=%20require('../config/constants');",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "b9dd4c",
+        "hash": "5462e3bf",
+        "encoded": "const%20router%20=%20express.Router();",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "b9dd4c",
+        "hash": "06067327",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "b9dd4c",
+        "hash": "88d0ee22",
+        "encoded": "*%20Basic%20health%20check",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "b9dd4c",
+        "hash": "2c69c47c",
+        "encoded": "*%20GET%20/api/health",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "b9dd4c",
+        "hash": "97c602ba",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "b9dd4c",
+        "hash": "99ec38fb",
+        "encoded": "router.get('/',%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "b9dd4c",
+        "hash": "901baece",
+        "encoded": "const%20healthCheck%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "b9dd4c",
+        "hash": "4eec6892",
+        "encoded": "status:%20'OK',",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "b9dd4c",
+        "hash": "68719a3e",
+        "encoded": "timestamp:%20new%20Date().toISOString(),",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "b9dd4c",
+        "hash": "c9a8b59a",
+        "encoded": "uptime:%20process.uptime(),",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "b9dd4c",
+        "hash": "99d51b5b",
+        "encoded": "environment:%20process.env.NODE_ENV%20%7C%7C%20'development',",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "b9dd4c",
+        "hash": "ecffa5c8",
+        "encoded": "version:%20'1.0.0',",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "b9dd4c",
+        "hash": "062e3db0",
+        "encoded": "services:%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "b9dd4c",
+        "hash": "d6fd387d",
+        "encoded": "api:%20'healthy',",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "b9dd4c",
+        "hash": "7d55be68",
+        "encoded": "database:%20getConnectionStatus()",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "b9dd4c",
+        "hash": "e256b81a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "b9dd4c",
+        "hash": "a3b06819",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "b9dd4c",
+        "hash": "a9a5cf62",
+        "encoded": "logger.info('Health%20check%20requested',%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "b9dd4c",
+        "hash": "4b88fd9f",
+        "encoded": "ip:%20req.ip,",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "b9dd4c",
+        "hash": "bab6c76b",
+        "encoded": "userAgent:%20req.get('User-Agent')",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "b9dd4c",
+        "hash": "25c863d9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "b9dd4c",
+        "hash": "d26251b4",
+        "encoded": "res.status(HTTP_STATUS.OK).json(healthCheck);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "b9dd4c",
+        "hash": "8c01c10e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "b9dd4c",
+        "hash": "be8af006",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "b9dd4c",
+        "hash": "fc4434c4",
+        "encoded": "*%20Detailed%20health%20check",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "b9dd4c",
+        "hash": "464f9dff",
+        "encoded": "*%20GET%20/api/health/detailed",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "b9dd4c",
+        "hash": "4059174a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "b9dd4c",
+        "hash": "cbfeef6c",
+        "encoded": "router.get('/detailed',%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "b9dd4c",
+        "hash": "381fabb7",
+        "encoded": "const%20memoryUsage%20=%20process.memoryUsage();",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "b9dd4c",
+        "hash": "ee520b05",
+        "encoded": "const%20cpuUsage%20=%20process.cpuUsage();",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "b9dd4c",
+        "hash": "cfdaf0f8",
+        "encoded": "const%20detailedHealth%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "b9dd4c",
+        "hash": "39d188a8",
+        "encoded": "status:%20'OK',",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "b9dd4c",
+        "hash": "6506689a",
+        "encoded": "timestamp:%20new%20Date().toISOString(),",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "b9dd4c",
+        "hash": "2a77b583",
+        "encoded": "uptime:%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "b9dd4c",
+        "hash": "de80cd79",
+        "encoded": "seconds:%20process.uptime(),",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "b9dd4c",
+        "hash": "9058f769",
+        "encoded": "formatted:%20formatUptime(process.uptime())",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "b9dd4c",
+        "hash": "c4149f68",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "b9dd4c",
+        "hash": "377be103",
+        "encoded": "environment:%20process.env.NODE_ENV%20%7C%7C%20'development',",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "b9dd4c",
+        "hash": "3d4ab45d",
+        "encoded": "version:%20'1.0.0',",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "b9dd4c",
+        "hash": "7e8ad7f9",
+        "encoded": "node:%20%7B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "b9dd4c",
+        "hash": "a66ef494",
+        "encoded": "version:%20process.version,",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "b9dd4c",
+        "hash": "fb098c23",
+        "encoded": "platform:%20process.platform,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "b9dd4c",
+        "hash": "d20c7477",
+        "encoded": "arch:%20process.arch",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "b9dd4c",
+        "hash": "f31f7ed2",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "b9dd4c",
+        "hash": "7e69872d",
+        "encoded": "memory:%20%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "b9dd4c",
+        "hash": "1e45983f",
+        "encoded": "rss:%20%60$%7BMath.round(memoryUsage.rss%20/%201024%20/%201024)%7D%20MB%60,",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "b9dd4c",
+        "hash": "e1984cf0",
+        "encoded": "heapTotal:%20%60$%7BMath.round(memoryUsage.heapTotal%20/%201024%20/%201024)%7D%20MB%60,",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "b9dd4c",
+        "hash": "5475dd73",
+        "encoded": "heapUsed:%20%60$%7BMath.round(memoryUsage.heapUsed%20/%201024%20/%201024)%7D%20MB%60,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "b9dd4c",
+        "hash": "e96c7042",
+        "encoded": "external:%20%60$%7BMath.round(memoryUsage.external%20/%201024%20/%201024)%7D%20MB%60",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "b9dd4c",
+        "hash": "3668736d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "b9dd4c",
+        "hash": "770ed82a",
+        "encoded": "cpu:%20%7B",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "b9dd4c",
+        "hash": "2429c9e9",
+        "encoded": "user:%20cpuUsage.user,",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "b9dd4c",
+        "hash": "d5a12d33",
+        "encoded": "system:%20cpuUsage.system",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "b9dd4c",
+        "hash": "8dec3385",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "b9dd4c",
+        "hash": "6308aff9",
+        "encoded": "services:%20%7B",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "b9dd4c",
+        "hash": "2fcfb9e0",
+        "encoded": "api:%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "b9dd4c",
+        "hash": "91426079",
+        "encoded": "status:%20'healthy',",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "b9dd4c",
+        "hash": "41bec886",
+        "encoded": "responseTime:%20'%3C%20100ms'",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "b9dd4c",
+        "hash": "d1ed9091",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "b9dd4c",
+        "hash": "a85f5554",
+        "encoded": "database:%20%7B",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "b9dd4c",
+        "hash": "7e5d517c",
+        "encoded": "status:%20getConnectionStatus(),",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "b9dd4c",
+        "hash": "2fd977e1",
+        "encoded": "type:%20'MongoDB'",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "b9dd4c",
+        "hash": "2c3e2788",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "b9dd4c",
+        "hash": "971fc938",
+        "encoded": "externalServices:%20%7B",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "b9dd4c",
+        "hash": "dec652d7",
+        "encoded": "atmStagingService:%20process.env.USE_MOCK_SERVICES%20===%20'true'%20?%20'mock'%20:%20'unknown',",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "b9dd4c",
+        "hash": "8d760af8",
+        "encoded": "coreBankingService:%20process.env.USE_MOCK_SERVICES%20===%20'true'%20?%20'mock'%20:%20'unknown',",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "b9dd4c",
+        "hash": "4bfbb596",
+        "encoded": "visionService:%20process.env.USE_MOCK_SERVICES%20===%20'true'%20?%20'mock'%20:%20'unknown'",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "b9dd4c",
+        "hash": "74977a35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "b9dd4c",
+        "hash": "b219e3d0",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "b9dd4c",
+        "hash": "e389abe7",
+        "encoded": "configuration:%20%7B",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "b9dd4c",
+        "hash": "b1d091c1",
+        "encoded": "port:%20process.env.PORT%20%7C%7C%203001,",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "b9dd4c",
+        "hash": "7eb38979",
+        "encoded": "logLevel:%20process.env.LOG_LEVEL%20%7C%7C%20'info',",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "b9dd4c",
+        "hash": "ce974976",
+        "encoded": "useMockServices:%20process.env.USE_MOCK_SERVICES%20===%20'true',",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "b9dd4c",
+        "hash": "cef14e31",
+        "encoded": "jwtExpiresIn:%20process.env.JWT_EXPIRES_IN%20%7C%7C%20'1h'",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "b9dd4c",
+        "hash": "9b477039",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "b9dd4c",
+        "hash": "fe945ff2",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "b9dd4c",
+        "hash": "21b9c084",
+        "encoded": "logger.info('Detailed%20health%20check%20requested',%20%7B",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "b9dd4c",
+        "hash": "20842c2e",
+        "encoded": "ip:%20req.ip,",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "b9dd4c",
+        "hash": "6678dfc3",
+        "encoded": "userAgent:%20req.get('User-Agent')",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "b9dd4c",
+        "hash": "98569f06",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "b9dd4c",
+        "hash": "2c965159",
+        "encoded": "res.status(HTTP_STATUS.OK).json(detailedHealth);",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "b9dd4c",
+        "hash": "8a83ede4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "b9dd4c",
+        "hash": "cd2f86a0",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "b9dd4c",
+        "hash": "21bd1c5b",
+        "encoded": "*%20Readiness%20check",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "b9dd4c",
+        "hash": "2e519798",
+        "encoded": "*%20GET%20/api/health/ready",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "b9dd4c",
+        "hash": "4157e7e6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "b9dd4c",
+        "hash": "3c4c7a32",
+        "encoded": "router.get('/ready',%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "b9dd4c",
+        "hash": "722a20eb",
+        "encoded": "const%20dbStatus%20=%20getConnectionStatus();",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "b9dd4c",
+        "hash": "cd0e480d",
+        "encoded": "const%20isReady%20=%20dbStatus%20===%20'connected';",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "b9dd4c",
+        "hash": "ecf4c627",
+        "encoded": "const%20readinessCheck%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "b9dd4c",
+        "hash": "09fb2eee",
+        "encoded": "status:%20isReady%20?%20'READY'%20:%20'NOT_READY',",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "b9dd4c",
+        "hash": "103f50c8",
+        "encoded": "timestamp:%20new%20Date().toISOString(),",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "b9dd4c",
+        "hash": "07c98b14",
+        "encoded": "checks:%20%7B",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "b9dd4c",
+        "hash": "d0be3665",
+        "encoded": "database:%20%7B",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "b9dd4c",
+        "hash": "7e50bf4e",
+        "encoded": "status:%20dbStatus,",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "b9dd4c",
+        "hash": "3c476cf6",
+        "encoded": "required:%20true,",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "b9dd4c",
+        "hash": "185e256a",
+        "encoded": "passed:%20dbStatus%20===%20'connected'",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "b9dd4c",
+        "hash": "b6c82857",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "b9dd4c",
+        "hash": "55960c6f",
+        "encoded": "environment:%20%7B",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "b9dd4c",
+        "hash": "22af8166",
+        "encoded": "status:%20'OK',",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "b9dd4c",
+        "hash": "752b6a6d",
+        "encoded": "required:%20true,",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "b9dd4c",
+        "hash": "968ff7a3",
+        "encoded": "passed:%20true",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "b9dd4c",
+        "hash": "7b145d98",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "b9dd4c",
+        "hash": "2d0864bf",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "b9dd4c",
+        "hash": "d47294a5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "b9dd4c",
+        "hash": "c09c2c3a",
+        "encoded": "const%20statusCode%20=%20isReady%20?%20HTTP_STATUS.OK%20:%20HTTP_STATUS.SERVICE_UNAVAILABLE;",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "b9dd4c",
+        "hash": "4f911567",
+        "encoded": "logger.info('Readiness%20check%20requested',%20%7B",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "b9dd4c",
+        "hash": "f9aa1eca",
+        "encoded": "ready:%20isReady,",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "b9dd4c",
+        "hash": "95cca680",
+        "encoded": "dbStatus,",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "b9dd4c",
+        "hash": "851f288a",
+        "encoded": "ip:%20req.ip",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "b9dd4c",
+        "hash": "ed4ca5df",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "b9dd4c",
+        "hash": "d43c5191",
+        "encoded": "res.status(statusCode).json(readinessCheck);",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "b9dd4c",
+        "hash": "c9e7ebd5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "b9dd4c",
+        "hash": "d0afabef",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "b9dd4c",
+        "hash": "7757d361",
+        "encoded": "*%20Liveness%20check",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "b9dd4c",
+        "hash": "f0eae683",
+        "encoded": "*%20GET%20/api/health/live",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "b9dd4c",
+        "hash": "ec23f9c5",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "b9dd4c",
+        "hash": "910ccc8f",
+        "encoded": "router.get('/live',%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "b9dd4c",
+        "hash": "039295d2",
+        "encoded": "const%20livenessCheck%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "b9dd4c",
+        "hash": "8b069370",
+        "encoded": "status:%20'ALIVE',",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "b9dd4c",
+        "hash": "f53836cb",
+        "encoded": "timestamp:%20new%20Date().toISOString(),",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "b9dd4c",
+        "hash": "4a92bb63",
+        "encoded": "uptime:%20process.uptime(),",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "b9dd4c",
+        "hash": "002eadde",
+        "encoded": "pid:%20process.pid",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "b9dd4c",
+        "hash": "2b5fe871",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "b9dd4c",
+        "hash": "97f6aef5",
+        "encoded": "res.status(HTTP_STATUS.OK).json(livenessCheck);",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "b9dd4c",
+        "hash": "389a9b2d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "b9dd4c",
+        "hash": "ae7ba39d",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "b9dd4c",
+        "hash": "891dc540",
+        "encoded": "*%20Service%20status%20check",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "b9dd4c",
+        "hash": "99877cec",
+        "encoded": "*%20GET%20/api/health/services",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "b9dd4c",
+        "hash": "0bcb05be",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "b9dd4c",
+        "hash": "bb0368f9",
+        "encoded": "router.get('/services',%20async%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "b9dd4c",
+        "hash": "1abeaaeb",
+        "encoded": "const%20services%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "b9dd4c",
+        "hash": "a4cd536e",
+        "encoded": "database:%20%7B",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "b9dd4c",
+        "hash": "dc2d4460",
+        "encoded": "name:%20'MongoDB',",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "b9dd4c",
+        "hash": "a6074293",
+        "encoded": "status:%20getConnectionStatus(),",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "b9dd4c",
+        "hash": "c45cbadd",
+        "encoded": "lastChecked:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "b9dd4c",
+        "hash": "62d2f542",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "b9dd4c",
+        "hash": "cd003c69",
+        "encoded": "atmStagingService:%20%7B",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "b9dd4c",
+        "hash": "3ea71206",
+        "encoded": "name:%20'ATM%20Staging%20Service',",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "b9dd4c",
+        "hash": "0df6cad3",
+        "encoded": "status:%20process.env.USE_MOCK_SERVICES%20===%20'true'%20?%20'mock'%20:%20'unknown',",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "b9dd4c",
+        "hash": "8e78a2ff",
+        "encoded": "url:%20process.env.ATM_STAGING_SERVICE_URL%20%7C%7C%20'not%20configured',",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "b9dd4c",
+        "hash": "2b67423f",
+        "encoded": "lastChecked:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "b9dd4c",
+        "hash": "0cd37790",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "b9dd4c",
+        "hash": "af5325e5",
+        "encoded": "coreBankingService:%20%7B",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "b9dd4c",
+        "hash": "b876ffc3",
+        "encoded": "name:%20'Core%20Banking%20Service',",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "b9dd4c",
+        "hash": "64e76591",
+        "encoded": "status:%20process.env.USE_MOCK_SERVICES%20===%20'true'%20?%20'mock'%20:%20'unknown',",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "b9dd4c",
+        "hash": "3ffc422c",
+        "encoded": "url:%20process.env.CORE_BANKING_SERVICE_URL%20%7C%7C%20'not%20configured',",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "b9dd4c",
+        "hash": "1afc01d5",
+        "encoded": "lastChecked:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "b9dd4c",
+        "hash": "d9316249",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "b9dd4c",
+        "hash": "22d3a450",
+        "encoded": "visionService:%20%7B",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "b9dd4c",
+        "hash": "e5cb7ca9",
+        "encoded": "name:%20'On-Device%20Vision%20Service',",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "b9dd4c",
+        "hash": "d245be76",
+        "encoded": "status:%20process.env.USE_MOCK_SERVICES%20===%20'true'%20?%20'mock'%20:%20'unknown',",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "b9dd4c",
+        "hash": "2a4690c5",
+        "encoded": "url:%20process.env.ON_DEVICE_VISION_SERVICE_URL%20%7C%7C%20'not%20configured',",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "b9dd4c",
+        "hash": "5ce8624a",
+        "encoded": "lastChecked:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "b9dd4c",
+        "hash": "dee02b44",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "b9dd4c",
+        "hash": "fba174f0",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "b9dd4c",
+        "hash": "cc99a586",
+        "encoded": "//%20TODO:%20Add%20actual%20service%20health%20checks%20for%20external%20services",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "b9dd4c",
+        "hash": "b313e6c3",
+        "encoded": "//%20This%20would%20involve%20making%20HTTP%20requests%20to%20each%20service's%20health%20endpoint",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "b9dd4c",
+        "hash": "d4186aa6",
+        "encoded": "const%20allServicesHealthy%20=%20Object.values(services).every(",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "b9dd4c",
+        "hash": "016589c3",
+        "encoded": "service%20=%3E%20%5B'connected',%20'mock',%20'healthy'%5D.includes(service.status)",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "b9dd4c",
+        "hash": "d8be494c",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "b9dd4c",
+        "hash": "0dc65a7d",
+        "encoded": "const%20response%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "b9dd4c",
+        "hash": "ec2f11ef",
+        "encoded": "status:%20allServicesHealthy%20?%20'HEALTHY'%20:%20'DEGRADED',",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "b9dd4c",
+        "hash": "93cef791",
+        "encoded": "timestamp:%20new%20Date().toISOString(),",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "b9dd4c",
+        "hash": "e37fd32f",
+        "encoded": "services",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "b9dd4c",
+        "hash": "a9e8f539",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "b9dd4c",
+        "hash": "606f68cb",
+        "encoded": "const%20statusCode%20=%20allServicesHealthy%20?%20HTTP_STATUS.OK%20:%20HTTP_STATUS.SERVICE_UNAVAILABLE;",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "b9dd4c",
+        "hash": "3160bf88",
+        "encoded": "logger.info('Services%20health%20check%20requested',%20%7B",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "b9dd4c",
+        "hash": "787b914f",
+        "encoded": "allHealthy:%20allServicesHealthy,",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "b9dd4c",
+        "hash": "99862b1f",
+        "encoded": "services:%20Object.keys(services),",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "b9dd4c",
+        "hash": "5ef26c1f",
+        "encoded": "ip:%20req.ip",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "b9dd4c",
+        "hash": "313d143e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "b9dd4c",
+        "hash": "3bfd6757",
+        "encoded": "res.status(statusCode).json(response);",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "b9dd4c",
+        "hash": "fd2fe27f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "b9dd4c",
+        "hash": "940053f5",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "b9dd4c",
+        "hash": "b1dbfe90",
+        "encoded": "*%20Format%20uptime%20in%20human%20readable%20format",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "b9dd4c",
+        "hash": "0da7e88a",
+        "encoded": "*%20@param%20%7Bnumber%7D%20seconds%20-%20Uptime%20in%20seconds",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "b9dd4c",
+        "hash": "c9c9dd93",
+        "encoded": "*%20@returns%20%7Bstring%7D%20Formatted%20uptime",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "b9dd4c",
+        "hash": "fdc3e0e4",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "b9dd4c",
+        "hash": "3bcf4262",
+        "encoded": "function%20formatUptime(seconds)%20%7B",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "b9dd4c",
+        "hash": "186a104d",
+        "encoded": "const%20days%20=%20Math.floor(seconds%20/%2086400);",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "b9dd4c",
+        "hash": "55993b60",
+        "encoded": "const%20hours%20=%20Math.floor((seconds%20%25%2086400)%20/%203600);",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "b9dd4c",
+        "hash": "1c222a20",
+        "encoded": "const%20minutes%20=%20Math.floor((seconds%20%25%203600)%20/%2060);",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "b9dd4c",
+        "hash": "e6615e04",
+        "encoded": "const%20secs%20=%20Math.floor(seconds%20%25%2060);",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "b9dd4c",
+        "hash": "a9ea148b",
+        "encoded": "const%20parts%20=%20%5B%5D;",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "b9dd4c",
+        "hash": "cd95af58",
+        "encoded": "if%20(days%20%3E%200)%20parts.push(%60$%7Bdays%7Dd%60);",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "b9dd4c",
+        "hash": "91510b82",
+        "encoded": "if%20(hours%20%3E%200)%20parts.push(%60$%7Bhours%7Dh%60);",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "b9dd4c",
+        "hash": "b6efdc9f",
+        "encoded": "if%20(minutes%20%3E%200)%20parts.push(%60$%7Bminutes%7Dm%60);",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "b9dd4c",
+        "hash": "77224a0a",
+        "encoded": "if%20(secs%20%3E%200)%20parts.push(%60$%7Bsecs%7Ds%60);",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "b9dd4c",
+        "hash": "f85a407f",
+        "encoded": "return%20parts.join('%20')%20%7C%7C%20'0s';",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "b9dd4c",
+        "hash": "4bec1b99",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "b9dd4c",
+        "hash": "9984c7c3",
+        "encoded": "module.exports%20=%20router;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

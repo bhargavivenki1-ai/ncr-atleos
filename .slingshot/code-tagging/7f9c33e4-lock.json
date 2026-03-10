@@ -1,0 +1,321 @@
+{
+  "backend/jest.config.js": {
+    "filename": "jest.config.js",
+    "path": "backend/jest.config.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "5e65da": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134813,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "c44bf3dc",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "5e65da",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "5e65da",
+        "hash": "e32fca8a",
+        "encoded": "*%20Jest%20configuration%20for%20NCR%20ATLEOS%20ATM%20Backend%20Services",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "5e65da",
+        "hash": "fe772869",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "5e65da",
+        "hash": "80f97d15",
+        "encoded": "module.exports%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "5e65da",
+        "hash": "0946cd0c",
+        "encoded": "//%20Test%20environment",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "5e65da",
+        "hash": "fc929602",
+        "encoded": "testEnvironment:%20'node',",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "5e65da",
+        "hash": "ab81cd3d",
+        "encoded": "//%20Test%20file%20patterns",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "5e65da",
+        "hash": "173d2f5d",
+        "encoded": "testMatch:%20%5B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "5e65da",
+        "hash": "18f92e31",
+        "encoded": "'**/tests/**/*.test.js',",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "5e65da",
+        "hash": "68510ae3",
+        "encoded": "'**/src/**/*.test.js',",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "5e65da",
+        "hash": "207e7169",
+        "encoded": "'**/__tests__/**/*.js'",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "5e65da",
+        "hash": "6860d97d",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "5e65da",
+        "hash": "0b1e9684",
+        "encoded": "//%20Coverage%20settings",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "5e65da",
+        "hash": "f565e082",
+        "encoded": "collectCoverage:%20true,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "5e65da",
+        "hash": "40e5c341",
+        "encoded": "coverageDirectory:%20'coverage',",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "5e65da",
+        "hash": "25a59a0a",
+        "encoded": "coverageReporters:%20%5B'text',%20'lcov',%20'html'%5D,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "5e65da",
+        "hash": "2025853e",
+        "encoded": "collectCoverageFrom:%20%5B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "5e65da",
+        "hash": "40917e99",
+        "encoded": "'src/**/*.js',",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "5e65da",
+        "hash": "cefebc51",
+        "encoded": "'!src/server.js',",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "5e65da",
+        "hash": "e8def9e3",
+        "encoded": "'!src/**/*.test.js',",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "5e65da",
+        "hash": "b6286c0e",
+        "encoded": "'!src/config/database.js'",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "5e65da",
+        "hash": "0f999d71",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "5e65da",
+        "hash": "22656dd3",
+        "encoded": "//%20Coverage%20thresholds",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "5e65da",
+        "hash": "efcbd95f",
+        "encoded": "coverageThreshold:%20%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "5e65da",
+        "hash": "0f21dce4",
+        "encoded": "global:%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "5e65da",
+        "hash": "411a96a0",
+        "encoded": "branches:%2070,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "5e65da",
+        "hash": "f7b5641b",
+        "encoded": "functions:%2070,",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "5e65da",
+        "hash": "d1d9683d",
+        "encoded": "lines:%2070,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "5e65da",
+        "hash": "fdc4dc75",
+        "encoded": "statements:%2070",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "5e65da",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "5e65da",
+        "hash": "108b8db2",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "5e65da",
+        "hash": "bb81c2fa",
+        "encoded": "//%20Setup%20files",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "5e65da",
+        "hash": "b685aecb",
+        "encoded": "setupFilesAfterEnv:%20%5B'%3CrootDir%3E/tests/setup.js'%5D,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "5e65da",
+        "hash": "9c7e8a76",
+        "encoded": "//%20Module%20paths",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "5e65da",
+        "hash": "8846e82f",
+        "encoded": "moduleDirectories:%20%5B'node_modules',%20'src'%5D,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "5e65da",
+        "hash": "8997d787",
+        "encoded": "//%20Test%20timeout",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "5e65da",
+        "hash": "b8c5e95f",
+        "encoded": "testTimeout:%2010000,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "5e65da",
+        "hash": "f4915a0c",
+        "encoded": "//%20Clear%20mocks%20between%20tests",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "5e65da",
+        "hash": "473e355d",
+        "encoded": "clearMocks:%20true,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "5e65da",
+        "hash": "3c574140",
+        "encoded": "//%20Verbose%20output",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "5e65da",
+        "hash": "e1b32824",
+        "encoded": "verbose:%20true,",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "5e65da",
+        "hash": "015a1212",
+        "encoded": "//%20Transform%20files",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "5e65da",
+        "hash": "7c0595f5",
+        "encoded": "transform:%20%7B%7D,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "5e65da",
+        "hash": "a4eb0c9c",
+        "encoded": "//%20Module%20file%20extensions",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "5e65da",
+        "hash": "abd52395",
+        "encoded": "moduleFileExtensions:%20%5B'js',%20'json'%5D,",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "5e65da",
+        "hash": "5516ff2e",
+        "encoded": "//%20Global%20setup%20and%20teardown",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "5e65da",
+        "hash": "c05fe3f6",
+        "encoded": "globalSetup:%20'%3CrootDir%3E/tests/globalSetup.js',",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "5e65da",
+        "hash": "de25186b",
+        "encoded": "globalTeardown:%20'%3CrootDir%3E/tests/globalTeardown.js'",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "5e65da",
+        "hash": "cfd6d42d",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

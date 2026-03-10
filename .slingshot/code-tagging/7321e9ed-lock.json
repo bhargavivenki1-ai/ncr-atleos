@@ -1,0 +1,627 @@
+{
+  "backend/src/routes/banking.js": {
+    "filename": "banking.js",
+    "path": "backend/src/routes/banking.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "eaad81": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134515,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "de491e5d",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "eaad81",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "eaad81",
+        "hash": "5c8a3543",
+        "encoded": "*%20Banking%20service%20routes",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "eaad81",
+        "hash": "2d6c8789",
+        "encoded": "*%20Handles%20core%20banking%20operations%20including%20balance%20inquiries%20and%20fund%20transfers",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "eaad81",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "eaad81",
+        "hash": "e4593fda",
+        "encoded": "const%20express%20=%20require('express');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "eaad81",
+        "hash": "3787b752",
+        "encoded": "const%20%7B%20catchAsync%20%7D%20=%20require('../middleware/errorHandler');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "eaad81",
+        "hash": "d6eddcb5",
+        "encoded": "const%20%7B%20authenticate%20%7D%20=%20require('../middleware/auth');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "eaad81",
+        "hash": "66883619",
+        "encoded": "const%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "eaad81",
+        "hash": "10fce354",
+        "encoded": "validateTransfer,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "eaad81",
+        "hash": "44343f2b",
+        "encoded": "validateAccount,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "eaad81",
+        "hash": "b314c6cc",
+        "encoded": "validatePagination,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "eaad81",
+        "hash": "7c0206b7",
+        "encoded": "validateDateRange,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "eaad81",
+        "hash": "8fd42edc",
+        "encoded": "sanitizeInput",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "eaad81",
+        "hash": "65f8ffef",
+        "encoded": "%7D%20=%20require('../middleware/validation');",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "eaad81",
+        "hash": "199535f1",
+        "encoded": "const%20bankingController%20=%20require('../controllers/bankingController');",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "eaad81",
+        "hash": "6eb722c7",
+        "encoded": "const%20router%20=%20express.Router();",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "eaad81",
+        "hash": "ac489d6c",
+        "encoded": "//%20Apply%20authentication%20and%20sanitization%20to%20all%20routes",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "eaad81",
+        "hash": "af4d8ed6",
+        "encoded": "router.use(authenticate);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "eaad81",
+        "hash": "96c802b2",
+        "encoded": "router.use(sanitizeInput);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "eaad81",
+        "hash": "aaf43556",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "eaad81",
+        "hash": "11a08542",
+        "encoded": "*%20Get%20user%20account%20balances",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "eaad81",
+        "hash": "1d91c786",
+        "encoded": "*%20GET%20/api/banking/accounts/balance",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "eaad81",
+        "hash": "97550845",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "eaad81",
+        "hash": "a85b1c01",
+        "encoded": "router.get('/accounts/balance',",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "eaad81",
+        "hash": "52099613",
+        "encoded": "catchAsync(bankingController.getAccountBalances)",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "eaad81",
+        "hash": "4bce4871",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "eaad81",
+        "hash": "367a56c1",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "eaad81",
+        "hash": "02d80ebd",
+        "encoded": "*%20Get%20specific%20account%20balance",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "eaad81",
+        "hash": "95bc6764",
+        "encoded": "*%20GET%20/api/banking/accounts/:accountId/balance",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "eaad81",
+        "hash": "9358b5e7",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "eaad81",
+        "hash": "eafb1086",
+        "encoded": "router.get('/accounts/:accountId/balance',",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "eaad81",
+        "hash": "cf4b99a1",
+        "encoded": "validateAccount,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "eaad81",
+        "hash": "625f4bbe",
+        "encoded": "catchAsync(bankingController.getAccountBalance)",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "eaad81",
+        "hash": "883f8be2",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "eaad81",
+        "hash": "cf970820",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "eaad81",
+        "hash": "a5418c58",
+        "encoded": "*%20Get%20user%20accounts%20list",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "eaad81",
+        "hash": "aceca73e",
+        "encoded": "*%20GET%20/api/banking/accounts",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "eaad81",
+        "hash": "7b590782",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "eaad81",
+        "hash": "b1a38ae4",
+        "encoded": "router.get('/accounts',",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "eaad81",
+        "hash": "375934f0",
+        "encoded": "catchAsync(bankingController.getUserAccounts)",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "eaad81",
+        "hash": "fe26fe6b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "eaad81",
+        "hash": "eb0289d4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "eaad81",
+        "hash": "a707162b",
+        "encoded": "*%20Transfer%20funds%20between%20accounts",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "eaad81",
+        "hash": "fafe7e55",
+        "encoded": "*%20POST%20/api/banking/transfers",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "eaad81",
+        "hash": "7e4503c1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "eaad81",
+        "hash": "2fc01332",
+        "encoded": "router.post('/transfers',",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "eaad81",
+        "hash": "01ef2d8e",
+        "encoded": "validateTransfer,",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "eaad81",
+        "hash": "613ca0bd",
+        "encoded": "catchAsync(bankingController.transferFunds)",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "eaad81",
+        "hash": "763c5566",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "eaad81",
+        "hash": "5987bfad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "eaad81",
+        "hash": "75bdbfe3",
+        "encoded": "*%20Get%20transfer%20history",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "eaad81",
+        "hash": "094c19cb",
+        "encoded": "*%20GET%20/api/banking/transfers",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "eaad81",
+        "hash": "3de85b9d",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "eaad81",
+        "hash": "ea4b8a1b",
+        "encoded": "router.get('/transfers',",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "eaad81",
+        "hash": "a7308dce",
+        "encoded": "validatePagination,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "eaad81",
+        "hash": "bf9e8b6c",
+        "encoded": "validateDateRange,",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "eaad81",
+        "hash": "5ec9296f",
+        "encoded": "catchAsync(bankingController.getTransferHistory)",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "eaad81",
+        "hash": "cf2c02e7",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "eaad81",
+        "hash": "349faf87",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "eaad81",
+        "hash": "7e6c7d88",
+        "encoded": "*%20Get%20specific%20transfer%20details",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "eaad81",
+        "hash": "08bcdd86",
+        "encoded": "*%20GET%20/api/banking/transfers/:transferId",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "eaad81",
+        "hash": "72f2e141",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "eaad81",
+        "hash": "1cf6f5e0",
+        "encoded": "router.get('/transfers/:transferId',",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "eaad81",
+        "hash": "edff3b20",
+        "encoded": "catchAsync(bankingController.getTransferDetails)",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "eaad81",
+        "hash": "ef689d02",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "eaad81",
+        "hash": "3646e3b7",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "eaad81",
+        "hash": "1b2cb565",
+        "encoded": "*%20Get%20account%20statement",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "eaad81",
+        "hash": "f1635818",
+        "encoded": "*%20GET%20/api/banking/accounts/:accountId/statement",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "eaad81",
+        "hash": "9de63012",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "eaad81",
+        "hash": "8815cf59",
+        "encoded": "router.get('/accounts/:accountId/statement',",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "eaad81",
+        "hash": "de873eb4",
+        "encoded": "validateAccount,",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "eaad81",
+        "hash": "d8ed9dad",
+        "encoded": "validateDateRange,",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "eaad81",
+        "hash": "af1acf7d",
+        "encoded": "validatePagination,",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "eaad81",
+        "hash": "e823d0ea",
+        "encoded": "catchAsync(bankingController.getAccountStatement)",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "eaad81",
+        "hash": "cd33b6b2",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "eaad81",
+        "hash": "0c8c5ee6",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "eaad81",
+        "hash": "8f105dd5",
+        "encoded": "*%20Get%20account%20transaction%20history",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "eaad81",
+        "hash": "bd06757e",
+        "encoded": "*%20GET%20/api/banking/accounts/:accountId/transactions",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "eaad81",
+        "hash": "0bf47674",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "eaad81",
+        "hash": "6a7f75d3",
+        "encoded": "router.get('/accounts/:accountId/transactions',",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "eaad81",
+        "hash": "ed86d741",
+        "encoded": "validateAccount,",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "eaad81",
+        "hash": "411e2fe4",
+        "encoded": "validatePagination,",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "eaad81",
+        "hash": "cb0e258e",
+        "encoded": "validateDateRange,",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "eaad81",
+        "hash": "2b65c361",
+        "encoded": "catchAsync(bankingController.getAccountTransactions)",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "eaad81",
+        "hash": "942f47db",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "eaad81",
+        "hash": "87fa6196",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "eaad81",
+        "hash": "63825508",
+        "encoded": "*%20Get%20banking%20service%20limits",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "eaad81",
+        "hash": "45f3b7d0",
+        "encoded": "*%20GET%20/api/banking/limits",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "eaad81",
+        "hash": "d684199a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "eaad81",
+        "hash": "8f03af2d",
+        "encoded": "router.get('/limits',",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "eaad81",
+        "hash": "4b8b9832",
+        "encoded": "catchAsync(bankingController.getServiceLimits)",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "eaad81",
+        "hash": "b80c2844",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "eaad81",
+        "hash": "a9f1e502",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "eaad81",
+        "hash": "596a48da",
+        "encoded": "*%20Update%20daily%20limits",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "eaad81",
+        "hash": "b0b6e628",
+        "encoded": "*%20PUT%20/api/banking/limits",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "eaad81",
+        "hash": "63ad5add",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "eaad81",
+        "hash": "7dd956ac",
+        "encoded": "router.put('/limits',",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "eaad81",
+        "hash": "9cd0e56f",
+        "encoded": "catchAsync(bankingController.updateServiceLimits)",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "eaad81",
+        "hash": "caa4e59c",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "eaad81",
+        "hash": "0adcfa3f",
+        "encoded": "module.exports%20=%20router;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

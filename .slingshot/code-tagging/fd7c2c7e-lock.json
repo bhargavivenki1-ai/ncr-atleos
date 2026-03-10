@@ -1,0 +1,627 @@
+{
+  "backend/docker-compose.yml": {
+    "filename": "docker-compose.yml",
+    "path": "backend/docker-compose.yml",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "5eb49d": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134921,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "7e3db416",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "5eb49d",
+        "hash": "f089e2bc",
+        "encoded": "version:%20'3.8'",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "5eb49d",
+        "hash": "751b5859",
+        "encoded": "services:",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "5eb49d",
+        "hash": "ea472f73",
+        "encoded": "#%20NCR%20ATLEOS%20ATM%20Backend%20Service",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "5eb49d",
+        "hash": "803233a5",
+        "encoded": "atleos-backend:",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "5eb49d",
+        "hash": "346d4061",
+        "encoded": "build:",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "5eb49d",
+        "hash": "d2fd0dc6",
+        "encoded": "context:%20.",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "5eb49d",
+        "hash": "e0fd644b",
+        "encoded": "dockerfile:%20Dockerfile",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "5eb49d",
+        "hash": "2ae9f4be",
+        "encoded": "target:%20production",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "5eb49d",
+        "hash": "e2d65d9c",
+        "encoded": "container_name:%20atleos-backend",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "5eb49d",
+        "hash": "1b0b0e7c",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "5eb49d",
+        "hash": "999c33fc",
+        "encoded": "-%20%223001:3001%22",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "5eb49d",
+        "hash": "8db5fde5",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "5eb49d",
+        "hash": "4ca3b1b0",
+        "encoded": "-%20NODE_ENV=production",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "5eb49d",
+        "hash": "3917d310",
+        "encoded": "-%20PORT=3001",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "5eb49d",
+        "hash": "a8c35ecc",
+        "encoded": "-%20MONGODB_URI=mongodb://mongo:27017/ncr-atleos-atm",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "5eb49d",
+        "hash": "1105d6e9",
+        "encoded": "-%20JWT_SECRET=$%7BJWT_SECRET:-ncr-atleos-super-secret-jwt-key-2024%7D",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "5eb49d",
+        "hash": "e107abc7",
+        "encoded": "-%20JWT_REFRESH_SECRET=$%7BJWT_REFRESH_SECRET:-ncr-atleos-refresh-token-secret-2024%7D",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "5eb49d",
+        "hash": "b217f888",
+        "encoded": "-%20USE_MOCK_SERVICES=true",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "5eb49d",
+        "hash": "93950c41",
+        "encoded": "-%20LOG_LEVEL=info",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "5eb49d",
+        "hash": "ce88b453",
+        "encoded": "-%20ALLOWED_ORIGINS=http://localhost:3000,http://localhost:3001",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "5eb49d",
+        "hash": "d130394c",
+        "encoded": "depends_on:",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "5eb49d",
+        "hash": "ca5a611f",
+        "encoded": "-%20mongo",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "5eb49d",
+        "hash": "ae598a77",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "5eb49d",
+        "hash": "49ac69e7",
+        "encoded": "-%20atleos-network",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "5eb49d",
+        "hash": "0635f64d",
+        "encoded": "restart:%20unless-stopped",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "5eb49d",
+        "hash": "d292db43",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "5eb49d",
+        "hash": "e000a2f0",
+        "encoded": "-%20./logs:/app/logs",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "5eb49d",
+        "hash": "ec03c466",
+        "encoded": "healthcheck:",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "5eb49d",
+        "hash": "54ed7fd6",
+        "encoded": "test:%20%5B%22CMD%22,%20%22node%22,%20%22healthcheck.js%22%5D",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "5eb49d",
+        "hash": "a7f36367",
+        "encoded": "interval:%2030s",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "5eb49d",
+        "hash": "2d5a3412",
+        "encoded": "timeout:%2010s",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "5eb49d",
+        "hash": "28940423",
+        "encoded": "retries:%203",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "5eb49d",
+        "hash": "f465e05e",
+        "encoded": "start_period:%2040s",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "5eb49d",
+        "hash": "32e35fe0",
+        "encoded": "#%20MongoDB%20Database",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "5eb49d",
+        "hash": "b43cf873",
+        "encoded": "mongo:",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "5eb49d",
+        "hash": "cf3c4e40",
+        "encoded": "image:%20mongo:6.0",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "5eb49d",
+        "hash": "12f38b4e",
+        "encoded": "container_name:%20atleos-mongo",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "5eb49d",
+        "hash": "78f176f2",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "5eb49d",
+        "hash": "958960ed",
+        "encoded": "-%20%2227017:27017%22",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "5eb49d",
+        "hash": "a7d74699",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "5eb49d",
+        "hash": "56223753",
+        "encoded": "-%20MONGO_INITDB_ROOT_USERNAME=$%7BMONGO_USERNAME:-admin%7D",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "5eb49d",
+        "hash": "25fcd8b1",
+        "encoded": "-%20MONGO_INITDB_ROOT_PASSWORD=$%7BMONGO_PASSWORD:-password%7D",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "5eb49d",
+        "hash": "b0459412",
+        "encoded": "-%20MONGO_INITDB_DATABASE=ncr-atleos-atm",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "5eb49d",
+        "hash": "e211853c",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "5eb49d",
+        "hash": "8ccfd657",
+        "encoded": "-%20mongo-data:/data/db",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "5eb49d",
+        "hash": "a4af90fb",
+        "encoded": "-%20./scripts/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "5eb49d",
+        "hash": "e392bc67",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "5eb49d",
+        "hash": "6912853e",
+        "encoded": "-%20atleos-network",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "5eb49d",
+        "hash": "4a3e82f6",
+        "encoded": "restart:%20unless-stopped",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "5eb49d",
+        "hash": "7f46afae",
+        "encoded": "healthcheck:",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "5eb49d",
+        "hash": "fd2123a8",
+        "encoded": "test:%20echo%20'db.runCommand(%22ping%22).ok'%20%7C%20mongosh%20localhost:27017/test%20--quiet",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "5eb49d",
+        "hash": "a7e022ef",
+        "encoded": "interval:%2030s",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "5eb49d",
+        "hash": "9f03c2d9",
+        "encoded": "timeout:%2010s",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "5eb49d",
+        "hash": "73e9e2c1",
+        "encoded": "retries:%203",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "5eb49d",
+        "hash": "15bc1d4c",
+        "encoded": "start_period:%2040s",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "5eb49d",
+        "hash": "fb4d5e92",
+        "encoded": "#%20MongoDB%20Express%20(Database%20Admin%20UI)",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "5eb49d",
+        "hash": "8fbbe8bd",
+        "encoded": "mongo-express:",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "5eb49d",
+        "hash": "7ff9046b",
+        "encoded": "image:%20mongo-express:latest",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "5eb49d",
+        "hash": "9939c851",
+        "encoded": "container_name:%20atleos-mongo-express",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "5eb49d",
+        "hash": "d19f190c",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "5eb49d",
+        "hash": "0737108c",
+        "encoded": "-%20%228081:8081%22",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "5eb49d",
+        "hash": "be011475",
+        "encoded": "environment:",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "5eb49d",
+        "hash": "136b637b",
+        "encoded": "-%20ME_CONFIG_MONGODB_ADMINUSERNAME=$%7BMONGO_USERNAME:-admin%7D",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "5eb49d",
+        "hash": "750e63a7",
+        "encoded": "-%20ME_CONFIG_MONGODB_ADMINPASSWORD=$%7BMONGO_PASSWORD:-password%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "5eb49d",
+        "hash": "76c2b86f",
+        "encoded": "-%20ME_CONFIG_MONGODB_URL=mongodb://admin:password@mongo:27017/",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "5eb49d",
+        "hash": "2673616c",
+        "encoded": "-%20ME_CONFIG_BASICAUTH_USERNAME=$%7BMONGO_EXPRESS_USERNAME:-admin%7D",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "5eb49d",
+        "hash": "b73dd3d5",
+        "encoded": "-%20ME_CONFIG_BASICAUTH_PASSWORD=$%7BMONGO_EXPRESS_PASSWORD:-password%7D",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "5eb49d",
+        "hash": "f26f805a",
+        "encoded": "depends_on:",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "5eb49d",
+        "hash": "ef02bf56",
+        "encoded": "-%20mongo",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "5eb49d",
+        "hash": "8cd93def",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "5eb49d",
+        "hash": "4029760b",
+        "encoded": "-%20atleos-network",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "5eb49d",
+        "hash": "30275450",
+        "encoded": "restart:%20unless-stopped",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "5eb49d",
+        "hash": "1fe6e1a5",
+        "encoded": "#%20Redis%20(for%20session%20management%20and%20caching)",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "5eb49d",
+        "hash": "2bb56efc",
+        "encoded": "redis:",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "5eb49d",
+        "hash": "c06ac34d",
+        "encoded": "image:%20redis:7-alpine",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "5eb49d",
+        "hash": "7d45bb81",
+        "encoded": "container_name:%20atleos-redis",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "5eb49d",
+        "hash": "515d24c6",
+        "encoded": "ports:",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "5eb49d",
+        "hash": "68ac41ad",
+        "encoded": "-%20%226379:6379%22",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "5eb49d",
+        "hash": "0880a042",
+        "encoded": "command:%20redis-server%20--requirepass%20$%7BREDIS_PASSWORD:-password%7D",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "5eb49d",
+        "hash": "3ef48fb1",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "5eb49d",
+        "hash": "b7e3c791",
+        "encoded": "-%20redis-data:/data",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "5eb49d",
+        "hash": "98deb5c6",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "5eb49d",
+        "hash": "52fb4ab6",
+        "encoded": "-%20atleos-network",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "5eb49d",
+        "hash": "2370a2ba",
+        "encoded": "restart:%20unless-stopped",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "5eb49d",
+        "hash": "3de9e0dc",
+        "encoded": "healthcheck:",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "5eb49d",
+        "hash": "7edb2911",
+        "encoded": "test:%20%5B%22CMD%22,%20%22redis-cli%22,%20%22ping%22%5D",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "5eb49d",
+        "hash": "9ab68484",
+        "encoded": "interval:%2030s",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "5eb49d",
+        "hash": "def31888",
+        "encoded": "timeout:%2010s",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "5eb49d",
+        "hash": "79e93884",
+        "encoded": "retries:%203",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "5eb49d",
+        "hash": "e19580e5",
+        "encoded": "volumes:",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "5eb49d",
+        "hash": "4327b528",
+        "encoded": "mongo-data:",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "5eb49d",
+        "hash": "bcc061c8",
+        "encoded": "driver:%20local",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "5eb49d",
+        "hash": "15e4687c",
+        "encoded": "redis-data:",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "5eb49d",
+        "hash": "a7409943",
+        "encoded": "driver:%20local",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "5eb49d",
+        "hash": "1b3987ad",
+        "encoded": "networks:",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "5eb49d",
+        "hash": "feb48da9",
+        "encoded": "atleos-network:",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "5eb49d",
+        "hash": "32321eeb",
+        "encoded": "driver:%20bridge",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "5eb49d",
+        "hash": "f3299ff6",
+        "encoded": "ipam:",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "5eb49d",
+        "hash": "2058e78b",
+        "encoded": "config:",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "5eb49d",
+        "hash": "0019646e",
+        "encoded": "-%20subnet:%20172.20.0.0/16",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

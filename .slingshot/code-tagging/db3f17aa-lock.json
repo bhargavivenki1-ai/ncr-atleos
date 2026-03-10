@@ -1,0 +1,93 @@
+{
+  "backend/.prettierrc": {
+    "filename": ".prettierrc",
+    "path": "backend/.prettierrc",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "ef2615": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134813,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "dbad7b9c",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ef2615",
+        "hash": "47009686",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "ef2615",
+        "hash": "4fb9e37e",
+        "encoded": "%22semi%22:%20true,",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "ef2615",
+        "hash": "49ec8f11",
+        "encoded": "%22trailingComma%22:%20%22none%22,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "ef2615",
+        "hash": "fd8068e2",
+        "encoded": "%22singleQuote%22:%20true,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "ef2615",
+        "hash": "13f35727",
+        "encoded": "%22printWidth%22:%20120,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "ef2615",
+        "hash": "73378913",
+        "encoded": "%22tabWidth%22:%202,",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "ef2615",
+        "hash": "f39690df",
+        "encoded": "%22useTabs%22:%20false,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "ef2615",
+        "hash": "8178cc91",
+        "encoded": "%22bracketSpacing%22:%20true,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "ef2615",
+        "hash": "035806a0",
+        "encoded": "%22arrowParens%22:%20%22avoid%22,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ef2615",
+        "hash": "2a282f00",
+        "encoded": "%22endOfLine%22:%20%22lf%22",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "ef2615",
+        "hash": "c2f1edd6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

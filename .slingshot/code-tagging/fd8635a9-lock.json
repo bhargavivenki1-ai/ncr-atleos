@@ -1,0 +1,339 @@
+{
+  "backend/package.json": {
+    "filename": "package.json",
+    "path": "backend/package.json",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "992d76": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773133218,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "37ddefe4",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "992d76",
+        "hash": "47009686",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "992d76",
+        "hash": "b59800a6",
+        "encoded": "%22name%22:%20%22ncr-atleos-backend%22,",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "992d76",
+        "hash": "bde4980f",
+        "encoded": "%22version%22:%20%221.0.0%22,",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "992d76",
+        "hash": "8d8a8ad4",
+        "encoded": "%22description%22:%20%22Backend%20services%20for%20NCR%20ATLEOS%20ATM%20Customer%20Journey%20Application%22,",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "992d76",
+        "hash": "53c3969b",
+        "encoded": "%22main%22:%20%22src/server.js%22,",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "992d76",
+        "hash": "f4278672",
+        "encoded": "%22scripts%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "992d76",
+        "hash": "3343eb7d",
+        "encoded": "%22start%22:%20%22node%20src/server.js%22,",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "992d76",
+        "hash": "ebc39341",
+        "encoded": "%22dev%22:%20%22nodemon%20src/server.js%22,",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "992d76",
+        "hash": "53968542",
+        "encoded": "%22test%22:%20%22jest%22,",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "992d76",
+        "hash": "9baf7a39",
+        "encoded": "%22test:watch%22:%20%22jest%20--watch%22,",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "992d76",
+        "hash": "4c83156b",
+        "encoded": "%22test:coverage%22:%20%22jest%20--coverage%22,",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "992d76",
+        "hash": "e8d60ee4",
+        "encoded": "%22lint%22:%20%22eslint%20src/%22,",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "992d76",
+        "hash": "cb259180",
+        "encoded": "%22lint:fix%22:%20%22eslint%20src/%20--fix%22,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "992d76",
+        "hash": "d2aa3bf0",
+        "encoded": "%22format%22:%20%22prettier%20--write%20src/%22",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "992d76",
+        "hash": "aaa19923",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "992d76",
+        "hash": "12907959",
+        "encoded": "%22dependencies%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "992d76",
+        "hash": "397eebb4",
+        "encoded": "%22express%22:%20%22%5E4.18.2%22,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "992d76",
+        "hash": "59ad3b16",
+        "encoded": "%22helmet%22:%20%22%5E6.1.5%22,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "992d76",
+        "hash": "bdc8620c",
+        "encoded": "%22cors%22:%20%22%5E2.8.5%22,",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "992d76",
+        "hash": "6a280d0b",
+        "encoded": "%22express-rate-limit%22:%20%22%5E6.7.0%22,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "992d76",
+        "hash": "b3d3514d",
+        "encoded": "%22express-validator%22:%20%22%5E6.15.0%22,",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "992d76",
+        "hash": "2858e399",
+        "encoded": "%22bcryptjs%22:%20%22%5E2.4.3%22,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "992d76",
+        "hash": "91bee937",
+        "encoded": "%22jsonwebtoken%22:%20%22%5E9.0.0%22,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "992d76",
+        "hash": "7ec91260",
+        "encoded": "%22dotenv%22:%20%22%5E16.0.3%22,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "992d76",
+        "hash": "f9b726bb",
+        "encoded": "%22compression%22:%20%22%5E1.7.4%22,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "992d76",
+        "hash": "69b873d7",
+        "encoded": "%22winston%22:%20%22%5E3.8.2%22,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "992d76",
+        "hash": "49b257e3",
+        "encoded": "%22mongoose%22:%20%22%5E7.0.3%22,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "992d76",
+        "hash": "4c3322fd",
+        "encoded": "%22uuid%22:%20%22%5E9.0.0%22,",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "992d76",
+        "hash": "a90c723f",
+        "encoded": "%22joi%22:%20%22%5E17.9.1%22",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "992d76",
+        "hash": "b0145a10",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "992d76",
+        "hash": "9339433e",
+        "encoded": "%22devDependencies%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "992d76",
+        "hash": "e13354ba",
+        "encoded": "%22nodemon%22:%20%22%5E2.0.22%22,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "992d76",
+        "hash": "fb28fb2a",
+        "encoded": "%22jest%22:%20%22%5E29.5.0%22,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "992d76",
+        "hash": "94ea83a2",
+        "encoded": "%22supertest%22:%20%22%5E6.3.3%22,",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "992d76",
+        "hash": "beb848fb",
+        "encoded": "%22eslint%22:%20%22%5E8.39.0%22,",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "992d76",
+        "hash": "638ad9e8",
+        "encoded": "%22eslint-config-airbnb-base%22:%20%22%5E15.0.0%22,",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "992d76",
+        "hash": "ae670c36",
+        "encoded": "%22eslint-plugin-import%22:%20%22%5E2.27.5%22,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "992d76",
+        "hash": "a0d9eb84",
+        "encoded": "%22prettier%22:%20%22%5E2.8.8%22",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "992d76",
+        "hash": "ca75e77a",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "992d76",
+        "hash": "5b0ed318",
+        "encoded": "%22engines%22:%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "992d76",
+        "hash": "7da26589",
+        "encoded": "%22node%22:%20%22%3E=16.0.0%22",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "992d76",
+        "hash": "179b30c9",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "992d76",
+        "hash": "7cb8f750",
+        "encoded": "%22keywords%22:%20%5B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "992d76",
+        "hash": "0061d5f1",
+        "encoded": "%22atm%22,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "992d76",
+        "hash": "c98ac10d",
+        "encoded": "%22banking%22,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "992d76",
+        "hash": "a789ba9d",
+        "encoded": "%22api%22,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "992d76",
+        "hash": "257b3c42",
+        "encoded": "%22express%22,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "992d76",
+        "hash": "ee58f460",
+        "encoded": "%22nodejs%22",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "992d76",
+        "hash": "58ee4412",
+        "encoded": "%5D,",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "992d76",
+        "hash": "f0805b60",
+        "encoded": "%22author%22:%20%22NCR%20ATLEOS%20Team%22,",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "992d76",
+        "hash": "fafc20fa",
+        "encoded": "%22license%22:%20%22MIT%22",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "992d76",
+        "hash": "38b604dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,4125 @@
+{
+  "backend/src/controllers/atmController.js": {
+    "filename": "atmController.js",
+    "path": "backend/src/controllers/atmController.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "d3a7a1": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134567,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "527a9496",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "d3a7a1",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "d3a7a1",
+        "hash": "71034e84",
+        "encoded": "*%20ATM%20controller",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "d3a7a1",
+        "hash": "734aacb2",
+        "encoded": "*%20Handles%20ATM%20transaction%20operations%20including%20withdrawals,%20deposits,%20and%20staging",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "d3a7a1",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "d3a7a1",
+        "hash": "43ec61a4",
+        "encoded": "const%20%7B%20v4:%20uuidv4%20%7D%20=%20require('uuid');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "d3a7a1",
+        "hash": "9b89d2f4",
+        "encoded": "const%20%7B%20AppError%20%7D%20=%20require('../middleware/errorHandler');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "d3a7a1",
+        "hash": "99302590",
+        "encoded": "const%20%7B%20HTTP_STATUS,%20ERROR_TYPES,%20ERROR_MESSAGES,%20SUCCESS_MESSAGES,%20TRANSACTION_TYPES,%20TRANSACTION_STATUS,%20MOCK_CONFIG,%20API_TIMEOUTS%20%7D%20=%20require('../config/constants');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "d3a7a1",
+        "hash": "e8e62a8a",
+        "encoded": "const%20logger%20=%20require('../utils/logger');",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "d3a7a1",
+        "hash": "2805da78",
+        "encoded": "const%20Transaction%20=%20require('../models/Transaction');",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "d3a7a1",
+        "hash": "1de38b7f",
+        "encoded": "const%20atmStagingService%20=%20require('../services/atmStagingService');",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "d3a7a1",
+        "hash": "06067327",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "d3a7a1",
+        "hash": "9a91e53b",
+        "encoded": "*%20Stage%20a%20cash%20withdrawal%20transaction",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "d3a7a1",
+        "hash": "c7131128",
+        "encoded": "*%20@param%20%7BObject%7D%20req%20-%20Express%20request%20object",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "d3a7a1",
+        "hash": "823f1877",
+        "encoded": "*%20@param%20%7BObject%7D%20res%20-%20Express%20response%20object",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "d3a7a1",
+        "hash": "7ca1406f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "d3a7a1",
+        "hash": "99d857b1",
+        "encoded": "const%20stageWithdrawal%20=%20async%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "d3a7a1",
+        "hash": "2b2e93c9",
+        "encoded": "const%20%7B%20cardToken,%20amount%20%7D%20=%20req.body;",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "d3a7a1",
+        "hash": "2df8ef76",
+        "encoded": "const%20user%20=%20req.user;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "d3a7a1",
+        "hash": "752aa6b7",
+        "encoded": "const%20ipAddress%20=%20req.ip;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "d3a7a1",
+        "hash": "d8405b9b",
+        "encoded": "const%20userAgent%20=%20req.get('User-Agent');",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "d3a7a1",
+        "hash": "1c408668",
+        "encoded": "logger.info('Withdrawal%20staging%20request',%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "d3a7a1",
+        "hash": "3b661223",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "d3a7a1",
+        "hash": "79e85141",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "d3a7a1",
+        "hash": "0c8387e5",
+        "encoded": "ip:%20ipAddress,",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "d3a7a1",
+        "hash": "126facd0",
+        "encoded": "userAgent",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "d3a7a1",
+        "hash": "56683f82",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "d3a7a1",
+        "hash": "8c13bf6b",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "d3a7a1",
+        "hash": "6411fa31",
+        "encoded": "//%20Generate%20transaction%20ID",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "d3a7a1",
+        "hash": "122ee747",
+        "encoded": "const%20transactionId%20=%20%60txn_$%7Buuidv4().replace(/-/g,%20'').substring(0,%2016)%7D%60;",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "d3a7a1",
+        "hash": "95d11564",
+        "encoded": "//%20Create%20transaction%20record",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "d3a7a1",
+        "hash": "ba8b68d5",
+        "encoded": "const%20transactionData%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "d3a7a1",
+        "hash": "3b869cc0",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "d3a7a1",
+        "hash": "7800d070",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "d3a7a1",
+        "hash": "5cc0418e",
+        "encoded": "type:%20TRANSACTION_TYPES.WITHDRAWAL,",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "d3a7a1",
+        "hash": "4ecad01a",
+        "encoded": "status:%20TRANSACTION_STATUS.PENDING,",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "d3a7a1",
+        "hash": "0bb6b118",
+        "encoded": "amount:%20parseFloat(amount),",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "d3a7a1",
+        "hash": "1ec6b55f",
+        "encoded": "cardToken,",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "d3a7a1",
+        "hash": "8c00ec71",
+        "encoded": "processingTime:%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "d3a7a1",
+        "hash": "a6b03c28",
+        "encoded": "initiated:%20new%20Date()",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "d3a7a1",
+        "hash": "82c8ca80",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "d3a7a1",
+        "hash": "3e551826",
+        "encoded": "metadata:%20%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "d3a7a1",
+        "hash": "755b996a",
+        "encoded": "ipAddress,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "d3a7a1",
+        "hash": "f33d9e88",
+        "encoded": "userAgent,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "d3a7a1",
+        "hash": "938b6883",
+        "encoded": "sessionId:%20user.sessionToken%20%7C%7C%20'unknown',",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "d3a7a1",
+        "hash": "f63d27b3",
+        "encoded": "channel:%20'mobile_app'",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "d3a7a1",
+        "hash": "6a5bdc1a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "d3a7a1",
+        "hash": "a50e1a88",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "d3a7a1",
+        "hash": "de2e9e24",
+        "encoded": "let%20transaction;",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "d3a7a1",
+        "hash": "051ea5b2",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20!==%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "d3a7a1",
+        "hash": "090b0cea",
+        "encoded": "//%20Create%20transaction%20in%20database",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "d3a7a1",
+        "hash": "79587ab9",
+        "encoded": "transaction%20=%20new%20Transaction(transactionData);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "d3a7a1",
+        "hash": "373d8152",
+        "encoded": "await%20transaction.save();",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "d3a7a1",
+        "hash": "309dd352",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "d3a7a1",
+        "hash": "27735a90",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "d3a7a1",
+        "hash": "246ef693",
+        "encoded": "//%20Call%20ATM%20staging%20service",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "d3a7a1",
+        "hash": "3ca38110",
+        "encoded": "const%20stagingResponse%20=%20await%20atmStagingService.stageWithdrawal(%7B",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "d3a7a1",
+        "hash": "16c2b8ae",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "d3a7a1",
+        "hash": "21a72066",
+        "encoded": "cardToken,",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "d3a7a1",
+        "hash": "958e70e8",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "d3a7a1",
+        "hash": "2c7274bd",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "d3a7a1",
+        "hash": "f238e051",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "d3a7a1",
+        "hash": "6f2ead62",
+        "encoded": "//%20Update%20transaction%20status",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "d3a7a1",
+        "hash": "85a2d15f",
+        "encoded": "const%20updatedTransactionData%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "d3a7a1",
+        "hash": "eb2b94bc",
+        "encoded": "...transactionData,",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "d3a7a1",
+        "hash": "0ecf196e",
+        "encoded": "status:%20TRANSACTION_STATUS.STAGED,",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "d3a7a1",
+        "hash": "e0c583c0",
+        "encoded": "externalReferences:%20%7B",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "d3a7a1",
+        "hash": "90d9c06c",
+        "encoded": "atmStagingServiceId:%20stagingResponse.externalTransactionId",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "d3a7a1",
+        "hash": "11fc4278",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "d3a7a1",
+        "hash": "9d529b4c",
+        "encoded": "processingTime:%20%7B",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "d3a7a1",
+        "hash": "ad1049ba",
+        "encoded": "...transactionData.processingTime,",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "d3a7a1",
+        "hash": "c9b00ce3",
+        "encoded": "staged:%20new%20Date()",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "d3a7a1",
+        "hash": "a2f26355",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "d3a7a1",
+        "hash": "93e776f6",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "d3a7a1",
+        "hash": "47a3f344",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20!==%20'true'%20&&%20transaction)%20%7B",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "d3a7a1",
+        "hash": "1a5e625b",
+        "encoded": "await%20transaction.updateStatus(TRANSACTION_STATUS.STAGED,%20'atm_staging_service',%20%7B",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "d3a7a1",
+        "hash": "60b8791a",
+        "encoded": "externalTransactionId:%20stagingResponse.externalTransactionId",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "d3a7a1",
+        "hash": "82716009",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "d3a7a1",
+        "hash": "7fb82772",
+        "encoded": "transaction.externalReferences%20=%20updatedTransactionData.externalReferences;",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "d3a7a1",
+        "hash": "4833ba8b",
+        "encoded": "await%20transaction.save();",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "d3a7a1",
+        "hash": "9b477039",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "d3a7a1",
+        "hash": "551592eb",
+        "encoded": "logger.info('Withdrawal%20staged%20successfully',%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "d3a7a1",
+        "hash": "cc32f8d1",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "d3a7a1",
+        "hash": "14cb153c",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "d3a7a1",
+        "hash": "be2d2b75",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "d3a7a1",
+        "hash": "94827b3b",
+        "encoded": "externalTransactionId:%20stagingResponse.externalTransactionId",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "d3a7a1",
+        "hash": "904a972c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "d3a7a1",
+        "hash": "68cfceff",
+        "encoded": "res.status(HTTP_STATUS.CREATED).json(%7B",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "d3a7a1",
+        "hash": "6ce78b8e",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "d3a7a1",
+        "hash": "4973d582",
+        "encoded": "message:%20SUCCESS_MESSAGES.TRANSACTION_STAGED,",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "d3a7a1",
+        "hash": "19bc0d72",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "d3a7a1",
+        "hash": "0b488bd7",
+        "encoded": "status:%20TRANSACTION_STATUS.STAGED,",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "d3a7a1",
+        "hash": "db36d52c",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "d3a7a1",
+        "hash": "7a1d5dd1",
+        "encoded": "externalTransactionId:%20stagingResponse.externalTransactionId,",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "d3a7a1",
+        "hash": "09a83bfc",
+        "encoded": "estimatedCompletionTime:%20new%20Date(Date.now()%20+%205%20*%2060%20*%201000).toISOString()%20//%205%20minutes",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "d3a7a1",
+        "hash": "0bd6fda6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "d3a7a1",
+        "hash": "f70e1152",
+        "encoded": "%7D%20catch%20(stagingError)%20%7B",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "d3a7a1",
+        "hash": "8d780cbd",
+        "encoded": "//%20Update%20transaction%20status%20to%20failed",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "d3a7a1",
+        "hash": "09314191",
+        "encoded": "const%20errorData%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "d3a7a1",
+        "hash": "e6d14d5f",
+        "encoded": "code:%20stagingError.code%20%7C%7C%20'STAGING_FAILED',",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "d3a7a1",
+        "hash": "5ae66036",
+        "encoded": "message:%20stagingError.message,",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "d3a7a1",
+        "hash": "83afe519",
+        "encoded": "details:%20stagingError.details%20%7C%7C%20%7B%7D",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "d3a7a1",
+        "hash": "762f00b3",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "d3a7a1",
+        "hash": "ccf62de3",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20!==%20'true'%20&&%20transaction)%20%7B",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "d3a7a1",
+        "hash": "4826ac51",
+        "encoded": "transaction.status%20=%20TRANSACTION_STATUS.FAILED;",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "d3a7a1",
+        "hash": "0e902922",
+        "encoded": "transaction.error%20=%20errorData;",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "d3a7a1",
+        "hash": "79817729",
+        "encoded": "transaction.processingTime.failed%20=%20new%20Date();",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "d3a7a1",
+        "hash": "9b8596d1",
+        "encoded": "await%20transaction.save();",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "d3a7a1",
+        "hash": "7b145d98",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "d3a7a1",
+        "hash": "e0deae51",
+        "encoded": "logger.error('Withdrawal%20staging%20failed',%20%7B",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "d3a7a1",
+        "hash": "1b751203",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "d3a7a1",
+        "hash": "a56d4604",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "d3a7a1",
+        "hash": "f171d755",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "d3a7a1",
+        "hash": "24c639b1",
+        "encoded": "error:%20stagingError.message,",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "d3a7a1",
+        "hash": "dc0e1ca5",
+        "encoded": "ip:%20ipAddress",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "d3a7a1",
+        "hash": "a67eb14c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "d3a7a1",
+        "hash": "4837d133",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "d3a7a1",
+        "hash": "a37c4357",
+        "encoded": "ERROR_MESSAGES.STAGING_FAILED,",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "d3a7a1",
+        "hash": "91f982d5",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "d3a7a1",
+        "hash": "ecbe6806",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "d3a7a1",
+        "hash": "49eddb80",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "d3a7a1",
+        "hash": "dc65d51e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "d3a7a1",
+        "hash": "a6a198d9",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "d3a7a1",
+        "hash": "f792cd8d",
+        "encoded": "if%20(error%20instanceof%20AppError)%20%7B",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "d3a7a1",
+        "hash": "7563811e",
+        "encoded": "throw%20error;",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "d3a7a1",
+        "hash": "4e2389e2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "d3a7a1",
+        "hash": "918bb777",
+        "encoded": "logger.error('Withdrawal%20staging%20error',%20%7B",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "d3a7a1",
+        "hash": "93ca311e",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "d3a7a1",
+        "hash": "408749c8",
+        "encoded": "stack:%20error.stack,",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "d3a7a1",
+        "hash": "9c211231",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "d3a7a1",
+        "hash": "a32c2d1d",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "d3a7a1",
+        "hash": "7579da56",
+        "encoded": "ip:%20ipAddress",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "d3a7a1",
+        "hash": "389a9b2d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "d3a7a1",
+        "hash": "11693df2",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "d3a7a1",
+        "hash": "f859e2e6",
+        "encoded": "ERROR_MESSAGES.INTERNAL_ERROR,",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "d3a7a1",
+        "hash": "f9dcb358",
+        "encoded": "HTTP_STATUS.INTERNAL_SERVER_ERROR,",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "d3a7a1",
+        "hash": "bd040b1d",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "d3a7a1",
+        "hash": "6f473337",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "d3a7a1",
+        "hash": "c2938672",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "d3a7a1",
+        "hash": "bcac6d92",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "d3a7a1",
+        "hash": "6de5ca5f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "d3a7a1",
+        "hash": "4aa36257",
+        "encoded": "*%20Stage%20a%20cash%20deposit%20transaction",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "d3a7a1",
+        "hash": "7bbf65a0",
+        "encoded": "*%20@param%20%7BObject%7D%20req%20-%20Express%20request%20object",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "d3a7a1",
+        "hash": "604d7ae3",
+        "encoded": "*%20@param%20%7BObject%7D%20res%20-%20Express%20response%20object",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "d3a7a1",
+        "hash": "f0ce86bc",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "d3a7a1",
+        "hash": "a910487e",
+        "encoded": "const%20stageDeposit%20=%20async%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "d3a7a1",
+        "hash": "723eaab2",
+        "encoded": "const%20%7B%20cardToken,%20amount%20%7D%20=%20req.body;",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "d3a7a1",
+        "hash": "f2aeabaa",
+        "encoded": "const%20user%20=%20req.user;",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "d3a7a1",
+        "hash": "b10a796f",
+        "encoded": "const%20ipAddress%20=%20req.ip;",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "d3a7a1",
+        "hash": "976fa56c",
+        "encoded": "const%20userAgent%20=%20req.get('User-Agent');",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "d3a7a1",
+        "hash": "d74a852e",
+        "encoded": "logger.info('Deposit%20staging%20request',%20%7B",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "d3a7a1",
+        "hash": "55c101ba",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "d3a7a1",
+        "hash": "33ead0cc",
+        "encoded": "amount:%20amount%20%7C%7C%20'not%20specified',",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "d3a7a1",
+        "hash": "5ed0dfab",
+        "encoded": "ip:%20ipAddress,",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "d3a7a1",
+        "hash": "1901dbe4",
+        "encoded": "userAgent",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "d3a7a1",
+        "hash": "33915446",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "d3a7a1",
+        "hash": "98b432bf",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "d3a7a1",
+        "hash": "531e2b7f",
+        "encoded": "//%20Generate%20transaction%20ID",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "d3a7a1",
+        "hash": "04a3277c",
+        "encoded": "const%20transactionId%20=%20%60txn_$%7Buuidv4().replace(/-/g,%20'').substring(0,%2016)%7D%60;",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "d3a7a1",
+        "hash": "e3b2aace",
+        "encoded": "//%20Create%20transaction%20record",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "d3a7a1",
+        "hash": "917e387b",
+        "encoded": "const%20transactionData%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "d3a7a1",
+        "hash": "8f5f753e",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "d3a7a1",
+        "hash": "10b3d9eb",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "d3a7a1",
+        "hash": "53340181",
+        "encoded": "type:%20TRANSACTION_TYPES.DEPOSIT,",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "d3a7a1",
+        "hash": "3112c5e7",
+        "encoded": "status:%20TRANSACTION_STATUS.PENDING,",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "d3a7a1",
+        "hash": "330e6d14",
+        "encoded": "amount:%20amount%20?%20parseFloat(amount)%20:%20undefined,",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "d3a7a1",
+        "hash": "cda7fbed",
+        "encoded": "cardToken,",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "d3a7a1",
+        "hash": "311f848c",
+        "encoded": "processingTime:%20%7B",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "d3a7a1",
+        "hash": "4da4ddb3",
+        "encoded": "initiated:%20new%20Date()",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "d3a7a1",
+        "hash": "59b20579",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "d3a7a1",
+        "hash": "709917e1",
+        "encoded": "metadata:%20%7B",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "d3a7a1",
+        "hash": "a3e9cc29",
+        "encoded": "ipAddress,",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "d3a7a1",
+        "hash": "9f21bdf0",
+        "encoded": "userAgent,",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "d3a7a1",
+        "hash": "dd7c0aa7",
+        "encoded": "sessionId:%20user.sessionToken%20%7C%7C%20'unknown',",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "d3a7a1",
+        "hash": "298f9fe2",
+        "encoded": "channel:%20'mobile_app'",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "d3a7a1",
+        "hash": "4ff5cbdc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "d3a7a1",
+        "hash": "01ac5c59",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "d3a7a1",
+        "hash": "ea219e1c",
+        "encoded": "let%20transaction;",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "d3a7a1",
+        "hash": "d6f1ede5",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20!==%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "d3a7a1",
+        "hash": "0132a5dd",
+        "encoded": "//%20Create%20transaction%20in%20database",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "d3a7a1",
+        "hash": "e5211de0",
+        "encoded": "transaction%20=%20new%20Transaction(transactionData);",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "d3a7a1",
+        "hash": "a0750aa6",
+        "encoded": "await%20transaction.save();",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "d3a7a1",
+        "hash": "b70b04fa",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "d3a7a1",
+        "hash": "4ecdf6c1",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "d3a7a1",
+        "hash": "d0577fec",
+        "encoded": "//%20Call%20ATM%20staging%20service",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "d3a7a1",
+        "hash": "d77d265c",
+        "encoded": "const%20stagingResponse%20=%20await%20atmStagingService.stageDeposit(%7B",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "d3a7a1",
+        "hash": "a44ad5fc",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "d3a7a1",
+        "hash": "dbf5dd8a",
+        "encoded": "cardToken,",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "d3a7a1",
+        "hash": "669ce2a9",
+        "encoded": "amount,",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "d3a7a1",
+        "hash": "14cae026",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "d3a7a1",
+        "hash": "410012af",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "d3a7a1",
+        "hash": "16b3f290",
+        "encoded": "//%20Update%20transaction%20status",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "d3a7a1",
+        "hash": "06fa8b70",
+        "encoded": "const%20updatedTransactionData%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "d3a7a1",
+        "hash": "f5c1a3e9",
+        "encoded": "...transactionData,",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "d3a7a1",
+        "hash": "d9ec5de6",
+        "encoded": "status:%20TRANSACTION_STATUS.STAGED,",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "d3a7a1",
+        "hash": "6d54fce7",
+        "encoded": "externalReferences:%20%7B",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "d3a7a1",
+        "hash": "06227399",
+        "encoded": "atmStagingServiceId:%20stagingResponse.externalTransactionId",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "d3a7a1",
+        "hash": "2df3cf74",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "d3a7a1",
+        "hash": "a9001f98",
+        "encoded": "processingTime:%20%7B",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "d3a7a1",
+        "hash": "0bc3f81c",
+        "encoded": "...transactionData.processingTime,",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "d3a7a1",
+        "hash": "f2db0417",
+        "encoded": "staged:%20new%20Date()",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "d3a7a1",
+        "hash": "30e86338",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "d3a7a1",
+        "hash": "ac8fc932",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "d3a7a1",
+        "hash": "adc69418",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20!==%20'true'%20&&%20transaction)%20%7B",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "d3a7a1",
+        "hash": "5fd36771",
+        "encoded": "await%20transaction.updateStatus(TRANSACTION_STATUS.STAGED,%20'atm_staging_service',%20%7B",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "d3a7a1",
+        "hash": "edeb0808",
+        "encoded": "externalTransactionId:%20stagingResponse.externalTransactionId",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "d3a7a1",
+        "hash": "4ee4b9a9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "d3a7a1",
+        "hash": "6b9454af",
+        "encoded": "transaction.externalReferences%20=%20updatedTransactionData.externalReferences;",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "d3a7a1",
+        "hash": "154b10e4",
+        "encoded": "await%20transaction.save();",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "d3a7a1",
+        "hash": "0c95109b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "d3a7a1",
+        "hash": "9beecadd",
+        "encoded": "logger.info('Deposit%20staged%20successfully',%20%7B",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "d3a7a1",
+        "hash": "28b9f86e",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "d3a7a1",
+        "hash": "9d3097ad",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "d3a7a1",
+        "hash": "408f2de4",
+        "encoded": "amount:%20amount%20%7C%7C%20'not%20specified',",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "d3a7a1",
+        "hash": "a4e762ce",
+        "encoded": "externalTransactionId:%20stagingResponse.externalTransactionId",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "d3a7a1",
+        "hash": "ca965167",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "d3a7a1",
+        "hash": "3f760625",
+        "encoded": "res.status(HTTP_STATUS.CREATED).json(%7B",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "d3a7a1",
+        "hash": "c6bb3a52",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "d3a7a1",
+        "hash": "a5962200",
+        "encoded": "message:%20SUCCESS_MESSAGES.TRANSACTION_STAGED,",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "d3a7a1",
+        "hash": "ddd1f653",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "d3a7a1",
+        "hash": "8d75ba13",
+        "encoded": "status:%20TRANSACTION_STATUS.STAGED,",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "d3a7a1",
+        "hash": "61e7f380",
+        "encoded": "amount:%20amount%20%7C%7C%20null,",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "d3a7a1",
+        "hash": "3e14c719",
+        "encoded": "externalTransactionId:%20stagingResponse.externalTransactionId,",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "d3a7a1",
+        "hash": "cd247372",
+        "encoded": "estimatedCompletionTime:%20new%20Date(Date.now()%20+%205%20*%2060%20*%201000).toISOString()%20//%205%20minutes",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "d3a7a1",
+        "hash": "467d72a4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "d3a7a1",
+        "hash": "217599c2",
+        "encoded": "%7D%20catch%20(stagingError)%20%7B",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "d3a7a1",
+        "hash": "f2f68f5b",
+        "encoded": "//%20Update%20transaction%20status%20to%20failed",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "d3a7a1",
+        "hash": "288e4a1d",
+        "encoded": "const%20errorData%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "d3a7a1",
+        "hash": "3088fed8",
+        "encoded": "code:%20stagingError.code%20%7C%7C%20'STAGING_FAILED',",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "d3a7a1",
+        "hash": "487f0950",
+        "encoded": "message:%20stagingError.message,",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "d3a7a1",
+        "hash": "f062daad",
+        "encoded": "details:%20stagingError.details%20%7C%7C%20%7B%7D",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "d3a7a1",
+        "hash": "f057139c",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "d3a7a1",
+        "hash": "7104c5bc",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20!==%20'true'%20&&%20transaction)%20%7B",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "d3a7a1",
+        "hash": "c74b4ae9",
+        "encoded": "transaction.status%20=%20TRANSACTION_STATUS.FAILED;",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "d3a7a1",
+        "hash": "43ebcfa5",
+        "encoded": "transaction.error%20=%20errorData;",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "d3a7a1",
+        "hash": "20a4f2a4",
+        "encoded": "transaction.processingTime.failed%20=%20new%20Date();",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "d3a7a1",
+        "hash": "e7aa258c",
+        "encoded": "await%20transaction.save();",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "d3a7a1",
+        "hash": "5c85fe45",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "d3a7a1",
+        "hash": "dfdca0b3",
+        "encoded": "logger.error('Deposit%20staging%20failed',%20%7B",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "d3a7a1",
+        "hash": "ebe8b470",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "d3a7a1",
+        "hash": "3ffef7ce",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "d3a7a1",
+        "hash": "bba61a7c",
+        "encoded": "amount:%20amount%20%7C%7C%20'not%20specified',",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "d3a7a1",
+        "hash": "c7625ace",
+        "encoded": "error:%20stagingError.message,",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "d3a7a1",
+        "hash": "d222848f",
+        "encoded": "ip:%20ipAddress",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "d3a7a1",
+        "hash": "e4e98f50",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "d3a7a1",
+        "hash": "0a7ce6ea",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "d3a7a1",
+        "hash": "9fafc397",
+        "encoded": "ERROR_MESSAGES.STAGING_FAILED,",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "d3a7a1",
+        "hash": "7486f55d",
+        "encoded": "HTTP_STATUS.SERVICE_UNAVAILABLE,",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "d3a7a1",
+        "hash": "aa631cdc",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "d3a7a1",
+        "hash": "50e5f9e5",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "d3a7a1",
+        "hash": "36d31997",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "d3a7a1",
+        "hash": "59c2f012",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "d3a7a1",
+        "hash": "0c7d8089",
+        "encoded": "if%20(error%20instanceof%20AppError)%20%7B",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "d3a7a1",
+        "hash": "0b07818f",
+        "encoded": "throw%20error;",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "d3a7a1",
+        "hash": "bf9641d2",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "d3a7a1",
+        "hash": "f04d05e0",
+        "encoded": "logger.error('Deposit%20staging%20error',%20%7B",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "d3a7a1",
+        "hash": "68acf528",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "d3a7a1",
+        "hash": "20730744",
+        "encoded": "stack:%20error.stack,",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "d3a7a1",
+        "hash": "c54a0a30",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "d3a7a1",
+        "hash": "decd2d76",
+        "encoded": "amount:%20amount%20%7C%7C%20'not%20specified',",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "d3a7a1",
+        "hash": "caa798e8",
+        "encoded": "ip:%20ipAddress",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "d3a7a1",
+        "hash": "72ca0ddf",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "d3a7a1",
+        "hash": "826a6011",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "d3a7a1",
+        "hash": "65c184f4",
+        "encoded": "ERROR_MESSAGES.INTERNAL_ERROR,",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "d3a7a1",
+        "hash": "f61b3682",
+        "encoded": "HTTP_STATUS.INTERNAL_SERVER_ERROR,",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "d3a7a1",
+        "hash": "ce3613b6",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "d3a7a1",
+        "hash": "cf987bc0",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "d3a7a1",
+        "hash": "ca7d8d23",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "d3a7a1",
+        "hash": "24193658",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "d3a7a1",
+        "hash": "8a317fd2",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "d3a7a1",
+        "hash": "6154da8a",
+        "encoded": "*%20Get%20transaction%20status%20by%20ID",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "d3a7a1",
+        "hash": "80e109ed",
+        "encoded": "*%20@param%20%7BObject%7D%20req%20-%20Express%20request%20object",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "d3a7a1",
+        "hash": "a919898e",
+        "encoded": "*%20@param%20%7BObject%7D%20res%20-%20Express%20response%20object",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "d3a7a1",
+        "hash": "7a7dbd07",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "d3a7a1",
+        "hash": "d21f5d67",
+        "encoded": "const%20getTransactionStatus%20=%20async%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "d3a7a1",
+        "hash": "65844ecd",
+        "encoded": "const%20%7B%20transactionId%20%7D%20=%20req.params;",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "d3a7a1",
+        "hash": "61be4f44",
+        "encoded": "const%20user%20=%20req.user;",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "d3a7a1",
+        "hash": "abb81420",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "d3a7a1",
+        "hash": "833d2140",
+        "encoded": "let%20transaction;",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "d3a7a1",
+        "hash": "0ea0e989",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "319": {
+        "chunkId": "d3a7a1",
+        "hash": "9e379575",
+        "encoded": "//%20Mock%20transaction%20status",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "d3a7a1",
+        "hash": "d150a997",
+        "encoded": "transaction%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "d3a7a1",
+        "hash": "45365c06",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "d3a7a1",
+        "hash": "befc9bc2",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "d3a7a1",
+        "hash": "d98f0320",
+        "encoded": "type:%20TRANSACTION_TYPES.WITHDRAWAL,",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "d3a7a1",
+        "hash": "a781146a",
+        "encoded": "status:%20TRANSACTION_STATUS.STAGED,",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "d3a7a1",
+        "hash": "0268a793",
+        "encoded": "amount:%20100.00,",
+        "prevChunkIds": []
+      },
+      "326": {
+        "chunkId": "d3a7a1",
+        "hash": "32f8adbf",
+        "encoded": "createdAt:%20new%20Date().toISOString(),",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "d3a7a1",
+        "hash": "bce01782",
+        "encoded": "processingTime:%20%7B",
+        "prevChunkIds": []
+      },
+      "328": {
+        "chunkId": "d3a7a1",
+        "hash": "c3e5ff61",
+        "encoded": "initiated:%20new%20Date(Date.now()%20-%2060000).toISOString(),",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "d3a7a1",
+        "hash": "42b5ac82",
+        "encoded": "staged:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "d3a7a1",
+        "hash": "55a9e46b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "d3a7a1",
+        "hash": "4cb52072",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "d3a7a1",
+        "hash": "9d451467",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "d3a7a1",
+        "hash": "67c5957a",
+        "encoded": "//%20Get%20transaction%20from%20database",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "d3a7a1",
+        "hash": "3215432c",
+        "encoded": "transaction%20=%20await%20Transaction.findOne(%7B",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "d3a7a1",
+        "hash": "f113cff6",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "336": {
+        "chunkId": "d3a7a1",
+        "hash": "8a44c83b",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "d3a7a1",
+        "hash": "6ce19f75",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "d3a7a1",
+        "hash": "c01818f3",
+        "encoded": "if%20(!transaction)%20%7B",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "d3a7a1",
+        "hash": "400e68ee",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "d3a7a1",
+        "hash": "48a2f88b",
+        "encoded": "'Transaction%20not%20found',",
+        "prevChunkIds": []
+      },
+      "342": {
+        "chunkId": "d3a7a1",
+        "hash": "3095abe0",
+        "encoded": "HTTP_STATUS.NOT_FOUND,",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "d3a7a1",
+        "hash": "fc91a646",
+        "encoded": "ERROR_TYPES.NOT_FOUND_ERROR",
+        "prevChunkIds": []
+      },
+      "344": {
+        "chunkId": "d3a7a1",
+        "hash": "74588016",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "d3a7a1",
+        "hash": "992696b4",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "346": {
+        "chunkId": "d3a7a1",
+        "hash": "b0d56384",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "d3a7a1",
+        "hash": "868f6579",
+        "encoded": "logger.info('Transaction%20status%20retrieved',%20%7B",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "d3a7a1",
+        "hash": "6b40a2d9",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "d3a7a1",
+        "hash": "4f401d89",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "351": {
+        "chunkId": "d3a7a1",
+        "hash": "412d3ced",
+        "encoded": "status:%20transaction.status",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "d3a7a1",
+        "hash": "1f50a7c6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "d3a7a1",
+        "hash": "d414ed6e",
+        "encoded": "res.status(HTTP_STATUS.OK).json(%7B",
+        "prevChunkIds": []
+      },
+      "355": {
+        "chunkId": "d3a7a1",
+        "hash": "6bed535c",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "d3a7a1",
+        "hash": "c777fcca",
+        "encoded": "transaction",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "d3a7a1",
+        "hash": "a65be2ab",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "d3a7a1",
+        "hash": "f61fbae0",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "d3a7a1",
+        "hash": "dd1e5502",
+        "encoded": "if%20(error%20instanceof%20AppError)%20%7B",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "d3a7a1",
+        "hash": "47a9b07d",
+        "encoded": "throw%20error;",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "d3a7a1",
+        "hash": "6841e645",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "d3a7a1",
+        "hash": "4ec9ce90",
+        "encoded": "logger.error('Get%20transaction%20status%20error',%20%7B",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "d3a7a1",
+        "hash": "fe517e02",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "366": {
+        "chunkId": "d3a7a1",
+        "hash": "8453309a",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "d3a7a1",
+        "hash": "a91119b2",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "368": {
+        "chunkId": "d3a7a1",
+        "hash": "85d7b277",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "370": {
+        "chunkId": "d3a7a1",
+        "hash": "c5c7c569",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "371": {
+        "chunkId": "d3a7a1",
+        "hash": "0974da6e",
+        "encoded": "ERROR_MESSAGES.INTERNAL_ERROR,",
+        "prevChunkIds": []
+      },
+      "372": {
+        "chunkId": "d3a7a1",
+        "hash": "b40bd56e",
+        "encoded": "HTTP_STATUS.INTERNAL_SERVER_ERROR,",
+        "prevChunkIds": []
+      },
+      "373": {
+        "chunkId": "d3a7a1",
+        "hash": "afd83ce9",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "374": {
+        "chunkId": "d3a7a1",
+        "hash": "7adddfe5",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "375": {
+        "chunkId": "d3a7a1",
+        "hash": "62c8ff13",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "376": {
+        "chunkId": "d3a7a1",
+        "hash": "eae43a94",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "378": {
+        "chunkId": "d3a7a1",
+        "hash": "70564799",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "379": {
+        "chunkId": "d3a7a1",
+        "hash": "6117c5a2",
+        "encoded": "*%20Get%20user%20transaction%20history",
+        "prevChunkIds": []
+      },
+      "380": {
+        "chunkId": "d3a7a1",
+        "hash": "ab7d6dc3",
+        "encoded": "*%20@param%20%7BObject%7D%20req%20-%20Express%20request%20object",
+        "prevChunkIds": []
+      },
+      "381": {
+        "chunkId": "d3a7a1",
+        "hash": "f58d6b27",
+        "encoded": "*%20@param%20%7BObject%7D%20res%20-%20Express%20response%20object",
+        "prevChunkIds": []
+      },
+      "382": {
+        "chunkId": "d3a7a1",
+        "hash": "d671a10c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "383": {
+        "chunkId": "d3a7a1",
+        "hash": "b3792237",
+        "encoded": "const%20getTransactionHistory%20=%20async%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "384": {
+        "chunkId": "d3a7a1",
+        "hash": "b132e938",
+        "encoded": "const%20user%20=%20req.user;",
+        "prevChunkIds": []
+      },
+      "385": {
+        "chunkId": "d3a7a1",
+        "hash": "c45272c4",
+        "encoded": "const%20%7B%20page%20=%201,%20limit%20=%2020,%20type,%20status,%20startDate,%20endDate%20%7D%20=%20req.query;",
+        "prevChunkIds": []
+      },
+      "387": {
+        "chunkId": "d3a7a1",
+        "hash": "21c3bf45",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "388": {
+        "chunkId": "d3a7a1",
+        "hash": "5e6509a9",
+        "encoded": "let%20transactions;",
+        "prevChunkIds": []
+      },
+      "389": {
+        "chunkId": "d3a7a1",
+        "hash": "e1eee5bd",
+        "encoded": "let%20total%20=%200;",
+        "prevChunkIds": []
+      },
+      "391": {
+        "chunkId": "d3a7a1",
+        "hash": "2a705ac6",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "392": {
+        "chunkId": "d3a7a1",
+        "hash": "f17cd8ff",
+        "encoded": "//%20Mock%20transaction%20history",
+        "prevChunkIds": []
+      },
+      "393": {
+        "chunkId": "d3a7a1",
+        "hash": "474442f2",
+        "encoded": "transactions%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "394": {
+        "chunkId": "d3a7a1",
+        "hash": "adb65eea",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "395": {
+        "chunkId": "d3a7a1",
+        "hash": "abc9dea9",
+        "encoded": "transactionId:%20'txn_mock_001',",
+        "prevChunkIds": []
+      },
+      "396": {
+        "chunkId": "d3a7a1",
+        "hash": "23d4113a",
+        "encoded": "type:%20TRANSACTION_TYPES.WITHDRAWAL,",
+        "prevChunkIds": []
+      },
+      "397": {
+        "chunkId": "d3a7a1",
+        "hash": "79b2c81e",
+        "encoded": "status:%20TRANSACTION_STATUS.COMPLETED,",
+        "prevChunkIds": []
+      },
+      "398": {
+        "chunkId": "d3a7a1",
+        "hash": "8ffd294e",
+        "encoded": "amount:%20100.00,",
+        "prevChunkIds": []
+      },
+      "399": {
+        "chunkId": "d3a7a1",
+        "hash": "9f84c386",
+        "encoded": "createdAt:%20new%20Date(Date.now()%20-%2086400000).toISOString()%20//%201%20day%20ago",
+        "prevChunkIds": []
+      },
+      "400": {
+        "chunkId": "d3a7a1",
+        "hash": "fb3e64e0",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "401": {
+        "chunkId": "d3a7a1",
+        "hash": "9a036172",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "402": {
+        "chunkId": "d3a7a1",
+        "hash": "ef1d6953",
+        "encoded": "transactionId:%20'txn_mock_002',",
+        "prevChunkIds": []
+      },
+      "403": {
+        "chunkId": "d3a7a1",
+        "hash": "8e29e393",
+        "encoded": "type:%20TRANSACTION_TYPES.DEPOSIT,",
+        "prevChunkIds": []
+      },
+      "404": {
+        "chunkId": "d3a7a1",
+        "hash": "aac81804",
+        "encoded": "status:%20TRANSACTION_STATUS.STAGED,",
+        "prevChunkIds": []
+      },
+      "405": {
+        "chunkId": "d3a7a1",
+        "hash": "0d5793c0",
+        "encoded": "amount:%20200.00,",
+        "prevChunkIds": []
+      },
+      "406": {
+        "chunkId": "d3a7a1",
+        "hash": "87d37c29",
+        "encoded": "createdAt:%20new%20Date(Date.now()%20-%203600000).toISOString()%20//%201%20hour%20ago",
+        "prevChunkIds": []
+      },
+      "407": {
+        "chunkId": "d3a7a1",
+        "hash": "fb0fa5e9",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "408": {
+        "chunkId": "d3a7a1",
+        "hash": "2492e9b4",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "409": {
+        "chunkId": "d3a7a1",
+        "hash": "5517401a",
+        "encoded": "total%20=%20transactions.length;",
+        "prevChunkIds": []
+      },
+      "410": {
+        "chunkId": "d3a7a1",
+        "hash": "e523c9d0",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "411": {
+        "chunkId": "d3a7a1",
+        "hash": "7178d080",
+        "encoded": "//%20Get%20transactions%20from%20database",
+        "prevChunkIds": []
+      },
+      "412": {
+        "chunkId": "d3a7a1",
+        "hash": "0abf8d57",
+        "encoded": "const%20options%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "413": {
+        "chunkId": "d3a7a1",
+        "hash": "78e8e72c",
+        "encoded": "type,",
+        "prevChunkIds": []
+      },
+      "414": {
+        "chunkId": "d3a7a1",
+        "hash": "b0b0039a",
+        "encoded": "status,",
+        "prevChunkIds": []
+      },
+      "415": {
+        "chunkId": "d3a7a1",
+        "hash": "a2d61015",
+        "encoded": "limit:%20parseInt(limit),",
+        "prevChunkIds": []
+      },
+      "416": {
+        "chunkId": "d3a7a1",
+        "hash": "11709d43",
+        "encoded": "skip:%20(parseInt(page)%20-%201)%20*%20parseInt(limit)",
+        "prevChunkIds": []
+      },
+      "417": {
+        "chunkId": "d3a7a1",
+        "hash": "0fe4567d",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "419": {
+        "chunkId": "d3a7a1",
+        "hash": "c2b1708c",
+        "encoded": "if%20(startDate%20&&%20endDate)%20%7B",
+        "prevChunkIds": []
+      },
+      "420": {
+        "chunkId": "d3a7a1",
+        "hash": "7879286c",
+        "encoded": "options.dateRange%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "421": {
+        "chunkId": "d3a7a1",
+        "hash": "61e83f29",
+        "encoded": "start:%20new%20Date(startDate),",
+        "prevChunkIds": []
+      },
+      "422": {
+        "chunkId": "d3a7a1",
+        "hash": "18b3caff",
+        "encoded": "end:%20new%20Date(endDate)",
+        "prevChunkIds": []
+      },
+      "423": {
+        "chunkId": "d3a7a1",
+        "hash": "fcce6607",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "424": {
+        "chunkId": "d3a7a1",
+        "hash": "a8c40013",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "426": {
+        "chunkId": "d3a7a1",
+        "hash": "c63432e3",
+        "encoded": "transactions%20=%20await%20Transaction.findByUser(user.id,%20options);",
+        "prevChunkIds": []
+      },
+      "427": {
+        "chunkId": "d3a7a1",
+        "hash": "6cbc0307",
+        "encoded": "total%20=%20await%20Transaction.countDocuments(%7B%20userId:%20user.id%20%7D);",
+        "prevChunkIds": []
+      },
+      "428": {
+        "chunkId": "d3a7a1",
+        "hash": "f666894a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "430": {
+        "chunkId": "d3a7a1",
+        "hash": "69ee2806",
+        "encoded": "logger.info('Transaction%20history%20retrieved',%20%7B",
+        "prevChunkIds": []
+      },
+      "431": {
+        "chunkId": "d3a7a1",
+        "hash": "64f4bb61",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "432": {
+        "chunkId": "d3a7a1",
+        "hash": "8ac201ad",
+        "encoded": "count:%20transactions.length,",
+        "prevChunkIds": []
+      },
+      "433": {
+        "chunkId": "d3a7a1",
+        "hash": "f84d7a5c",
+        "encoded": "page,",
+        "prevChunkIds": []
+      },
+      "434": {
+        "chunkId": "d3a7a1",
+        "hash": "c19cb450",
+        "encoded": "limit",
+        "prevChunkIds": []
+      },
+      "435": {
+        "chunkId": "d3a7a1",
+        "hash": "2c87a6b6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "437": {
+        "chunkId": "d3a7a1",
+        "hash": "f9b67351",
+        "encoded": "res.status(HTTP_STATUS.OK).json(%7B",
+        "prevChunkIds": []
+      },
+      "438": {
+        "chunkId": "d3a7a1",
+        "hash": "0a0ef195",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "439": {
+        "chunkId": "d3a7a1",
+        "hash": "b43e98ee",
+        "encoded": "transactions,",
+        "prevChunkIds": []
+      },
+      "440": {
+        "chunkId": "d3a7a1",
+        "hash": "0ce5ee17",
+        "encoded": "pagination:%20%7B",
+        "prevChunkIds": []
+      },
+      "441": {
+        "chunkId": "d3a7a1",
+        "hash": "1b015a20",
+        "encoded": "page:%20parseInt(page),",
+        "prevChunkIds": []
+      },
+      "442": {
+        "chunkId": "d3a7a1",
+        "hash": "022ef256",
+        "encoded": "limit:%20parseInt(limit),",
+        "prevChunkIds": []
+      },
+      "443": {
+        "chunkId": "d3a7a1",
+        "hash": "061b04ae",
+        "encoded": "total,",
+        "prevChunkIds": []
+      },
+      "444": {
+        "chunkId": "d3a7a1",
+        "hash": "3bdd84cc",
+        "encoded": "pages:%20Math.ceil(total%20/%20parseInt(limit))",
+        "prevChunkIds": []
+      },
+      "445": {
+        "chunkId": "d3a7a1",
+        "hash": "7341866d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "446": {
+        "chunkId": "d3a7a1",
+        "hash": "db1bbf2e",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "448": {
+        "chunkId": "d3a7a1",
+        "hash": "d1135fda",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "449": {
+        "chunkId": "d3a7a1",
+        "hash": "fbce3f7f",
+        "encoded": "logger.error('Get%20transaction%20history%20error',%20%7B",
+        "prevChunkIds": []
+      },
+      "450": {
+        "chunkId": "d3a7a1",
+        "hash": "37f43fd3",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "451": {
+        "chunkId": "d3a7a1",
+        "hash": "244b170b",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "452": {
+        "chunkId": "d3a7a1",
+        "hash": "f6e1d825",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "454": {
+        "chunkId": "d3a7a1",
+        "hash": "89402739",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "455": {
+        "chunkId": "d3a7a1",
+        "hash": "1595dbf5",
+        "encoded": "ERROR_MESSAGES.INTERNAL_ERROR,",
+        "prevChunkIds": []
+      },
+      "456": {
+        "chunkId": "d3a7a1",
+        "hash": "c1694583",
+        "encoded": "HTTP_STATUS.INTERNAL_SERVER_ERROR,",
+        "prevChunkIds": []
+      },
+      "457": {
+        "chunkId": "d3a7a1",
+        "hash": "c5366a2e",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "458": {
+        "chunkId": "d3a7a1",
+        "hash": "90e5fe7f",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "459": {
+        "chunkId": "d3a7a1",
+        "hash": "fdd45c5e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "460": {
+        "chunkId": "d3a7a1",
+        "hash": "ba54c954",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "462": {
+        "chunkId": "d3a7a1",
+        "hash": "58d7cda9",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "463": {
+        "chunkId": "d3a7a1",
+        "hash": "81394109",
+        "encoded": "*%20Cancel%20a%20pending%20transaction",
+        "prevChunkIds": []
+      },
+      "464": {
+        "chunkId": "d3a7a1",
+        "hash": "d45bb777",
+        "encoded": "*%20@param%20%7BObject%7D%20req%20-%20Express%20request%20object",
+        "prevChunkIds": []
+      },
+      "465": {
+        "chunkId": "d3a7a1",
+        "hash": "35c42f87",
+        "encoded": "*%20@param%20%7BObject%7D%20res%20-%20Express%20response%20object",
+        "prevChunkIds": []
+      },
+      "466": {
+        "chunkId": "d3a7a1",
+        "hash": "4a77f4f3",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "467": {
+        "chunkId": "d3a7a1",
+        "hash": "8c72908f",
+        "encoded": "const%20cancelTransaction%20=%20async%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "468": {
+        "chunkId": "d3a7a1",
+        "hash": "445eaa72",
+        "encoded": "const%20%7B%20transactionId%20%7D%20=%20req.params;",
+        "prevChunkIds": []
+      },
+      "469": {
+        "chunkId": "d3a7a1",
+        "hash": "a0f1aa86",
+        "encoded": "const%20user%20=%20req.user;",
+        "prevChunkIds": []
+      },
+      "471": {
+        "chunkId": "d3a7a1",
+        "hash": "b0b7d336",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "472": {
+        "chunkId": "d3a7a1",
+        "hash": "1e97280c",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "473": {
+        "chunkId": "d3a7a1",
+        "hash": "db848f59",
+        "encoded": "//%20Mock%20transaction%20cancellation",
+        "prevChunkIds": []
+      },
+      "474": {
+        "chunkId": "d3a7a1",
+        "hash": "9fd22e46",
+        "encoded": "logger.info('Transaction%20cancelled%20(mock)',%20%7B",
+        "prevChunkIds": []
+      },
+      "475": {
+        "chunkId": "d3a7a1",
+        "hash": "06806065",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "476": {
+        "chunkId": "d3a7a1",
+        "hash": "988c8a52",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "477": {
+        "chunkId": "d3a7a1",
+        "hash": "4c036ce4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "479": {
+        "chunkId": "d3a7a1",
+        "hash": "eb3d9bf3",
+        "encoded": "res.status(HTTP_STATUS.OK).json(%7B",
+        "prevChunkIds": []
+      },
+      "480": {
+        "chunkId": "d3a7a1",
+        "hash": "ff8e7e29",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "481": {
+        "chunkId": "d3a7a1",
+        "hash": "263690d5",
+        "encoded": "message:%20'Transaction%20cancelled%20successfully',",
+        "prevChunkIds": []
+      },
+      "482": {
+        "chunkId": "d3a7a1",
+        "hash": "43cd5d21",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "483": {
+        "chunkId": "d3a7a1",
+        "hash": "ad860e70",
+        "encoded": "status:%20TRANSACTION_STATUS.CANCELLED",
+        "prevChunkIds": []
+      },
+      "484": {
+        "chunkId": "d3a7a1",
+        "hash": "54e131d2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "485": {
+        "chunkId": "d3a7a1",
+        "hash": "6f9fd7c5",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "486": {
+        "chunkId": "d3a7a1",
+        "hash": "4d99df79",
+        "encoded": "//%20Cancel%20transaction%20in%20database",
+        "prevChunkIds": []
+      },
+      "487": {
+        "chunkId": "d3a7a1",
+        "hash": "afa8464c",
+        "encoded": "const%20transaction%20=%20await%20Transaction.findOne(%7B",
+        "prevChunkIds": []
+      },
+      "488": {
+        "chunkId": "d3a7a1",
+        "hash": "311491ea",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "489": {
+        "chunkId": "d3a7a1",
+        "hash": "20e9e9e1",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "490": {
+        "chunkId": "d3a7a1",
+        "hash": "d6e3387f",
+        "encoded": "status:%20%7B%20$in:%20%5BTRANSACTION_STATUS.PENDING,%20TRANSACTION_STATUS.STAGED%5D%20%7D",
+        "prevChunkIds": []
+      },
+      "491": {
+        "chunkId": "d3a7a1",
+        "hash": "0aa2e7d6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "493": {
+        "chunkId": "d3a7a1",
+        "hash": "fa031dd7",
+        "encoded": "if%20(!transaction)%20%7B",
+        "prevChunkIds": []
+      },
+      "494": {
+        "chunkId": "d3a7a1",
+        "hash": "b7a2dd1a",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "495": {
+        "chunkId": "d3a7a1",
+        "hash": "bea833e9",
+        "encoded": "'Transaction%20not%20found%20or%20cannot%20be%20cancelled',",
+        "prevChunkIds": []
+      },
+      "496": {
+        "chunkId": "d3a7a1",
+        "hash": "3d780878",
+        "encoded": "HTTP_STATUS.NOT_FOUND,",
+        "prevChunkIds": []
+      },
+      "497": {
+        "chunkId": "d3a7a1",
+        "hash": "73e297dc",
+        "encoded": "ERROR_TYPES.NOT_FOUND_ERROR",
+        "prevChunkIds": []
+      },
+      "498": {
+        "chunkId": "d3a7a1",
+        "hash": "5f2d3730",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "499": {
+        "chunkId": "d3a7a1",
+        "hash": "f20c9d18",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "501": {
+        "chunkId": "d3a7a1",
+        "hash": "c869067c",
+        "encoded": "await%20transaction.updateStatus(TRANSACTION_STATUS.CANCELLED,%20user.id);",
+        "prevChunkIds": []
+      },
+      "503": {
+        "chunkId": "d3a7a1",
+        "hash": "bbe1c809",
+        "encoded": "logger.info('Transaction%20cancelled',%20%7B",
+        "prevChunkIds": []
+      },
+      "504": {
+        "chunkId": "d3a7a1",
+        "hash": "5ef8fa54",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "505": {
+        "chunkId": "d3a7a1",
+        "hash": "dbf7e9a0",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "506": {
+        "chunkId": "d3a7a1",
+        "hash": "1e215566",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "508": {
+        "chunkId": "d3a7a1",
+        "hash": "4a6ba091",
+        "encoded": "res.status(HTTP_STATUS.OK).json(%7B",
+        "prevChunkIds": []
+      },
+      "509": {
+        "chunkId": "d3a7a1",
+        "hash": "2cb73689",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "510": {
+        "chunkId": "d3a7a1",
+        "hash": "93c02bde",
+        "encoded": "message:%20'Transaction%20cancelled%20successfully',",
+        "prevChunkIds": []
+      },
+      "511": {
+        "chunkId": "d3a7a1",
+        "hash": "4c5e6088",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "512": {
+        "chunkId": "d3a7a1",
+        "hash": "a8565de8",
+        "encoded": "status:%20TRANSACTION_STATUS.CANCELLED",
+        "prevChunkIds": []
+      },
+      "513": {
+        "chunkId": "d3a7a1",
+        "hash": "39c5a643",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "514": {
+        "chunkId": "d3a7a1",
+        "hash": "3ff85678",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "516": {
+        "chunkId": "d3a7a1",
+        "hash": "1cf6e134",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "517": {
+        "chunkId": "d3a7a1",
+        "hash": "4db68a81",
+        "encoded": "if%20(error%20instanceof%20AppError)%20%7B",
+        "prevChunkIds": []
+      },
+      "518": {
+        "chunkId": "d3a7a1",
+        "hash": "6574bf68",
+        "encoded": "throw%20error;",
+        "prevChunkIds": []
+      },
+      "519": {
+        "chunkId": "d3a7a1",
+        "hash": "431c1884",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "521": {
+        "chunkId": "d3a7a1",
+        "hash": "f610ebfa",
+        "encoded": "logger.error('Cancel%20transaction%20error',%20%7B",
+        "prevChunkIds": []
+      },
+      "522": {
+        "chunkId": "d3a7a1",
+        "hash": "94ca95e3",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "523": {
+        "chunkId": "d3a7a1",
+        "hash": "37e690d6",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "524": {
+        "chunkId": "d3a7a1",
+        "hash": "4d8ebc60",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "525": {
+        "chunkId": "d3a7a1",
+        "hash": "4201f3a0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "527": {
+        "chunkId": "d3a7a1",
+        "hash": "e6bb9401",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "528": {
+        "chunkId": "d3a7a1",
+        "hash": "971a2abc",
+        "encoded": "ERROR_MESSAGES.INTERNAL_ERROR,",
+        "prevChunkIds": []
+      },
+      "529": {
+        "chunkId": "d3a7a1",
+        "hash": "7c311f94",
+        "encoded": "HTTP_STATUS.INTERNAL_SERVER_ERROR,",
+        "prevChunkIds": []
+      },
+      "530": {
+        "chunkId": "d3a7a1",
+        "hash": "f8354f85",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "531": {
+        "chunkId": "d3a7a1",
+        "hash": "df8634a9",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "532": {
+        "chunkId": "d3a7a1",
+        "hash": "89201d7c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "533": {
+        "chunkId": "d3a7a1",
+        "hash": "d17aeb13",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "535": {
+        "chunkId": "d3a7a1",
+        "hash": "ae3bfcf1",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "536": {
+        "chunkId": "d3a7a1",
+        "hash": "26be3a3b",
+        "encoded": "*%20Retry%20a%20failed%20transaction",
+        "prevChunkIds": []
+      },
+      "537": {
+        "chunkId": "d3a7a1",
+        "hash": "737b5ca9",
+        "encoded": "*%20@param%20%7BObject%7D%20req%20-%20Express%20request%20object",
+        "prevChunkIds": []
+      },
+      "538": {
+        "chunkId": "d3a7a1",
+        "hash": "209d5c44",
+        "encoded": "*%20@param%20%7BObject%7D%20res%20-%20Express%20response%20object",
+        "prevChunkIds": []
+      },
+      "539": {
+        "chunkId": "d3a7a1",
+        "hash": "8f36a26c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "540": {
+        "chunkId": "d3a7a1",
+        "hash": "ccc74355",
+        "encoded": "const%20retryTransaction%20=%20async%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "541": {
+        "chunkId": "d3a7a1",
+        "hash": "693493df",
+        "encoded": "const%20%7B%20transactionId%20%7D%20=%20req.params;",
+        "prevChunkIds": []
+      },
+      "542": {
+        "chunkId": "d3a7a1",
+        "hash": "f75d6a17",
+        "encoded": "const%20user%20=%20req.user;",
+        "prevChunkIds": []
+      },
+      "544": {
+        "chunkId": "d3a7a1",
+        "hash": "8930d393",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "545": {
+        "chunkId": "d3a7a1",
+        "hash": "c3bc1431",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "546": {
+        "chunkId": "d3a7a1",
+        "hash": "3d67361c",
+        "encoded": "//%20Mock%20transaction%20retry",
+        "prevChunkIds": []
+      },
+      "547": {
+        "chunkId": "d3a7a1",
+        "hash": "090ce78c",
+        "encoded": "logger.info('Transaction%20retry%20(mock)',%20%7B",
+        "prevChunkIds": []
+      },
+      "548": {
+        "chunkId": "d3a7a1",
+        "hash": "190bff9a",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "549": {
+        "chunkId": "d3a7a1",
+        "hash": "52057c45",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "550": {
+        "chunkId": "d3a7a1",
+        "hash": "6511c47c",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "552": {
+        "chunkId": "d3a7a1",
+        "hash": "8bc7f2dc",
+        "encoded": "res.status(HTTP_STATUS.OK).json(%7B",
+        "prevChunkIds": []
+      },
+      "553": {
+        "chunkId": "d3a7a1",
+        "hash": "3c50ff1e",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "554": {
+        "chunkId": "d3a7a1",
+        "hash": "35cb6550",
+        "encoded": "message:%20'Transaction%20retry%20initiated',",
+        "prevChunkIds": []
+      },
+      "555": {
+        "chunkId": "d3a7a1",
+        "hash": "a0fd74b4",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "556": {
+        "chunkId": "d3a7a1",
+        "hash": "307bfa6b",
+        "encoded": "status:%20TRANSACTION_STATUS.PENDING",
+        "prevChunkIds": []
+      },
+      "557": {
+        "chunkId": "d3a7a1",
+        "hash": "0fa5ed47",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "558": {
+        "chunkId": "d3a7a1",
+        "hash": "6f4f6602",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "559": {
+        "chunkId": "d3a7a1",
+        "hash": "f8fb4bda",
+        "encoded": "//%20Retry%20transaction%20in%20database",
+        "prevChunkIds": []
+      },
+      "560": {
+        "chunkId": "d3a7a1",
+        "hash": "faf13de9",
+        "encoded": "const%20transaction%20=%20await%20Transaction.findOne(%7B",
+        "prevChunkIds": []
+      },
+      "561": {
+        "chunkId": "d3a7a1",
+        "hash": "8c2e3314",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "562": {
+        "chunkId": "d3a7a1",
+        "hash": "5d11448f",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "563": {
+        "chunkId": "d3a7a1",
+        "hash": "00b27d72",
+        "encoded": "status:%20TRANSACTION_STATUS.FAILED",
+        "prevChunkIds": []
+      },
+      "564": {
+        "chunkId": "d3a7a1",
+        "hash": "f7840cc6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "566": {
+        "chunkId": "d3a7a1",
+        "hash": "4fa4a2a1",
+        "encoded": "if%20(!transaction)%20%7B",
+        "prevChunkIds": []
+      },
+      "567": {
+        "chunkId": "d3a7a1",
+        "hash": "8eea2ef0",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "568": {
+        "chunkId": "d3a7a1",
+        "hash": "4de16c52",
+        "encoded": "'Transaction%20not%20found%20or%20cannot%20be%20retried',",
+        "prevChunkIds": []
+      },
+      "569": {
+        "chunkId": "d3a7a1",
+        "hash": "7639a136",
+        "encoded": "HTTP_STATUS.NOT_FOUND,",
+        "prevChunkIds": []
+      },
+      "570": {
+        "chunkId": "d3a7a1",
+        "hash": "fc248f18",
+        "encoded": "ERROR_TYPES.NOT_FOUND_ERROR",
+        "prevChunkIds": []
+      },
+      "571": {
+        "chunkId": "d3a7a1",
+        "hash": "f99d9a7b",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "572": {
+        "chunkId": "d3a7a1",
+        "hash": "8fa727d6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "574": {
+        "chunkId": "d3a7a1",
+        "hash": "a8290012",
+        "encoded": "if%20(transaction.hasMaxRetriesReached())%20%7B",
+        "prevChunkIds": []
+      },
+      "575": {
+        "chunkId": "d3a7a1",
+        "hash": "d3c1658f",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "576": {
+        "chunkId": "d3a7a1",
+        "hash": "21a5302c",
+        "encoded": "'Maximum%20retry%20attempts%20reached',",
+        "prevChunkIds": []
+      },
+      "577": {
+        "chunkId": "d3a7a1",
+        "hash": "4ed82888",
+        "encoded": "HTTP_STATUS.BAD_REQUEST,",
+        "prevChunkIds": []
+      },
+      "578": {
+        "chunkId": "d3a7a1",
+        "hash": "44cadec9",
+        "encoded": "ERROR_TYPES.VALIDATION_ERROR",
+        "prevChunkIds": []
+      },
+      "579": {
+        "chunkId": "d3a7a1",
+        "hash": "306bacc8",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "580": {
+        "chunkId": "d3a7a1",
+        "hash": "e442827e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "582": {
+        "chunkId": "d3a7a1",
+        "hash": "ed9d2ae1",
+        "encoded": "await%20transaction.incrementRetry();",
+        "prevChunkIds": []
+      },
+      "583": {
+        "chunkId": "d3a7a1",
+        "hash": "c5f7bd5a",
+        "encoded": "await%20transaction.updateStatus(TRANSACTION_STATUS.PENDING,%20user.id);",
+        "prevChunkIds": []
+      },
+      "585": {
+        "chunkId": "d3a7a1",
+        "hash": "c8b11d8d",
+        "encoded": "logger.info('Transaction%20retry%20initiated',%20%7B",
+        "prevChunkIds": []
+      },
+      "586": {
+        "chunkId": "d3a7a1",
+        "hash": "86280196",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "587": {
+        "chunkId": "d3a7a1",
+        "hash": "53424927",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "588": {
+        "chunkId": "d3a7a1",
+        "hash": "7b1ad44c",
+        "encoded": "retryAttempt:%20transaction.retryInfo.attempts",
+        "prevChunkIds": []
+      },
+      "589": {
+        "chunkId": "d3a7a1",
+        "hash": "a8997544",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "591": {
+        "chunkId": "d3a7a1",
+        "hash": "3af8f054",
+        "encoded": "res.status(HTTP_STATUS.OK).json(%7B",
+        "prevChunkIds": []
+      },
+      "592": {
+        "chunkId": "d3a7a1",
+        "hash": "b6dc4dd2",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "593": {
+        "chunkId": "d3a7a1",
+        "hash": "92a0e7a2",
+        "encoded": "message:%20'Transaction%20retry%20initiated',",
+        "prevChunkIds": []
+      },
+      "594": {
+        "chunkId": "d3a7a1",
+        "hash": "68458dcf",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "595": {
+        "chunkId": "d3a7a1",
+        "hash": "74588e22",
+        "encoded": "status:%20TRANSACTION_STATUS.PENDING,",
+        "prevChunkIds": []
+      },
+      "596": {
+        "chunkId": "d3a7a1",
+        "hash": "aa12bf0a",
+        "encoded": "retryAttempt:%20transaction.retryInfo.attempts",
+        "prevChunkIds": []
+      },
+      "597": {
+        "chunkId": "d3a7a1",
+        "hash": "268df22f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "598": {
+        "chunkId": "d3a7a1",
+        "hash": "f4f3b80d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "600": {
+        "chunkId": "d3a7a1",
+        "hash": "2d18279b",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "601": {
+        "chunkId": "d3a7a1",
+        "hash": "335043fa",
+        "encoded": "if%20(error%20instanceof%20AppError)%20%7B",
+        "prevChunkIds": []
+      },
+      "602": {
+        "chunkId": "d3a7a1",
+        "hash": "1fa51869",
+        "encoded": "throw%20error;",
+        "prevChunkIds": []
+      },
+      "603": {
+        "chunkId": "d3a7a1",
+        "hash": "57978652",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "605": {
+        "chunkId": "d3a7a1",
+        "hash": "919c64ee",
+        "encoded": "logger.error('Retry%20transaction%20error',%20%7B",
+        "prevChunkIds": []
+      },
+      "606": {
+        "chunkId": "d3a7a1",
+        "hash": "301f6853",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "607": {
+        "chunkId": "d3a7a1",
+        "hash": "fe7b90a4",
+        "encoded": "transactionId,",
+        "prevChunkIds": []
+      },
+      "608": {
+        "chunkId": "d3a7a1",
+        "hash": "39bd87b1",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "609": {
+        "chunkId": "d3a7a1",
+        "hash": "a4d9841f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "611": {
+        "chunkId": "d3a7a1",
+        "hash": "da28e83a",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "612": {
+        "chunkId": "d3a7a1",
+        "hash": "a90a008b",
+        "encoded": "ERROR_MESSAGES.INTERNAL_ERROR,",
+        "prevChunkIds": []
+      },
+      "613": {
+        "chunkId": "d3a7a1",
+        "hash": "1168d5e2",
+        "encoded": "HTTP_STATUS.INTERNAL_SERVER_ERROR,",
+        "prevChunkIds": []
+      },
+      "614": {
+        "chunkId": "d3a7a1",
+        "hash": "c2401f55",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "615": {
+        "chunkId": "d3a7a1",
+        "hash": "48ab0121",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "616": {
+        "chunkId": "d3a7a1",
+        "hash": "77ea5cda",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "617": {
+        "chunkId": "d3a7a1",
+        "hash": "bd4a74c8",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "619": {
+        "chunkId": "d3a7a1",
+        "hash": "1b86d812",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "620": {
+        "chunkId": "d3a7a1",
+        "hash": "0447ddc8",
+        "encoded": "*%20Get%20transaction%20statistics",
+        "prevChunkIds": []
+      },
+      "621": {
+        "chunkId": "d3a7a1",
+        "hash": "701c870b",
+        "encoded": "*%20@param%20%7BObject%7D%20req%20-%20Express%20request%20object",
+        "prevChunkIds": []
+      },
+      "622": {
+        "chunkId": "d3a7a1",
+        "hash": "1588493d",
+        "encoded": "*%20@param%20%7BObject%7D%20res%20-%20Express%20response%20object",
+        "prevChunkIds": []
+      },
+      "623": {
+        "chunkId": "d3a7a1",
+        "hash": "11910705",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "624": {
+        "chunkId": "d3a7a1",
+        "hash": "e28725b7",
+        "encoded": "const%20getTransactionStatistics%20=%20async%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "625": {
+        "chunkId": "d3a7a1",
+        "hash": "724e1948",
+        "encoded": "const%20user%20=%20req.user;",
+        "prevChunkIds": []
+      },
+      "626": {
+        "chunkId": "d3a7a1",
+        "hash": "523cddce",
+        "encoded": "const%20%7B%20startDate,%20endDate%20%7D%20=%20req.query;",
+        "prevChunkIds": []
+      },
+      "628": {
+        "chunkId": "d3a7a1",
+        "hash": "1f2879c7",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "629": {
+        "chunkId": "d3a7a1",
+        "hash": "daf44112",
+        "encoded": "let%20statistics;",
+        "prevChunkIds": []
+      },
+      "631": {
+        "chunkId": "d3a7a1",
+        "hash": "243fffb3",
+        "encoded": "if%20(process.env.USE_MOCK_SERVICES%20===%20'true')%20%7B",
+        "prevChunkIds": []
+      },
+      "632": {
+        "chunkId": "d3a7a1",
+        "hash": "bc151224",
+        "encoded": "//%20Mock%20statistics",
+        "prevChunkIds": []
+      },
+      "633": {
+        "chunkId": "d3a7a1",
+        "hash": "d9b99be2",
+        "encoded": "statistics%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "634": {
+        "chunkId": "d3a7a1",
+        "hash": "964d8861",
+        "encoded": "totalTransactions:%2015,",
+        "prevChunkIds": []
+      },
+      "635": {
+        "chunkId": "d3a7a1",
+        "hash": "2985e400",
+        "encoded": "successfulTransactions:%2013,",
+        "prevChunkIds": []
+      },
+      "636": {
+        "chunkId": "d3a7a1",
+        "hash": "65628f76",
+        "encoded": "failedTransactions:%202,",
+        "prevChunkIds": []
+      },
+      "637": {
+        "chunkId": "d3a7a1",
+        "hash": "c67894f4",
+        "encoded": "totalAmount:%201500.00,",
+        "prevChunkIds": []
+      },
+      "638": {
+        "chunkId": "d3a7a1",
+        "hash": "ffd40eef",
+        "encoded": "averageAmount:%20100.00,",
+        "prevChunkIds": []
+      },
+      "639": {
+        "chunkId": "d3a7a1",
+        "hash": "95bd7032",
+        "encoded": "transactionTypes:%20%7B",
+        "prevChunkIds": []
+      },
+      "640": {
+        "chunkId": "d3a7a1",
+        "hash": "04f4f986",
+        "encoded": "withdrawal:%20%7B%20count:%208,%20totalAmount:%20800.00%20%7D,",
+        "prevChunkIds": []
+      },
+      "641": {
+        "chunkId": "d3a7a1",
+        "hash": "d1c8eab9",
+        "encoded": "deposit:%20%7B%20count:%205,%20totalAmount:%20500.00%20%7D,",
+        "prevChunkIds": []
+      },
+      "642": {
+        "chunkId": "d3a7a1",
+        "hash": "1c0ef417",
+        "encoded": "transfer:%20%7B%20count:%202,%20totalAmount:%20200.00%20%7D",
+        "prevChunkIds": []
+      },
+      "643": {
+        "chunkId": "d3a7a1",
+        "hash": "120a327c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "644": {
+        "chunkId": "d3a7a1",
+        "hash": "6fc2709b",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "645": {
+        "chunkId": "d3a7a1",
+        "hash": "7a16975c",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "646": {
+        "chunkId": "d3a7a1",
+        "hash": "537adc40",
+        "encoded": "//%20Get%20statistics%20from%20database",
+        "prevChunkIds": []
+      },
+      "647": {
+        "chunkId": "d3a7a1",
+        "hash": "904b755e",
+        "encoded": "const%20dateRange%20=%20startDate%20&&%20endDate%20?%20%7B",
+        "prevChunkIds": []
+      },
+      "648": {
+        "chunkId": "d3a7a1",
+        "hash": "a7fc5958",
+        "encoded": "start:%20new%20Date(startDate),",
+        "prevChunkIds": []
+      },
+      "649": {
+        "chunkId": "d3a7a1",
+        "hash": "f14d9ef4",
+        "encoded": "end:%20new%20Date(endDate)",
+        "prevChunkIds": []
+      },
+      "650": {
+        "chunkId": "d3a7a1",
+        "hash": "41f5d4e1",
+        "encoded": "%7D%20:%20null;",
+        "prevChunkIds": []
+      },
+      "652": {
+        "chunkId": "d3a7a1",
+        "hash": "048f3d78",
+        "encoded": "statistics%20=%20await%20Transaction.getStatistics(user.id,%20dateRange);",
+        "prevChunkIds": []
+      },
+      "653": {
+        "chunkId": "d3a7a1",
+        "hash": "efd10ce3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "655": {
+        "chunkId": "d3a7a1",
+        "hash": "14e627cf",
+        "encoded": "logger.info('Transaction%20statistics%20retrieved',%20%7B",
+        "prevChunkIds": []
+      },
+      "656": {
+        "chunkId": "d3a7a1",
+        "hash": "6900d641",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "657": {
+        "chunkId": "d3a7a1",
+        "hash": "cfce96f8",
+        "encoded": "dateRange:%20%7B%20startDate,%20endDate%20%7D",
+        "prevChunkIds": []
+      },
+      "658": {
+        "chunkId": "d3a7a1",
+        "hash": "5ed7b08a",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "660": {
+        "chunkId": "d3a7a1",
+        "hash": "68ffd4b7",
+        "encoded": "res.status(HTTP_STATUS.OK).json(%7B",
+        "prevChunkIds": []
+      },
+      "661": {
+        "chunkId": "d3a7a1",
+        "hash": "0149ae48",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "662": {
+        "chunkId": "d3a7a1",
+        "hash": "bd883c49",
+        "encoded": "statistics",
+        "prevChunkIds": []
+      },
+      "663": {
+        "chunkId": "d3a7a1",
+        "hash": "9d5a9ab2",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "665": {
+        "chunkId": "d3a7a1",
+        "hash": "db210b87",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "666": {
+        "chunkId": "d3a7a1",
+        "hash": "96a2b1f1",
+        "encoded": "logger.error('Get%20transaction%20statistics%20error',%20%7B",
+        "prevChunkIds": []
+      },
+      "667": {
+        "chunkId": "d3a7a1",
+        "hash": "47df3075",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "668": {
+        "chunkId": "d3a7a1",
+        "hash": "ba582150",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "669": {
+        "chunkId": "d3a7a1",
+        "hash": "bf76889b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "671": {
+        "chunkId": "d3a7a1",
+        "hash": "52e5d11c",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "672": {
+        "chunkId": "d3a7a1",
+        "hash": "cfe0a24c",
+        "encoded": "ERROR_MESSAGES.INTERNAL_ERROR,",
+        "prevChunkIds": []
+      },
+      "673": {
+        "chunkId": "d3a7a1",
+        "hash": "6511d8e3",
+        "encoded": "HTTP_STATUS.INTERNAL_SERVER_ERROR,",
+        "prevChunkIds": []
+      },
+      "674": {
+        "chunkId": "d3a7a1",
+        "hash": "fb86921a",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "675": {
+        "chunkId": "d3a7a1",
+        "hash": "e483a395",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "676": {
+        "chunkId": "d3a7a1",
+        "hash": "07392e1f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "677": {
+        "chunkId": "d3a7a1",
+        "hash": "63a79d00",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "679": {
+        "chunkId": "d3a7a1",
+        "hash": "fb18eeb6",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "680": {
+        "chunkId": "d3a7a1",
+        "hash": "f629ac32",
+        "encoded": "*%20Simulate%20card%20scanning%20(for%20testing)",
+        "prevChunkIds": []
+      },
+      "681": {
+        "chunkId": "d3a7a1",
+        "hash": "5c895b58",
+        "encoded": "*%20@param%20%7BObject%7D%20req%20-%20Express%20request%20object",
+        "prevChunkIds": []
+      },
+      "682": {
+        "chunkId": "d3a7a1",
+        "hash": "84a427c1",
+        "encoded": "*%20@param%20%7BObject%7D%20res%20-%20Express%20response%20object",
+        "prevChunkIds": []
+      },
+      "683": {
+        "chunkId": "d3a7a1",
+        "hash": "bd7017bb",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "684": {
+        "chunkId": "d3a7a1",
+        "hash": "c2e809fb",
+        "encoded": "const%20simulateCardScan%20=%20async%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "685": {
+        "chunkId": "d3a7a1",
+        "hash": "6983681f",
+        "encoded": "const%20user%20=%20req.user;",
+        "prevChunkIds": []
+      },
+      "687": {
+        "chunkId": "d3a7a1",
+        "hash": "7bdb72fa",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "688": {
+        "chunkId": "d3a7a1",
+        "hash": "fd3c433f",
+        "encoded": "//%20Simulate%20card%20scan%20delay",
+        "prevChunkIds": []
+      },
+      "689": {
+        "chunkId": "d3a7a1",
+        "hash": "32a90835",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%202000));",
+        "prevChunkIds": []
+      },
+      "691": {
+        "chunkId": "d3a7a1",
+        "hash": "3caff74a",
+        "encoded": "//%20Generate%20mock%20card%20token",
+        "prevChunkIds": []
+      },
+      "692": {
+        "chunkId": "d3a7a1",
+        "hash": "2c8d9bbd",
+        "encoded": "const%20cardToken%20=%20%60tok_$%7Buuidv4().replace(/-/g,%20'').substring(0,%2032)%7D%60;",
+        "prevChunkIds": []
+      },
+      "694": {
+        "chunkId": "d3a7a1",
+        "hash": "a6c4a940",
+        "encoded": "logger.info('Card%20scan%20simulated',%20%7B",
+        "prevChunkIds": []
+      },
+      "695": {
+        "chunkId": "d3a7a1",
+        "hash": "51f7b513",
+        "encoded": "userId:%20user.id,",
+        "prevChunkIds": []
+      },
+      "696": {
+        "chunkId": "d3a7a1",
+        "hash": "14d30401",
+        "encoded": "cardToken:%20cardToken.substring(0,%208)%20+%20'****'",
+        "prevChunkIds": []
+      },
+      "697": {
+        "chunkId": "d3a7a1",
+        "hash": "70cd9872",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "699": {
+        "chunkId": "d3a7a1",
+        "hash": "edefe2e0",
+        "encoded": "res.status(HTTP_STATUS.OK).json(%7B",
+        "prevChunkIds": []
+      },
+      "700": {
+        "chunkId": "d3a7a1",
+        "hash": "767a00ab",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "701": {
+        "chunkId": "d3a7a1",
+        "hash": "19c69e3f",
+        "encoded": "message:%20'Card%20scanned%20successfully',",
+        "prevChunkIds": []
+      },
+      "702": {
+        "chunkId": "d3a7a1",
+        "hash": "80eb0462",
+        "encoded": "cardToken,",
+        "prevChunkIds": []
+      },
+      "703": {
+        "chunkId": "d3a7a1",
+        "hash": "79b931fb",
+        "encoded": "cardDetails:%20%7B",
+        "prevChunkIds": []
+      },
+      "704": {
+        "chunkId": "d3a7a1",
+        "hash": "5030057d",
+        "encoded": "maskedNumber:%20'****%20****%20****%201234',",
+        "prevChunkIds": []
+      },
+      "705": {
+        "chunkId": "d3a7a1",
+        "hash": "3bae0c9b",
+        "encoded": "type:%20'DEBIT',",
+        "prevChunkIds": []
+      },
+      "706": {
+        "chunkId": "d3a7a1",
+        "hash": "aa0a3036",
+        "encoded": "bank:%20'NCR%20Bank'",
+        "prevChunkIds": []
+      },
+      "707": {
+        "chunkId": "d3a7a1",
+        "hash": "deed68a7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "708": {
+        "chunkId": "d3a7a1",
+        "hash": "66fc0699",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "710": {
+        "chunkId": "d3a7a1",
+        "hash": "8de5288f",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "711": {
+        "chunkId": "d3a7a1",
+        "hash": "635a65a8",
+        "encoded": "logger.error('Card%20scan%20simulation%20error',%20%7B",
+        "prevChunkIds": []
+      },
+      "712": {
+        "chunkId": "d3a7a1",
+        "hash": "575ce1aa",
+        "encoded": "error:%20error.message,",
+        "prevChunkIds": []
+      },
+      "713": {
+        "chunkId": "d3a7a1",
+        "hash": "6bb57a56",
+        "encoded": "userId:%20user.id",
+        "prevChunkIds": []
+      },
+      "714": {
+        "chunkId": "d3a7a1",
+        "hash": "283c9436",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "716": {
+        "chunkId": "d3a7a1",
+        "hash": "8e7f2975",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "717": {
+        "chunkId": "d3a7a1",
+        "hash": "222a2447",
+        "encoded": "'Card%20scan%20failed.%20Please%20try%20again%20in%20a%20well-lit%20area%20or%20enter%20details%20manually.',",
+        "prevChunkIds": []
+      },
+      "718": {
+        "chunkId": "d3a7a1",
+        "hash": "a0ee1d7d",
+        "encoded": "HTTP_STATUS.BAD_REQUEST,",
+        "prevChunkIds": []
+      },
+      "719": {
+        "chunkId": "d3a7a1",
+        "hash": "96a41137",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "720": {
+        "chunkId": "d3a7a1",
+        "hash": "a7b68015",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "721": {
+        "chunkId": "d3a7a1",
+        "hash": "34b8e8be",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "722": {
+        "chunkId": "d3a7a1",
+        "hash": "58474d67",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "724": {
+        "chunkId": "d3a7a1",
+        "hash": "1c2c5f53",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "725": {
+        "chunkId": "d3a7a1",
+        "hash": "d84616bc",
+        "encoded": "*%20Get%20ATM%20service%20status",
+        "prevChunkIds": []
+      },
+      "726": {
+        "chunkId": "d3a7a1",
+        "hash": "3c8ec6ba",
+        "encoded": "*%20@param%20%7BObject%7D%20req%20-%20Express%20request%20object",
+        "prevChunkIds": []
+      },
+      "727": {
+        "chunkId": "d3a7a1",
+        "hash": "d936c365",
+        "encoded": "*%20@param%20%7BObject%7D%20res%20-%20Express%20response%20object",
+        "prevChunkIds": []
+      },
+      "728": {
+        "chunkId": "d3a7a1",
+        "hash": "ef9d7c63",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "729": {
+        "chunkId": "d3a7a1",
+        "hash": "5f802542",
+        "encoded": "const%20getServiceStatus%20=%20async%20(req,%20res)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "730": {
+        "chunkId": "d3a7a1",
+        "hash": "1ea58d86",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "731": {
+        "chunkId": "d3a7a1",
+        "hash": "9510823a",
+        "encoded": "const%20serviceStatus%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "732": {
+        "chunkId": "d3a7a1",
+        "hash": "4a5e7a11",
+        "encoded": "atmStagingService:%20%7B",
+        "prevChunkIds": []
+      },
+      "733": {
+        "chunkId": "d3a7a1",
+        "hash": "e9c7426e",
+        "encoded": "status:%20process.env.USE_MOCK_SERVICES%20===%20'true'%20?%20'mock'%20:%20'unknown',",
+        "prevChunkIds": []
+      },
+      "734": {
+        "chunkId": "d3a7a1",
+        "hash": "cb4ae535",
+        "encoded": "responseTime:%20'%3C%20100ms',",
+        "prevChunkIds": []
+      },
+      "735": {
+        "chunkId": "d3a7a1",
+        "hash": "acbe12e9",
+        "encoded": "lastChecked:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "736": {
+        "chunkId": "d3a7a1",
+        "hash": "baf8f60d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "737": {
+        "chunkId": "d3a7a1",
+        "hash": "64434de8",
+        "encoded": "visionService:%20%7B",
+        "prevChunkIds": []
+      },
+      "738": {
+        "chunkId": "d3a7a1",
+        "hash": "16ff2890",
+        "encoded": "status:%20process.env.USE_MOCK_SERVICES%20===%20'true'%20?%20'mock'%20:%20'unknown',",
+        "prevChunkIds": []
+      },
+      "739": {
+        "chunkId": "d3a7a1",
+        "hash": "5edec65a",
+        "encoded": "responseTime:%20'%3C%20200ms',",
+        "prevChunkIds": []
+      },
+      "740": {
+        "chunkId": "d3a7a1",
+        "hash": "26c6d5e2",
+        "encoded": "lastChecked:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "741": {
+        "chunkId": "d3a7a1",
+        "hash": "521073d8",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "742": {
+        "chunkId": "d3a7a1",
+        "hash": "8d0f9b08",
+        "encoded": "database:%20%7B",
+        "prevChunkIds": []
+      },
+      "743": {
+        "chunkId": "d3a7a1",
+        "hash": "77ab264e",
+        "encoded": "status:%20'connected',",
+        "prevChunkIds": []
+      },
+      "744": {
+        "chunkId": "d3a7a1",
+        "hash": "4a85eb2e",
+        "encoded": "responseTime:%20'%3C%2050ms',",
+        "prevChunkIds": []
+      },
+      "745": {
+        "chunkId": "d3a7a1",
+        "hash": "e3ed9a6d",
+        "encoded": "lastChecked:%20new%20Date().toISOString()",
+        "prevChunkIds": []
+      },
+      "746": {
+        "chunkId": "d3a7a1",
+        "hash": "29285a8a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "747": {
+        "chunkId": "d3a7a1",
+        "hash": "1dbd29db",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "749": {
+        "chunkId": "d3a7a1",
+        "hash": "48178e21",
+        "encoded": "res.status(HTTP_STATUS.OK).json(%7B",
+        "prevChunkIds": []
+      },
+      "750": {
+        "chunkId": "d3a7a1",
+        "hash": "072dc2a9",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "751": {
+        "chunkId": "d3a7a1",
+        "hash": "dc2bba2e",
+        "encoded": "services:%20serviceStatus,",
+        "prevChunkIds": []
+      },
+      "752": {
+        "chunkId": "d3a7a1",
+        "hash": "73165017",
+        "encoded": "overall:%20'healthy'",
+        "prevChunkIds": []
+      },
+      "753": {
+        "chunkId": "d3a7a1",
+        "hash": "65223498",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "755": {
+        "chunkId": "d3a7a1",
+        "hash": "f9bd5f60",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "756": {
+        "chunkId": "d3a7a1",
+        "hash": "23b1aed5",
+        "encoded": "logger.error('Get%20service%20status%20error',%20%7B",
+        "prevChunkIds": []
+      },
+      "757": {
+        "chunkId": "d3a7a1",
+        "hash": "d2546d56",
+        "encoded": "error:%20error.message",
+        "prevChunkIds": []
+      },
+      "758": {
+        "chunkId": "d3a7a1",
+        "hash": "4bc8eda5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "760": {
+        "chunkId": "d3a7a1",
+        "hash": "004794aa",
+        "encoded": "throw%20new%20AppError(",
+        "prevChunkIds": []
+      },
+      "761": {
+        "chunkId": "d3a7a1",
+        "hash": "7dff6928",
+        "encoded": "ERROR_MESSAGES.INTERNAL_ERROR,",
+        "prevChunkIds": []
+      },
+      "762": {
+        "chunkId": "d3a7a1",
+        "hash": "c5ff73db",
+        "encoded": "HTTP_STATUS.INTERNAL_SERVER_ERROR,",
+        "prevChunkIds": []
+      },
+      "763": {
+        "chunkId": "d3a7a1",
+        "hash": "8742bb0d",
+        "encoded": "ERROR_TYPES.SERVICE_ERROR",
+        "prevChunkIds": []
+      },
+      "764": {
+        "chunkId": "d3a7a1",
+        "hash": "df1dbf5c",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "765": {
+        "chunkId": "d3a7a1",
+        "hash": "e21f26d5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "766": {
+        "chunkId": "d3a7a1",
+        "hash": "65eca641",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "768": {
+        "chunkId": "d3a7a1",
+        "hash": "3d220dc6",
+        "encoded": "module.exports%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "769": {
+        "chunkId": "d3a7a1",
+        "hash": "da3e1ee3",
+        "encoded": "stageWithdrawal,",
+        "prevChunkIds": []
+      },
+      "770": {
+        "chunkId": "d3a7a1",
+        "hash": "094c71dc",
+        "encoded": "stageDeposit,",
+        "prevChunkIds": []
+      },
+      "771": {
+        "chunkId": "d3a7a1",
+        "hash": "6bbe1991",
+        "encoded": "getTransactionStatus,",
+        "prevChunkIds": []
+      },
+      "772": {
+        "chunkId": "d3a7a1",
+        "hash": "d9439f43",
+        "encoded": "getTransactionHistory,",
+        "prevChunkIds": []
+      },
+      "773": {
+        "chunkId": "d3a7a1",
+        "hash": "301e4611",
+        "encoded": "cancelTransaction,",
+        "prevChunkIds": []
+      },
+      "774": {
+        "chunkId": "d3a7a1",
+        "hash": "c7a944b7",
+        "encoded": "retryTransaction,",
+        "prevChunkIds": []
+      },
+      "775": {
+        "chunkId": "d3a7a1",
+        "hash": "a20cdc2e",
+        "encoded": "getTransactionStatistics,",
+        "prevChunkIds": []
+      },
+      "776": {
+        "chunkId": "d3a7a1",
+        "hash": "14e9cd3d",
+        "encoded": "simulateCardScan,",
+        "prevChunkIds": []
+      },
+      "777": {
+        "chunkId": "d3a7a1",
+        "hash": "486d3022",
+        "encoded": "getServiceStatus",
+        "prevChunkIds": []
+      },
+      "778": {
+        "chunkId": "d3a7a1",
+        "hash": "112d5339",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,1869 @@
+{
+  "backend/BACKEND_SUMMARY.md": {
+    "filename": "BACKEND_SUMMARY.md",
+    "path": "backend/BACKEND_SUMMARY.md",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "fb9572": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773135476,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "952c1a40",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "fb9572",
+        "hash": "48e990b8",
+        "encoded": "#%20NCR%20ATLEOS%20ATM%20Backend%20Services%20-%20Implementation%20Summary",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "fb9572",
+        "hash": "b50cb44e",
+        "encoded": "##%20%F0%9F%8E%AF%20Overview",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "fb9572",
+        "hash": "db8f7a34",
+        "encoded": "I%20have%20successfully%20built%20a%20comprehensive,%20production-ready%20backend%20service%20for%20the%20NCR%20ATLEOS%20ATM%20Customer%20Journey%20Application.%20The%20backend%20provides%20secure,%20scalable%20APIs%20that%20support%20all%20the%20frontend%20functionality%20described%20in%20the%20user%20stories.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "fb9572",
+        "hash": "8e187271",
+        "encoded": "##%20%F0%9F%8F%97%EF%B8%8F%20Architecture",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "fb9572",
+        "hash": "5ff12196",
+        "encoded": "###%20Technology%20Stack",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "fb9572",
+        "hash": "676a4149",
+        "encoded": "-%20**Runtime**:%20Node.js%2016+",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "fb9572",
+        "hash": "1770fb87",
+        "encoded": "-%20**Framework**:%20Express.js%20with%20security%20middleware",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "fb9572",
+        "hash": "ff618346",
+        "encoded": "-%20**Database**:%20MongoDB%20with%20Mongoose%20ODM",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "fb9572",
+        "hash": "422b5fdb",
+        "encoded": "-%20**Authentication**:%20JWT%20with%20refresh%20tokens",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "fb9572",
+        "hash": "f8760528",
+        "encoded": "-%20**Validation**:%20Express-validator%20with%20Joi",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "fb9572",
+        "hash": "1df58021",
+        "encoded": "-%20**Logging**:%20Winston%20structured%20logging",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "fb9572",
+        "hash": "6b36b649",
+        "encoded": "-%20**Testing**:%20Jest%20with%20Supertest",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "fb9572",
+        "hash": "d18230f1",
+        "encoded": "-%20**Code%20Quality**:%20ESLint%20+%20Prettier",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "fb9572",
+        "hash": "46ba54c7",
+        "encoded": "-%20**Containerization**:%20Docker%20with%20multi-stage%20builds",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "fb9572",
+        "hash": "14ceea11",
+        "encoded": "###%20Security%20Features",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "fb9572",
+        "hash": "cb6a1aa7",
+        "encoded": "-%20**Helmet**:%20Security%20headers%20(CSP,%20HSTS,%20XSS%20protection)",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "fb9572",
+        "hash": "a4a518c7",
+        "encoded": "-%20**CORS**:%20Configurable%20cross-origin%20resource%20sharing",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "fb9572",
+        "hash": "da6a6b22",
+        "encoded": "-%20**Rate%20Limiting**:%20Brute%20force%20protection",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "fb9572",
+        "hash": "e7336833",
+        "encoded": "-%20**Input%20Validation**:%20Comprehensive%20request%20validation",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "fb9572",
+        "hash": "1314f27e",
+        "encoded": "-%20**JWT%20Authentication**:%20Secure%20token-based%20auth%20with%20refresh%20tokens",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "fb9572",
+        "hash": "ee84a6b2",
+        "encoded": "-%20**PIN%20Hashing**:%20bcrypt%20with%20configurable%20rounds",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "fb9572",
+        "hash": "310aef90",
+        "encoded": "-%20**Environment%20Variables**:%20Secure%20configuration%20management",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "fb9572",
+        "hash": "dde1bfff",
+        "encoded": "##%20%F0%9F%93%81%20Project%20Structure",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "fb9572",
+        "hash": "72e57ca8",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "fb9572",
+        "hash": "f5fadb66",
+        "encoded": "backend/",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "fb9572",
+        "hash": "661f0f16",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20src/",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "fb9572",
+        "hash": "0f23d24e",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20config/%20%20%20%20%20%20%20%20%20%20%20#%20Configuration%20files",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "fb9572",
+        "hash": "37915636",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20database.js%20%20%20#%20MongoDB%20connection",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "fb9572",
+        "hash": "cfa4f0e7",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20constants.js%20%20#%20Application%20constants",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "fb9572",
+        "hash": "2a1879de",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20controllers/%20%20%20%20%20%20#%20Route%20controllers",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "fb9572",
+        "hash": "e5f79533",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20authController.js",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "fb9572",
+        "hash": "bced48ff",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20atmController.js",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "fb9572",
+        "hash": "d761de44",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20bankingController.js",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "fb9572",
+        "hash": "d453332c",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20middleware/%20%20%20%20%20%20%20#%20Custom%20middleware",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "fb9572",
+        "hash": "08f5d3a1",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20auth.js%20%20%20%20%20%20%20#%20Authentication%20middleware",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "fb9572",
+        "hash": "ea899384",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20errorHandler.js",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "fb9572",
+        "hash": "ce5014a4",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20validation.js%20#%20Input%20validation",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "fb9572",
+        "hash": "f8e22b74",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20models/%20%20%20%20%20%20%20%20%20%20#%20Database%20models",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "fb9572",
+        "hash": "598479d0",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20User.js%20%20%20%20%20%20#%20User%20model%20with%20auth",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "fb9572",
+        "hash": "515f6e75",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20Transaction.js",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "fb9572",
+        "hash": "de164c4d",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20routes/%20%20%20%20%20%20%20%20%20%20#%20API%20routes",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "fb9572",
+        "hash": "3d0f81de",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20auth.js",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "fb9572",
+        "hash": "fa224643",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20atm.js",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "fb9572",
+        "hash": "cc590c8a",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20banking.js",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "fb9572",
+        "hash": "bc81cd88",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20health.js",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "fb9572",
+        "hash": "47d34d91",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20services/%20%20%20%20%20%20%20%20#%20External%20service%20integrations",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "fb9572",
+        "hash": "f80f1b7a",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20atmStagingService.js",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "fb9572",
+        "hash": "3c4ff3e6",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20coreBankingService.js",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "fb9572",
+        "hash": "07502761",
+        "encoded": "%E2%94%82%20%20%20%E2%94%9C%E2%94%80%E2%94%80%20utils/%20%20%20%20%20%20%20%20%20%20%20#%20Utility%20functions",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "fb9572",
+        "hash": "366f7da2",
+        "encoded": "%E2%94%82%20%20%20%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20logger.js%20%20%20%20#%20Winston%20logger",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "fb9572",
+        "hash": "8b5ebf6d",
+        "encoded": "%E2%94%82%20%20%20%E2%94%94%E2%94%80%E2%94%80%20server.js%20%20%20%20%20%20%20%20#%20Main%20server%20file",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "fb9572",
+        "hash": "7b6c2cff",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20tests/%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Test%20files",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "fb9572",
+        "hash": "44faaa5f",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20scripts/%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Database%20scripts",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "fb9572",
+        "hash": "74389b0c",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20logs/%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Log%20files",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "fb9572",
+        "hash": "3941699b",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20Dockerfile%20%20%20%20%20%20%20%20%20%20#%20Container%20configuration",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "fb9572",
+        "hash": "23c9f262",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20docker-compose.yml%20%20#%20Multi-service%20setup",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "fb9572",
+        "hash": "98c47f8d",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20package.json%20%20%20%20%20%20%20%20#%20Dependencies",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "fb9572",
+        "hash": "23226bcb",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "fb9572",
+        "hash": "8b59973f",
+        "encoded": "##%20%F0%9F%94%8C%20API%20Endpoints",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "fb9572",
+        "hash": "fc0a1717",
+        "encoded": "###%20Authentication%20(%60/api/auth%60)",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "fb9572",
+        "hash": "8f641cae",
+        "encoded": "-%20%60POST%20/login%60%20-%20User%20login%20with%20PIN",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "fb9572",
+        "hash": "0cf83c3a",
+        "encoded": "-%20%60POST%20/logout%60%20-%20User%20logout",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "fb9572",
+        "hash": "bdf7c4cc",
+        "encoded": "-%20%60POST%20/refresh%60%20-%20Refresh%20authentication%20token",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "fb9572",
+        "hash": "6a6a85c3",
+        "encoded": "-%20%60GET%20/validate%60%20-%20Validate%20current%20session",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "fb9572",
+        "hash": "765d4344",
+        "encoded": "-%20%60GET%20/profile%60%20-%20Get%20user%20profile",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "fb9572",
+        "hash": "a02b43bb",
+        "encoded": "-%20%60PUT%20/preferences%60%20-%20Update%20user%20preferences",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "fb9572",
+        "hash": "14bab021",
+        "encoded": "-%20%60PUT%20/change-pin%60%20-%20Change%20user%20PIN",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "fb9572",
+        "hash": "5c82c5b4",
+        "encoded": "-%20%60GET%20/session%60%20-%20Get%20session%20information",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "fb9572",
+        "hash": "34b51411",
+        "encoded": "-%20%60POST%20/logout-all%60%20-%20Logout%20from%20all%20sessions",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "fb9572",
+        "hash": "790cdf32",
+        "encoded": "###%20ATM%20Services%20(%60/api/atm%60)",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "fb9572",
+        "hash": "e4ee812a",
+        "encoded": "-%20%60POST%20/transactions/withdrawal%60%20-%20Stage%20cash%20withdrawal",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "fb9572",
+        "hash": "4167a3ae",
+        "encoded": "-%20%60POST%20/transactions/deposit%60%20-%20Stage%20cash%20deposit",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "fb9572",
+        "hash": "759c6518",
+        "encoded": "-%20%60GET%20/transactions/:id%60%20-%20Get%20transaction%20status",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "fb9572",
+        "hash": "fe6c3bd2",
+        "encoded": "-%20%60GET%20/transactions%60%20-%20Get%20transaction%20history",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "fb9572",
+        "hash": "f670b8a5",
+        "encoded": "-%20%60DELETE%20/transactions/:id%60%20-%20Cancel%20transaction",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "fb9572",
+        "hash": "f24f187e",
+        "encoded": "-%20%60POST%20/transactions/:id/retry%60%20-%20Retry%20failed%20transaction",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "fb9572",
+        "hash": "5c26c9a0",
+        "encoded": "-%20%60GET%20/statistics%60%20-%20Get%20transaction%20statistics",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "fb9572",
+        "hash": "a4bc8862",
+        "encoded": "-%20%60POST%20/scan-card%60%20-%20Simulate%20card%20scanning",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "fb9572",
+        "hash": "448f6761",
+        "encoded": "-%20%60GET%20/status%60%20-%20Get%20service%20status",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "fb9572",
+        "hash": "ef0aee4d",
+        "encoded": "###%20Banking%20Services%20(%60/api/banking%60)",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "fb9572",
+        "hash": "71d1becc",
+        "encoded": "-%20%60GET%20/accounts/balance%60%20-%20Get%20account%20balances",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "fb9572",
+        "hash": "50a9d889",
+        "encoded": "-%20%60GET%20/accounts/:id/balance%60%20-%20Get%20specific%20account%20balance",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "fb9572",
+        "hash": "d0a974b8",
+        "encoded": "-%20%60GET%20/accounts%60%20-%20Get%20user%20accounts",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "fb9572",
+        "hash": "7a824964",
+        "encoded": "-%20%60POST%20/transfers%60%20-%20Transfer%20funds%20between%20accounts",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "fb9572",
+        "hash": "55d5ab36",
+        "encoded": "-%20%60GET%20/transfers%60%20-%20Get%20transfer%20history",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "fb9572",
+        "hash": "02d03d92",
+        "encoded": "-%20%60GET%20/transfers/:id%60%20-%20Get%20transfer%20details",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "fb9572",
+        "hash": "258f162d",
+        "encoded": "-%20%60GET%20/accounts/:id/statement%60%20-%20Get%20account%20statement",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "fb9572",
+        "hash": "910457ae",
+        "encoded": "-%20%60GET%20/accounts/:id/transactions%60%20-%20Get%20account%20transactions",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "fb9572",
+        "hash": "09314d38",
+        "encoded": "-%20%60GET%20/limits%60%20-%20Get%20service%20limits",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "fb9572",
+        "hash": "cf7dd223",
+        "encoded": "-%20%60PUT%20/limits%60%20-%20Update%20service%20limits",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "fb9572",
+        "hash": "0e2f50ef",
+        "encoded": "###%20Health%20Check%20(%60/api/health%60)",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "fb9572",
+        "hash": "58903901",
+        "encoded": "-%20%60GET%20/%60%20-%20Basic%20health%20check",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "fb9572",
+        "hash": "cf1117b5",
+        "encoded": "-%20%60GET%20/detailed%60%20-%20Detailed%20health%20information",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "fb9572",
+        "hash": "4309d28e",
+        "encoded": "-%20%60GET%20/ready%60%20-%20Readiness%20check",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "fb9572",
+        "hash": "6eb7107c",
+        "encoded": "-%20%60GET%20/live%60%20-%20Liveness%20check",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "fb9572",
+        "hash": "ce4222b7",
+        "encoded": "-%20%60GET%20/services%60%20-%20Service%20status%20check",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "fb9572",
+        "hash": "c28eb757",
+        "encoded": "##%20%F0%9F%94%90%20Security%20Implementation",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "fb9572",
+        "hash": "6b6c3bd0",
+        "encoded": "###%20Authentication%20Flow",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "fb9572",
+        "hash": "ff9cfa2c",
+        "encoded": "1.%20**PIN%20Validation**:%204-digit%20PIN%20with%20bcrypt%20hashing",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "fb9572",
+        "hash": "dec8b293",
+        "encoded": "2.%20**JWT%20Tokens**:%20Access%20tokens%20(1h)%20+%20refresh%20tokens%20(7d)",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "fb9572",
+        "hash": "ce6ed00d",
+        "encoded": "3.%20**Session%20Management**:%20Single/multiple%20session%20support",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "fb9572",
+        "hash": "64e6dd19",
+        "encoded": "4.%20**Rate%20Limiting**:%20Failed%20login%20attempt%20protection",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "fb9572",
+        "hash": "83fd996e",
+        "encoded": "5.%20**Account%20Locking**:%20Temporary%20lockout%20after%20failed%20attempts",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "fb9572",
+        "hash": "e08e9db6",
+        "encoded": "###%20Input%20Validation",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "fb9572",
+        "hash": "25ee042d",
+        "encoded": "-%20**PIN%20Format**:%20Exactly%204%20digits,%20numeric%20only",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "fb9572",
+        "hash": "28da974c",
+        "encoded": "-%20**Amount%20Validation**:%20Min/max%20limits,%20decimal%20precision",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "fb9572",
+        "hash": "3b9fcce5",
+        "encoded": "-%20**Card%20Token**:%20Secure%20tokenized%20format",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "fb9572",
+        "hash": "2b0d323d",
+        "encoded": "-%20**Account%20IDs**:%20Format%20and%20ownership%20validation",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "fb9572",
+        "hash": "4be4397a",
+        "encoded": "-%20**XSS%20Prevention**:%20Input%20sanitization",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "fb9572",
+        "hash": "24eb3ba9",
+        "encoded": "###%20Error%20Handling",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "fb9572",
+        "hash": "2d64718d",
+        "encoded": "-%20**Centralized%20Error%20Handler**:%20Consistent%20error%20responses",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "fb9572",
+        "hash": "f5aa6b5e",
+        "encoded": "-%20**Custom%20Error%20Classes**:%20Typed%20error%20handling",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "fb9572",
+        "hash": "f63ca2bb",
+        "encoded": "-%20**Security%20Logging**:%20Failed%20attempts%20and%20suspicious%20activity",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "fb9572",
+        "hash": "36c03005",
+        "encoded": "-%20**Production%20Safety**:%20No%20sensitive%20data%20in%20error%20responses",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "fb9572",
+        "hash": "a12e9bc2",
+        "encoded": "##%20%F0%9F%93%8A%20Data%20Models",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "fb9572",
+        "hash": "a0c388db",
+        "encoded": "###%20User%20Model",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "fb9572",
+        "hash": "4c7dfc22",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "fb9572",
+        "hash": "1f40a7d6",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "fb9572",
+        "hash": "8cabc925",
+        "encoded": "userId:%20String,%20%20%20%20%20%20%20%20%20%20%20//%20Unique%20user%20identifier",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "fb9572",
+        "hash": "02c93683",
+        "encoded": "name:%20String,%20%20%20%20%20%20%20%20%20%20%20%20//%20User%20display%20name",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "fb9572",
+        "hash": "544819d8",
+        "encoded": "pin:%20String,%20%20%20%20%20%20%20%20%20%20%20%20%20//%20Hashed%20PIN",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "fb9572",
+        "hash": "3cc1499f",
+        "encoded": "isActive:%20Boolean,%20%20%20%20%20%20%20//%20Account%20status",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "fb9572",
+        "hash": "9d214862",
+        "encoded": "isLocked:%20Boolean,%20%20%20%20%20%20%20//%20Lock%20status",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "fb9572",
+        "hash": "3dcce2a6",
+        "encoded": "failedLoginAttempts:%20Number,",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "fb9572",
+        "hash": "ccdada74",
+        "encoded": "lockUntil:%20Date,",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "fb9572",
+        "hash": "cb0506b6",
+        "encoded": "currentSession:%20%7B%20%20%20%20%20%20%20%20//%20Active%20session",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "fb9572",
+        "hash": "ffa5234b",
+        "encoded": "token:%20String,",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "fb9572",
+        "hash": "97d48731",
+        "encoded": "createdAt:%20Date,",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "fb9572",
+        "hash": "9d48afdf",
+        "encoded": "expiresAt:%20Date,",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "fb9572",
+        "hash": "e2b03c89",
+        "encoded": "ipAddress:%20String,",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "fb9572",
+        "hash": "2b4c719b",
+        "encoded": "userAgent:%20String",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "fb9572",
+        "hash": "b57efd8f",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "fb9572",
+        "hash": "f5c77ee0",
+        "encoded": "refreshTokens:%20%5B...%5D,%20%20%20%20//%20Refresh%20token%20array",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "fb9572",
+        "hash": "956d7528",
+        "encoded": "accounts:%20%5B...%5D,%20%20%20%20%20%20%20%20%20//%20User%20bank%20accounts",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "fb9572",
+        "hash": "8693db58",
+        "encoded": "dailyLimits:%20%7B...%7D,%20%20%20%20%20%20//%20Transaction%20limits",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "fb9572",
+        "hash": "d7ee6e39",
+        "encoded": "preferences:%20%7B...%7D%20%20%20%20%20%20%20//%20User%20preferences",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "fb9572",
+        "hash": "dbb55d46",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "fb9572",
+        "hash": "3090eeb6",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "fb9572",
+        "hash": "d9a8dd77",
+        "encoded": "###%20Transaction%20Model",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "fb9572",
+        "hash": "918d71a2",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "fb9572",
+        "hash": "deb4f098",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "fb9572",
+        "hash": "4205f62c",
+        "encoded": "transactionId:%20String,%20%20%20//%20Unique%20transaction%20ID",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "fb9572",
+        "hash": "fe0276be",
+        "encoded": "userId:%20String,%20%20%20%20%20%20%20%20%20%20//%20User%20reference",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "fb9572",
+        "hash": "247b2a1b",
+        "encoded": "type:%20String,%20%20%20%20%20%20%20%20%20%20%20//%20withdrawal%7Cdeposit%7Ctransfer",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "fb9572",
+        "hash": "f540edcc",
+        "encoded": "status:%20String,%20%20%20%20%20%20%20%20%20//%20pending%7Cstaged%7Ccompleted%7Cfailed",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "fb9572",
+        "hash": "62ff945f",
+        "encoded": "amount:%20Number,%20%20%20%20%20%20%20%20%20//%20Transaction%20amount",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "fb9572",
+        "hash": "60008339",
+        "encoded": "cardToken:%20String,%20%20%20%20%20%20//%20Tokenized%20card%20data",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "fb9572",
+        "hash": "e0dbf4d9",
+        "encoded": "fromAccount:%20%7B...%7D,%20%20%20%20%20//%20Source%20account",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "fb9572",
+        "hash": "25d3b364",
+        "encoded": "toAccount:%20%7B...%7D,%20%20%20%20%20%20%20//%20Destination%20account",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "fb9572",
+        "hash": "50b73dc3",
+        "encoded": "processingTime:%20%7B...%7D,%20%20//%20Timing%20information",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "fb9572",
+        "hash": "a387ca17",
+        "encoded": "externalReferences:%20%7B...%7D,%20//%20External%20service%20IDs",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "fb9572",
+        "hash": "9bed038d",
+        "encoded": "error:%20%7B...%7D,%20%20%20%20%20%20%20%20%20%20%20//%20Error%20information",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "fb9572",
+        "hash": "83f6bbf1",
+        "encoded": "auditTrail:%20%5B...%5D,%20%20%20%20%20%20//%20Change%20history",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "fb9572",
+        "hash": "5298e008",
+        "encoded": "metadata:%20%7B...%7D%20%20%20%20%20%20%20%20%20//%20Request%20metadata",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "fb9572",
+        "hash": "2107d871",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "fb9572",
+        "hash": "c4e20f80",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "fb9572",
+        "hash": "be0bf399",
+        "encoded": "##%20%F0%9F%94%84%20External%20Service%20Integration",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "fb9572",
+        "hash": "3fab9c5f",
+        "encoded": "###%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "fb9572",
+        "hash": "50bf3f09",
+        "encoded": "-%20**Purpose**:%20Stage%20withdrawal/deposit%20transactions",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "fb9572",
+        "hash": "8e050176",
+        "encoded": "-%20**Endpoints**:%20%60/transactions/withdrawal%60,%20%60/transactions/deposit%60",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "fb9572",
+        "hash": "9f916383",
+        "encoded": "-%20**Features**:%20Mock%20implementation%20with%20realistic%20delays",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "fb9572",
+        "hash": "238e33b0",
+        "encoded": "-%20**Error%20Handling**:%20Timeout,%20retry%20logic,%20failure%20simulation",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "fb9572",
+        "hash": "57f08fbd",
+        "encoded": "###%20Core%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "fb9572",
+        "hash": "a2446d2c",
+        "encoded": "-%20**Purpose**:%20Account%20management%20and%20fund%20transfers",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "fb9572",
+        "hash": "e585071d",
+        "encoded": "-%20**Endpoints**:%20Account%20balances,%20transfers,%20statements",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "fb9572",
+        "hash": "569a2693",
+        "encoded": "-%20**Features**:%20Mock%20account%20data%20with%20realistic%20responses",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "fb9572",
+        "hash": "a6bb0c63",
+        "encoded": "-%20**Security**:%20Encrypted%20communication,%20API%20key%20authentication",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "fb9572",
+        "hash": "6b0c49e9",
+        "encoded": "###%20Mock%20Services",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "fb9572",
+        "hash": "11b32f32",
+        "encoded": "-%20**Development%20Mode**:%20%60USE_MOCK_SERVICES=true%60",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "fb9572",
+        "hash": "3a1cf3b7",
+        "encoded": "-%20**Realistic%20Delays**:%20Network%20simulation%20(500ms-2s)",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "fb9572",
+        "hash": "a6ecb7f5",
+        "encoded": "-%20**Failure%20Simulation**:%20Random%20failures%20(2-5%25%20rate)",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "fb9572",
+        "hash": "f7ebb903",
+        "encoded": "-%20**Data%20Consistency**:%20Persistent%20mock%20data",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "fb9572",
+        "hash": "5112630b",
+        "encoded": "##%20%F0%9F%A7%AA%20Testing%20Strategy",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "fb9572",
+        "hash": "667efd45",
+        "encoded": "###%20Test%20Coverage",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "fb9572",
+        "hash": "1bf77ebd",
+        "encoded": "-%20**Unit%20Tests**:%20Controllers,%20services,%20middleware",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "fb9572",
+        "hash": "4beee92f",
+        "encoded": "-%20**Integration%20Tests**:%20API%20endpoints,%20database%20operations",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "fb9572",
+        "hash": "e1086961",
+        "encoded": "-%20**Security%20Tests**:%20Authentication,%20authorization,%20validation",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "fb9572",
+        "hash": "1ddb6336",
+        "encoded": "-%20**Performance%20Tests**:%20Load%20testing,%20timeout%20handling",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "fb9572",
+        "hash": "7b0ec6b3",
+        "encoded": "###%20Test%20Configuration",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "fb9572",
+        "hash": "bf937662",
+        "encoded": "-%20**Jest**:%20Test%20framework%20with%20coverage%20reporting",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "fb9572",
+        "hash": "5d808346",
+        "encoded": "-%20**Supertest**:%20HTTP%20assertion%20library",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "fb9572",
+        "hash": "5ed80cfe",
+        "encoded": "-%20**MongoDB%20Memory%20Server**:%20In-memory%20database%20for%20tests",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "fb9572",
+        "hash": "ca52a6a9",
+        "encoded": "-%20**Mock%20Services**:%20Isolated%20testing%20environment",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "fb9572",
+        "hash": "0b7ee919",
+        "encoded": "###%20Running%20Tests",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "fb9572",
+        "hash": "f10fd825",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "fb9572",
+        "hash": "25d3d21f",
+        "encoded": "#%20Run%20all%20tests",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "fb9572",
+        "hash": "f6af2df9",
+        "encoded": "npm%20test",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "fb9572",
+        "hash": "6cd88787",
+        "encoded": "#%20Run%20tests%20with%20coverage",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "fb9572",
+        "hash": "53df4a82",
+        "encoded": "npm%20run%20test:coverage",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "fb9572",
+        "hash": "08e8f1a9",
+        "encoded": "#%20Run%20tests%20in%20watch%20mode",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "fb9572",
+        "hash": "30c7f64b",
+        "encoded": "npm%20run%20test:watch",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "fb9572",
+        "hash": "67dc3588",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "fb9572",
+        "hash": "ad645a5b",
+        "encoded": "##%20%F0%9F%9A%80%20Deployment",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "fb9572",
+        "hash": "31a10db4",
+        "encoded": "###%20Docker%20Configuration",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "fb9572",
+        "hash": "580fb62e",
+        "encoded": "-%20**Multi-stage%20Build**:%20Optimized%20production%20image",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "fb9572",
+        "hash": "ba3c86fe",
+        "encoded": "-%20**Security**:%20Non-root%20user,%20minimal%20attack%20surface",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "fb9572",
+        "hash": "a04982f3",
+        "encoded": "-%20**Health%20Checks**:%20Container%20health%20monitoring",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "fb9572",
+        "hash": "59149ce7",
+        "encoded": "-%20**Environment**:%20Production-ready%20configuration",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "fb9572",
+        "hash": "2cc14a35",
+        "encoded": "###%20Docker%20Compose%20Services",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "fb9572",
+        "hash": "249ef6a5",
+        "encoded": "-%20**Backend%20API**:%20Main%20application%20service",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "fb9572",
+        "hash": "b254fd54",
+        "encoded": "-%20**MongoDB**:%20Database%20with%20persistence",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "fb9572",
+        "hash": "07527158",
+        "encoded": "-%20**Redis**:%20Session%20storage%20and%20caching",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "fb9572",
+        "hash": "c950c9d4",
+        "encoded": "-%20**Mongo%20Express**:%20Database%20administration%20UI",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "fb9572",
+        "hash": "aa57c278",
+        "encoded": "###%20Starting%20Services",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "fb9572",
+        "hash": "3a1797e1",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "fb9572",
+        "hash": "0edbeb3c",
+        "encoded": "#%20Development%20mode",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "fb9572",
+        "hash": "20beda4b",
+        "encoded": "npm%20run%20dev",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "fb9572",
+        "hash": "00f9574c",
+        "encoded": "#%20Production%20mode",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "fb9572",
+        "hash": "b33cc67a",
+        "encoded": "npm%20start",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "fb9572",
+        "hash": "ad2e777c",
+        "encoded": "#%20Docker%20deployment",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "fb9572",
+        "hash": "c238684c",
+        "encoded": "docker-compose%20up%20-d",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "fb9572",
+        "hash": "72e65106",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "fb9572",
+        "hash": "e087d17a",
+        "encoded": "##%20%F0%9F%93%88%20Monitoring%20&%20Logging",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "fb9572",
+        "hash": "e3a52bd6",
+        "encoded": "###%20Structured%20Logging",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "fb9572",
+        "hash": "aaa66ec4",
+        "encoded": "-%20**Winston**:%20Configurable%20log%20levels%20and%20formats",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "fb9572",
+        "hash": "a35f7be6",
+        "encoded": "-%20**Request%20Logging**:%20HTTP%20request/response%20tracking",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "fb9572",
+        "hash": "7e23151b",
+        "encoded": "-%20**Security%20Logging**:%20Authentication%20events,%20failed%20attempts",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "fb9572",
+        "hash": "9fd4fb1f",
+        "encoded": "-%20**Performance%20Logging**:%20External%20service%20response%20times",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "fb9572",
+        "hash": "50adaeae",
+        "encoded": "-%20**Error%20Logging**:%20Comprehensive%20error%20tracking",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "fb9572",
+        "hash": "50291c6a",
+        "encoded": "###%20Health%20Monitoring",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "fb9572",
+        "hash": "af8f7be4",
+        "encoded": "-%20**Health%20Endpoints**:%20Multiple%20health%20check%20types",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "fb9572",
+        "hash": "10f998fe",
+        "encoded": "-%20**Service%20Status**:%20External%20service%20monitoring",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "fb9572",
+        "hash": "c390503d",
+        "encoded": "-%20**Database%20Health**:%20Connection%20status%20monitoring",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "fb9572",
+        "hash": "f270fcc0",
+        "encoded": "-%20**Performance%20Metrics**:%20Response%20time%20tracking",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "fb9572",
+        "hash": "9a54c997",
+        "encoded": "##%20%F0%9F%94%A7%20Configuration",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "fb9572",
+        "hash": "53fb9c4e",
+        "encoded": "###%20Environment%20Variables",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "fb9572",
+        "hash": "4f247c5f",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "fb9572",
+        "hash": "99d0cef0",
+        "encoded": "#%20Server%20Configuration",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "fb9572",
+        "hash": "b66a2c44",
+        "encoded": "PORT=3001",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "fb9572",
+        "hash": "feaa6b62",
+        "encoded": "NODE_ENV=production",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "fb9572",
+        "hash": "7d6a3bde",
+        "encoded": "#%20Database",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "fb9572",
+        "hash": "36935016",
+        "encoded": "MONGODB_URI=mongodb://localhost:27017/ncr-atleos-atm",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "fb9572",
+        "hash": "f2ae8a9e",
+        "encoded": "#%20Authentication",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "fb9572",
+        "hash": "48865134",
+        "encoded": "JWT_SECRET=your-secret-key",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "fb9572",
+        "hash": "f5ef5ca7",
+        "encoded": "JWT_EXPIRES_IN=1h",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "fb9572",
+        "hash": "31e14bb2",
+        "encoded": "#%20External%20Services",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "fb9572",
+        "hash": "4abd9151",
+        "encoded": "USE_MOCK_SERVICES=true",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "fb9572",
+        "hash": "f68ced8f",
+        "encoded": "ATM_STAGING_SERVICE_URL=https://api.atm-staging.example.com",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "fb9572",
+        "hash": "a5bb4d5c",
+        "encoded": "CORE_BANKING_SERVICE_URL=https://api.core-banking.example.com",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "fb9572",
+        "hash": "b9a8d466",
+        "encoded": "#%20Security",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "fb9572",
+        "hash": "0850d644",
+        "encoded": "ALLOWED_ORIGINS=http://localhost:3000",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "fb9572",
+        "hash": "8875d1a1",
+        "encoded": "RATE_LIMIT_MAX_REQUESTS=100",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "fb9572",
+        "hash": "0309a247",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "fb9572",
+        "hash": "d6e5ac08",
+        "encoded": "##%20%F0%9F%8E%AF%20User%20Story%20Implementation",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "fb9572",
+        "hash": "49da0c8c",
+        "encoded": "The%20backend%20fully%20implements%20all%20user%20stories%20from%20the%20provided%20context:",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "fb9572",
+        "hash": "8709d449",
+        "encoded": "###%20E2-S3:%20Stage%20Withdrawal%20Transaction",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "fb9572",
+        "hash": "c51169f4",
+        "encoded": "%E2%9C%85%20**Implemented**:%20%60POST%20/api/atm/transactions/withdrawal%60",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "fb9572",
+        "hash": "cab9c1e6",
+        "encoded": "-%20Secure%20card%20token%20validation",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "fb9572",
+        "hash": "4f95a4ca",
+        "encoded": "-%20Amount%20validation%20and%20limits",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "fb9572",
+        "hash": "1f617b3b",
+        "encoded": "-%20ATM%20staging%20service%20integration",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "fb9572",
+        "hash": "5b78e3db",
+        "encoded": "-%20Transaction%20status%20tracking",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "fb9572",
+        "hash": "c4e8cfbf",
+        "encoded": "###%20E2-S4:%20Stage%20Deposit%20Transaction",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "fb9572",
+        "hash": "e0caa1c6",
+        "encoded": "%E2%9C%85%20**Implemented**:%20%60POST%20/api/atm/transactions/deposit%60",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "fb9572",
+        "hash": "0afc53bd",
+        "encoded": "-%20Card%20details%20validation",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "fb9572",
+        "hash": "288318cb",
+        "encoded": "-%20Optional%20amount%20handling",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "fb9572",
+        "hash": "be3cf33e",
+        "encoded": "-%20Staging%20service%20integration",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "fb9572",
+        "hash": "eb11e66c",
+        "encoded": "-%20Error%20handling%20and%20timeouts",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "fb9572",
+        "hash": "5e2ec999",
+        "encoded": "###%20E2-S6:%20ATM%20Staging%20Service%20Integration",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "fb9572",
+        "hash": "34411a87",
+        "encoded": "%E2%9C%85%20**Implemented**:%20Complete%20service%20client",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "fb9572",
+        "hash": "f7200c00",
+        "encoded": "-%20Secure%20HTTPS%20communication",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "fb9572",
+        "hash": "5856eeb9",
+        "encoded": "-%2010-second%20timeout%20handling",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "fb9572",
+        "hash": "d45a90b7",
+        "encoded": "-%20Comprehensive%20error%20handling",
+        "prevChunkIds": []
+      },
+      "311": {
+        "chunkId": "fb9572",
+        "hash": "bdee13b1",
+        "encoded": "-%20Mock%20implementation%20for%20development",
+        "prevChunkIds": []
+      },
+      "313": {
+        "chunkId": "fb9572",
+        "hash": "6f981b06",
+        "encoded": "###%20E3-S2:%20Fund%20Transfer",
+        "prevChunkIds": []
+      },
+      "314": {
+        "chunkId": "fb9572",
+        "hash": "c6438f60",
+        "encoded": "%E2%9C%85%20**Implemented**:%20%60POST%20/api/banking/transfers%60",
+        "prevChunkIds": []
+      },
+      "315": {
+        "chunkId": "fb9572",
+        "hash": "16bb0351",
+        "encoded": "-%20Account%20validation",
+        "prevChunkIds": []
+      },
+      "316": {
+        "chunkId": "fb9572",
+        "hash": "547d6cac",
+        "encoded": "-%20Amount%20limits%20and%20validation",
+        "prevChunkIds": []
+      },
+      "317": {
+        "chunkId": "fb9572",
+        "hash": "3ba705e0",
+        "encoded": "-%20Core%20banking%20service%20integration",
+        "prevChunkIds": []
+      },
+      "318": {
+        "chunkId": "fb9572",
+        "hash": "5cb6fddd",
+        "encoded": "-%20Transaction%20tracking%20and%20audit",
+        "prevChunkIds": []
+      },
+      "320": {
+        "chunkId": "fb9572",
+        "hash": "0242c68c",
+        "encoded": "###%20Authentication%20&%20Session%20Management",
+        "prevChunkIds": []
+      },
+      "321": {
+        "chunkId": "fb9572",
+        "hash": "cdf5b6b2",
+        "encoded": "%E2%9C%85%20**Implemented**:%20Complete%20auth%20system",
+        "prevChunkIds": []
+      },
+      "322": {
+        "chunkId": "fb9572",
+        "hash": "f7d95762",
+        "encoded": "-%20PIN-based%20authentication",
+        "prevChunkIds": []
+      },
+      "323": {
+        "chunkId": "fb9572",
+        "hash": "2ef981a1",
+        "encoded": "-%20JWT%20token%20management",
+        "prevChunkIds": []
+      },
+      "324": {
+        "chunkId": "fb9572",
+        "hash": "eb55a34d",
+        "encoded": "-%20Session%20tracking",
+        "prevChunkIds": []
+      },
+      "325": {
+        "chunkId": "fb9572",
+        "hash": "745c3915",
+        "encoded": "-%20Security%20logging",
+        "prevChunkIds": []
+      },
+      "327": {
+        "chunkId": "fb9572",
+        "hash": "faecdc61",
+        "encoded": "##%20%F0%9F%94%AE%20Future%20Enhancements",
+        "prevChunkIds": []
+      },
+      "329": {
+        "chunkId": "fb9572",
+        "hash": "d5afa610",
+        "encoded": "###%20Planned%20Features",
+        "prevChunkIds": []
+      },
+      "330": {
+        "chunkId": "fb9572",
+        "hash": "6c25268d",
+        "encoded": "1.%20**Real%20Service%20Integration**:%20Replace%20mock%20services%20with%20actual%20APIs",
+        "prevChunkIds": []
+      },
+      "331": {
+        "chunkId": "fb9572",
+        "hash": "b5da683b",
+        "encoded": "2.%20**Advanced%20Monitoring**:%20APM%20integration%20(New%20Relic,%20DataDog)",
+        "prevChunkIds": []
+      },
+      "332": {
+        "chunkId": "fb9572",
+        "hash": "cd9432e1",
+        "encoded": "3.%20**Caching%20Layer**:%20Redis%20for%20performance%20optimization",
+        "prevChunkIds": []
+      },
+      "333": {
+        "chunkId": "fb9572",
+        "hash": "9f5cc0ca",
+        "encoded": "4.%20**Message%20Queues**:%20Async%20processing%20with%20Bull/Redis",
+        "prevChunkIds": []
+      },
+      "334": {
+        "chunkId": "fb9572",
+        "hash": "a69ee98e",
+        "encoded": "5.%20**API%20Documentation**:%20OpenAPI/Swagger%20integration",
+        "prevChunkIds": []
+      },
+      "335": {
+        "chunkId": "fb9572",
+        "hash": "ac390c2c",
+        "encoded": "6.%20**Load%20Balancing**:%20Multi-instance%20deployment%20support",
+        "prevChunkIds": []
+      },
+      "337": {
+        "chunkId": "fb9572",
+        "hash": "811df0c5",
+        "encoded": "###%20Security%20Enhancements",
+        "prevChunkIds": []
+      },
+      "338": {
+        "chunkId": "fb9572",
+        "hash": "59c3b428",
+        "encoded": "1.%20**2FA%20Support**:%20Two-factor%20authentication",
+        "prevChunkIds": []
+      },
+      "339": {
+        "chunkId": "fb9572",
+        "hash": "9ae0393c",
+        "encoded": "2.%20**Device%20Fingerprinting**:%20Enhanced%20security%20tracking",
+        "prevChunkIds": []
+      },
+      "340": {
+        "chunkId": "fb9572",
+        "hash": "5e4ee4d7",
+        "encoded": "3.%20**Fraud%20Detection**:%20Transaction%20pattern%20analysis",
+        "prevChunkIds": []
+      },
+      "341": {
+        "chunkId": "fb9572",
+        "hash": "95d7ee8b",
+        "encoded": "4.%20**Encryption**:%20End-to-end%20data%20encryption",
+        "prevChunkIds": []
+      },
+      "343": {
+        "chunkId": "fb9572",
+        "hash": "79638778",
+        "encoded": "##%20%F0%9F%93%9E%20Support",
+        "prevChunkIds": []
+      },
+      "345": {
+        "chunkId": "fb9572",
+        "hash": "bcb8278c",
+        "encoded": "For%20questions%20or%20issues%20with%20the%20backend%20services:",
+        "prevChunkIds": []
+      },
+      "347": {
+        "chunkId": "fb9572",
+        "hash": "d6637737",
+        "encoded": "1.%20**Development**:%20Check%20logs%20in%20%60./logs/%60%20directory",
+        "prevChunkIds": []
+      },
+      "348": {
+        "chunkId": "fb9572",
+        "hash": "897a0489",
+        "encoded": "2.%20**Testing**:%20Run%20%60npm%20test%60%20for%20validation",
+        "prevChunkIds": []
+      },
+      "349": {
+        "chunkId": "fb9572",
+        "hash": "ae5ab282",
+        "encoded": "3.%20**Health%20Check**:%20Visit%20%60http://localhost:3001/api/health%60",
+        "prevChunkIds": []
+      },
+      "350": {
+        "chunkId": "fb9572",
+        "hash": "f29791cc",
+        "encoded": "4.%20**Documentation**:%20Refer%20to%20inline%20code%20comments",
+        "prevChunkIds": []
+      },
+      "352": {
+        "chunkId": "fb9572",
+        "hash": "74673ceb",
+        "encoded": "##%20%F0%9F%8E%89%20Conclusion",
+        "prevChunkIds": []
+      },
+      "354": {
+        "chunkId": "fb9572",
+        "hash": "a48a6e8e",
+        "encoded": "The%20NCR%20ATLEOS%20ATM%20Backend%20Services%20provide%20a%20robust,%20secure,%20and%20scalable%20foundation%20for%20the%20mobile%20ATM%20application.%20With%20comprehensive%20testing,%20security%20features,%20and%20production-ready%20deployment%20configuration,%20the%20backend%20is%20ready%20to%20support%20the%20complete%20customer%20journey%20from%20authentication%20to%20transaction%20completion.",
+        "prevChunkIds": []
+      },
+      "356": {
+        "chunkId": "fb9572",
+        "hash": "a5301fba",
+        "encoded": "**Key%20Achievements:**",
+        "prevChunkIds": []
+      },
+      "357": {
+        "chunkId": "fb9572",
+        "hash": "0741e1ac",
+        "encoded": "-%20%E2%9C%85%20100%25%20User%20Story%20Coverage",
+        "prevChunkIds": []
+      },
+      "358": {
+        "chunkId": "fb9572",
+        "hash": "aef78f30",
+        "encoded": "-%20%E2%9C%85%20Production-Ready%20Security",
+        "prevChunkIds": []
+      },
+      "359": {
+        "chunkId": "fb9572",
+        "hash": "1b993b20",
+        "encoded": "-%20%E2%9C%85%20Comprehensive%20Testing%20Suite",
+        "prevChunkIds": []
+      },
+      "360": {
+        "chunkId": "fb9572",
+        "hash": "c13b19f4",
+        "encoded": "-%20%E2%9C%85%20Docker%20Deployment%20Ready",
+        "prevChunkIds": []
+      },
+      "361": {
+        "chunkId": "fb9572",
+        "hash": "7eb7d469",
+        "encoded": "-%20%E2%9C%85%20Extensive%20Documentation",
+        "prevChunkIds": []
+      },
+      "362": {
+        "chunkId": "fb9572",
+        "hash": "59dc5c5e",
+        "encoded": "-%20%E2%9C%85%20Mock%20Services%20for%20Development",
+        "prevChunkIds": []
+      },
+      "363": {
+        "chunkId": "fb9572",
+        "hash": "d4c1d4b1",
+        "encoded": "-%20%E2%9C%85%20Real-time%20Health%20Monitoring",
+        "prevChunkIds": []
+      },
+      "364": {
+        "chunkId": "fb9572",
+        "hash": "3354d2db",
+        "encoded": "-%20%E2%9C%85%20Structured%20Logging",
+        "prevChunkIds": []
+      },
+      "365": {
+        "chunkId": "fb9572",
+        "hash": "db0d9afc",
+        "encoded": "-%20%E2%9C%85%20Error%20Handling%20&%20Recovery",
+        "prevChunkIds": []
+      },
+      "367": {
+        "chunkId": "fb9572",
+        "hash": "0e8936d7",
+        "encoded": "The%20backend%20is%20now%20ready%20for%20integration%20with%20the%20existing%20frontend%20and%20can%20be%20extended%20to%20support%20additional%20features%20as%20the%20application%20grows.",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

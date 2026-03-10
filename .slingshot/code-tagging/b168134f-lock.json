@@ -1,0 +1,327 @@
+{
+  "backend/tests/routes/health.test.js": {
+    "filename": "health.test.js",
+    "path": "backend/tests/routes/health.test.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "55d734": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134871,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "d1d54847",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "55d734",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "55d734",
+        "hash": "aa2ec3a5",
+        "encoded": "*%20Health%20routes%20tests",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "55d734",
+        "hash": "fe772869",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "55d734",
+        "hash": "e4af7bc2",
+        "encoded": "const%20request%20=%20require('supertest');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "55d734",
+        "hash": "b2e2331e",
+        "encoded": "const%20app%20=%20require('../../src/server');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "55d734",
+        "hash": "95a4af2a",
+        "encoded": "const%20%7B%20HTTP_STATUS%20%7D%20=%20require('../../src/config/constants');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "55d734",
+        "hash": "f7edc506",
+        "encoded": "describe('Health%20Routes',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "55d734",
+        "hash": "efca4a54",
+        "encoded": "describe('GET%20/api/health',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "55d734",
+        "hash": "4c843227",
+        "encoded": "it('should%20return%20basic%20health%20check',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "55d734",
+        "hash": "d2246ed1",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "55d734",
+        "hash": "185f5dbd",
+        "encoded": ".get('/api/health')",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "55d734",
+        "hash": "26c17e07",
+        "encoded": ".expect(HTTP_STATUS.OK);",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "55d734",
+        "hash": "bb8bf27d",
+        "encoded": "expect(response.body.status).toBe('OK');",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "55d734",
+        "hash": "dfc7ca31",
+        "encoded": "expect(response.body.timestamp).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "55d734",
+        "hash": "96c85ecc",
+        "encoded": "expect(response.body.uptime).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "55d734",
+        "hash": "89aefd07",
+        "encoded": "expect(response.body.services).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "55d734",
+        "hash": "1b686da9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "55d734",
+        "hash": "12c90b0b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "55d734",
+        "hash": "f5fae9d5",
+        "encoded": "describe('GET%20/api/health/detailed',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "55d734",
+        "hash": "4cbfa058",
+        "encoded": "it('should%20return%20detailed%20health%20information',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "55d734",
+        "hash": "fa6c9773",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "55d734",
+        "hash": "0da17a12",
+        "encoded": ".get('/api/health/detailed')",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "55d734",
+        "hash": "9fbe53c0",
+        "encoded": ".expect(HTTP_STATUS.OK);",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "55d734",
+        "hash": "58a9416c",
+        "encoded": "expect(response.body.status).toBe('OK');",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "55d734",
+        "hash": "4f7da275",
+        "encoded": "expect(response.body.memory).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "55d734",
+        "hash": "b1ddd9d6",
+        "encoded": "expect(response.body.cpu).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "55d734",
+        "hash": "38d518c1",
+        "encoded": "expect(response.body.services).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "55d734",
+        "hash": "d57b1930",
+        "encoded": "expect(response.body.configuration).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "55d734",
+        "hash": "84faadb9",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "55d734",
+        "hash": "8522c245",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "55d734",
+        "hash": "847137b3",
+        "encoded": "describe('GET%20/api/health/ready',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "55d734",
+        "hash": "c5813d07",
+        "encoded": "it('should%20return%20readiness%20status',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "55d734",
+        "hash": "e226f5c3",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "55d734",
+        "hash": "2e92df5c",
+        "encoded": ".get('/api/health/ready')",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "55d734",
+        "hash": "65daf585",
+        "encoded": ".expect(HTTP_STATUS.OK);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "55d734",
+        "hash": "eb236ec0",
+        "encoded": "expect(response.body.status).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "55d734",
+        "hash": "a82e7b97",
+        "encoded": "expect(response.body.checks).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "55d734",
+        "hash": "39fe36a7",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "55d734",
+        "hash": "816d4a12",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "55d734",
+        "hash": "45d0a7b1",
+        "encoded": "describe('GET%20/api/health/live',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "55d734",
+        "hash": "9629bb1e",
+        "encoded": "it('should%20return%20liveness%20status',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "55d734",
+        "hash": "cbafd9f7",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "55d734",
+        "hash": "b35b46c0",
+        "encoded": ".get('/api/health/live')",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "55d734",
+        "hash": "79c07ea4",
+        "encoded": ".expect(HTTP_STATUS.OK);",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "55d734",
+        "hash": "421a8bdf",
+        "encoded": "expect(response.body.status).toBe('ALIVE');",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "55d734",
+        "hash": "c34a44ef",
+        "encoded": "expect(response.body.uptime).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "55d734",
+        "hash": "90a4ae38",
+        "encoded": "expect(response.body.pid).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "55d734",
+        "hash": "4f8dfc51",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "55d734",
+        "hash": "a7e8e737",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "55d734",
+        "hash": "9d5cdb20",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

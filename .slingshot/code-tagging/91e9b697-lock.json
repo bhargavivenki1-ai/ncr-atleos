@@ -1,0 +1,1677 @@
+{
+  "backend/src/models/User.js": {
+    "filename": "User.js",
+    "path": "backend/src/models/User.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "4ab096": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134259,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "d8fc6d5d",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "4ab096",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "4ab096",
+        "hash": "381952b1",
+        "encoded": "*%20User%20model%20for%20MongoDB",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "4ab096",
+        "hash": "c543d174",
+        "encoded": "*%20Defines%20user%20schema%20with%20authentication%20and%20session%20management",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "4ab096",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "4ab096",
+        "hash": "98ff4a97",
+        "encoded": "const%20mongoose%20=%20require('mongoose');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "4ab096",
+        "hash": "f90f082e",
+        "encoded": "const%20bcrypt%20=%20require('bcryptjs');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "4ab096",
+        "hash": "b84c7f56",
+        "encoded": "const%20%7B%20PIN_CONFIG,%20SESSION_CONFIG%20%7D%20=%20require('../config/constants');",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "4ab096",
+        "hash": "852c839d",
+        "encoded": "const%20userSchema%20=%20new%20mongoose.Schema(%7B",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "4ab096",
+        "hash": "d04f8bdb",
+        "encoded": "//%20User%20identification",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "4ab096",
+        "hash": "3f2fac25",
+        "encoded": "userId:%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "4ab096",
+        "hash": "a4ae2d49",
+        "encoded": "type:%20String,",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "4ab096",
+        "hash": "3e880a0f",
+        "encoded": "required:%20true,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "4ab096",
+        "hash": "fb4923a9",
+        "encoded": "unique:%20true,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "4ab096",
+        "hash": "bf388c38",
+        "encoded": "trim:%20true,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "4ab096",
+        "hash": "81388be9",
+        "encoded": "minlength:%205,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "4ab096",
+        "hash": "f6a9f9ff",
+        "encoded": "maxlength:%2050",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "4ab096",
+        "hash": "1cba0cb6",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "4ab096",
+        "hash": "f31adf86",
+        "encoded": "//%20User%20details",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "4ab096",
+        "hash": "c1b79b85",
+        "encoded": "name:%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "4ab096",
+        "hash": "6a6bff83",
+        "encoded": "type:%20String,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "4ab096",
+        "hash": "1aecde6a",
+        "encoded": "required:%20true,",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "4ab096",
+        "hash": "3fbd08bc",
+        "encoded": "trim:%20true,",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "4ab096",
+        "hash": "e841a83f",
+        "encoded": "minlength:%202,",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "4ab096",
+        "hash": "5a590482",
+        "encoded": "maxlength:%20100",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "4ab096",
+        "hash": "3b955d05",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "4ab096",
+        "hash": "0cb817e6",
+        "encoded": "//%20Authentication",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "4ab096",
+        "hash": "4917d01f",
+        "encoded": "pin:%20%7B",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "4ab096",
+        "hash": "17dc1dcc",
+        "encoded": "type:%20String,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "4ab096",
+        "hash": "afe4fa46",
+        "encoded": "required:%20true,",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "4ab096",
+        "hash": "fe6086b9",
+        "encoded": "validate:%20%7B",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "4ab096",
+        "hash": "b9891f8c",
+        "encoded": "validator:%20function(pin)%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "4ab096",
+        "hash": "0f3e3d36",
+        "encoded": "return%20PIN_CONFIG.PATTERN.test(pin);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "4ab096",
+        "hash": "6bb93cd8",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "4ab096",
+        "hash": "375c2022",
+        "encoded": "message:%20'PIN%20must%20be%204%20digits'",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "4ab096",
+        "hash": "1b754c76",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "4ab096",
+        "hash": "fe8033d3",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "4ab096",
+        "hash": "df183a23",
+        "encoded": "//%20Account%20status",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "4ab096",
+        "hash": "3feb3eb1",
+        "encoded": "isActive:%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "4ab096",
+        "hash": "38a0e799",
+        "encoded": "type:%20Boolean,",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "4ab096",
+        "hash": "9b95afc4",
+        "encoded": "default:%20true",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "4ab096",
+        "hash": "0f7a0d79",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "4ab096",
+        "hash": "56f4a468",
+        "encoded": "isLocked:%20%7B",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "4ab096",
+        "hash": "92307e09",
+        "encoded": "type:%20Boolean,",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "4ab096",
+        "hash": "e762b710",
+        "encoded": "default:%20false",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "4ab096",
+        "hash": "41dd60dc",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "4ab096",
+        "hash": "777fef28",
+        "encoded": "//%20Failed%20login%20attempts",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "4ab096",
+        "hash": "d3239d23",
+        "encoded": "failedLoginAttempts:%20%7B",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "4ab096",
+        "hash": "f9ebe41f",
+        "encoded": "type:%20Number,",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "4ab096",
+        "hash": "643c29b6",
+        "encoded": "default:%200,",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "4ab096",
+        "hash": "31cf7400",
+        "encoded": "max:%20PIN_CONFIG.MAX_ATTEMPTS",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "4ab096",
+        "hash": "a56419ed",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "4ab096",
+        "hash": "8e7d18d9",
+        "encoded": "lockUntil:%20%7B",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "4ab096",
+        "hash": "0a3159d2",
+        "encoded": "type:%20Date",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "4ab096",
+        "hash": "86a459e7",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "4ab096",
+        "hash": "317f3510",
+        "encoded": "//%20Session%20management",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "4ab096",
+        "hash": "3e25e157",
+        "encoded": "currentSession:%20%7B",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "4ab096",
+        "hash": "8c9bd718",
+        "encoded": "token:%20String,",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "4ab096",
+        "hash": "7f56ee43",
+        "encoded": "createdAt:%20Date,",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "4ab096",
+        "hash": "a281d5e5",
+        "encoded": "expiresAt:%20Date,",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "4ab096",
+        "hash": "22a36677",
+        "encoded": "ipAddress:%20String,",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "4ab096",
+        "hash": "a81a1719",
+        "encoded": "userAgent:%20String",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "4ab096",
+        "hash": "d5aefc15",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "4ab096",
+        "hash": "f1bc2df1",
+        "encoded": "//%20Refresh%20tokens",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "4ab096",
+        "hash": "6e4975fe",
+        "encoded": "refreshTokens:%20%5B%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "4ab096",
+        "hash": "9ce4b56c",
+        "encoded": "token:%20String,",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "4ab096",
+        "hash": "d2fc9d1b",
+        "encoded": "createdAt:%20Date,",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "4ab096",
+        "hash": "d86d3b91",
+        "encoded": "expiresAt:%20Date,",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "4ab096",
+        "hash": "625c58d7",
+        "encoded": "ipAddress:%20String,",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "4ab096",
+        "hash": "4ad8f04c",
+        "encoded": "userAgent:%20String",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "4ab096",
+        "hash": "926a4531",
+        "encoded": "%7D%5D,",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "4ab096",
+        "hash": "fe6368f3",
+        "encoded": "//%20User%20accounts",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "4ab096",
+        "hash": "17a6eabc",
+        "encoded": "accounts:%20%5B%7B",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "4ab096",
+        "hash": "d13056f5",
+        "encoded": "accountId:%20%7B",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "4ab096",
+        "hash": "083ca437",
+        "encoded": "type:%20String,",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "4ab096",
+        "hash": "3a21d809",
+        "encoded": "required:%20true",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "4ab096",
+        "hash": "4aad17c4",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "4ab096",
+        "hash": "f9a6b8b7",
+        "encoded": "accountType:%20%7B",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "4ab096",
+        "hash": "5b5a3215",
+        "encoded": "type:%20String,",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "4ab096",
+        "hash": "efacf2b0",
+        "encoded": "required:%20true,",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "4ab096",
+        "hash": "e6496bb0",
+        "encoded": "enum:%20%5B'savings',%20'checking',%20'credit',%20'loan'%5D",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "4ab096",
+        "hash": "5f475dcc",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "4ab096",
+        "hash": "3be734d5",
+        "encoded": "accountName:%20%7B",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "4ab096",
+        "hash": "bb99d2ee",
+        "encoded": "type:%20String,",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "4ab096",
+        "hash": "24fd7f0d",
+        "encoded": "required:%20true",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "4ab096",
+        "hash": "f460c207",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "4ab096",
+        "hash": "7a109350",
+        "encoded": "accountNumber:%20%7B",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "4ab096",
+        "hash": "7a50ba81",
+        "encoded": "type:%20String,",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "4ab096",
+        "hash": "24184648",
+        "encoded": "required:%20true",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "4ab096",
+        "hash": "abb08ef2",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "4ab096",
+        "hash": "cf3bc61b",
+        "encoded": "balance:%20%7B",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "4ab096",
+        "hash": "5978f3c0",
+        "encoded": "type:%20Number,",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "4ab096",
+        "hash": "33e55640",
+        "encoded": "required:%20true,",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "4ab096",
+        "hash": "6530a3ca",
+        "encoded": "min:%200",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "4ab096",
+        "hash": "cc6e78e5",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "4ab096",
+        "hash": "88d1ff12",
+        "encoded": "isActive:%20%7B",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "4ab096",
+        "hash": "2fa1edcf",
+        "encoded": "type:%20Boolean,",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "4ab096",
+        "hash": "371b121f",
+        "encoded": "default:%20true",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "4ab096",
+        "hash": "c146bd79",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "4ab096",
+        "hash": "1c447d1a",
+        "encoded": "%7D%5D,",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "4ab096",
+        "hash": "3d8a59fe",
+        "encoded": "//%20Transaction%20limits",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "4ab096",
+        "hash": "8d78b4a1",
+        "encoded": "dailyLimits:%20%7B",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "4ab096",
+        "hash": "211458a5",
+        "encoded": "withdrawal:%20%7B",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "4ab096",
+        "hash": "847aee51",
+        "encoded": "type:%20Number,",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "4ab096",
+        "hash": "c52ec2c3",
+        "encoded": "default:%201000.00",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "4ab096",
+        "hash": "b6c82857",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "4ab096",
+        "hash": "70658bdb",
+        "encoded": "transfer:%20%7B",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "4ab096",
+        "hash": "fd8b39a8",
+        "encoded": "type:%20Number,",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "4ab096",
+        "hash": "437fa3ab",
+        "encoded": "default:%205000.00",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "4ab096",
+        "hash": "0ca73160",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "4ab096",
+        "hash": "d5084bcd",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "4ab096",
+        "hash": "76e7df43",
+        "encoded": "//%20Usage%20tracking",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "4ab096",
+        "hash": "f15996ad",
+        "encoded": "lastLogin:%20Date,",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "4ab096",
+        "hash": "a6946bd0",
+        "encoded": "lastActivity:%20Date,",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "4ab096",
+        "hash": "7b48dbf8",
+        "encoded": "loginCount:%20%7B",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "4ab096",
+        "hash": "3456770a",
+        "encoded": "type:%20Number,",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "4ab096",
+        "hash": "6a9f7d72",
+        "encoded": "default:%200",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "4ab096",
+        "hash": "5df36d4f",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "4ab096",
+        "hash": "65714c15",
+        "encoded": "//%20Preferences",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "4ab096",
+        "hash": "6af57514",
+        "encoded": "preferences:%20%7B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "4ab096",
+        "hash": "7b4ad76d",
+        "encoded": "language:%20%7B",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "4ab096",
+        "hash": "ce42d3df",
+        "encoded": "type:%20String,",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "4ab096",
+        "hash": "89257c87",
+        "encoded": "default:%20'en'",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "4ab096",
+        "hash": "89469418",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "4ab096",
+        "hash": "e71f959c",
+        "encoded": "notifications:%20%7B",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "4ab096",
+        "hash": "8e068af9",
+        "encoded": "type:%20Boolean,",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "4ab096",
+        "hash": "0525c1dc",
+        "encoded": "default:%20true",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "4ab096",
+        "hash": "5523af03",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "4ab096",
+        "hash": "e11a1f23",
+        "encoded": "theme:%20%7B",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "4ab096",
+        "hash": "502e80fe",
+        "encoded": "type:%20String,",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "4ab096",
+        "hash": "f7c69fab",
+        "encoded": "enum:%20%5B'light',%20'dark'%5D,",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "4ab096",
+        "hash": "ca0e11b5",
+        "encoded": "default:%20'dark'",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "4ab096",
+        "hash": "48cab207",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "4ab096",
+        "hash": "2d25e64b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "4ab096",
+        "hash": "46a45160",
+        "encoded": "%7D,%20%7B",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "4ab096",
+        "hash": "67c47681",
+        "encoded": "timestamps:%20true,",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "4ab096",
+        "hash": "6e774764",
+        "encoded": "toJSON:%20%7B",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "4ab096",
+        "hash": "9ca89a3e",
+        "encoded": "transform:%20function(doc,%20ret)%20%7B",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "4ab096",
+        "hash": "900b0297",
+        "encoded": "delete%20ret.pin;",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "4ab096",
+        "hash": "6f335f0d",
+        "encoded": "delete%20ret.refreshTokens;",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "4ab096",
+        "hash": "e36bdd79",
+        "encoded": "delete%20ret.__v;",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "4ab096",
+        "hash": "d7a6a2c1",
+        "encoded": "return%20ret;",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "4ab096",
+        "hash": "0b3cc65a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "4ab096",
+        "hash": "c2938672",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "4ab096",
+        "hash": "e1561d68",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "4ab096",
+        "hash": "1d55b849",
+        "encoded": "//%20Indexes%20for%20performance",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "4ab096",
+        "hash": "b8d2bb48",
+        "encoded": "userSchema.index(%7B%20userId:%201%20%7D,%20%7B%20unique:%20true%20%7D);",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "4ab096",
+        "hash": "255b53fa",
+        "encoded": "userSchema.index(%7B%20'currentSession.token':%201%20%7D);",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "4ab096",
+        "hash": "50f29dc1",
+        "encoded": "userSchema.index(%7B%20'refreshTokens.token':%201%20%7D);",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "4ab096",
+        "hash": "fc1ceb61",
+        "encoded": "userSchema.index(%7B%20isActive:%201,%20isLocked:%201%20%7D);",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "4ab096",
+        "hash": "e1d0a7fc",
+        "encoded": "//%20Virtual%20for%20account%20lock%20status",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "4ab096",
+        "hash": "77e80d8d",
+        "encoded": "userSchema.virtual('isAccountLocked').get(function()%20%7B",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "4ab096",
+        "hash": "9577b45b",
+        "encoded": "return%20!!(this.isLocked%20&&%20this.lockUntil%20&&%20this.lockUntil%20%3E%20Date.now());",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "4ab096",
+        "hash": "4c5b7b1d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "4ab096",
+        "hash": "07cde7e3",
+        "encoded": "//%20Pre-save%20middleware%20to%20hash%20PIN",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "4ab096",
+        "hash": "0d51a93c",
+        "encoded": "userSchema.pre('save',%20async%20function(next)%20%7B",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "4ab096",
+        "hash": "3b856518",
+        "encoded": "//%20Only%20hash%20the%20PIN%20if%20it%20has%20been%20modified%20(or%20is%20new)",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "4ab096",
+        "hash": "1fff18e8",
+        "encoded": "if%20(!this.isModified('pin'))%20return%20next();",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "4ab096",
+        "hash": "52895bb4",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "4ab096",
+        "hash": "aa4b47d1",
+        "encoded": "//%20Hash%20PIN%20with%20cost%20of%2012",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "4ab096",
+        "hash": "2c27d23e",
+        "encoded": "const%20saltRounds%20=%20parseInt(process.env.BCRYPT_ROUNDS)%20%7C%7C%2012;",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "4ab096",
+        "hash": "f903c752",
+        "encoded": "this.pin%20=%20await%20bcrypt.hash(this.pin,%20saltRounds);",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "4ab096",
+        "hash": "fc8e735c",
+        "encoded": "next();",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "4ab096",
+        "hash": "89e2166a",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "4ab096",
+        "hash": "f119e2ad",
+        "encoded": "next(error);",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "4ab096",
+        "hash": "ad066da5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "4ab096",
+        "hash": "4607d1e0",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "4ab096",
+        "hash": "b5770a3e",
+        "encoded": "//%20Instance%20method%20to%20check%20PIN",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "4ab096",
+        "hash": "7714cf6d",
+        "encoded": "userSchema.methods.checkPin%20=%20async%20function(candidatePin)%20%7B",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "4ab096",
+        "hash": "dd3ff0fe",
+        "encoded": "return%20bcrypt.compare(candidatePin,%20this.pin);",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "4ab096",
+        "hash": "eeec4a42",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "4ab096",
+        "hash": "56c25c11",
+        "encoded": "//%20Instance%20method%20to%20handle%20failed%20login",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "4ab096",
+        "hash": "587a0a6f",
+        "encoded": "userSchema.methods.handleFailedLogin%20=%20async%20function()%20%7B",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "4ab096",
+        "hash": "8e79beda",
+        "encoded": "this.failedLoginAttempts%20+=%201;",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "4ab096",
+        "hash": "357b2d0c",
+        "encoded": "//%20Lock%20account%20if%20max%20attempts%20reached",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "4ab096",
+        "hash": "e87572d5",
+        "encoded": "if%20(this.failedLoginAttempts%20%3E=%20PIN_CONFIG.MAX_ATTEMPTS)%20%7B",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "4ab096",
+        "hash": "c7d99bca",
+        "encoded": "this.isLocked%20=%20true;",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "4ab096",
+        "hash": "1d6abcfa",
+        "encoded": "this.lockUntil%20=%20new%20Date(Date.now()%20+%20PIN_CONFIG.LOCKOUT_DURATION);",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "4ab096",
+        "hash": "7cf402bb",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "4ab096",
+        "hash": "d14f5105",
+        "encoded": "await%20this.save();",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "4ab096",
+        "hash": "af1e89c4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "4ab096",
+        "hash": "1a80b792",
+        "encoded": "//%20Instance%20method%20to%20handle%20successful%20login",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "4ab096",
+        "hash": "e08ab7bf",
+        "encoded": "userSchema.methods.handleSuccessfulLogin%20=%20async%20function(sessionData)%20%7B",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "4ab096",
+        "hash": "334f33a4",
+        "encoded": "this.failedLoginAttempts%20=%200;",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "4ab096",
+        "hash": "51a5c619",
+        "encoded": "this.isLocked%20=%20false;",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "4ab096",
+        "hash": "cd35fc6c",
+        "encoded": "this.lockUntil%20=%20undefined;",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "4ab096",
+        "hash": "393b4e5b",
+        "encoded": "this.lastLogin%20=%20new%20Date();",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "4ab096",
+        "hash": "7d1596f4",
+        "encoded": "this.lastActivity%20=%20new%20Date();",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "4ab096",
+        "hash": "1fbb5292",
+        "encoded": "this.loginCount%20+=%201;",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "4ab096",
+        "hash": "d9b196e1",
+        "encoded": "//%20Set%20current%20session",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "4ab096",
+        "hash": "86f056da",
+        "encoded": "this.currentSession%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "4ab096",
+        "hash": "328812bb",
+        "encoded": "token:%20sessionData.token,",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "4ab096",
+        "hash": "b5f21a01",
+        "encoded": "createdAt:%20new%20Date(),",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "4ab096",
+        "hash": "02d2caf9",
+        "encoded": "expiresAt:%20new%20Date(Date.now()%20+%20SESSION_CONFIG.TIMEOUT),",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "4ab096",
+        "hash": "5404ab02",
+        "encoded": "ipAddress:%20sessionData.ipAddress,",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "4ab096",
+        "hash": "12037952",
+        "encoded": "userAgent:%20sessionData.userAgent",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "4ab096",
+        "hash": "bd48a214",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "4ab096",
+        "hash": "fbd6e58b",
+        "encoded": "await%20this.save();",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "4ab096",
+        "hash": "c3efc328",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "4ab096",
+        "hash": "636c5db0",
+        "encoded": "//%20Instance%20method%20to%20add%20refresh%20token",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "4ab096",
+        "hash": "db945dd7",
+        "encoded": "userSchema.methods.addRefreshToken%20=%20async%20function(tokenData)%20%7B",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "4ab096",
+        "hash": "b085b143",
+        "encoded": "//%20Remove%20old%20refresh%20tokens%20(keep%20only%20the%20most%20recent)",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "4ab096",
+        "hash": "42b1d5d8",
+        "encoded": "this.refreshTokens%20=%20this.refreshTokens.filter(",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "4ab096",
+        "hash": "7458ebf4",
+        "encoded": "token%20=%3E%20token.expiresAt%20%3E%20new%20Date()",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "4ab096",
+        "hash": "1daed9c6",
+        "encoded": ").slice(-4);%20//%20Keep%20max%205%20refresh%20tokens",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "4ab096",
+        "hash": "227ce9cd",
+        "encoded": "//%20Add%20new%20refresh%20token",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "4ab096",
+        "hash": "545b59c8",
+        "encoded": "this.refreshTokens.push(%7B",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "4ab096",
+        "hash": "d5086e4c",
+        "encoded": "token:%20tokenData.token,",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "4ab096",
+        "hash": "e50d7dd9",
+        "encoded": "createdAt:%20new%20Date(),",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "4ab096",
+        "hash": "12f5e573",
+        "encoded": "expiresAt:%20new%20Date(Date.now()%20+%20(7%20*%2024%20*%2060%20*%2060%20*%201000)),%20//%207%20days",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "4ab096",
+        "hash": "fa7a202b",
+        "encoded": "ipAddress:%20tokenData.ipAddress,",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "4ab096",
+        "hash": "167387db",
+        "encoded": "userAgent:%20tokenData.userAgent",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "4ab096",
+        "hash": "7617d487",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "4ab096",
+        "hash": "cff555fb",
+        "encoded": "await%20this.save();",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "4ab096",
+        "hash": "55faad84",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "4ab096",
+        "hash": "b95e6929",
+        "encoded": "//%20Instance%20method%20to%20remove%20refresh%20token",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "4ab096",
+        "hash": "da27b4dc",
+        "encoded": "userSchema.methods.removeRefreshToken%20=%20async%20function(token)%20%7B",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "4ab096",
+        "hash": "3647acb5",
+        "encoded": "this.refreshTokens%20=%20this.refreshTokens.filter(",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "4ab096",
+        "hash": "3da134e4",
+        "encoded": "refreshToken%20=%3E%20refreshToken.token%20!==%20token",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "4ab096",
+        "hash": "25354049",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "4ab096",
+        "hash": "6fccb236",
+        "encoded": "await%20this.save();",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "4ab096",
+        "hash": "9872915a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "4ab096",
+        "hash": "67368b20",
+        "encoded": "//%20Instance%20method%20to%20clear%20all%20sessions",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "4ab096",
+        "hash": "05c57917",
+        "encoded": "userSchema.methods.clearAllSessions%20=%20async%20function()%20%7B",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "4ab096",
+        "hash": "a7c58e0a",
+        "encoded": "this.currentSession%20=%20undefined;",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "4ab096",
+        "hash": "b9c1ef59",
+        "encoded": "this.refreshTokens%20=%20%5B%5D;",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "4ab096",
+        "hash": "7eae0391",
+        "encoded": "await%20this.save();",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "4ab096",
+        "hash": "4b015219",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "4ab096",
+        "hash": "abe50f10",
+        "encoded": "//%20Instance%20method%20to%20update%20last%20activity",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "4ab096",
+        "hash": "88564cfc",
+        "encoded": "userSchema.methods.updateActivity%20=%20async%20function()%20%7B",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "4ab096",
+        "hash": "0b64fc23",
+        "encoded": "this.lastActivity%20=%20new%20Date();",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "4ab096",
+        "hash": "c9f7cc88",
+        "encoded": "await%20this.save();",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "4ab096",
+        "hash": "f00833d0",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "4ab096",
+        "hash": "13146f7f",
+        "encoded": "//%20Static%20method%20to%20find%20user%20by%20session%20token",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "4ab096",
+        "hash": "a6ed56e2",
+        "encoded": "userSchema.statics.findBySessionToken%20=%20function(token)%20%7B",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "4ab096",
+        "hash": "c96ba1e4",
+        "encoded": "return%20this.findOne(%7B",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "4ab096",
+        "hash": "470b98fa",
+        "encoded": "'currentSession.token':%20token,",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "4ab096",
+        "hash": "58f35370",
+        "encoded": "'currentSession.expiresAt':%20%7B%20$gt:%20new%20Date()%20%7D,",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "4ab096",
+        "hash": "9102b852",
+        "encoded": "isActive:%20true,",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "4ab096",
+        "hash": "246bd8e0",
+        "encoded": "$or:%20%5B",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "4ab096",
+        "hash": "cfa6827a",
+        "encoded": "%7B%20isLocked:%20false%20%7D,",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "4ab096",
+        "hash": "5d51cc92",
+        "encoded": "%7B%20isLocked:%20true,%20lockUntil:%20%7B%20$lt:%20new%20Date()%20%7D%20%7D",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "4ab096",
+        "hash": "f9eaf61b",
+        "encoded": "%5D",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "4ab096",
+        "hash": "e4e98f50",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "4ab096",
+        "hash": "ae256433",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "4ab096",
+        "hash": "fe4cd1d7",
+        "encoded": "//%20Static%20method%20to%20find%20user%20by%20refresh%20token",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "4ab096",
+        "hash": "00940a1e",
+        "encoded": "userSchema.statics.findByRefreshToken%20=%20function(token)%20%7B",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "4ab096",
+        "hash": "b131f6fd",
+        "encoded": "return%20this.findOne(%7B",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "4ab096",
+        "hash": "4d7a2882",
+        "encoded": "'refreshTokens.token':%20token,",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "4ab096",
+        "hash": "f90bc657",
+        "encoded": "'refreshTokens.expiresAt':%20%7B%20$gt:%20new%20Date()%20%7D,",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "4ab096",
+        "hash": "329973c0",
+        "encoded": "isActive:%20true",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "4ab096",
+        "hash": "45cc4ddb",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "4ab096",
+        "hash": "164c784e",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "4ab096",
+        "hash": "68e0dc2e",
+        "encoded": "//%20Static%20method%20to%20cleanup%20expired%20sessions",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "4ab096",
+        "hash": "b53fe42f",
+        "encoded": "userSchema.statics.cleanupExpiredSessions%20=%20async%20function()%20%7B",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "4ab096",
+        "hash": "a572e8df",
+        "encoded": "const%20now%20=%20new%20Date();",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "4ab096",
+        "hash": "69e358e4",
+        "encoded": "await%20this.updateMany(",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "4ab096",
+        "hash": "39e4fcd8",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "4ab096",
+        "hash": "ffc8b2d7",
+        "encoded": "$or:%20%5B",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "4ab096",
+        "hash": "e7358905",
+        "encoded": "%7B%20'currentSession.expiresAt':%20%7B%20$lt:%20now%20%7D%20%7D,",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "4ab096",
+        "hash": "9251cfd6",
+        "encoded": "%7B%20'refreshTokens.expiresAt':%20%7B%20$lt:%20now%20%7D%20%7D",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "4ab096",
+        "hash": "827b06cd",
+        "encoded": "%5D",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "4ab096",
+        "hash": "773a024d",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "4ab096",
+        "hash": "fa7b43ab",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "4ab096",
+        "hash": "2fe495b8",
+        "encoded": "$unset:%20%7B",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "4ab096",
+        "hash": "5a06aafe",
+        "encoded": "'currentSession':%201",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "4ab096",
+        "hash": "c5615b9b",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "4ab096",
+        "hash": "581212da",
+        "encoded": "$pull:%20%7B",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "4ab096",
+        "hash": "74c43251",
+        "encoded": "'refreshTokens':%20%7B",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "4ab096",
+        "hash": "f0188969",
+        "encoded": "expiresAt:%20%7B%20$lt:%20now%20%7D",
+        "prevChunkIds": []
+      },
+      "306": {
+        "chunkId": "4ab096",
+        "hash": "cc15c81d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "4ab096",
+        "hash": "a5e1e4c3",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "308": {
+        "chunkId": "4ab096",
+        "hash": "759cd168",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "4ab096",
+        "hash": "d1972bb7",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "310": {
+        "chunkId": "4ab096",
+        "hash": "a13749ab",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "312": {
+        "chunkId": "4ab096",
+        "hash": "0365b9ce",
+        "encoded": "module.exports%20=%20mongoose.model('User',%20userSchema);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

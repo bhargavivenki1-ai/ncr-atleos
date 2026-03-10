@@ -1,0 +1,213 @@
+{
+  "backend/Dockerfile": {
+    "filename": "Dockerfile",
+    "path": "backend/Dockerfile",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "5ca5d1": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134921,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "c0605084",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "5ca5d1",
+        "hash": "cf6efffa",
+        "encoded": "#%20Multi-stage%20build%20for%20NCR%20ATLEOS%20ATM%20Backend%20Services",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "5ca5d1",
+        "hash": "2b863361",
+        "encoded": "#%20Build%20stage",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "5ca5d1",
+        "hash": "d601909c",
+        "encoded": "FROM%20node:18-alpine%20AS%20builder",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "5ca5d1",
+        "hash": "28c1f24e",
+        "encoded": "#%20Set%20working%20directory",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "5ca5d1",
+        "hash": "3f75c639",
+        "encoded": "WORKDIR%20/app",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "5ca5d1",
+        "hash": "cd1146ff",
+        "encoded": "#%20Copy%20package%20files",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "5ca5d1",
+        "hash": "8e0e8801",
+        "encoded": "COPY%20package*.json%20./",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "5ca5d1",
+        "hash": "f4deef88",
+        "encoded": "#%20Install%20dependencies",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "5ca5d1",
+        "hash": "0ca9bf14",
+        "encoded": "RUN%20npm%20ci%20--only=production",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "5ca5d1",
+        "hash": "7347599a",
+        "encoded": "#%20Production%20stage",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "5ca5d1",
+        "hash": "356bd6d7",
+        "encoded": "FROM%20node:18-alpine%20AS%20production",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "5ca5d1",
+        "hash": "04b0329e",
+        "encoded": "#%20Create%20app%20user",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "5ca5d1",
+        "hash": "f60e15cb",
+        "encoded": "RUN%20addgroup%20-g%201001%20-S%20nodejs",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "5ca5d1",
+        "hash": "4cac2315",
+        "encoded": "RUN%20adduser%20-S%20atleos%20-u%201001",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "5ca5d1",
+        "hash": "4ac7ab45",
+        "encoded": "#%20Set%20working%20directory",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "5ca5d1",
+        "hash": "97733720",
+        "encoded": "WORKDIR%20/app",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "5ca5d1",
+        "hash": "8acbbfd6",
+        "encoded": "#%20Copy%20node_modules%20from%20builder%20stage",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "5ca5d1",
+        "hash": "dc2b44c7",
+        "encoded": "COPY%20--from=builder%20--chown=atleos:nodejs%20/app/node_modules%20./node_modules",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "5ca5d1",
+        "hash": "9d04a775",
+        "encoded": "#%20Copy%20application%20code",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "5ca5d1",
+        "hash": "eb390bd2",
+        "encoded": "COPY%20--chown=atleos:nodejs%20.%20.",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "5ca5d1",
+        "hash": "f3426e72",
+        "encoded": "#%20Create%20logs%20directory",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "5ca5d1",
+        "hash": "fcdcb492",
+        "encoded": "RUN%20mkdir%20-p%20logs%20&&%20chown%20atleos:nodejs%20logs",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "5ca5d1",
+        "hash": "0bc761e3",
+        "encoded": "#%20Switch%20to%20non-root%20user",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "5ca5d1",
+        "hash": "f408a988",
+        "encoded": "USER%20atleos",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "5ca5d1",
+        "hash": "fa4223b1",
+        "encoded": "#%20Expose%20port",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "5ca5d1",
+        "hash": "d5b279e6",
+        "encoded": "EXPOSE%203001",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "5ca5d1",
+        "hash": "bbd51cd1",
+        "encoded": "#%20Health%20check",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "5ca5d1",
+        "hash": "4d3b6e1d",
+        "encoded": "HEALTHCHECK%20--interval=30s%20--timeout=3s%20--start-period=5s%20--retries=3%20%5C",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "5ca5d1",
+        "hash": "1ad9fac6",
+        "encoded": "CMD%20node%20healthcheck.js",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "5ca5d1",
+        "hash": "4d57d2f4",
+        "encoded": "#%20Start%20the%20application",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "5ca5d1",
+        "hash": "52d6d10b",
+        "encoded": "CMD%20%5B%22node%22,%20%22src/server.js%22%5D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

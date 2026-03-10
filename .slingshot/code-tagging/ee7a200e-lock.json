@@ -1,0 +1,663 @@
+{
+  "backend/tests/controllers/atm.test.js": {
+    "filename": "atm.test.js",
+    "path": "backend/tests/controllers/atm.test.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "8a32a7": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134869,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "498f2615",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "8a32a7",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "8a32a7",
+        "hash": "19d43d4f",
+        "encoded": "*%20ATM%20controller%20tests",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "8a32a7",
+        "hash": "fe772869",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "8a32a7",
+        "hash": "e4af7bc2",
+        "encoded": "const%20request%20=%20require('supertest');",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "8a32a7",
+        "hash": "b2e2331e",
+        "encoded": "const%20app%20=%20require('../../src/server');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "8a32a7",
+        "hash": "95a4af2a",
+        "encoded": "const%20%7B%20HTTP_STATUS%20%7D%20=%20require('../../src/config/constants');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "8a32a7",
+        "hash": "4ada12ea",
+        "encoded": "describe('ATM%20Controller',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "8a32a7",
+        "hash": "3f1a8b4e",
+        "encoded": "let%20authToken;",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "8a32a7",
+        "hash": "c419d80b",
+        "encoded": "beforeEach(async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "8a32a7",
+        "hash": "08b752cb",
+        "encoded": "const%20loginResponse%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "8a32a7",
+        "hash": "94287350",
+        "encoded": ".post('/api/auth/login')",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "8a32a7",
+        "hash": "000c2109",
+        "encoded": ".send(%7B%20pin:%20'1234'%20%7D);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "8a32a7",
+        "hash": "920a4e35",
+        "encoded": "authToken%20=%20loginResponse.body.token;",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "8a32a7",
+        "hash": "2dbc7cf4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "8a32a7",
+        "hash": "3ced0de2",
+        "encoded": "describe('POST%20/api/atm/transactions/withdrawal',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "8a32a7",
+        "hash": "144ccce2",
+        "encoded": "it('should%20stage%20withdrawal%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "8a32a7",
+        "hash": "361efb6b",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "8a32a7",
+        "hash": "c057ca18",
+        "encoded": ".post('/api/atm/transactions/withdrawal')",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "8a32a7",
+        "hash": "66d1d73a",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "8a32a7",
+        "hash": "b891fd6d",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "8a32a7",
+        "hash": "62f3aaf6",
+        "encoded": "cardToken:%20'tok_test_card_token_12345',",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "8a32a7",
+        "hash": "2d135509",
+        "encoded": "amount:%20100.00",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "8a32a7",
+        "hash": "37021f5f",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "8a32a7",
+        "hash": "cd1a8ea6",
+        "encoded": ".expect(HTTP_STATUS.CREATED);",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "8a32a7",
+        "hash": "e9120119",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "8a32a7",
+        "hash": "a18608fb",
+        "encoded": "expect(response.body.transactionId).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "8a32a7",
+        "hash": "baf93eba",
+        "encoded": "expect(response.body.status).toBe('staged');",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "8a32a7",
+        "hash": "bb83b857",
+        "encoded": "expect(response.body.amount).toBe(100.00);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "8a32a7",
+        "hash": "8522c245",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "8a32a7",
+        "hash": "498a37fa",
+        "encoded": "it('should%20reject%20withdrawal%20without%20card%20token',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "8a32a7",
+        "hash": "f6e04429",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "8a32a7",
+        "hash": "edf5f671",
+        "encoded": ".post('/api/atm/transactions/withdrawal')",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "8a32a7",
+        "hash": "0c41321d",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "8a32a7",
+        "hash": "588c1cba",
+        "encoded": ".send(%7B%20amount:%20100.00%20%7D)",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "8a32a7",
+        "hash": "8d0bc60d",
+        "encoded": ".expect(HTTP_STATUS.BAD_REQUEST);",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "8a32a7",
+        "hash": "2dd3a271",
+        "encoded": "expect(response.body.success).toBe(false);",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "8a32a7",
+        "hash": "39fe36a7",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "8a32a7",
+        "hash": "ee781cb1",
+        "encoded": "it('should%20reject%20withdrawal%20with%20invalid%20amount',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "8a32a7",
+        "hash": "75d78ff9",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "8a32a7",
+        "hash": "bf298fdf",
+        "encoded": ".post('/api/atm/transactions/withdrawal')",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "8a32a7",
+        "hash": "87b41ea2",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "8a32a7",
+        "hash": "be3ac663",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "8a32a7",
+        "hash": "397e610d",
+        "encoded": "cardToken:%20'tok_test_card_token_12345',",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "8a32a7",
+        "hash": "618e792f",
+        "encoded": "amount:%20-50.00",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "8a32a7",
+        "hash": "555b964d",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "8a32a7",
+        "hash": "b2d4bfd0",
+        "encoded": ".expect(HTTP_STATUS.BAD_REQUEST);",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "8a32a7",
+        "hash": "79da3134",
+        "encoded": "expect(response.body.success).toBe(false);",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "8a32a7",
+        "hash": "a7e8e737",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "8a32a7",
+        "hash": "9d5cdb20",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "8a32a7",
+        "hash": "7ebe172d",
+        "encoded": "describe('POST%20/api/atm/transactions/deposit',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "8a32a7",
+        "hash": "d1faaacc",
+        "encoded": "it('should%20stage%20deposit%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "8a32a7",
+        "hash": "e32a5eba",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "8a32a7",
+        "hash": "7876fa62",
+        "encoded": ".post('/api/atm/transactions/deposit')",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "8a32a7",
+        "hash": "3334b699",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "8a32a7",
+        "hash": "26cd255c",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "8a32a7",
+        "hash": "92268e4a",
+        "encoded": "cardToken:%20'tok_test_card_token_12345'",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "8a32a7",
+        "hash": "992b4098",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "8a32a7",
+        "hash": "4dd9fde4",
+        "encoded": ".expect(HTTP_STATUS.CREATED);",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "8a32a7",
+        "hash": "6cfdbf3c",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "8a32a7",
+        "hash": "28803686",
+        "encoded": "expect(response.body.transactionId).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "8a32a7",
+        "hash": "ef410142",
+        "encoded": "expect(response.body.status).toBe('staged');",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "8a32a7",
+        "hash": "294f5374",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "8a32a7",
+        "hash": "04ec1348",
+        "encoded": "it('should%20stage%20deposit%20with%20amount',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "8a32a7",
+        "hash": "5e583bf1",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "8a32a7",
+        "hash": "18f878fb",
+        "encoded": ".post('/api/atm/transactions/deposit')",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "8a32a7",
+        "hash": "cd964a3e",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "8a32a7",
+        "hash": "5fabc2bd",
+        "encoded": ".send(%7B",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "8a32a7",
+        "hash": "f8862fa8",
+        "encoded": "cardToken:%20'tok_test_card_token_12345',",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "8a32a7",
+        "hash": "d2968089",
+        "encoded": "amount:%20200.00",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "8a32a7",
+        "hash": "b65a96bf",
+        "encoded": "%7D)",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "8a32a7",
+        "hash": "c0e3a007",
+        "encoded": ".expect(HTTP_STATUS.CREATED);",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "8a32a7",
+        "hash": "bd27c3e8",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "8a32a7",
+        "hash": "1df15ea9",
+        "encoded": "expect(response.body.amount).toBe(200.00);",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "8a32a7",
+        "hash": "aa5a1e4d",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "8a32a7",
+        "hash": "fea98643",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "8a32a7",
+        "hash": "47f4751e",
+        "encoded": "describe('GET%20/api/atm/transactions',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "8a32a7",
+        "hash": "0321a534",
+        "encoded": "it('should%20get%20transaction%20history',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "8a32a7",
+        "hash": "387ed7a4",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "8a32a7",
+        "hash": "79229038",
+        "encoded": ".get('/api/atm/transactions')",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "8a32a7",
+        "hash": "bc2ef869",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "8a32a7",
+        "hash": "f48c04f5",
+        "encoded": ".expect(HTTP_STATUS.OK);",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "8a32a7",
+        "hash": "d0392bec",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "8a32a7",
+        "hash": "89100e4c",
+        "encoded": "expect(response.body.transactions).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "8a32a7",
+        "hash": "a5d69ecc",
+        "encoded": "expect(response.body.pagination).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "8a32a7",
+        "hash": "cb89ead6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "8a32a7",
+        "hash": "6802ce35",
+        "encoded": "it('should%20support%20pagination',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "8a32a7",
+        "hash": "6eec9504",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "8a32a7",
+        "hash": "3c3b20af",
+        "encoded": ".get('/api/atm/transactions?page=1&limit=10')",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "8a32a7",
+        "hash": "490aba55",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "8a32a7",
+        "hash": "4f988d79",
+        "encoded": ".expect(HTTP_STATUS.OK);",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "8a32a7",
+        "hash": "e9b387d4",
+        "encoded": "expect(response.body.pagination.page).toBe(1);",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "8a32a7",
+        "hash": "d60f69d7",
+        "encoded": "expect(response.body.pagination.limit).toBe(10);",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "8a32a7",
+        "hash": "3cff1aec",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "8a32a7",
+        "hash": "d9f18600",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "8a32a7",
+        "hash": "43f25a25",
+        "encoded": "describe('POST%20/api/atm/scan-card',%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "8a32a7",
+        "hash": "6f510aa3",
+        "encoded": "it('should%20simulate%20card%20scan%20successfully',%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "8a32a7",
+        "hash": "1cb8041b",
+        "encoded": "const%20response%20=%20await%20request(app)",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "8a32a7",
+        "hash": "ff91e087",
+        "encoded": ".post('/api/atm/scan-card')",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "8a32a7",
+        "hash": "fc904cfd",
+        "encoded": ".set('Authorization',%20%60Bearer%20$%7BauthToken%7D%60)",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "8a32a7",
+        "hash": "a3cb09a8",
+        "encoded": ".expect(HTTP_STATUS.OK);",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "8a32a7",
+        "hash": "bca73bef",
+        "encoded": "expect(response.body.success).toBe(true);",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "8a32a7",
+        "hash": "9034c606",
+        "encoded": "expect(response.body.cardToken).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "8a32a7",
+        "hash": "46fe6431",
+        "encoded": "expect(response.body.cardDetails).toBeDefined();",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "8a32a7",
+        "hash": "ac2debc4",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "8a32a7",
+        "hash": "96abd65f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "8a32a7",
+        "hash": "0e3ba760",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

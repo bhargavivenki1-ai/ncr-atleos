@@ -1,0 +1,549 @@
+{
+  "backend/src/routes/auth.js": {
+    "filename": "auth.js",
+    "path": "backend/src/routes/auth.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "c054a8": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773134378,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "dab186ff",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "c054a8",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "c054a8",
+        "hash": "70e08fdc",
+        "encoded": "*%20Authentication%20routes",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "c054a8",
+        "hash": "c25b92d5",
+        "encoded": "*%20Handles%20user%20login,%20logout,%20token%20refresh,%20and%20session%20management",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "c054a8",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "c054a8",
+        "hash": "e4593fda",
+        "encoded": "const%20express%20=%20require('express');",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "c054a8",
+        "hash": "3787b752",
+        "encoded": "const%20%7B%20catchAsync%20%7D%20=%20require('../middleware/errorHandler');",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "c054a8",
+        "hash": "f31ad0b1",
+        "encoded": "const%20%7B%20authenticate,%20checkAuthRateLimit%20%7D%20=%20require('../middleware/auth');",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "c054a8",
+        "hash": "8d04927b",
+        "encoded": "const%20%7B%20validatePin,%20validateRefreshToken,%20sanitizeInput%20%7D%20=%20require('../middleware/validation');",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "c054a8",
+        "hash": "79512435",
+        "encoded": "const%20authController%20=%20require('../controllers/authController');",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "c054a8",
+        "hash": "04e625c1",
+        "encoded": "const%20router%20=%20express.Router();",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "c054a8",
+        "hash": "aacf6b04",
+        "encoded": "//%20Apply%20sanitization%20to%20all%20routes",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "c054a8",
+        "hash": "130fa4b8",
+        "encoded": "router.use(sanitizeInput);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "c054a8",
+        "hash": "8e163d57",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "c054a8",
+        "hash": "48281602",
+        "encoded": "*%20User%20login%20with%20PIN",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "c054a8",
+        "hash": "2c5881ad",
+        "encoded": "*%20POST%20/api/auth/login",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "c054a8",
+        "hash": "4b6c9127",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "c054a8",
+        "hash": "0226b188",
+        "encoded": "router.post('/login',",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "c054a8",
+        "hash": "82e039a8",
+        "encoded": "checkAuthRateLimit,",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "c054a8",
+        "hash": "d17fb6c3",
+        "encoded": "validatePin,",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "c054a8",
+        "hash": "97805f1b",
+        "encoded": "catchAsync(authController.login)",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "c054a8",
+        "hash": "71b3974a",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "c054a8",
+        "hash": "f1583e66",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "c054a8",
+        "hash": "186a76b8",
+        "encoded": "*%20User%20logout",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "c054a8",
+        "hash": "4f8b0e2a",
+        "encoded": "*%20POST%20/api/auth/logout",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "c054a8",
+        "hash": "fc05b72a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "c054a8",
+        "hash": "c5cf8064",
+        "encoded": "router.post('/logout',",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "c054a8",
+        "hash": "97850688",
+        "encoded": "authenticate,",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "c054a8",
+        "hash": "5084c7cd",
+        "encoded": "catchAsync(authController.logout)",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "c054a8",
+        "hash": "c7c51549",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "c054a8",
+        "hash": "bfb1acd4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "c054a8",
+        "hash": "1c5625a6",
+        "encoded": "*%20Refresh%20authentication%20token",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "c054a8",
+        "hash": "520d4361",
+        "encoded": "*%20POST%20/api/auth/refresh",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "c054a8",
+        "hash": "7736df95",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "c054a8",
+        "hash": "f47de047",
+        "encoded": "router.post('/refresh',",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "c054a8",
+        "hash": "fc2c9a93",
+        "encoded": "validateRefreshToken,",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "c054a8",
+        "hash": "7f7fdeb6",
+        "encoded": "catchAsync(authController.refreshToken)",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "c054a8",
+        "hash": "868abab0",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "c054a8",
+        "hash": "acdd418f",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "c054a8",
+        "hash": "89f4a59a",
+        "encoded": "*%20Validate%20current%20session",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "c054a8",
+        "hash": "29b05f38",
+        "encoded": "*%20GET%20/api/auth/validate",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "c054a8",
+        "hash": "5d4a7073",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "c054a8",
+        "hash": "4a357312",
+        "encoded": "router.get('/validate',",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "c054a8",
+        "hash": "7f8b1c92",
+        "encoded": "authenticate,",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "c054a8",
+        "hash": "1a424c90",
+        "encoded": "catchAsync(authController.validateSession)",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "c054a8",
+        "hash": "460a75d9",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "c054a8",
+        "hash": "57103e83",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "c054a8",
+        "hash": "fbff879e",
+        "encoded": "*%20Get%20current%20user%20profile",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "c054a8",
+        "hash": "ae1ad48a",
+        "encoded": "*%20GET%20/api/auth/profile",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "c054a8",
+        "hash": "d877908f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "c054a8",
+        "hash": "ea559049",
+        "encoded": "router.get('/profile',",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "c054a8",
+        "hash": "efb499f2",
+        "encoded": "authenticate,",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "c054a8",
+        "hash": "0be7b07d",
+        "encoded": "catchAsync(authController.getProfile)",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "c054a8",
+        "hash": "ea593236",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "c054a8",
+        "hash": "78315c35",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "c054a8",
+        "hash": "7457e0dc",
+        "encoded": "*%20Update%20user%20preferences",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "c054a8",
+        "hash": "614de95e",
+        "encoded": "*%20PUT%20/api/auth/preferences",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "c054a8",
+        "hash": "2cfd755d",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "c054a8",
+        "hash": "cc4b6333",
+        "encoded": "router.put('/preferences',",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "c054a8",
+        "hash": "38a1b145",
+        "encoded": "authenticate,",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "c054a8",
+        "hash": "41774e8c",
+        "encoded": "catchAsync(authController.updatePreferences)",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "c054a8",
+        "hash": "6f127df0",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "c054a8",
+        "hash": "c462b373",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "c054a8",
+        "hash": "d73c1fe6",
+        "encoded": "*%20Change%20PIN",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "c054a8",
+        "hash": "7c67b901",
+        "encoded": "*%20PUT%20/api/auth/change-pin",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "c054a8",
+        "hash": "e3774e70",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "c054a8",
+        "hash": "2f611ef2",
+        "encoded": "router.put('/change-pin',",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "c054a8",
+        "hash": "20766cd3",
+        "encoded": "authenticate,",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "c054a8",
+        "hash": "fee68976",
+        "encoded": "validatePin,",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "c054a8",
+        "hash": "0ed4665f",
+        "encoded": "catchAsync(authController.changePin)",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "c054a8",
+        "hash": "42df1560",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "c054a8",
+        "hash": "9a94c1ad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "c054a8",
+        "hash": "2a9b88cb",
+        "encoded": "*%20Get%20user%20session%20information",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "c054a8",
+        "hash": "825a1ae9",
+        "encoded": "*%20GET%20/api/auth/session",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "c054a8",
+        "hash": "268bf65a",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "c054a8",
+        "hash": "7ac99424",
+        "encoded": "router.get('/session',",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "c054a8",
+        "hash": "a4b9adab",
+        "encoded": "authenticate,",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "c054a8",
+        "hash": "2f39eb69",
+        "encoded": "catchAsync(authController.getSessionInfo)",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "c054a8",
+        "hash": "fd7f7fe7",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "c054a8",
+        "hash": "3efab6d4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "c054a8",
+        "hash": "36b23ed7",
+        "encoded": "*%20Terminate%20all%20sessions",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "c054a8",
+        "hash": "cd3e50b2",
+        "encoded": "*%20POST%20/api/auth/logout-all",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "c054a8",
+        "hash": "804c941f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "c054a8",
+        "hash": "d3d497d8",
+        "encoded": "router.post('/logout-all',",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "c054a8",
+        "hash": "95cdf15f",
+        "encoded": "authenticate,",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "c054a8",
+        "hash": "e94965f7",
+        "encoded": "catchAsync(authController.logoutAll)",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "c054a8",
+        "hash": "ae271f8c",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "c054a8",
+        "hash": "863dea89",
+        "encoded": "module.exports%20=%20router;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

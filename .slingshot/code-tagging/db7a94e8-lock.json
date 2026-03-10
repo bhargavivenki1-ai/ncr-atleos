@@ -1,0 +1,219 @@
+{
+  "backend/.env.example": {
+    "filename": ".env.example",
+    "path": "backend/.env.example",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "3c8704": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773133249,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "b7d8ccbd",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "3c8704",
+        "hash": "2604e791",
+        "encoded": "#%20Server%20Configuration",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "3c8704",
+        "hash": "fb86841f",
+        "encoded": "PORT=3001",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "3c8704",
+        "hash": "a924274f",
+        "encoded": "NODE_ENV=development",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "3c8704",
+        "hash": "10d83769",
+        "encoded": "#%20Database%20Configuration",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "3c8704",
+        "hash": "0230dea5",
+        "encoded": "MONGODB_URI=mongodb://localhost:27017/ncr-atleos-atm",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "3c8704",
+        "hash": "ab0dd7a6",
+        "encoded": "MONGODB_TEST_URI=mongodb://localhost:27017/ncr-atleos-atm-test",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "3c8704",
+        "hash": "e30fb39b",
+        "encoded": "#%20JWT%20Configuration",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "3c8704",
+        "hash": "da1b4a9d",
+        "encoded": "JWT_SECRET=your-super-secret-jwt-key-here",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "3c8704",
+        "hash": "4d9d6b5d",
+        "encoded": "JWT_EXPIRES_IN=1h",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "3c8704",
+        "hash": "91d53802",
+        "encoded": "JWT_REFRESH_SECRET=your-refresh-token-secret-here",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "3c8704",
+        "hash": "af81332a",
+        "encoded": "JWT_REFRESH_EXPIRES_IN=7d",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "3c8704",
+        "hash": "5563ae1a",
+        "encoded": "#%20Security%20Configuration",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "3c8704",
+        "hash": "4a90630d",
+        "encoded": "BCRYPT_ROUNDS=12",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "3c8704",
+        "hash": "365e9112",
+        "encoded": "RATE_LIMIT_WINDOW_MS=900000",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "3c8704",
+        "hash": "0017234d",
+        "encoded": "RATE_LIMIT_MAX_REQUESTS=100",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "3c8704",
+        "hash": "5d300505",
+        "encoded": "#%20External%20Services",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "3c8704",
+        "hash": "14b97796",
+        "encoded": "ATM_STAGING_SERVICE_URL=https://api.atm-staging.example.com",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "3c8704",
+        "hash": "1dcf10a5",
+        "encoded": "CORE_BANKING_SERVICE_URL=https://api.core-banking.example.com",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "3c8704",
+        "hash": "73005769",
+        "encoded": "ON_DEVICE_VISION_SERVICE_URL=https://api.vision.example.com",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "3c8704",
+        "hash": "d52ed0bb",
+        "encoded": "#%20API%20Keys%20(if%20required)",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "3c8704",
+        "hash": "9aaaf07b",
+        "encoded": "ATM_STAGING_API_KEY=your-atm-staging-api-key",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "3c8704",
+        "hash": "81cc6d59",
+        "encoded": "CORE_BANKING_API_KEY=your-core-banking-api-key",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "3c8704",
+        "hash": "63113003",
+        "encoded": "#%20Logging",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "3c8704",
+        "hash": "d8e62c7f",
+        "encoded": "LOG_LEVEL=info",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "3c8704",
+        "hash": "d3be314f",
+        "encoded": "LOG_FILE_PATH=./logs/app.log",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "3c8704",
+        "hash": "c255b0fe",
+        "encoded": "#%20CORS%20Configuration",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "3c8704",
+        "hash": "7d95cff0",
+        "encoded": "ALLOWED_ORIGINS=http://localhost:3000,http://localhost:3001",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "3c8704",
+        "hash": "97b3cb10",
+        "encoded": "#%20Session%20Configuration",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "3c8704",
+        "hash": "1951bd4b",
+        "encoded": "SESSION_TIMEOUT_MS=3600000",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "3c8704",
+        "hash": "02363813",
+        "encoded": "#%20Mock%20Data%20(for%20development)",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "3c8704",
+        "hash": "86816b54",
+        "encoded": "USE_MOCK_SERVICES=true",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "3c8704",
+        "hash": "69531cfa",
+        "encoded": "MOCK_PIN=1234",
+        "prevChunkIds": []
+      }
+    }
+  }
+}
