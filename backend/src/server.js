@@ -11,7 +11,7 @@ const compression = require('compression');
 const rateLimit = require('express-rate-limit');
 const { connectDatabase } = require('./config/database');
 const logger = require('./utils/logger');
-const errorHandler = require('./middleware/errorHandler');
+const { globalErrorHandler } = require('./middleware/errorHandler');
 const authRoutes = require('./routes/auth');
 const atmRoutes = require('./routes/atm');
 const bankingRoutes = require('./routes/banking');
@@ -126,7 +126,7 @@ app.use('*', (req, res) => {
 });
 
 // Global error handler
-app.use(errorHandler);
+app.use(globalErrorHandler);
 
 // Graceful shutdown handler
 process.on('SIGTERM', () => {

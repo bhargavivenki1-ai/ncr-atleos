@@ -1,0 +1,681 @@
+{
+  "src/pages/IntegratedFundsTransferPage.jsx": {
+    "filename": "IntegratedFundsTransferPage.jsx",
+    "path": "src/pages/IntegratedFundsTransferPage.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "db2de3": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773146778,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "11fad66a",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "db2de3",
+        "hash": "98ac06df",
+        "encoded": "import%20React%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "db2de3",
+        "hash": "3924ce97",
+        "encoded": "import%20Header%20from%20'../components/organisms/Header';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "db2de3",
+        "hash": "3cafc5b7",
+        "encoded": "import%20FundsTransferForm%20from%20'../components/organisms/FundsTransferForm';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "db2de3",
+        "hash": "489aedc8",
+        "encoded": "import%20%7B%20useNavigate%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "db2de3",
+        "hash": "0b263d40",
+        "encoded": "import%20%7B%20transferFunds,%20getUserAccounts%20%7D%20from%20'../services/bankingService';",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "db2de3",
+        "hash": "692dab65",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "db2de3",
+        "hash": "1c3d7815",
+        "encoded": "*%20FundsTransferPage%20-%20Main%20page%20component%20for%20funds%20transfer%20functionality%20with%20integrated%20backend%20API",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "db2de3",
+        "hash": "2108511f",
+        "encoded": "*%20Implements%20the%20complete%20funds%20transfer%20user%20journey%20with%20validation%20and%20error%20handling",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "db2de3",
+        "hash": "7c8b9e0c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "db2de3",
+        "hash": "ede39bc9",
+        "encoded": "const%20FundsTransferPage%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "db2de3",
+        "hash": "430c283f",
+        "encoded": "const%20navigate%20=%20useNavigate();",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "db2de3",
+        "hash": "f5fd05bd",
+        "encoded": "const%20%5BaccountOptions,%20setAccountOptions%5D%20=%20React.useState(%5B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "db2de3",
+        "hash": "cb7dd1a1",
+        "encoded": "%7B%20value:%20'savings',%20label:%20'Savings'%20%7D,",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "db2de3",
+        "hash": "75fab1fc",
+        "encoded": "%7B%20value:%20'checking',%20label:%20'Checking'%20%7D,",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "db2de3",
+        "hash": "e83a7360",
+        "encoded": "%7B%20value:%20'business',%20label:%20'Business'%20%7D,",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "db2de3",
+        "hash": "0b048672",
+        "encoded": "%7B%20value:%20'investment',%20label:%20'Investment'%20%7D",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "db2de3",
+        "hash": "ae94d4e0",
+        "encoded": "%5D);",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "db2de3",
+        "hash": "54c5f48c",
+        "encoded": "//%20Fetch%20user%20accounts%20on%20component%20mount",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "db2de3",
+        "hash": "0ced29d3",
+        "encoded": "React.useEffect(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "db2de3",
+        "hash": "7324d3c5",
+        "encoded": "const%20fetchAccounts%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "db2de3",
+        "hash": "fb70f4e0",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "db2de3",
+        "hash": "12444ae1",
+        "encoded": "const%20response%20=%20await%20getUserAccounts();",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "db2de3",
+        "hash": "76409ca4",
+        "encoded": "if%20(response.success%20&&%20response.accounts)%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "db2de3",
+        "hash": "93293161",
+        "encoded": "//%20Transform%20accounts%20into%20options%20format",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "db2de3",
+        "hash": "7ece687f",
+        "encoded": "const%20options%20=%20response.accounts.map(account%20=%3E%20(%7B",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "db2de3",
+        "hash": "7862815a",
+        "encoded": "value:%20account.id,",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "db2de3",
+        "hash": "02d1bcfb",
+        "encoded": "label:%20%60$%7Baccount.name%7D%20($%7Baccount.accountNumber%7D)%60",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "db2de3",
+        "hash": "47220f8e",
+        "encoded": "%7D));",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "db2de3",
+        "hash": "a7762bcb",
+        "encoded": "setAccountOptions(options);",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "db2de3",
+        "hash": "699fd80f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "db2de3",
+        "hash": "d1ad6146",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "db2de3",
+        "hash": "6cf19c3e",
+        "encoded": "console.error('Failed%20to%20fetch%20user%20accounts:',%20error);",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "db2de3",
+        "hash": "432ac1ce",
+        "encoded": "//%20Keep%20default%20options%20if%20API%20call%20fails",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "db2de3",
+        "hash": "b14d68ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "db2de3",
+        "hash": "5ef10871",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "db2de3",
+        "hash": "264a5e55",
+        "encoded": "fetchAccounts();",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "db2de3",
+        "hash": "89f881c7",
+        "encoded": "%7D,%20%5B%5D);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "db2de3",
+        "hash": "55978ec9",
+        "encoded": "const%20handleTransferSubmit%20=%20async%20(formData)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "db2de3",
+        "hash": "bca53730",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "db2de3",
+        "hash": "8b9895a2",
+        "encoded": "//%20Call%20the%20banking%20service%20to%20transfer%20funds",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "db2de3",
+        "hash": "668ff7d3",
+        "encoded": "const%20response%20=%20await%20transferFunds(%7B",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "db2de3",
+        "hash": "210a25e6",
+        "encoded": "fromAccountId:%20formData.fromAccount,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "db2de3",
+        "hash": "275e7472",
+        "encoded": "toAccountId:%20formData.toAccount,",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "db2de3",
+        "hash": "31a95f2f",
+        "encoded": "amount:%20parseFloat(formData.amount),",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "db2de3",
+        "hash": "5afd61b3",
+        "encoded": "description:%20formData.description%20%7C%7C%20'Fund%20transfer'",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "db2de3",
+        "hash": "d4fc8746",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "db2de3",
+        "hash": "619b9449",
+        "encoded": "if%20(response.success)%20%7B",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "db2de3",
+        "hash": "6489ea1e",
+        "encoded": "console.log('Transfer%20successful:',%20response);",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "db2de3",
+        "hash": "52fce43d",
+        "encoded": "//%20Show%20success%20message",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "db2de3",
+        "hash": "ff6abc84",
+        "encoded": "alert(%60Transfer%20of%20$$%7BformData.amount%7D%20completed%20successfully!%20Transaction%20ID:%20$%7Bresponse.transactionId%7D%60);",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "db2de3",
+        "hash": "b986a42a",
+        "encoded": "//%20Navigate%20to%20confirmation%20screen%20or%20dashboard",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "db2de3",
+        "hash": "c733a6f4",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "db2de3",
+        "hash": "a4107221",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "db2de3",
+        "hash": "dfba80ff",
+        "encoded": "throw%20new%20Error(response.message%20%7C%7C%20'Transfer%20failed');",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "db2de3",
+        "hash": "646a8e84",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "db2de3",
+        "hash": "f0716696",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "db2de3",
+        "hash": "cf21ed5f",
+        "encoded": "console.error('Transfer%20error:',%20error);",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "db2de3",
+        "hash": "827459f7",
+        "encoded": "throw%20new%20Error(error.message%20%7C%7C%20'We%20were%20unable%20to%20process%20your%20transfer%20at%20this%20time.%20Please%20try%20again.');",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "db2de3",
+        "hash": "f706ff69",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "db2de3",
+        "hash": "f74f24ea",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "db2de3",
+        "hash": "26a829c6",
+        "encoded": "const%20handleCancel%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "db2de3",
+        "hash": "9a7ca6bd",
+        "encoded": "//%20Navigate%20back%20to%20dashboard%20or%20previous%20page",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "db2de3",
+        "hash": "c6aec484",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "db2de3",
+        "hash": "97f90d11",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "db2de3",
+        "hash": "cc46b35b",
+        "encoded": "const%20handleBackToDashboard%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "db2de3",
+        "hash": "aa394720",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "db2de3",
+        "hash": "8d7d086a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "db2de3",
+        "hash": "b31ec93d",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "db2de3",
+        "hash": "99a05a7b",
+        "encoded": "%3Cdiv%20className=%22min-h-screen%20bg-background%20text-text-primary%20flex%20flex-col%22%3E",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "db2de3",
+        "hash": "dea87396",
+        "encoded": "%7B/*%20Header%20with%20Status%20Bar%20and%20Title%20*/%7D",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "db2de3",
+        "hash": "5a976ff5",
+        "encoded": "%3CHeader",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "db2de3",
+        "hash": "04d51bef",
+        "encoded": "title=%22Transfer%20Funds%22",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "db2de3",
+        "hash": "8b94f1e9",
+        "encoded": "time=%2212:30%22",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "db2de3",
+        "hash": "ab1c75e7",
+        "encoded": "batteryLevel=%7B85%7D",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "db2de3",
+        "hash": "58ea2173",
+        "encoded": "hasWifi=%7Btrue%7D",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "db2de3",
+        "hash": "793e2298",
+        "encoded": "hasSignal=%7Btrue%7D",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "db2de3",
+        "hash": "408653c4",
+        "encoded": "className=%22bg-background%22",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "db2de3",
+        "hash": "e0b016da",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "db2de3",
+        "hash": "fb82b09b",
+        "encoded": "%7B/*%20Back%20to%20Dashboard%20Link%20*/%7D",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "db2de3",
+        "hash": "8406a8fa",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20pt-4%20pb-2%22%3E",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "db2de3",
+        "hash": "b3eea41e",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "db2de3",
+        "hash": "6dc61267",
+        "encoded": "onClick=%7BhandleBackToDashboard%7D",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "db2de3",
+        "hash": "6b9a3b37",
+        "encoded": "className=%22flex%20items-center%20gap-2%20text-text-primary%20hover:text-button-primary%20transition-colors%22",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "db2de3",
+        "hash": "5502acf6",
+        "encoded": "aria-label=%22Back%20to%20Dashboard%22",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "db2de3",
+        "hash": "5372afc2",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "db2de3",
+        "hash": "716098b5",
+        "encoded": "%3Csvg%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "db2de3",
+        "hash": "58f21f65",
+        "encoded": "%3Cpath%20d=%22M10%2012L6%208L10%204%22%20stroke=%22currentColor%22%20strokeWidth=%222%22%20strokeLinecap=%22round%22%20strokeLinejoin=%22round%22/%3E",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "db2de3",
+        "hash": "ff9d3414",
+        "encoded": "%3C/svg%3E",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "db2de3",
+        "hash": "a88be69f",
+        "encoded": "%3Cspan%20className=%22font-%5B'Plus_Jakarta_Sans'%5D%20font-medium%20text-%5B16px%5D%22%3EBack%20to%20Dashboard%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "db2de3",
+        "hash": "5be42ada",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "db2de3",
+        "hash": "319fca34",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "db2de3",
+        "hash": "c2d04974",
+        "encoded": "%7B/*%20Main%20Content%20*/%7D",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "db2de3",
+        "hash": "370b6bc6",
+        "encoded": "%3Cmain%20className=%22flex-1%20flex%20flex-col%22%20role=%22main%22%3E",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "db2de3",
+        "hash": "c15a2e3e",
+        "encoded": "%3CFundsTransferForm",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "db2de3",
+        "hash": "523eca37",
+        "encoded": "onSubmit=%7BhandleTransferSubmit%7D",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "db2de3",
+        "hash": "43c10d39",
+        "encoded": "onCancel=%7BhandleCancel%7D",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "db2de3",
+        "hash": "5d6319a2",
+        "encoded": "accountOptions=%7BaccountOptions%7D",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "db2de3",
+        "hash": "1faa673d",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "db2de3",
+        "hash": "91e0debb",
+        "encoded": "%3C/main%3E",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "db2de3",
+        "hash": "96a3d8e3",
+        "encoded": "%7B/*%20Bottom%20Gesture%20Indicator%20*/%7D",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "db2de3",
+        "hash": "ca01bf32",
+        "encoded": "%3Cdiv%20className=%22flex%20flex-col%20justify-end%20self-stretch%22%3E",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "db2de3",
+        "hash": "d968a4d3",
+        "encoded": "%3Cdiv%20className=%22flex%20justify-center%22%3E",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "db2de3",
+        "hash": "8f6429e0",
+        "encoded": "%3Cdiv%20className=%22w-%5B134px%5D%20h-%5B5px%5D%20bg-gesture-indicator%20rounded-full%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "db2de3",
+        "hash": "e3ee1107",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "db2de3",
+        "hash": "52a243b5",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "db2de3",
+        "hash": "ac83fe70",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "db2de3",
+        "hash": "112d3112",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "db2de3",
+        "hash": "9cda0aff",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "db2de3",
+        "hash": "d4637ca1",
+        "encoded": "export%20default%20FundsTransferPage;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,753 @@
+{
+  "src/services/bankingService.js": {
+    "filename": "bankingService.js",
+    "path": "src/services/bankingService.js",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "dd8e82": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773146366,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "540f927f",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "dd8e82",
+        "hash": "48c76aad",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "dd8e82",
+        "hash": "966db2af",
+        "encoded": "*%20Banking%20Service%20-%20Handles%20banking-related%20API%20calls",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "dd8e82",
+        "hash": "b21098a8",
+        "encoded": "*%20Integrates%20with%20backend%20core%20banking%20service",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "dd8e82",
+        "hash": "7c9e86a6",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "dd8e82",
+        "hash": "38d1659b",
+        "encoded": "import%20apiClient%20from%20'./apiClient';",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "dd8e82",
+        "hash": "6aab29d8",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "dd8e82",
+        "hash": "f3fd0482",
+        "encoded": "*%20Get%20account%20balances",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "dd8e82",
+        "hash": "1e56745d",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Account%20balances",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "dd8e82",
+        "hash": "f398d74c",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "dd8e82",
+        "hash": "a6dce453",
+        "encoded": "export%20const%20getAccountBalances%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "dd8e82",
+        "hash": "77c073df",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "dd8e82",
+        "hash": "266550db",
+        "encoded": "const%20response%20=%20await%20apiClient.get('/banking/accounts/balance');",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "dd8e82",
+        "hash": "8cbc917d",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "dd8e82",
+        "hash": "2812bedd",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "dd8e82",
+        "hash": "113b5af1",
+        "encoded": "accounts:%20response.accounts,",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "dd8e82",
+        "hash": "a30030cf",
+        "encoded": "message:%20response.message%20%7C%7C%20'Balances%20retrieved%20successfully',",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "dd8e82",
+        "hash": "1c5cd165",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "dd8e82",
+        "hash": "5f0e16e2",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "dd8e82",
+        "hash": "bc34dff1",
+        "encoded": "console.error('Get%20Account%20Balances%20Error:',%20error);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "dd8e82",
+        "hash": "628295a4",
+        "encoded": "//%20Handle%20specific%20error%20cases",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "dd8e82",
+        "hash": "c695f835",
+        "encoded": "if%20(error.status%20===%20401)%20%7B",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "dd8e82",
+        "hash": "97ea83ca",
+        "encoded": "throw%20new%20Error('Session%20expired.%20Please%20log%20in%20again.');",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "dd8e82",
+        "hash": "e256b81a",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "dd8e82",
+        "hash": "7913e80e",
+        "encoded": "if%20(error.status%20%3E=%20500)%20%7B",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "dd8e82",
+        "hash": "d8ab0fe8",
+        "encoded": "throw%20new%20Error('Banking%20service%20is%20temporarily%20unavailable.%20Please%20try%20again%20later.');",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "dd8e82",
+        "hash": "cfdac52c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "dd8e82",
+        "hash": "f64f8a84",
+        "encoded": "throw%20new%20Error(error.message%20%7C%7C%20'Failed%20to%20retrieve%20account%20balances');",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "dd8e82",
+        "hash": "0e2c0edc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "dd8e82",
+        "hash": "b2fa52a5",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "dd8e82",
+        "hash": "391bbb81",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "dd8e82",
+        "hash": "63b35276",
+        "encoded": "*%20Get%20user%20accounts",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "dd8e82",
+        "hash": "de19fb80",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20User%20accounts",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "dd8e82",
+        "hash": "ba46d75f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "dd8e82",
+        "hash": "33e84be6",
+        "encoded": "export%20const%20getUserAccounts%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "dd8e82",
+        "hash": "11ef1383",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "dd8e82",
+        "hash": "642827e5",
+        "encoded": "const%20response%20=%20await%20apiClient.get('/banking/accounts');",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "dd8e82",
+        "hash": "a349a378",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "dd8e82",
+        "hash": "ba01defd",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "dd8e82",
+        "hash": "e8a700fb",
+        "encoded": "accounts:%20response.accounts,",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "dd8e82",
+        "hash": "6fab5950",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "dd8e82",
+        "hash": "c6d49f8a",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "dd8e82",
+        "hash": "83d55da7",
+        "encoded": "console.error('Get%20User%20Accounts%20Error:',%20error);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "dd8e82",
+        "hash": "2a249804",
+        "encoded": "if%20(error.status%20===%20401)%20%7B",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "dd8e82",
+        "hash": "7c343fd3",
+        "encoded": "throw%20new%20Error('Session%20expired.%20Please%20log%20in%20again.');",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "dd8e82",
+        "hash": "e392f376",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "dd8e82",
+        "hash": "7f417116",
+        "encoded": "throw%20new%20Error(error.message%20%7C%7C%20'Failed%20to%20retrieve%20accounts');",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "dd8e82",
+        "hash": "cdb7b2a0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "dd8e82",
+        "hash": "7930ae6f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "dd8e82",
+        "hash": "50ad655d",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "dd8e82",
+        "hash": "0a09946d",
+        "encoded": "*%20Transfer%20funds%20between%20accounts",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "dd8e82",
+        "hash": "1d0040dd",
+        "encoded": "*%20@param%20%7BObject%7D%20transferData%20-%20Transfer%20details",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "dd8e82",
+        "hash": "afbd99ac",
+        "encoded": "*%20@param%20%7Bstring%7D%20transferData.fromAccountId%20-%20Source%20account%20ID",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "dd8e82",
+        "hash": "2dbfae8a",
+        "encoded": "*%20@param%20%7Bstring%7D%20transferData.toAccountId%20-%20Destination%20account%20ID",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "dd8e82",
+        "hash": "025a2154",
+        "encoded": "*%20@param%20%7Bnumber%7D%20transferData.amount%20-%20Transfer%20amount",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "dd8e82",
+        "hash": "568d8730",
+        "encoded": "*%20@param%20%7Bstring%7D%20%5BtransferData.description%5D%20-%20Optional%20description",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "dd8e82",
+        "hash": "d0337629",
+        "encoded": "*%20@returns%20%7BPromise%3CObject%3E%7D%20Transfer%20response",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "dd8e82",
+        "hash": "8d2db5fd",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "dd8e82",
+        "hash": "9a208b23",
+        "encoded": "export%20const%20transferFunds%20=%20async%20(transferData)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "dd8e82",
+        "hash": "bb7fee13",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "dd8e82",
+        "hash": "dd82f212",
+        "encoded": "const%20%7B%20fromAccountId,%20toAccountId,%20amount,%20description%20%7D%20=%20transferData;",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "dd8e82",
+        "hash": "0def5510",
+        "encoded": "//%20Validate%20input",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "dd8e82",
+        "hash": "3c22966e",
+        "encoded": "if%20(!fromAccountId%20%7C%7C%20!toAccountId%20%7C%7C%20!amount)%20%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "dd8e82",
+        "hash": "a4559926",
+        "encoded": "throw%20new%20Error('From%20account,%20to%20account,%20and%20amount%20are%20required');",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "dd8e82",
+        "hash": "5250e31e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "dd8e82",
+        "hash": "6743f2e1",
+        "encoded": "if%20(fromAccountId%20===%20toAccountId)%20%7B",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "dd8e82",
+        "hash": "4b00732e",
+        "encoded": "throw%20new%20Error('Source%20and%20destination%20accounts%20cannot%20be%20the%20same');",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "dd8e82",
+        "hash": "8aac2494",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "dd8e82",
+        "hash": "5a997680",
+        "encoded": "if%20(amount%20%3C=%200%20%7C%7C%20amount%20%3E%205000)%20%7B",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "dd8e82",
+        "hash": "5a74e073",
+        "encoded": "throw%20new%20Error('Amount%20must%20be%20between%20$0.01%20and%20$5,000.00');",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "dd8e82",
+        "hash": "e4b921c6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "dd8e82",
+        "hash": "bb4d65dc",
+        "encoded": "const%20payload%20=%20%7B",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "dd8e82",
+        "hash": "acfeef34",
+        "encoded": "fromAccountId,",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "dd8e82",
+        "hash": "66067925",
+        "encoded": "toAccountId,",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "dd8e82",
+        "hash": "98add5cd",
+        "encoded": "amount:%20parseFloat(amount),",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "dd8e82",
+        "hash": "07fbdddc",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "dd8e82",
+        "hash": "f257f530",
+        "encoded": "if%20(description)%20%7B",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "dd8e82",
+        "hash": "e33ad5ef",
+        "encoded": "payload.description%20=%20description.trim();",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "dd8e82",
+        "hash": "94b19f35",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "dd8e82",
+        "hash": "5d5fa3d5",
+        "encoded": "const%20response%20=%20await%20apiClient.post('/banking/transfers',%20payload);",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "dd8e82",
+        "hash": "cde4283f",
+        "encoded": "return%20%7B",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "dd8e82",
+        "hash": "d733ee6b",
+        "encoded": "success:%20true,",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "dd8e82",
+        "hash": "23c21f74",
+        "encoded": "transactionId:%20response.transactionId,",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "dd8e82",
+        "hash": "c5a84c2a",
+        "encoded": "status:%20response.status,",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "dd8e82",
+        "hash": "2cfcd100",
+        "encoded": "amount:%20response.amount,",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "dd8e82",
+        "hash": "bebec6fe",
+        "encoded": "fromAccountId:%20response.fromAccountId,",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "dd8e82",
+        "hash": "2a634a75",
+        "encoded": "toAccountId:%20response.toAccountId,",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "dd8e82",
+        "hash": "44546491",
+        "encoded": "completedAt:%20response.completedAt,",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "dd8e82",
+        "hash": "46cd1a50",
+        "encoded": "message:%20response.message%20%7C%7C%20'Transfer%20completed%20successfully',",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "dd8e82",
+        "hash": "a78dfa4e",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "dd8e82",
+        "hash": "af771d33",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "dd8e82",
+        "hash": "8c274c10",
+        "encoded": "console.error('Transfer%20Funds%20Error:',%20error);",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "dd8e82",
+        "hash": "9a6f6fea",
+        "encoded": "//%20Handle%20specific%20error%20cases",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "dd8e82",
+        "hash": "2ae4b8e9",
+        "encoded": "if%20(error.status%20===%20401)%20%7B",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "dd8e82",
+        "hash": "c8ba8381",
+        "encoded": "throw%20new%20Error('Session%20expired.%20Please%20log%20in%20again.');",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "dd8e82",
+        "hash": "fd8e1155",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "dd8e82",
+        "hash": "5767db20",
+        "encoded": "if%20(error.status%20===%20400)%20%7B",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "dd8e82",
+        "hash": "357500e9",
+        "encoded": "throw%20new%20Error(error.message%20%7C%7C%20'Invalid%20transfer%20details');",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "dd8e82",
+        "hash": "056477bc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "dd8e82",
+        "hash": "cc5397a0",
+        "encoded": "if%20(error.status%20===%20409)%20%7B",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "dd8e82",
+        "hash": "00d40336",
+        "encoded": "throw%20new%20Error('Insufficient%20funds%20or%20account%20conflict');",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "dd8e82",
+        "hash": "7b145d98",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "dd8e82",
+        "hash": "85a59525",
+        "encoded": "if%20(error.status%20%3E=%20500)%20%7B",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "dd8e82",
+        "hash": "9d325d8e",
+        "encoded": "throw%20new%20Error('Banking%20service%20is%20temporarily%20unavailable.%20Please%20try%20again%20later.');",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "dd8e82",
+        "hash": "c4560e5f",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "dd8e82",
+        "hash": "b871d050",
+        "encoded": "throw%20new%20Error(error.message%20%7C%7C%20'Transfer%20failed');",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "dd8e82",
+        "hash": "74f7c40c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "dd8e82",
+        "hash": "22e15308",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "dd8e82",
+        "hash": "62e7f37b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "dd8e82",
+        "hash": "d8e47442",
+        "encoded": "*%20Format%20currency%20for%20display",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "dd8e82",
+        "hash": "d2f0a0ee",
+        "encoded": "*%20@param%20%7Bnumber%7D%20amount%20-%20Amount%20to%20format",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "dd8e82",
+        "hash": "f9a3b881",
+        "encoded": "*%20@param%20%7Bstring%7D%20%5Bcurrency='USD'%5D%20-%20Currency%20code",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "dd8e82",
+        "hash": "8f51d783",
+        "encoded": "*%20@returns%20%7Bstring%7D%20Formatted%20currency%20string",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "dd8e82",
+        "hash": "2371ee93",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "dd8e82",
+        "hash": "9249e1c5",
+        "encoded": "export%20const%20formatCurrency%20=%20(amount,%20currency%20=%20'USD')%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "dd8e82",
+        "hash": "f721e934",
+        "encoded": "return%20new%20Intl.NumberFormat('en-US',%20%7B",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "dd8e82",
+        "hash": "5ee83fa4",
+        "encoded": "style:%20'currency',",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "dd8e82",
+        "hash": "8aee8343",
+        "encoded": "currency,",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "dd8e82",
+        "hash": "1f7e7336",
+        "encoded": "minimumFractionDigits:%202,",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "dd8e82",
+        "hash": "9ed76bd0",
+        "encoded": "maximumFractionDigits:%202,",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "dd8e82",
+        "hash": "e21cc466",
+        "encoded": "%7D).format(amount);",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "dd8e82",
+        "hash": "ed3dc2a7",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

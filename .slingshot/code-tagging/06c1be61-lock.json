@@ -1,0 +1,1125 @@
+{
+  "src/pages/IntegratedATMCashWithdrawal.jsx": {
+    "filename": "IntegratedATMCashWithdrawal.jsx",
+    "path": "src/pages/IntegratedATMCashWithdrawal.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "9826e0": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773146777,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "fb09ea63",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "9826e0",
+        "hash": "0b9c5fc1",
+        "encoded": "import%20React,%20%7B%20useState%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "9826e0",
+        "hash": "2abe3658",
+        "encoded": "import%20%7B%20useNavigate%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "9826e0",
+        "hash": "bae85b93",
+        "encoded": "import%20Header%20from%20'../components/organisms/Header';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "9826e0",
+        "hash": "0125872f",
+        "encoded": "import%20CardDetailsForm%20from%20'../components/organisms/CardDetailsForm';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "9826e0",
+        "hash": "8f57b54d",
+        "encoded": "import%20AmountSelection%20from%20'../components/organisms/AmountSelection';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "9826e0",
+        "hash": "9f35a6d3",
+        "encoded": "import%20Button%20from%20'../components/atoms/Button';",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "9826e0",
+        "hash": "fe6be944",
+        "encoded": "import%20GestureIndicator%20from%20'../components/atoms/GestureIndicator';",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "9826e0",
+        "hash": "c06a884f",
+        "encoded": "import%20%7B%20stageWithdrawal,%20simulateCardScan%20%7D%20from%20'../services/atmService';",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "9826e0",
+        "hash": "1d1b7499",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "9826e0",
+        "hash": "52e7b4b0",
+        "encoded": "*%20ATMCashWithdrawal%20page%20component%20with%20integrated%20backend%20API",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "9826e0",
+        "hash": "c382bbae",
+        "encoded": "*%20Main%20page%20for%20ATM%20cash%20withdrawal%20functionality",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "9826e0",
+        "hash": "caaefa0e",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "9826e0",
+        "hash": "917e85fb",
+        "encoded": "const%20ATMCashWithdrawal%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "9826e0",
+        "hash": "087186f0",
+        "encoded": "const%20navigate%20=%20useNavigate();",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "9826e0",
+        "hash": "f18ce82c",
+        "encoded": "const%20%5BcardDetails,%20setCardDetails%5D%20=%20useState(%7B",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "9826e0",
+        "hash": "e7c76139",
+        "encoded": "cardNumber:%20'',",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "9826e0",
+        "hash": "50164eab",
+        "encoded": "expiryDate:%20'',",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "9826e0",
+        "hash": "4dc0f21e",
+        "encoded": "cvv:%20'',",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "9826e0",
+        "hash": "7fc04aec",
+        "encoded": "fullName:%20''",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "9826e0",
+        "hash": "12c90b0b",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "9826e0",
+        "hash": "5fadfcb1",
+        "encoded": "const%20%5BselectedAmount,%20setSelectedAmount%5D%20=%20useState('');",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "9826e0",
+        "hash": "0a14f039",
+        "encoded": "const%20%5Berrors,%20setErrors%5D%20=%20useState(%7B%7D);",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "9826e0",
+        "hash": "12107e5f",
+        "encoded": "const%20%5BisLoading,%20setIsLoading%5D%20=%20useState(false);",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "9826e0",
+        "hash": "526f5bfe",
+        "encoded": "const%20validateForm%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "9826e0",
+        "hash": "0b8a146f",
+        "encoded": "const%20newErrors%20=%20%7B%7D;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "9826e0",
+        "hash": "5e16914c",
+        "encoded": "//%20Card%20number%20validation",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "9826e0",
+        "hash": "e6c04fb4",
+        "encoded": "if%20(!cardDetails.cardNumber.trim())%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "9826e0",
+        "hash": "d89234bc",
+        "encoded": "newErrors.cardNumber%20=%20'Card%20number%20is%20required';",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "9826e0",
+        "hash": "43353d17",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "9826e0",
+        "hash": "aeea2491",
+        "encoded": "//%20Expiry%20date%20validation",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "9826e0",
+        "hash": "ea0645ac",
+        "encoded": "if%20(!cardDetails.expiryDate.trim())%20%7B",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "9826e0",
+        "hash": "2d579bc4",
+        "encoded": "newErrors.expiryDate%20=%20'Expiry%20date%20is%20required';",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "9826e0",
+        "hash": "b14d68ea",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "9826e0",
+        "hash": "c7e93968",
+        "encoded": "//%20CVV%20validation",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "9826e0",
+        "hash": "b2682fd3",
+        "encoded": "if%20(!cardDetails.cvv.trim())%20%7B",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "9826e0",
+        "hash": "f2412d81",
+        "encoded": "newErrors.cvv%20=%20'CVV%20is%20required';",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "9826e0",
+        "hash": "98f83ab6",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "9826e0",
+        "hash": "ee14d863",
+        "encoded": "//%20Full%20name%20validation",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "9826e0",
+        "hash": "9203696c",
+        "encoded": "if%20(!cardDetails.fullName.trim())%20%7B",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "9826e0",
+        "hash": "aae665b0",
+        "encoded": "newErrors.fullName%20=%20'Full%20name%20is%20required';",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "9826e0",
+        "hash": "f9b2449c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "9826e0",
+        "hash": "0df8b018",
+        "encoded": "//%20Amount%20validation",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "9826e0",
+        "hash": "577482f9",
+        "encoded": "if%20(!selectedAmount)%20%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "9826e0",
+        "hash": "d5c8a32d",
+        "encoded": "newErrors.amount%20=%20'Please%20select%20a%20withdrawal%20amount%20before%20proceeding.';",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "9826e0",
+        "hash": "38b604dc",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "9826e0",
+        "hash": "d3360f60",
+        "encoded": "setErrors(newErrors);",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "9826e0",
+        "hash": "de376d17",
+        "encoded": "return%20Object.keys(newErrors).length%20===%200;",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "9826e0",
+        "hash": "8aa563ff",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "9826e0",
+        "hash": "a9259a6c",
+        "encoded": "const%20handleCardDetailsChange%20=%20(details)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "9826e0",
+        "hash": "49471702",
+        "encoded": "setCardDetails(details);",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "9826e0",
+        "hash": "4dd0972e",
+        "encoded": "//%20Clear%20related%20errors%20when%20user%20starts%20typing",
+        "prevChunkIds": []
+      },
+      "60": {
+        "chunkId": "9826e0",
+        "hash": "26078b1e",
+        "encoded": "if%20(errors.cardNumber%20%7C%7C%20errors.expiryDate%20%7C%7C%20errors.cvv%20%7C%7C%20errors.fullName)%20%7B",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "9826e0",
+        "hash": "733a6ce2",
+        "encoded": "const%20newErrors%20=%20%7B%20...errors%20%7D;",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "9826e0",
+        "hash": "e55b1b80",
+        "encoded": "if%20(details.cardNumber%20!==%20cardDetails.cardNumber)%20delete%20newErrors.cardNumber;",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "9826e0",
+        "hash": "0d0b4ddc",
+        "encoded": "if%20(details.expiryDate%20!==%20cardDetails.expiryDate)%20delete%20newErrors.expiryDate;",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "9826e0",
+        "hash": "7568c7a5",
+        "encoded": "if%20(details.cvv%20!==%20cardDetails.cvv)%20delete%20newErrors.cvv;",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "9826e0",
+        "hash": "9fff42fc",
+        "encoded": "if%20(details.fullName%20!==%20cardDetails.fullName)%20delete%20newErrors.fullName;",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "9826e0",
+        "hash": "47c5d613",
+        "encoded": "setErrors(newErrors);",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "9826e0",
+        "hash": "bf862585",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "9826e0",
+        "hash": "8e1a2c97",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "9826e0",
+        "hash": "c0427660",
+        "encoded": "const%20handleAmountChange%20=%20(amount)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "9826e0",
+        "hash": "7e6539ac",
+        "encoded": "setSelectedAmount(amount);",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "9826e0",
+        "hash": "38ec8239",
+        "encoded": "//%20Clear%20amount%20error%20when%20user%20selects%20an%20amount",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "9826e0",
+        "hash": "7082014e",
+        "encoded": "if%20(errors.amount)%20%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "9826e0",
+        "hash": "1b37539a",
+        "encoded": "const%20newErrors%20=%20%7B%20...errors%20%7D;",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "9826e0",
+        "hash": "15d4a170",
+        "encoded": "delete%20newErrors.amount;",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "9826e0",
+        "hash": "7094f80b",
+        "encoded": "setErrors(newErrors);",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "9826e0",
+        "hash": "20d59727",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "9826e0",
+        "hash": "ca563a6e",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "9826e0",
+        "hash": "7cbfa7e3",
+        "encoded": "const%20handleScanCard%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "9826e0",
+        "hash": "18c8d957",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "9826e0",
+        "hash": "009e70fd",
+        "encoded": "setIsLoading(true);",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "9826e0",
+        "hash": "0554499d",
+        "encoded": "//%20Simulate%20card%20scanning%20using%20the%20ATM%20service",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "9826e0",
+        "hash": "dce83733",
+        "encoded": "const%20response%20=%20await%20simulateCardScan();",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "9826e0",
+        "hash": "729d3523",
+        "encoded": "if%20(response.success)%20%7B",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "9826e0",
+        "hash": "ba7790e7",
+        "encoded": "//%20Populate%20card%20details%20from%20scanned%20data",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "9826e0",
+        "hash": "fc7bd959",
+        "encoded": "setCardDetails(%7B",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "9826e0",
+        "hash": "796419c7",
+        "encoded": "cardNumber:%20response.cardDetails.maskedNumber%20%7C%7C%20'****-****-****-1234',",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "9826e0",
+        "hash": "34bc86f3",
+        "encoded": "expiryDate:%20'12/25',",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "9826e0",
+        "hash": "c4b121df",
+        "encoded": "cvv:%20'***',",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "9826e0",
+        "hash": "de97e554",
+        "encoded": "fullName:%20'John%20Doe'",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "9826e0",
+        "hash": "ac69e76f",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "9826e0",
+        "hash": "975468f5",
+        "encoded": "console.log('Card%20scanned%20successfully:',%20response);",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "9826e0",
+        "hash": "2ce4dc97",
+        "encoded": "alert('Card%20scanned%20successfully!');",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "9826e0",
+        "hash": "998d938c",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "9826e0",
+        "hash": "de90dac5",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "9826e0",
+        "hash": "a0e251d7",
+        "encoded": "console.error('Card%20scan%20failed:',%20error);",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "9826e0",
+        "hash": "e8e66556",
+        "encoded": "setErrors(%7B",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "9826e0",
+        "hash": "c52bb213",
+        "encoded": "submit:%20'Card%20scanning%20failed.%20Please%20enter%20details%20manually.'",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "9826e0",
+        "hash": "6df62075",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "9826e0",
+        "hash": "a88a23b9",
+        "encoded": "%7D%20finally%20%7B",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "9826e0",
+        "hash": "5efea8d3",
+        "encoded": "setIsLoading(false);",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "9826e0",
+        "hash": "5a59cee7",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "9826e0",
+        "hash": "3360555d",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "9826e0",
+        "hash": "0df6a3d4",
+        "encoded": "const%20handleBackToDashboard%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "9826e0",
+        "hash": "09e9351f",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "9826e0",
+        "hash": "eeef3628",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "9826e0",
+        "hash": "45924b9e",
+        "encoded": "const%20handleStageWithdrawal%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "9826e0",
+        "hash": "cc16dcb2",
+        "encoded": "if%20(!validateForm())%20%7B",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "9826e0",
+        "hash": "0ea2393d",
+        "encoded": "return;",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "9826e0",
+        "hash": "2de22ffd",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "9826e0",
+        "hash": "8c0c271f",
+        "encoded": "setIsLoading(true);",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "9826e0",
+        "hash": "4d162d07",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "9826e0",
+        "hash": "2cdba551",
+        "encoded": "//%20Create%20card%20token%20from%20card%20details%20(in%20real%20implementation,%20this%20would%20be%20tokenized%20securely)",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "9826e0",
+        "hash": "b36bf80d",
+        "encoded": "const%20cardToken%20=%20%60tok_$%7BcardDetails.cardNumber.slice(-4)%7D_$%7BDate.now()%7D%60;",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "9826e0",
+        "hash": "883ef650",
+        "encoded": "//%20Call%20the%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "9826e0",
+        "hash": "cd2e8e1f",
+        "encoded": "const%20response%20=%20await%20stageWithdrawal(%7B",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "9826e0",
+        "hash": "a77e4db9",
+        "encoded": "cardToken,",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "9826e0",
+        "hash": "e6a2d1b3",
+        "encoded": "amount:%20parseFloat(selectedAmount)",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "9826e0",
+        "hash": "fc349fdd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "9826e0",
+        "hash": "b54d9e5e",
+        "encoded": "console.log('Withdrawal%20staged%20successfully:',%20response);",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "9826e0",
+        "hash": "fb940998",
+        "encoded": "//%20Navigate%20to%20confirmation%20screen%20(would%20be%20implemented%20with%20router)",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "9826e0",
+        "hash": "80ada9ad",
+        "encoded": "alert(%60Withdrawal%20of%20$$%7BselectedAmount%7D%20has%20been%20staged%20successfully!%20Transaction%20ID:%20$%7Bresponse.transactionId%7D%60);",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "9826e0",
+        "hash": "3bf89338",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "9826e0",
+        "hash": "81a0cfb3",
+        "encoded": "console.error('Failed%20to%20stage%20withdrawal:',%20error);",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "9826e0",
+        "hash": "bdf3262b",
+        "encoded": "setErrors(%7B",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "9826e0",
+        "hash": "711201c7",
+        "encoded": "submit:%20error.message%20%7C%7C%20'We%20were%20unable%20to%20stage%20your%20withdrawal%20at%20this%20time.%20Please%20try%20again.'",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "9826e0",
+        "hash": "2be22c18",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "9826e0",
+        "hash": "377a7a09",
+        "encoded": "%7D%20finally%20%7B",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "9826e0",
+        "hash": "9974ad1c",
+        "encoded": "setIsLoading(false);",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "9826e0",
+        "hash": "1b2fde43",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "9826e0",
+        "hash": "bd9ac09d",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "9826e0",
+        "hash": "26899fef",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "9826e0",
+        "hash": "6cdcc098",
+        "encoded": "%3Cdiv%20className=%22flex%20flex-col%20min-h-screen%20bg-%5B#FFFBFA%5D%22%3E",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "9826e0",
+        "hash": "c2cde5f5",
+        "encoded": "%7B/*%20Header%20*/%7D",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "9826e0",
+        "hash": "f7954874",
+        "encoded": "%3CHeader%20title=%22ATM%20Cash%20Withdrawal%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "9826e0",
+        "hash": "6ff0e35a",
+        "encoded": "%7B/*%20Back%20to%20Dashboard%20Link%20*/%7D",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "9826e0",
+        "hash": "6e755068",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20pt-4%20pb-2%22%3E",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "9826e0",
+        "hash": "739aa994",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "9826e0",
+        "hash": "86509a72",
+        "encoded": "onClick=%7BhandleBackToDashboard%7D",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "9826e0",
+        "hash": "b41fec25",
+        "encoded": "className=%22flex%20items-center%20gap-2%20text-%5B#1B281E%5D%20hover:text-%5B#277C3D%5D%20transition-colors%22",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "9826e0",
+        "hash": "e0331446",
+        "encoded": "aria-label=%22Back%20to%20Dashboard%22",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "9826e0",
+        "hash": "d8564e23",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "9826e0",
+        "hash": "63ab564c",
+        "encoded": "%3Csvg%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "9826e0",
+        "hash": "95f90498",
+        "encoded": "%3Cpath%20d=%22M10%2012L6%208L10%204%22%20stroke=%22currentColor%22%20strokeWidth=%222%22%20strokeLinecap=%22round%22%20strokeLinejoin=%22round%22/%3E",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "9826e0",
+        "hash": "f7939d3f",
+        "encoded": "%3C/svg%3E",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "9826e0",
+        "hash": "46ffe824",
+        "encoded": "%3Cspan%20className=%22font-%5B'Plus_Jakarta_Sans'%5D%20font-medium%20text-%5B16px%5D%22%3EBack%20to%20Dashboard%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "9826e0",
+        "hash": "a3cf189f",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "9826e0",
+        "hash": "35b31570",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "9826e0",
+        "hash": "dbcc3569",
+        "encoded": "%7B/*%20Main%20Content%20*/%7D",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "9826e0",
+        "hash": "dbb9d468",
+        "encoded": "%3Cmain%20className=%22flex%20flex-col%20self-stretch%20flex-1%22%3E",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "9826e0",
+        "hash": "0a6007bd",
+        "encoded": "%7B/*%20Card%20Details%20Form%20*/%7D",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "9826e0",
+        "hash": "30ad0cde",
+        "encoded": "%3CCardDetailsForm",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "9826e0",
+        "hash": "c82c087c",
+        "encoded": "cardDetails=%7BcardDetails%7D",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "9826e0",
+        "hash": "30918663",
+        "encoded": "onCardDetailsChange=%7BhandleCardDetailsChange%7D",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "9826e0",
+        "hash": "63252c99",
+        "encoded": "onScanCard=%7BhandleScanCard%7D",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "9826e0",
+        "hash": "7ba47697",
+        "encoded": "errors=%7Berrors%7D",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "9826e0",
+        "hash": "01392ab3",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "9826e0",
+        "hash": "5e083792",
+        "encoded": "%7B/*%20Amount%20Selection%20*/%7D",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "9826e0",
+        "hash": "c8e5ab6a",
+        "encoded": "%3CAmountSelection",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "9826e0",
+        "hash": "1642dbd0",
+        "encoded": "selectedAmount=%7BselectedAmount%7D",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "9826e0",
+        "hash": "5bfd32e3",
+        "encoded": "onAmountChange=%7BhandleAmountChange%7D",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "9826e0",
+        "hash": "ca27c5ef",
+        "encoded": "errors=%7Berrors%7D",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "9826e0",
+        "hash": "c0434c4e",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "9826e0",
+        "hash": "6260a631",
+        "encoded": "%7B/*%20Submit%20Button%20*/%7D",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "9826e0",
+        "hash": "8725b9af",
+        "encoded": "%3Cdiv%20className=%22flex%20flex-row%20justify-stretch%20items-stretch%20self-stretch%20gap-%5B18px%5D%20p-%5B18px%5D%22%3E",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "9826e0",
+        "hash": "5c77068a",
+        "encoded": "%3CButton",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "9826e0",
+        "hash": "52b63e72",
+        "encoded": "variant=%22primary%22",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "9826e0",
+        "hash": "af2fd64f",
+        "encoded": "size=%22lg%22",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "9826e0",
+        "hash": "a710b330",
+        "encoded": "onClick=%7BhandleStageWithdrawal%7D",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "9826e0",
+        "hash": "9c7c8ddc",
+        "encoded": "disabled=%7BisLoading%7D",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "9826e0",
+        "hash": "15c378c7",
+        "encoded": "loading=%7BisLoading%7D",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "9826e0",
+        "hash": "a0c4b30e",
+        "encoded": "ariaLabel=%22Stage%20withdrawal%22",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "9826e0",
+        "hash": "d071f8e8",
+        "encoded": "className=%22flex-1%22",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "9826e0",
+        "hash": "e92d7efd",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "9826e0",
+        "hash": "2e4a9568",
+        "encoded": "%7BisLoading%20?%20'Staging...'%20:%20'Proceed'%7D",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "9826e0",
+        "hash": "f8551b20",
+        "encoded": "%3C/Button%3E",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "9826e0",
+        "hash": "ecee1159",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "9826e0",
+        "hash": "90a845e9",
+        "encoded": "%7B/*%20Submit%20Error%20*/%7D",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "9826e0",
+        "hash": "08d3ff1a",
+        "encoded": "%7Berrors.submit%20&&%20(",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "9826e0",
+        "hash": "f4fa0e8e",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20pb-4%20text-red-600%20text-sm%20text-center%22%3E",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "9826e0",
+        "hash": "317adaaa",
+        "encoded": "%7Berrors.submit%7D",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "9826e0",
+        "hash": "bbc84eab",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "9826e0",
+        "hash": "66c99ffe",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "9826e0",
+        "hash": "bc53ba2a",
+        "encoded": "%3C/main%3E",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "9826e0",
+        "hash": "8db170de",
+        "encoded": "%7B/*%20Bottom%20Bar%20*/%7D",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "9826e0",
+        "hash": "b7f69a77",
+        "encoded": "%3Cfooter%20className=%22flex%20flex-col%20justify-end%20self-stretch%20bg-%5B#FFFBFA%5D%22%3E",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "9826e0",
+        "hash": "cffbfa9a",
+        "encoded": "%3CGestureIndicator%20/%3E",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "9826e0",
+        "hash": "2a2f2825",
+        "encoded": "%3C/footer%3E",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "9826e0",
+        "hash": "c3dc052a",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "9826e0",
+        "hash": "49c3b8b1",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "9826e0",
+        "hash": "6fec3559",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "9826e0",
+        "hash": "a037aed8",
+        "encoded": "export%20default%20ATMCashWithdrawal;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

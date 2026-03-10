@@ -1,0 +1,1683 @@
+{
+  "src/pages/IntegratedCashDepositPage.jsx": {
+    "filename": "IntegratedCashDepositPage.jsx",
+    "path": "src/pages/IntegratedCashDepositPage.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "2f4fa8": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773146778,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "7c19effe",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "2f4fa8",
+        "hash": "0b9c5fc1",
+        "encoded": "import%20React,%20%7B%20useState%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "2f4fa8",
+        "hash": "2abe3658",
+        "encoded": "import%20%7B%20useNavigate%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "2f4fa8",
+        "hash": "bae85b93",
+        "encoded": "import%20Header%20from%20'../components/organisms/Header';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "2f4fa8",
+        "hash": "4f3a1942",
+        "encoded": "import%20Title%20from%20'../components/atoms/Title';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "2f4fa8",
+        "hash": "906c7e10",
+        "encoded": "import%20TextFieldWithIcon%20from%20'../components/atoms/TextFieldWithIcon';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "2f4fa8",
+        "hash": "b5bcfc58",
+        "encoded": "import%20TextField%20from%20'../components/atoms/TextField';",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "2f4fa8",
+        "hash": "16c796fe",
+        "encoded": "import%20Button%20from%20'../components/atoms/Button';",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "2f4fa8",
+        "hash": "5f3d5583",
+        "encoded": "import%20GestureIndicator%20from%20'../components/atoms/GestureIndicator';",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "2f4fa8",
+        "hash": "6dbf9ba9",
+        "encoded": "import%20RoundButton%20from%20'../components/atoms/RoundButton';",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "2f4fa8",
+        "hash": "45c166ea",
+        "encoded": "import%20%7B%20stageDeposit,%20simulateCardScan%20%7D%20from%20'../services/atmService';",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "2f4fa8",
+        "hash": "bf22ba36",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "2f4fa8",
+        "hash": "022d7b83",
+        "encoded": "*%20Cash%20Deposit%20Page%20Component%20with%20integrated%20backend%20API",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "2f4fa8",
+        "hash": "425ab2a3",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "2f4fa8",
+        "hash": "abae8dbe",
+        "encoded": "*%20Implements%20the%20Cash%20Deposit%20screen%20as%20specified%20in%20Story-4-CashDeposit.md",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "2f4fa8",
+        "hash": "bf7e4e56",
+        "encoded": "*%20Features:",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "2f4fa8",
+        "hash": "3615b1f5",
+        "encoded": "*%20-%20Dark%20theme%20implementation",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "2f4fa8",
+        "hash": "ea14631e",
+        "encoded": "*%20-%20Card%20details%20form%20with%20validation",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "2f4fa8",
+        "hash": "1231022b",
+        "encoded": "*%20-%20Confirm%20deposit%20functionality%20with%20real%20API%20integration",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "2f4fa8",
+        "hash": "592816cb",
+        "encoded": "*%20-%20Camera%20icon%20for%20card%20scanning",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "2f4fa8",
+        "hash": "e92ae0ee",
+        "encoded": "*%20-%20Accessibility%20compliance%20(WCAG%202.1%20AA)",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "2f4fa8",
+        "hash": "2b44c13d",
+        "encoded": "*%20-%20Performance%20optimized%20(loads%20in%20under%202%20seconds)",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "2f4fa8",
+        "hash": "fcd6a071",
+        "encoded": "*",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "2f4fa8",
+        "hash": "80341417",
+        "encoded": "*%20@component",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "2f4fa8",
+        "hash": "22c40cd2",
+        "encoded": "*%20@returns%20%7BJSX.Element%7D%20Cash%20Deposit%20page",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "2f4fa8",
+        "hash": "8b36099b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "2f4fa8",
+        "hash": "f8d45fff",
+        "encoded": "const%20CashDepositPage%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "2f4fa8",
+        "hash": "ecd44ca1",
+        "encoded": "const%20navigate%20=%20useNavigate();",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "2f4fa8",
+        "hash": "54f7a5f4",
+        "encoded": "const%20%5BcardNumber,%20setCardNumber%5D%20=%20useState('');",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "2f4fa8",
+        "hash": "afe9798d",
+        "encoded": "const%20%5BexpiryDate,%20setExpiryDate%5D%20=%20useState('');",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "2f4fa8",
+        "hash": "6f9b6a13",
+        "encoded": "const%20%5Bcvv,%20setCvv%5D%20=%20useState('');",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "2f4fa8",
+        "hash": "4f8ba7c1",
+        "encoded": "const%20%5BfullName,%20setFullName%5D%20=%20useState('');",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "2f4fa8",
+        "hash": "2dc69dd1",
+        "encoded": "const%20%5Bamount,%20setAmount%5D%20=%20useState('');",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "2f4fa8",
+        "hash": "4416c09c",
+        "encoded": "const%20%5BisLoading,%20setIsLoading%5D%20=%20useState(false);",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "2f4fa8",
+        "hash": "2a51abfb",
+        "encoded": "const%20%5Berror,%20setError%5D%20=%20useState('');",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "2f4fa8",
+        "hash": "391bbb81",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "2f4fa8",
+        "hash": "f9ae2def",
+        "encoded": "*%20Handles%20card%20number%20input%20change",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "2f4fa8",
+        "hash": "e747f49a",
+        "encoded": "*%20@param%20%7BEvent%7D%20e%20-%20Input%20change%20event",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "2f4fa8",
+        "hash": "ba46d75f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "2f4fa8",
+        "hash": "d88f01a7",
+        "encoded": "const%20handleCardNumberChange%20=%20(e)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "2f4fa8",
+        "hash": "8657ca79",
+        "encoded": "setCardNumber(e.target.value);",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "2f4fa8",
+        "hash": "eca0ea68",
+        "encoded": "if%20(error)%20setError('');%20//%20Clear%20error%20when%20user%20starts%20typing",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "2f4fa8",
+        "hash": "ebf5e4a4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "2f4fa8",
+        "hash": "e189d5fa",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "2f4fa8",
+        "hash": "d9840087",
+        "encoded": "*%20Handles%20expiry%20date%20input%20change",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "2f4fa8",
+        "hash": "b8222751",
+        "encoded": "*%20@param%20%7BEvent%7D%20e%20-%20Input%20change%20event",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "2f4fa8",
+        "hash": "d02f616b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "2f4fa8",
+        "hash": "53146a5f",
+        "encoded": "const%20handleExpiryDateChange%20=%20(e)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "2f4fa8",
+        "hash": "8af3f872",
+        "encoded": "setExpiryDate(e.target.value);",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "2f4fa8",
+        "hash": "a50e1a88",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "2f4fa8",
+        "hash": "57103e83",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "2f4fa8",
+        "hash": "9d15853a",
+        "encoded": "*%20Handles%20CVV%20input%20change",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "2f4fa8",
+        "hash": "406a7df7",
+        "encoded": "*%20@param%20%7BEvent%7D%20e%20-%20Input%20change%20event",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "2f4fa8",
+        "hash": "d877908f",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "2f4fa8",
+        "hash": "30b2f6cb",
+        "encoded": "const%20handleCvvChange%20=%20(e)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "2f4fa8",
+        "hash": "c91b9a2e",
+        "encoded": "setCvv(e.target.value);",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "2f4fa8",
+        "hash": "cbe7488b",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "2f4fa8",
+        "hash": "725e598b",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "2f4fa8",
+        "hash": "fc234266",
+        "encoded": "*%20Handles%20full%20name%20input%20change",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "2f4fa8",
+        "hash": "7c19c6c9",
+        "encoded": "*%20@param%20%7BEvent%7D%20e%20-%20Input%20change%20event",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "2f4fa8",
+        "hash": "63411be4",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "2f4fa8",
+        "hash": "0a0957c7",
+        "encoded": "const%20handleFullNameChange%20=%20(e)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "2f4fa8",
+        "hash": "3202b8d2",
+        "encoded": "setFullName(e.target.value);",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "2f4fa8",
+        "hash": "f74f24ea",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "2f4fa8",
+        "hash": "696a5ca4",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "2f4fa8",
+        "hash": "7503a2fb",
+        "encoded": "*%20Handles%20amount%20input%20change",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "2f4fa8",
+        "hash": "db59a9e5",
+        "encoded": "*%20@param%20%7BEvent%7D%20e%20-%20Input%20change%20event",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "2f4fa8",
+        "hash": "b8b760f8",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "2f4fa8",
+        "hash": "f12ecd14",
+        "encoded": "const%20handleAmountChange%20=%20(e)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "2f4fa8",
+        "hash": "f0933ca6",
+        "encoded": "setAmount(e.target.value);",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "2f4fa8",
+        "hash": "04c8973c",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "2f4fa8",
+        "hash": "0140c331",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "2f4fa8",
+        "hash": "da4fda1c",
+        "encoded": "*%20Handles%20camera%20icon%20click%20for%20card%20scanning",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "2f4fa8",
+        "hash": "3aae0bf3",
+        "encoded": "*%20Integrates%20with%20ATM%20service%20for%20card%20scanning%20simulation",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "2f4fa8",
+        "hash": "b56624f8",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "2f4fa8",
+        "hash": "37adb1fa",
+        "encoded": "const%20handleCameraScan%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "2f4fa8",
+        "hash": "2465de3f",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "2f4fa8",
+        "hash": "0315eeb4",
+        "encoded": "setIsLoading(true);",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "2f4fa8",
+        "hash": "420addfd",
+        "encoded": "//%20Simulate%20card%20scanning%20using%20the%20ATM%20service",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "2f4fa8",
+        "hash": "58a42b1f",
+        "encoded": "const%20response%20=%20await%20simulateCardScan();",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "2f4fa8",
+        "hash": "552837d8",
+        "encoded": "if%20(response.success)%20%7B",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "2f4fa8",
+        "hash": "5d468733",
+        "encoded": "//%20Populate%20card%20details%20from%20scanned%20data",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "2f4fa8",
+        "hash": "73b1f835",
+        "encoded": "setCardNumber(response.cardDetails.maskedNumber%20%7C%7C%20'****-****-****-1234');",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "2f4fa8",
+        "hash": "a026f135",
+        "encoded": "setExpiryDate('12/25');",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "2f4fa8",
+        "hash": "f7feec98",
+        "encoded": "setCvv('***');",
+        "prevChunkIds": []
+      },
+      "93": {
+        "chunkId": "2f4fa8",
+        "hash": "7f277f20",
+        "encoded": "setFullName('John%20Doe');",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "2f4fa8",
+        "hash": "048d6c97",
+        "encoded": "console.log('Card%20scanned%20successfully:',%20response);",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "2f4fa8",
+        "hash": "10021931",
+        "encoded": "alert('Card%20scanned%20successfully!');",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "2f4fa8",
+        "hash": "21cc0f70",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "2f4fa8",
+        "hash": "1b69989c",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "2f4fa8",
+        "hash": "c3c0d05d",
+        "encoded": "console.error('Card%20scan%20failed:',%20error);",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "2f4fa8",
+        "hash": "27e433f1",
+        "encoded": "setError('Card%20scanning%20failed.%20Please%20enter%20details%20manually.');",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "2f4fa8",
+        "hash": "b70d1f63",
+        "encoded": "%7D%20finally%20%7B",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "2f4fa8",
+        "hash": "92891356",
+        "encoded": "setIsLoading(false);",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "2f4fa8",
+        "hash": "34001782",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "2f4fa8",
+        "hash": "567d1a41",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "2f4fa8",
+        "hash": "09438943",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "2f4fa8",
+        "hash": "46cea650",
+        "encoded": "*%20Handles%20navigation%20back%20to%20dashboard",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "2f4fa8",
+        "hash": "63ad5add",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "2f4fa8",
+        "hash": "0df6a3d4",
+        "encoded": "const%20handleBackToDashboard%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "2f4fa8",
+        "hash": "09e9351f",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "2f4fa8",
+        "hash": "eeef3628",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "2f4fa8",
+        "hash": "60f87e2a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "2f4fa8",
+        "hash": "f4311772",
+        "encoded": "*%20Validates%20form%20inputs",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "2f4fa8",
+        "hash": "4fb9effc",
+        "encoded": "*%20@returns%20%7Bboolean%7D%20True%20if%20form%20is%20valid",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "2f4fa8",
+        "hash": "19d2819b",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "2f4fa8",
+        "hash": "aa050a5f",
+        "encoded": "const%20validateForm%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "2f4fa8",
+        "hash": "e01b8e24",
+        "encoded": "if%20(!cardNumber.trim())%20%7B",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "2f4fa8",
+        "hash": "584a70b0",
+        "encoded": "setError('Please%20enter%20your%20card%20details%20before%20confirming%20the%20deposit.');",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "2f4fa8",
+        "hash": "64fc8649",
+        "encoded": "return%20false;",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "2f4fa8",
+        "hash": "7b145d98",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "2f4fa8",
+        "hash": "b024c797",
+        "encoded": "//%20Additional%20validation%20can%20be%20added%20here",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "2f4fa8",
+        "hash": "dc7d699a",
+        "encoded": "return%20true;",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "2f4fa8",
+        "hash": "ddc133c6",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "2f4fa8",
+        "hash": "1428ca54",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "2f4fa8",
+        "hash": "6cedb8c7",
+        "encoded": "*%20Handles%20confirm%20deposit%20button%20click",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "2f4fa8",
+        "hash": "1cd147ff",
+        "encoded": "*%20Implements%20validation%20and%20staging%20service%20call%20with%20real%20API%20integration",
+        "prevChunkIds": []
+      },
+      "129": {
+        "chunkId": "2f4fa8",
+        "hash": "9afc81a1",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "2f4fa8",
+        "hash": "478eff70",
+        "encoded": "const%20handleConfirmDeposit%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "2f4fa8",
+        "hash": "2bf6b1fe",
+        "encoded": "if%20(!validateForm())%20%7B",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "2f4fa8",
+        "hash": "9ca7ae90",
+        "encoded": "return;",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "2f4fa8",
+        "hash": "7ebeb133",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "2f4fa8",
+        "hash": "266ad63b",
+        "encoded": "setIsLoading(true);",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "2f4fa8",
+        "hash": "3a8de02d",
+        "encoded": "setError('');",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "2f4fa8",
+        "hash": "874f3d6b",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "2f4fa8",
+        "hash": "3a34ff72",
+        "encoded": "//%20Create%20card%20token%20from%20card%20details%20(in%20real%20implementation,%20this%20would%20be%20tokenized%20securely)",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "2f4fa8",
+        "hash": "6d694c32",
+        "encoded": "const%20cardToken%20=%20%60tok_$%7BcardNumber.slice(-4)%7D_$%7BDate.now()%7D%60;",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "2f4fa8",
+        "hash": "3a655d4d",
+        "encoded": "//%20Prepare%20deposit%20data",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "2f4fa8",
+        "hash": "be130f4e",
+        "encoded": "const%20depositData%20=%20%7B%20cardToken%20%7D;",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "2f4fa8",
+        "hash": "845adc1e",
+        "encoded": "if%20(amount%20&&%20parseFloat(amount)%20%3E%200)%20%7B",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "2f4fa8",
+        "hash": "d4578bfb",
+        "encoded": "depositData.amount%20=%20parseFloat(amount);",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "2f4fa8",
+        "hash": "2d25e64b",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "2f4fa8",
+        "hash": "cb8fb168",
+        "encoded": "//%20Call%20the%20ATM%20Staging%20Service",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "2f4fa8",
+        "hash": "d748668b",
+        "encoded": "const%20response%20=%20await%20stageDeposit(depositData);",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "2f4fa8",
+        "hash": "d62c7358",
+        "encoded": "console.log('Deposit%20staged%20successfully:',%20response);",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "2f4fa8",
+        "hash": "72a88077",
+        "encoded": "//%20Navigate%20to%20confirmation%20screen%20(TBD%20as%20per%20story)",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "2f4fa8",
+        "hash": "0045491e",
+        "encoded": "alert(%60Deposit%20has%20been%20staged%20successfully!%20Transaction%20ID:%20$%7Bresponse.transactionId%7D%60);",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "2f4fa8",
+        "hash": "44c9079d",
+        "encoded": "//%20navigate('/deposit-confirmation');",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "2f4fa8",
+        "hash": "e51a2d57",
+        "encoded": "%7D%20catch%20(err)%20%7B",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "2f4fa8",
+        "hash": "bf7d0b21",
+        "encoded": "console.error('Failed%20to%20stage%20deposit:',%20err);",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "2f4fa8",
+        "hash": "12a2b615",
+        "encoded": "setError(err.message%20%7C%7C%20'We%20were%20unable%20to%20stage%20your%20deposit%20at%20this%20time.%20Please%20try%20again%20later.');",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "2f4fa8",
+        "hash": "0c053e77",
+        "encoded": "%7D%20finally%20%7B",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "2f4fa8",
+        "hash": "0fa8d632",
+        "encoded": "setIsLoading(false);",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "2f4fa8",
+        "hash": "9f3096f5",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "2f4fa8",
+        "hash": "15b0cbdc",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "2f4fa8",
+        "hash": "6b918c25",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "2f4fa8",
+        "hash": "bf6a7050",
+        "encoded": "%3Cdiv%20className=%22min-h-screen%20bg-background%20flex%20flex-col%22%3E",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "2f4fa8",
+        "hash": "fbd9ed1e",
+        "encoded": "%7B/*%20Header%20*/%7D",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "2f4fa8",
+        "hash": "84f93018",
+        "encoded": "%3CHeader%20/%3E",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "2f4fa8",
+        "hash": "287558e6",
+        "encoded": "%7B/*%20Back%20to%20Dashboard%20Link%20*/%7D",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "2f4fa8",
+        "hash": "9a3986c9",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20pt-4%20pb-2%22%3E",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "2f4fa8",
+        "hash": "f1e3dd9f",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "2f4fa8",
+        "hash": "b484da66",
+        "encoded": "onClick=%7BhandleBackToDashboard%7D",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "2f4fa8",
+        "hash": "44f2fcb4",
+        "encoded": "className=%22flex%20items-center%20gap-2%20text-text-primary%20hover:text-button-primary%20transition-colors%22",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "2f4fa8",
+        "hash": "43d79eab",
+        "encoded": "aria-label=%22Back%20to%20Dashboard%22",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "2f4fa8",
+        "hash": "d718a85c",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "2f4fa8",
+        "hash": "fc3d0160",
+        "encoded": "%3Csvg%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "2f4fa8",
+        "hash": "666650e1",
+        "encoded": "%3Cpath%20d=%22M10%2012L6%208L10%204%22%20stroke=%22currentColor%22%20strokeWidth=%222%22%20strokeLinecap=%22round%22%20strokeLinejoin=%22round%22/%3E",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "2f4fa8",
+        "hash": "07e0ba5f",
+        "encoded": "%3C/svg%3E",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "2f4fa8",
+        "hash": "c8747f5e",
+        "encoded": "%3Cspan%20className=%22font-%5B'Plus_Jakarta_Sans'%5D%20font-medium%20text-%5B16px%5D%22%3EBack%20to%20Dashboard%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "2f4fa8",
+        "hash": "0a60a2cb",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "2f4fa8",
+        "hash": "a9e8cfa0",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "2f4fa8",
+        "hash": "4ae6422f",
+        "encoded": "%7B/*%20Main%20Content%20*/%7D",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "2f4fa8",
+        "hash": "bad2f736",
+        "encoded": "%3Cmain%20className=%22flex-1%20flex%20flex-col%22%20role=%22main%22%3E",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "2f4fa8",
+        "hash": "a55e42cc",
+        "encoded": "%7B/*%20Page%20Title%20*/%7D",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "2f4fa8",
+        "hash": "41612ada",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20pt-%5B28px%5D%20pb-1%22%3E",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "2f4fa8",
+        "hash": "b9b35220",
+        "encoded": "%3CTitle",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "2f4fa8",
+        "hash": "90bc1f0a",
+        "encoded": "text=%22Cash%20Deposit%22",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "2f4fa8",
+        "hash": "dede7015",
+        "encoded": "className=%22text-%5B28px%5D%20font-bold%20leading-%5B1.26%5D%20tracking-%5B-2%25%5D%20text-text-primary%20font-jakarta%22",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "2f4fa8",
+        "hash": "fba2239a",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "2f4fa8",
+        "hash": "e7953807",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "2f4fa8",
+        "hash": "3b6c10cf",
+        "encoded": "%7B/*%20Form%20Section%20*/%7D",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "2f4fa8",
+        "hash": "2774563c",
+        "encoded": "%3Cdiv%20className=%22flex-1%20px-0%20pb-2%22%3E",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "2f4fa8",
+        "hash": "78da7aa0",
+        "encoded": "%7B/*%20Section%20Title%20*/%7D",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "2f4fa8",
+        "hash": "2b1ee80a",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20pt-1%20pb-1%22%3E",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "2f4fa8",
+        "hash": "3f521e64",
+        "encoded": "%3CTitle",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "2f4fa8",
+        "hash": "6e2d57a2",
+        "encoded": "text=%22Enter%20Deposit%20Details%22",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "2f4fa8",
+        "hash": "90bc750d",
+        "encoded": "className=%22text-%5B22px%5D%20font-bold%20leading-%5B1.30%5D%20tracking-%5B-2%25%5D%20text-text-primary%20font-jakarta%22",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "2f4fa8",
+        "hash": "9ec3d561",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "2f4fa8",
+        "hash": "eed125f8",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "2f4fa8",
+        "hash": "eff68a1f",
+        "encoded": "%7B/*%20Card%20Number%20Field%20with%20Camera%20Icon%20*/%7D",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "2f4fa8",
+        "hash": "8e92f6da",
+        "encoded": "%3Cdiv%20className=%22flex%20items-center%20px-0%20pr-%5B18px%5D%20gap-0%22%3E",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "2f4fa8",
+        "hash": "fb5e58f6",
+        "encoded": "%3Cdiv%20className=%22flex-1%20px-%5B18px%5D%20py-2%22%3E",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "2f4fa8",
+        "hash": "22c948c8",
+        "encoded": "%3CTextFieldWithIcon",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "2f4fa8",
+        "hash": "83fdb576",
+        "encoded": "placeholder=%22Card%20Number%22",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "2f4fa8",
+        "hash": "198eb966",
+        "encoded": "value=%7BcardNumber%7D",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "2f4fa8",
+        "hash": "269d348a",
+        "encoded": "onChange=%7BhandleCardNumberChange%7D",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "2f4fa8",
+        "hash": "800d17ab",
+        "encoded": "icon=%22credit-card%22",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "2f4fa8",
+        "hash": "7b63be9e",
+        "encoded": "className=%22bg-input-background%20border-0%20rounded-%5B20px%5D%20text-text-primary%22",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "2f4fa8",
+        "hash": "d83331d7",
+        "encoded": "aria-label=%22Card%20number%20input%20field%22",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "2f4fa8",
+        "hash": "c8f5f36c",
+        "encoded": "aria-required=%22true%22",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "2f4fa8",
+        "hash": "919c7c5e",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "2f4fa8",
+        "hash": "94eaed36",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "2f4fa8",
+        "hash": "26bd6f75",
+        "encoded": "%3CRoundButton",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "2f4fa8",
+        "hash": "646aa5c0",
+        "encoded": "icon=%22camera%22",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "2f4fa8",
+        "hash": "b8c35669",
+        "encoded": "onClick=%7BhandleCameraScan%7D",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "2f4fa8",
+        "hash": "d7d1f2be",
+        "encoded": "disabled=%7BisLoading%7D",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "2f4fa8",
+        "hash": "e3feaa9f",
+        "encoded": "className=%22bg-button-primary%20w-12%20h-12%22",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "2f4fa8",
+        "hash": "6e9f6703",
+        "encoded": "aria-label=%22Scan%20card%20with%20camera%22",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "2f4fa8",
+        "hash": "a66a21bd",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "2f4fa8",
+        "hash": "7e426e5f",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "2f4fa8",
+        "hash": "43348908",
+        "encoded": "%7B/*%20Expiry%20Date%20and%20CVV%20Fields%20*/%7D",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "2f4fa8",
+        "hash": "3e156928",
+        "encoded": "%3Cdiv%20className=%22flex%20gap-0%22%3E",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "2f4fa8",
+        "hash": "7f0dc11f",
+        "encoded": "%3Cdiv%20className=%22flex-1%20px-2%20pl-%5B18px%5D%20py-2%22%3E",
+        "prevChunkIds": []
+      },
+      "229": {
+        "chunkId": "2f4fa8",
+        "hash": "848820f1",
+        "encoded": "%3CTextField",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "2f4fa8",
+        "hash": "c77677c3",
+        "encoded": "placeholder=%22MM/YY%22",
+        "prevChunkIds": []
+      },
+      "231": {
+        "chunkId": "2f4fa8",
+        "hash": "20e60ca8",
+        "encoded": "value=%7BexpiryDate%7D",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "2f4fa8",
+        "hash": "5571bd06",
+        "encoded": "onChange=%7BhandleExpiryDateChange%7D",
+        "prevChunkIds": []
+      },
+      "233": {
+        "chunkId": "2f4fa8",
+        "hash": "0cfe899d",
+        "encoded": "className=%22bg-input-background%20border-0%20rounded-%5B20px%5D%20text-text-primary%22",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "2f4fa8",
+        "hash": "22f71bf5",
+        "encoded": "aria-label=%22Card%20expiry%20date%22",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "2f4fa8",
+        "hash": "5f5e8c05",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "2f4fa8",
+        "hash": "b1d156d1",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "2f4fa8",
+        "hash": "0864ba48",
+        "encoded": "%3Cdiv%20className=%22flex-1%20px-2%20pr-%5B18px%5D%20py-2%22%3E",
+        "prevChunkIds": []
+      },
+      "238": {
+        "chunkId": "2f4fa8",
+        "hash": "d6e95d37",
+        "encoded": "%3CTextField",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "2f4fa8",
+        "hash": "c8414ecc",
+        "encoded": "placeholder=%22CVV%22",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "2f4fa8",
+        "hash": "ee937f62",
+        "encoded": "value=%7Bcvv%7D",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "2f4fa8",
+        "hash": "04d51eed",
+        "encoded": "onChange=%7BhandleCvvChange%7D",
+        "prevChunkIds": []
+      },
+      "242": {
+        "chunkId": "2f4fa8",
+        "hash": "6e6b304e",
+        "encoded": "className=%22bg-input-background%20border-0%20rounded-%5B20px%5D%20text-text-primary%22",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "2f4fa8",
+        "hash": "8dbd6d02",
+        "encoded": "aria-label=%22Card%20CVV%22",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "2f4fa8",
+        "hash": "d0594624",
+        "encoded": "type=%22password%22",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "2f4fa8",
+        "hash": "db70b9a2",
+        "encoded": "maxLength=%224%22",
+        "prevChunkIds": []
+      },
+      "246": {
+        "chunkId": "2f4fa8",
+        "hash": "a308534f",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "2f4fa8",
+        "hash": "c05902f4",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "248": {
+        "chunkId": "2f4fa8",
+        "hash": "597c6afb",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "250": {
+        "chunkId": "2f4fa8",
+        "hash": "bb888758",
+        "encoded": "%7B/*%20Full%20Name%20Field%20*/%7D",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "2f4fa8",
+        "hash": "a87ba052",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20py-2%20h-%5B66px%5D%22%3E",
+        "prevChunkIds": []
+      },
+      "252": {
+        "chunkId": "2f4fa8",
+        "hash": "09b8c31b",
+        "encoded": "%3CTextFieldWithIcon",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "2f4fa8",
+        "hash": "e2897c24",
+        "encoded": "placeholder=%22Full%20Name%22",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "2f4fa8",
+        "hash": "dd3709a2",
+        "encoded": "value=%7BfullName%7D",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "2f4fa8",
+        "hash": "023dd11c",
+        "encoded": "onChange=%7BhandleFullNameChange%7D",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "2f4fa8",
+        "hash": "c70e29ce",
+        "encoded": "icon=%22user%22",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "2f4fa8",
+        "hash": "5689efbd",
+        "encoded": "className=%22bg-input-background%20border-0%20rounded-%5B20px%5D%20text-text-primary%20h-full%22",
+        "prevChunkIds": []
+      },
+      "258": {
+        "chunkId": "2f4fa8",
+        "hash": "78f800cd",
+        "encoded": "aria-label=%22Cardholder%20full%20name%22",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "2f4fa8",
+        "hash": "cc7b70e4",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "2f4fa8",
+        "hash": "b80aa576",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "2f4fa8",
+        "hash": "7b1ad317",
+        "encoded": "%7B/*%20Amount%20Field%20(Optional)%20*/%7D",
+        "prevChunkIds": []
+      },
+      "263": {
+        "chunkId": "2f4fa8",
+        "hash": "9cbc55bc",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20py-2%20h-%5B66px%5D%22%3E",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "2f4fa8",
+        "hash": "e40a9a3a",
+        "encoded": "%3CTextFieldWithIcon",
+        "prevChunkIds": []
+      },
+      "265": {
+        "chunkId": "2f4fa8",
+        "hash": "027113f6",
+        "encoded": "placeholder=%22Amount%20(Optional)%22",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "2f4fa8",
+        "hash": "4b2b00f2",
+        "encoded": "value=%7Bamount%7D",
+        "prevChunkIds": []
+      },
+      "267": {
+        "chunkId": "2f4fa8",
+        "hash": "e739bec9",
+        "encoded": "onChange=%7BhandleAmountChange%7D",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "2f4fa8",
+        "hash": "87c82ebb",
+        "encoded": "icon=%22dollar-sign%22",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "2f4fa8",
+        "hash": "f7a8db5b",
+        "encoded": "className=%22bg-input-background%20border-0%20rounded-%5B20px%5D%20text-text-primary%20h-full%22",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "2f4fa8",
+        "hash": "8188bf8f",
+        "encoded": "aria-label=%22Deposit%20amount%20(optional)%22",
+        "prevChunkIds": []
+      },
+      "271": {
+        "chunkId": "2f4fa8",
+        "hash": "4006634b",
+        "encoded": "type=%22number%22",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "2f4fa8",
+        "hash": "a3b48e36",
+        "encoded": "step=%220.01%22",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "2f4fa8",
+        "hash": "cc4a7fbe",
+        "encoded": "min=%220%22",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "2f4fa8",
+        "hash": "7be4d257",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "2f4fa8",
+        "hash": "caead8da",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "276": {
+        "chunkId": "2f4fa8",
+        "hash": "2c73cf7f",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "2f4fa8",
+        "hash": "d0cd82d5",
+        "encoded": "%7B/*%20Error%20Message%20*/%7D",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "2f4fa8",
+        "hash": "114a6ff4",
+        "encoded": "%7Berror%20&&%20(",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "2f4fa8",
+        "hash": "2c8331e7",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20py-2%22%3E",
+        "prevChunkIds": []
+      },
+      "281": {
+        "chunkId": "2f4fa8",
+        "hash": "5f580c6c",
+        "encoded": "%3Cp%20className=%22text-red-500%20text-sm%22%20role=%22alert%22%20aria-live=%22polite%22%3E",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "2f4fa8",
+        "hash": "da802837",
+        "encoded": "%7Berror%7D",
+        "prevChunkIds": []
+      },
+      "283": {
+        "chunkId": "2f4fa8",
+        "hash": "ea6be787",
+        "encoded": "%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "2f4fa8",
+        "hash": "3781687b",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "2f4fa8",
+        "hash": "d96a6730",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "2f4fa8",
+        "hash": "fde9f172",
+        "encoded": "%7B/*%20Confirm%20Button%20*/%7D",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "2f4fa8",
+        "hash": "2c7fdaa8",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20py-%5B18px%5D%22%3E",
+        "prevChunkIds": []
+      },
+      "289": {
+        "chunkId": "2f4fa8",
+        "hash": "84d4f48c",
+        "encoded": "%3CButton",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "2f4fa8",
+        "hash": "e65652a7",
+        "encoded": "text=%7BisLoading%20?%20'Processing...'%20:%20'Confirm%20Deposit'%7D",
+        "prevChunkIds": []
+      },
+      "291": {
+        "chunkId": "2f4fa8",
+        "hash": "0c4d1654",
+        "encoded": "onClick=%7BhandleConfirmDeposit%7D",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "2f4fa8",
+        "hash": "ebdc9088",
+        "encoded": "disabled=%7BisLoading%7D",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "2f4fa8",
+        "hash": "9cbb2f21",
+        "encoded": "className=%22w-full%20bg-button-primary%20text-white%20h-%5B50px%5D%20rounded-%5B48px%5D%20font-medium%20text-%5B17px%5D%20leading-%5B1.35%5D%20disabled:opacity-50%22",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "2f4fa8",
+        "hash": "a6a51421",
+        "encoded": "aria-label=%22Confirm%20deposit%20transaction%22",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "2f4fa8",
+        "hash": "1bf064fb",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "2f4fa8",
+        "hash": "2bd1c7be",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "2f4fa8",
+        "hash": "636f4cbd",
+        "encoded": "%3C/main%3E",
+        "prevChunkIds": []
+      },
+      "299": {
+        "chunkId": "2f4fa8",
+        "hash": "ec66133b",
+        "encoded": "%7B/*%20Bottom%20Gesture%20Indicator%20*/%7D",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "2f4fa8",
+        "hash": "22631ac3",
+        "encoded": "%3Cdiv%20className=%22flex%20justify-center%20pb-4%22%3E",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "2f4fa8",
+        "hash": "e59fe504",
+        "encoded": "%3CGestureIndicator%20className=%22bg-gesture-indicator%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "2f4fa8",
+        "hash": "fe1e3545",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "2f4fa8",
+        "hash": "74d0f631",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "2f4fa8",
+        "hash": "0cca25c8",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "2f4fa8",
+        "hash": "c3f92a6f",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "2f4fa8",
+        "hash": "1ee783c5",
+        "encoded": "export%20default%20CashDepositPage;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

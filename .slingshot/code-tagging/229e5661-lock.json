@@ -1,0 +1,1407 @@
+{
+  "src/services/API_INTEGRATION_README.md": {
+    "filename": "API_INTEGRATION_README.md",
+    "path": "src/services/API_INTEGRATION_README.md",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "2ace94": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773146778,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "c13b3b19",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "2ace94",
+        "hash": "57c0dd9c",
+        "encoded": "#%20API%20Integration%20Layer%20Documentation",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "2ace94",
+        "hash": "5ac33061",
+        "encoded": "##%20Overview",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "2ace94",
+        "hash": "137a9554",
+        "encoded": "This%20directory%20contains%20the%20complete%20API%20integration%20layer%20that%20connects%20the%20React%20frontend%20components%20with%20the%20comprehensive%20backend%20services.%20The%20integration%20layer%20provides%20a%20clean,%20consistent%20interface%20for%20all%20API%20communications.",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "2ace94",
+        "hash": "21b763c6",
+        "encoded": "##%20Architecture",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "2ace94",
+        "hash": "b17a1f99",
+        "encoded": "###%20Core%20Components",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "2ace94",
+        "hash": "eff31fa4",
+        "encoded": "1.%20**apiClient.js**%20-%20Central%20HTTP%20client%20with%20authentication%20and%20error%20handling",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "2ace94",
+        "hash": "a7bb37e5",
+        "encoded": "2.%20**authService.js**%20-%20Authentication%20and%20session%20management",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "2ace94",
+        "hash": "48c1e802",
+        "encoded": "3.%20**atmService.js**%20-%20ATM%20transaction%20operations%20(withdrawal,%20deposit,%20card%20scanning)",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "2ace94",
+        "hash": "77846368",
+        "encoded": "4.%20**bankingService.js**%20-%20Banking%20operations%20(balance,%20accounts,%20transfers)",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "2ace94",
+        "hash": "08cfe0af",
+        "encoded": "5.%20**index.js**%20-%20Central%20export%20point%20for%20all%20services",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "2ace94",
+        "hash": "63c3004a",
+        "encoded": "###%20Service%20Structure",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "2ace94",
+        "hash": "0380e888",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "2ace94",
+        "hash": "7af6f415",
+        "encoded": "src/services/",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "2ace94",
+        "hash": "cd9db25c",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20apiClient.js%20%20%20%20%20%20%20%20%20%20#%20HTTP%20client%20with%20auth%20&%20error%20handling",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "2ace94",
+        "hash": "5be982f5",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20authService.js%20%20%20%20%20%20%20%20#%20Authentication%20service",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "2ace94",
+        "hash": "2008390d",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20atmService.js%20%20%20%20%20%20%20%20%20#%20ATM%20operations%20service",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "2ace94",
+        "hash": "c378c99a",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20bankingService.js%20%20%20%20%20#%20Banking%20operations%20service",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "2ace94",
+        "hash": "5a7bc470",
+        "encoded": "%E2%94%9C%E2%94%80%E2%94%80%20index.js%20%20%20%20%20%20%20%20%20%20%20%20%20%20#%20Central%20exports",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "2ace94",
+        "hash": "74444fe0",
+        "encoded": "%E2%94%94%E2%94%80%E2%94%80%20API_INTEGRATION_README.md",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "2ace94",
+        "hash": "d7b9acaf",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "2ace94",
+        "hash": "d256f198",
+        "encoded": "##%20API%20Client%20Features",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "2ace94",
+        "hash": "37a4d501",
+        "encoded": "###%20Authentication",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "2ace94",
+        "hash": "d5528a62",
+        "encoded": "-%20Automatic%20JWT%20token%20handling",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "2ace94",
+        "hash": "748026aa",
+        "encoded": "-%20Token%20storage%20in%20localStorage/sessionStorage",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "2ace94",
+        "hash": "8b7acd1c",
+        "encoded": "-%20Automatic%20token%20refresh",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "2ace94",
+        "hash": "c735e2b4",
+        "encoded": "-%20Session%20validation",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "2ace94",
+        "hash": "05b87524",
+        "encoded": "###%20Error%20Handling",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "2ace94",
+        "hash": "8d6dbed0",
+        "encoded": "-%20Consistent%20error%20formatting",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "2ace94",
+        "hash": "961009bf",
+        "encoded": "-%20HTTP%20status%20code%20handling",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "2ace94",
+        "hash": "09d95408",
+        "encoded": "-%20Network%20error%20detection",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "2ace94",
+        "hash": "ab695d5b",
+        "encoded": "-%20User-friendly%20error%20messages",
+        "prevChunkIds": []
+      },
+      "42": {
+        "chunkId": "2ace94",
+        "hash": "c2323fc9",
+        "encoded": "###%20Request/Response",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "2ace94",
+        "hash": "cebd7d3e",
+        "encoded": "-%20JSON%20content%20type%20handling",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "2ace94",
+        "hash": "4df711b2",
+        "encoded": "-%20Automatic%20request/response%20parsing",
+        "prevChunkIds": []
+      },
+      "45": {
+        "chunkId": "2ace94",
+        "hash": "30517cfd",
+        "encoded": "-%20Authorization%20header%20injection",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "2ace94",
+        "hash": "f27315dd",
+        "encoded": "-%20Base%20URL%20configuration",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "2ace94",
+        "hash": "2719baac",
+        "encoded": "##%20Service%20APIs",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "2ace94",
+        "hash": "a76efb5b",
+        "encoded": "###%20Authentication%20Service",
+        "prevChunkIds": []
+      },
+      "52": {
+        "chunkId": "2ace94",
+        "hash": "51063764",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "2ace94",
+        "hash": "d0d2836c",
+        "encoded": "import%20%7B%20authenticatePin,%20validateSession,%20logout%20%7D%20from%20'../services/authService';",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "2ace94",
+        "hash": "da57a335",
+        "encoded": "//%20Login%20with%20PIN",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "2ace94",
+        "hash": "ff8f7422",
+        "encoded": "const%20response%20=%20await%20authenticatePin('1234');",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "2ace94",
+        "hash": "d07add79",
+        "encoded": "//%20Validate%20current%20session",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "2ace94",
+        "hash": "e64a1f7f",
+        "encoded": "const%20validation%20=%20await%20validateSession();",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "2ace94",
+        "hash": "4526ad74",
+        "encoded": "//%20Logout%20user",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "2ace94",
+        "hash": "96441d9b",
+        "encoded": "const%20result%20=%20await%20logout();",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "2ace94",
+        "hash": "666504fe",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "2ace94",
+        "hash": "8c7a95f8",
+        "encoded": "###%20ATM%20Service",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "2ace94",
+        "hash": "499d1022",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "68": {
+        "chunkId": "2ace94",
+        "hash": "cf0d5242",
+        "encoded": "import%20%7B%20stageWithdrawal,%20stageDeposit,%20simulateCardScan%20%7D%20from%20'../services/atmService';",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "2ace94",
+        "hash": "6d5ab9c7",
+        "encoded": "//%20Stage%20withdrawal",
+        "prevChunkIds": []
+      },
+      "71": {
+        "chunkId": "2ace94",
+        "hash": "e66acaf1",
+        "encoded": "const%20withdrawal%20=%20await%20stageWithdrawal(%7B",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "2ace94",
+        "hash": "78714fd9",
+        "encoded": "cardToken:%20'tok_abc123',",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "2ace94",
+        "hash": "f3e23b9c",
+        "encoded": "amount:%20100.00",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "2ace94",
+        "hash": "dff700d5",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "2ace94",
+        "hash": "a5f6c311",
+        "encoded": "//%20Stage%20deposit",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "2ace94",
+        "hash": "ea80282b",
+        "encoded": "const%20deposit%20=%20await%20stageDeposit(%7B",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "2ace94",
+        "hash": "cbd9a45a",
+        "encoded": "cardToken:%20'tok_abc123',",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "2ace94",
+        "hash": "660b64e6",
+        "encoded": "amount:%20200.00%20%20//%20Optional",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "2ace94",
+        "hash": "5f95f156",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "82": {
+        "chunkId": "2ace94",
+        "hash": "32d195cb",
+        "encoded": "//%20Simulate%20card%20scan",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "2ace94",
+        "hash": "65a2e11e",
+        "encoded": "const%20cardData%20=%20await%20simulateCardScan();",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "2ace94",
+        "hash": "a9cec825",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "2ace94",
+        "hash": "67cff997",
+        "encoded": "###%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "2ace94",
+        "hash": "d273928c",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "2ace94",
+        "hash": "37860035",
+        "encoded": "import%20%7B%20getAccountBalances,%20transferFunds,%20getUserAccounts%20%7D%20from%20'../services/bankingService';",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "2ace94",
+        "hash": "c5f20dbd",
+        "encoded": "//%20Get%20account%20balances",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "2ace94",
+        "hash": "30db3ca0",
+        "encoded": "const%20balances%20=%20await%20getAccountBalances();",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "2ace94",
+        "hash": "252a3b9e",
+        "encoded": "//%20Transfer%20funds",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "2ace94",
+        "hash": "2ed94e7e",
+        "encoded": "const%20transfer%20=%20await%20transferFunds(%7B",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "2ace94",
+        "hash": "00854fa0",
+        "encoded": "fromAccountId:%20'acc-savings-001',",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "2ace94",
+        "hash": "bc0ac6c9",
+        "encoded": "toAccountId:%20'acc-checking-001',",
+        "prevChunkIds": []
+      },
+      "98": {
+        "chunkId": "2ace94",
+        "hash": "aa50fc54",
+        "encoded": "amount:%20500.00,",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "2ace94",
+        "hash": "de30e150",
+        "encoded": "description:%20'Monthly%20transfer'",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "2ace94",
+        "hash": "cb89ead6",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "102": {
+        "chunkId": "2ace94",
+        "hash": "3678da40",
+        "encoded": "//%20Get%20user%20accounts",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "2ace94",
+        "hash": "97d3046d",
+        "encoded": "const%20accounts%20=%20await%20getUserAccounts();",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "2ace94",
+        "hash": "062ff69e",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "2ace94",
+        "hash": "ccc2ad21",
+        "encoded": "##%20Integration%20with%20Frontend%20Components",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "2ace94",
+        "hash": "1891c567",
+        "encoded": "###%20Updated%20Pages",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "2ace94",
+        "hash": "2abeaf44",
+        "encoded": "The%20following%20integrated%20page%20components%20have%20been%20created%20that%20use%20the%20real%20API%20services:",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "2ace94",
+        "hash": "028685c1",
+        "encoded": "1.%20**IntegratedATMCashWithdrawal.jsx**%20-%20ATM%20withdrawal%20with%20real%20API",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "2ace94",
+        "hash": "76c76343",
+        "encoded": "2.%20**IntegratedCashDepositPage.jsx**%20-%20Cash%20deposit%20with%20real%20API",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "2ace94",
+        "hash": "7e936e50",
+        "encoded": "3.%20**IntegratedBalanceEnquiryPage.jsx**%20-%20Balance%20inquiry%20with%20real%20API",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "2ace94",
+        "hash": "5a890fc1",
+        "encoded": "4.%20**IntegratedFundsTransferPage.jsx**%20-%20Funds%20transfer%20with%20real%20API",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "2ace94",
+        "hash": "f0ebd2bd",
+        "encoded": "###%20Usage%20Example",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "2ace94",
+        "hash": "a89911f6",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "2ace94",
+        "hash": "33c9fd8d",
+        "encoded": "//%20In%20your%20React%20component",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "2ace94",
+        "hash": "b211537d",
+        "encoded": "import%20%7B%20stageWithdrawal%20%7D%20from%20'../services/atmService';",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "2ace94",
+        "hash": "4debf99d",
+        "encoded": "const%20handleWithdrawal%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "2ace94",
+        "hash": "956966af",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "2ace94",
+        "hash": "cd2e8e1f",
+        "encoded": "const%20response%20=%20await%20stageWithdrawal(%7B",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "2ace94",
+        "hash": "ed326d2f",
+        "encoded": "cardToken:%20'tok_abc123',",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "2ace94",
+        "hash": "fb43fa58",
+        "encoded": "amount:%20100.00",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "2ace94",
+        "hash": "fc349fdd",
+        "encoded": "%7D);",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "2ace94",
+        "hash": "5571fa58",
+        "encoded": "console.log('Success:',%20response.message);",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "2ace94",
+        "hash": "c2d818a5",
+        "encoded": "alert(%60Transaction%20ID:%20$%7Bresponse.transactionId%7D%60);",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "2ace94",
+        "hash": "d40d737b",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "133": {
+        "chunkId": "2ace94",
+        "hash": "0700ccfd",
+        "encoded": "console.error('Error:',%20error.message);",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "2ace94",
+        "hash": "048369f1",
+        "encoded": "setError(error.message);",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "2ace94",
+        "hash": "a1243e02",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "2ace94",
+        "hash": "eb694d41",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "2ace94",
+        "hash": "f5522d99",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "2ace94",
+        "hash": "bae753e8",
+        "encoded": "##%20Configuration",
+        "prevChunkIds": []
+      },
+      "141": {
+        "chunkId": "2ace94",
+        "hash": "046522cd",
+        "encoded": "###%20Environment%20Variables",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "2ace94",
+        "hash": "52be9ff8",
+        "encoded": "Create%20a%20%60.env%60%20file%20in%20the%20project%20root%20with%20the%20following%20variables:",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "2ace94",
+        "hash": "014e817f",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "2ace94",
+        "hash": "1cb98f02",
+        "encoded": "#%20API%20Configuration",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "2ace94",
+        "hash": "96324377",
+        "encoded": "REACT_APP_API_BASE_URL=http://localhost:3001/api",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "2ace94",
+        "hash": "a59d8154",
+        "encoded": "REACT_APP_API_TIMEOUT=10000",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "2ace94",
+        "hash": "e9b343e8",
+        "encoded": "REACT_APP_API_RETRY_ATTEMPTS=3",
+        "prevChunkIds": []
+      },
+      "150": {
+        "chunkId": "2ace94",
+        "hash": "7fe7d9d3",
+        "encoded": "REACT_APP_API_RETRY_DELAY=1000",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "2ace94",
+        "hash": "db0c8c85",
+        "encoded": "#%20Feature%20Flags",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "2ace94",
+        "hash": "ea633ee0",
+        "encoded": "REACT_APP_USE_MOCK_SERVICES=false",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "2ace94",
+        "hash": "381ea807",
+        "encoded": "REACT_APP_ENABLE_RETRY=true",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "2ace94",
+        "hash": "3f852460",
+        "encoded": "REACT_APP_ENABLE_HEALTH_MONITORING=false",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "2ace94",
+        "hash": "80a4e18d",
+        "encoded": "#%20Security",
+        "prevChunkIds": []
+      },
+      "158": {
+        "chunkId": "2ace94",
+        "hash": "a6344ad5",
+        "encoded": "REACT_APP_ENABLE_LOGGING=false",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "2ace94",
+        "hash": "5e2122d3",
+        "encoded": "REACT_APP_LOG_LEVEL=info",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "2ace94",
+        "hash": "55daa4ac",
+        "encoded": "#%20Development",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "2ace94",
+        "hash": "17df77b5",
+        "encoded": "REACT_APP_ENVIRONMENT=development",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "2ace94",
+        "hash": "993e049f",
+        "encoded": "REACT_APP_VERSION=1.0.0",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "2ace94",
+        "hash": "a24bb7f5",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "2ace94",
+        "hash": "1809110f",
+        "encoded": "###%20Backend%20Connection",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "2ace94",
+        "hash": "a9a78529",
+        "encoded": "Ensure%20the%20backend%20server%20is%20running%20on%20%60http://localhost:3001%60%20(or%20update%20the%20%60REACT_APP_API_BASE_URL%60%20accordingly).",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "2ace94",
+        "hash": "a7ac8bf3",
+        "encoded": "##%20Error%20Handling",
+        "prevChunkIds": []
+      },
+      "172": {
+        "chunkId": "2ace94",
+        "hash": "20dd9e75",
+        "encoded": "###%20Common%20Error%20Scenarios",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "2ace94",
+        "hash": "0e9bde71",
+        "encoded": "1.%20**Network%20Errors**%20-%20Connection%20issues,%20server%20unavailable",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "2ace94",
+        "hash": "35421b49",
+        "encoded": "2.%20**Authentication%20Errors**%20-%20Invalid%20credentials,%20expired%20sessions",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "2ace94",
+        "hash": "75ec26d5",
+        "encoded": "3.%20**Validation%20Errors**%20-%20Invalid%20input%20data",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "2ace94",
+        "hash": "995da310",
+        "encoded": "4.%20**Service%20Errors**%20-%20Backend%20service%20failures",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "2ace94",
+        "hash": "c6bcd04c",
+        "encoded": "###%20Error%20Response%20Format",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "2ace94",
+        "hash": "a51fa105",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "2ace94",
+        "hash": "dadb1956",
+        "encoded": "%7B",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "2ace94",
+        "hash": "d10d8a35",
+        "encoded": "success:%20false,",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "2ace94",
+        "hash": "f9554ee2",
+        "encoded": "error:%20%7B",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "2ace94",
+        "hash": "9ac1e0dc",
+        "encoded": "type:%20'AUTHENTICATION_ERROR',",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "2ace94",
+        "hash": "cf7031b5",
+        "encoded": "message:%20'Session%20expired.%20Please%20log%20in%20again.'",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "2ace94",
+        "hash": "bb2edef8",
+        "encoded": "%7D,",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "2ace94",
+        "hash": "2a59487c",
+        "encoded": "timestamp:%20'2024-01-15T10:30:00.000Z'",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "2ace94",
+        "hash": "00c06a24",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "2ace94",
+        "hash": "892bf35f",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "2ace94",
+        "hash": "05a701d7",
+        "encoded": "##%20Security%20Features",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "2ace94",
+        "hash": "40f8af9c",
+        "encoded": "###%20Token%20Management",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "2ace94",
+        "hash": "69aa3004",
+        "encoded": "-%20JWT%20tokens%20stored%20securely",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "2ace94",
+        "hash": "b97733d2",
+        "encoded": "-%20Automatic%20token%20refresh",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "2ace94",
+        "hash": "b1ee3386",
+        "encoded": "-%20Token%20expiration%20handling",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "2ace94",
+        "hash": "e1f167ba",
+        "encoded": "-%20Secure%20logout%20with%20token%20cleanup",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "2ace94",
+        "hash": "ba006f52",
+        "encoded": "###%20Request%20Security",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "2ace94",
+        "hash": "946da80e",
+        "encoded": "-%20HTTPS%20enforcement",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "2ace94",
+        "hash": "6d47e86d",
+        "encoded": "-%20CORS%20handling",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "2ace94",
+        "hash": "b4448463",
+        "encoded": "-%20Request%20validation",
+        "prevChunkIds": []
+      },
+      "204": {
+        "chunkId": "2ace94",
+        "hash": "034f118a",
+        "encoded": "-%20Sensitive%20data%20masking%20in%20logs",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "2ace94",
+        "hash": "90309bbb",
+        "encoded": "##%20Testing",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "2ace94",
+        "hash": "eb34abb8",
+        "encoded": "###%20Manual%20Testing",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "2ace94",
+        "hash": "505a844c",
+        "encoded": "1.%20Start%20the%20backend%20server:%20%60cd%20backend%20&&%20npm%20start%60",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "2ace94",
+        "hash": "51474c9d",
+        "encoded": "2.%20Start%20the%20frontend:%20%60npm%20start%60",
+        "prevChunkIds": []
+      },
+      "212": {
+        "chunkId": "2ace94",
+        "hash": "2a7fd8ec",
+        "encoded": "3.%20Test%20authentication%20with%20PIN:%20%601234%60",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "2ace94",
+        "hash": "a8b7dafe",
+        "encoded": "4.%20Test%20various%20operations%20through%20the%20UI",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "2ace94",
+        "hash": "55f61468",
+        "encoded": "###%20API%20Testing",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "2ace94",
+        "hash": "9307dd67",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "2ace94",
+        "hash": "7ea914af",
+        "encoded": "#%20Test%20authentication",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "2ace94",
+        "hash": "c4ced860",
+        "encoded": "curl%20-X%20POST%20http://localhost:3001/api/auth/login%20%5C",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "2ace94",
+        "hash": "f325d0ab",
+        "encoded": "-H%20%22Content-Type:%20application/json%22%20%5C",
+        "prevChunkIds": []
+      },
+      "221": {
+        "chunkId": "2ace94",
+        "hash": "543e0808",
+        "encoded": "-d%20'%7B%22pin%22:%20%221234%22%7D'",
+        "prevChunkIds": []
+      },
+      "223": {
+        "chunkId": "2ace94",
+        "hash": "f2fbc54b",
+        "encoded": "#%20Test%20withdrawal%20(with%20auth%20token)",
+        "prevChunkIds": []
+      },
+      "224": {
+        "chunkId": "2ace94",
+        "hash": "6063dc7b",
+        "encoded": "curl%20-X%20POST%20http://localhost:3001/api/atm/transactions/withdrawal%20%5C",
+        "prevChunkIds": []
+      },
+      "225": {
+        "chunkId": "2ace94",
+        "hash": "f339cc63",
+        "encoded": "-H%20%22Content-Type:%20application/json%22%20%5C",
+        "prevChunkIds": []
+      },
+      "226": {
+        "chunkId": "2ace94",
+        "hash": "378c1a4f",
+        "encoded": "-H%20%22Authorization:%20Bearer%20YOUR_TOKEN%22%20%5C",
+        "prevChunkIds": []
+      },
+      "227": {
+        "chunkId": "2ace94",
+        "hash": "8d721094",
+        "encoded": "-d%20'%7B%22cardToken%22:%20%22tok_test_123%22,%20%22amount%22:%20100.00%7D'",
+        "prevChunkIds": []
+      },
+      "228": {
+        "chunkId": "2ace94",
+        "hash": "8ca43f90",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "230": {
+        "chunkId": "2ace94",
+        "hash": "3d77ca88",
+        "encoded": "##%20Migration%20from%20Mock%20Services",
+        "prevChunkIds": []
+      },
+      "232": {
+        "chunkId": "2ace94",
+        "hash": "6d2b2db8",
+        "encoded": "###%20Steps%20to%20Replace%20Mock%20Components",
+        "prevChunkIds": []
+      },
+      "234": {
+        "chunkId": "2ace94",
+        "hash": "5b1907ea",
+        "encoded": "1.%20**Replace%20imports**%20in%20existing%20components:",
+        "prevChunkIds": []
+      },
+      "235": {
+        "chunkId": "2ace94",
+        "hash": "dbc5d743",
+        "encoded": "%60%60%60javascript",
+        "prevChunkIds": []
+      },
+      "236": {
+        "chunkId": "2ace94",
+        "hash": "f7929fa9",
+        "encoded": "//%20Old",
+        "prevChunkIds": []
+      },
+      "237": {
+        "chunkId": "2ace94",
+        "hash": "033928cb",
+        "encoded": "import%20%7B%20authenticatePin%20%7D%20from%20'../services/authService';",
+        "prevChunkIds": []
+      },
+      "239": {
+        "chunkId": "2ace94",
+        "hash": "335a2e93",
+        "encoded": "//%20New%20(same%20import,%20but%20now%20uses%20real%20API)",
+        "prevChunkIds": []
+      },
+      "240": {
+        "chunkId": "2ace94",
+        "hash": "49ba3cd0",
+        "encoded": "import%20%7B%20authenticatePin%20%7D%20from%20'../services/authService';",
+        "prevChunkIds": []
+      },
+      "241": {
+        "chunkId": "2ace94",
+        "hash": "57c4acd8",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "243": {
+        "chunkId": "2ace94",
+        "hash": "22194a88",
+        "encoded": "2.%20**Update%20error%20handling**%20to%20use%20new%20error%20format",
+        "prevChunkIds": []
+      },
+      "244": {
+        "chunkId": "2ace94",
+        "hash": "d57bc1f5",
+        "encoded": "3.%20**Test%20thoroughly**%20with%20backend%20services",
+        "prevChunkIds": []
+      },
+      "245": {
+        "chunkId": "2ace94",
+        "hash": "c1a9b156",
+        "encoded": "4.%20**Update%20environment%20variables**%20for%20production",
+        "prevChunkIds": []
+      },
+      "247": {
+        "chunkId": "2ace94",
+        "hash": "ea76d371",
+        "encoded": "###%20Backward%20Compatibility",
+        "prevChunkIds": []
+      },
+      "249": {
+        "chunkId": "2ace94",
+        "hash": "93648b85",
+        "encoded": "The%20new%20services%20maintain%20the%20same%20interface%20as%20the%20mock%20services,%20so%20existing%20components%20should%20work%20with%20minimal%20changes.",
+        "prevChunkIds": []
+      },
+      "251": {
+        "chunkId": "2ace94",
+        "hash": "810b4759",
+        "encoded": "##%20Performance%20Considerations",
+        "prevChunkIds": []
+      },
+      "253": {
+        "chunkId": "2ace94",
+        "hash": "2bfa49e6",
+        "encoded": "###%20Optimization%20Features",
+        "prevChunkIds": []
+      },
+      "254": {
+        "chunkId": "2ace94",
+        "hash": "9e5c8791",
+        "encoded": "-%20Request/response%20caching%20where%20appropriate",
+        "prevChunkIds": []
+      },
+      "255": {
+        "chunkId": "2ace94",
+        "hash": "d27fa42b",
+        "encoded": "-%20Automatic%20retry%20logic%20for%20failed%20requests",
+        "prevChunkIds": []
+      },
+      "256": {
+        "chunkId": "2ace94",
+        "hash": "d4c3b4fc",
+        "encoded": "-%20Connection%20pooling",
+        "prevChunkIds": []
+      },
+      "257": {
+        "chunkId": "2ace94",
+        "hash": "98930d25",
+        "encoded": "-%20Request%20timeout%20handling",
+        "prevChunkIds": []
+      },
+      "259": {
+        "chunkId": "2ace94",
+        "hash": "83416888",
+        "encoded": "###%20Monitoring",
+        "prevChunkIds": []
+      },
+      "260": {
+        "chunkId": "2ace94",
+        "hash": "94b82e48",
+        "encoded": "-%20Request%20timing%20logs",
+        "prevChunkIds": []
+      },
+      "261": {
+        "chunkId": "2ace94",
+        "hash": "da9b8e44",
+        "encoded": "-%20Error%20rate%20tracking",
+        "prevChunkIds": []
+      },
+      "262": {
+        "chunkId": "2ace94",
+        "hash": "b959bdae",
+        "encoded": "-%20Service%20availability%20monitoring",
+        "prevChunkIds": []
+      },
+      "264": {
+        "chunkId": "2ace94",
+        "hash": "f58845c8",
+        "encoded": "##%20Troubleshooting",
+        "prevChunkIds": []
+      },
+      "266": {
+        "chunkId": "2ace94",
+        "hash": "e830a015",
+        "encoded": "###%20Common%20Issues",
+        "prevChunkIds": []
+      },
+      "268": {
+        "chunkId": "2ace94",
+        "hash": "a2f260fd",
+        "encoded": "1.%20**CORS%20Errors**",
+        "prevChunkIds": []
+      },
+      "269": {
+        "chunkId": "2ace94",
+        "hash": "44086902",
+        "encoded": "-%20Ensure%20backend%20CORS%20is%20configured%20for%20frontend%20URL",
+        "prevChunkIds": []
+      },
+      "270": {
+        "chunkId": "2ace94",
+        "hash": "27996801",
+        "encoded": "-%20Check%20%60Access-Control-Allow-Origin%60%20headers",
+        "prevChunkIds": []
+      },
+      "272": {
+        "chunkId": "2ace94",
+        "hash": "766bf182",
+        "encoded": "2.%20**Authentication%20Failures**",
+        "prevChunkIds": []
+      },
+      "273": {
+        "chunkId": "2ace94",
+        "hash": "d857847f",
+        "encoded": "-%20Verify%20backend%20is%20running",
+        "prevChunkIds": []
+      },
+      "274": {
+        "chunkId": "2ace94",
+        "hash": "a7ccfcac",
+        "encoded": "-%20Check%20PIN%20is%20correct%20(default:%20%601234%60)",
+        "prevChunkIds": []
+      },
+      "275": {
+        "chunkId": "2ace94",
+        "hash": "e69baea0",
+        "encoded": "-%20Ensure%20tokens%20are%20being%20stored/retrieved%20correctly",
+        "prevChunkIds": []
+      },
+      "277": {
+        "chunkId": "2ace94",
+        "hash": "fa371dad",
+        "encoded": "3.%20**Network%20Errors**",
+        "prevChunkIds": []
+      },
+      "278": {
+        "chunkId": "2ace94",
+        "hash": "bb788fcd",
+        "encoded": "-%20Verify%20backend%20URL%20in%20environment%20variables",
+        "prevChunkIds": []
+      },
+      "279": {
+        "chunkId": "2ace94",
+        "hash": "088f87e9",
+        "encoded": "-%20Check%20network%20connectivity",
+        "prevChunkIds": []
+      },
+      "280": {
+        "chunkId": "2ace94",
+        "hash": "2d22ed26",
+        "encoded": "-%20Ensure%20backend%20services%20are%20healthy",
+        "prevChunkIds": []
+      },
+      "282": {
+        "chunkId": "2ace94",
+        "hash": "b85b78c5",
+        "encoded": "###%20Debug%20Mode",
+        "prevChunkIds": []
+      },
+      "284": {
+        "chunkId": "2ace94",
+        "hash": "ebd63878",
+        "encoded": "Enable%20debug%20logging%20by%20setting:",
+        "prevChunkIds": []
+      },
+      "285": {
+        "chunkId": "2ace94",
+        "hash": "8014dcc3",
+        "encoded": "%60%60%60bash",
+        "prevChunkIds": []
+      },
+      "286": {
+        "chunkId": "2ace94",
+        "hash": "6d6c9e10",
+        "encoded": "REACT_APP_ENABLE_LOGGING=true",
+        "prevChunkIds": []
+      },
+      "287": {
+        "chunkId": "2ace94",
+        "hash": "d3758d92",
+        "encoded": "REACT_APP_LOG_LEVEL=debug",
+        "prevChunkIds": []
+      },
+      "288": {
+        "chunkId": "2ace94",
+        "hash": "2ef0f2be",
+        "encoded": "%60%60%60",
+        "prevChunkIds": []
+      },
+      "290": {
+        "chunkId": "2ace94",
+        "hash": "f14d8699",
+        "encoded": "##%20Future%20Enhancements",
+        "prevChunkIds": []
+      },
+      "292": {
+        "chunkId": "2ace94",
+        "hash": "10f47ea4",
+        "encoded": "###%20Planned%20Features",
+        "prevChunkIds": []
+      },
+      "293": {
+        "chunkId": "2ace94",
+        "hash": "d805c0a1",
+        "encoded": "-%20Request/response%20caching",
+        "prevChunkIds": []
+      },
+      "294": {
+        "chunkId": "2ace94",
+        "hash": "131d5a7e",
+        "encoded": "-%20Offline%20support",
+        "prevChunkIds": []
+      },
+      "295": {
+        "chunkId": "2ace94",
+        "hash": "da261acf",
+        "encoded": "-%20Real-time%20notifications",
+        "prevChunkIds": []
+      },
+      "296": {
+        "chunkId": "2ace94",
+        "hash": "4379022c",
+        "encoded": "-%20Advanced%20error%20recovery",
+        "prevChunkIds": []
+      },
+      "297": {
+        "chunkId": "2ace94",
+        "hash": "8594ae84",
+        "encoded": "-%20Performance%20monitoring",
+        "prevChunkIds": []
+      },
+      "298": {
+        "chunkId": "2ace94",
+        "hash": "9c21206a",
+        "encoded": "-%20Automated%20testing%20suite",
+        "prevChunkIds": []
+      },
+      "300": {
+        "chunkId": "2ace94",
+        "hash": "6db0db1c",
+        "encoded": "###%20Integration%20Roadmap",
+        "prevChunkIds": []
+      },
+      "301": {
+        "chunkId": "2ace94",
+        "hash": "a29cc143",
+        "encoded": "1.%20Complete%20integration%20testing",
+        "prevChunkIds": []
+      },
+      "302": {
+        "chunkId": "2ace94",
+        "hash": "b1a693ba",
+        "encoded": "2.%20Performance%20optimization",
+        "prevChunkIds": []
+      },
+      "303": {
+        "chunkId": "2ace94",
+        "hash": "b9433392",
+        "encoded": "3.%20Security%20audit",
+        "prevChunkIds": []
+      },
+      "304": {
+        "chunkId": "2ace94",
+        "hash": "bdcd1287",
+        "encoded": "4.%20Production%20deployment",
+        "prevChunkIds": []
+      },
+      "305": {
+        "chunkId": "2ace94",
+        "hash": "7a2c24d9",
+        "encoded": "5.%20Monitoring%20setup",
+        "prevChunkIds": []
+      },
+      "307": {
+        "chunkId": "2ace94",
+        "hash": "cdc54860",
+        "encoded": "---",
+        "prevChunkIds": []
+      },
+      "309": {
+        "chunkId": "2ace94",
+        "hash": "25059944",
+        "encoded": "**Note**:%20This%20integration%20layer%20provides%20a%20complete%20bridge%20between%20the%20React%20frontend%20and%20Node.js%20backend%20services,%20enabling%20full-stack%20functionality%20for%20the%20NCR%20ATLEOS%20ATM%20application.",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  ".env.example": {
+    "filename": ".env.example",
+    "path": ".env.example",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "ba0d73": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773146777,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "6c7b7259",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "ba0d73",
+        "hash": "fbf5d44c",
+        "encoded": "#%20NCR%20ATLEOS%20ATM%20Application%20-%20Environment%20Variables",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "ba0d73",
+        "hash": "4ffe77da",
+        "encoded": "#%20Copy%20this%20file%20to%20.env%20and%20update%20the%20values%20as%20needed",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "ba0d73",
+        "hash": "81e7f871",
+        "encoded": "#%20API%20Configuration",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "ba0d73",
+        "hash": "89319539",
+        "encoded": "REACT_APP_API_BASE_URL=http://localhost:3001/api",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "ba0d73",
+        "hash": "98ec2c24",
+        "encoded": "REACT_APP_API_TIMEOUT=10000",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "ba0d73",
+        "hash": "b30644fc",
+        "encoded": "REACT_APP_API_RETRY_ATTEMPTS=3",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "ba0d73",
+        "hash": "97ff8a48",
+        "encoded": "REACT_APP_API_RETRY_DELAY=1000",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "ba0d73",
+        "hash": "8af3c331",
+        "encoded": "#%20Feature%20Flags",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "ba0d73",
+        "hash": "9f3398f4",
+        "encoded": "REACT_APP_USE_MOCK_SERVICES=false",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "ba0d73",
+        "hash": "a1671384",
+        "encoded": "REACT_APP_ENABLE_RETRY=true",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "ba0d73",
+        "hash": "8357f35a",
+        "encoded": "REACT_APP_ENABLE_HEALTH_MONITORING=false",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "ba0d73",
+        "hash": "4ce4593f",
+        "encoded": "#%20Security",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "ba0d73",
+        "hash": "8eddd920",
+        "encoded": "REACT_APP_ENABLE_LOGGING=false",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "ba0d73",
+        "hash": "c13d0c8c",
+        "encoded": "REACT_APP_LOG_LEVEL=info",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "ba0d73",
+        "hash": "9dc0bd6b",
+        "encoded": "#%20Development",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "ba0d73",
+        "hash": "c9668301",
+        "encoded": "REACT_APP_ENVIRONMENT=development",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "ba0d73",
+        "hash": "7356ca4a",
+        "encoded": "REACT_APP_VERSION=1.0.0",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

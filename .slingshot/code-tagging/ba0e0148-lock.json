@@ -1,0 +1,1227 @@
+{
+  "src/pages/IntegratedBalanceEnquiryPage.jsx": {
+    "filename": "IntegratedBalanceEnquiryPage.jsx",
+    "path": "src/pages/IntegratedBalanceEnquiryPage.jsx",
+    "version": "1.2",
+    "contextFile": null,
+    "chunks": {
+      "baa2bb": {
+        "user": "Kumar Gaurav",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1773146778,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.2.0",
+        "source": "agent",
+        "type": "agentWriteTool",
+        "extraContext": {},
+        "hash": "6668a13f",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "baa2bb",
+        "hash": "21a00bd6",
+        "encoded": "import%20React,%20%7B%20useState,%20useEffect%20%7D%20from%20'react';",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "baa2bb",
+        "hash": "2abe3658",
+        "encoded": "import%20%7B%20useNavigate%20%7D%20from%20'react-router-dom';",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "baa2bb",
+        "hash": "bae85b93",
+        "encoded": "import%20Header%20from%20'../components/organisms/Header';",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "baa2bb",
+        "hash": "1f433774",
+        "encoded": "import%20BalanceCard%20from%20'../components/molecules/BalanceCard';",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "baa2bb",
+        "hash": "b57c5ca3",
+        "encoded": "import%20HelpfulTipsSection%20from%20'../components/organisms/HelpfulTipsSection';",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "baa2bb",
+        "hash": "7061a281",
+        "encoded": "import%20BottomTabBar%20from%20'../components/organisms/BottomTabBar';",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "baa2bb",
+        "hash": "2a3ccdf4",
+        "encoded": "import%20%7B%20getAccountBalances%20%7D%20from%20'../services/bankingService';",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "baa2bb",
+        "hash": "cfd8e328",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "9": {
+        "chunkId": "baa2bb",
+        "hash": "acc2a50f",
+        "encoded": "*%20BalanceEnquiryPage%20component%20with%20integrated%20backend%20API",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "baa2bb",
+        "hash": "50c7b016",
+        "encoded": "*%20Displays%20account%20balance%20and%20helpful%20tips%20using%20real%20banking%20service",
+        "prevChunkIds": []
+      },
+      "11": {
+        "chunkId": "baa2bb",
+        "hash": "eda0387e",
+        "encoded": "*%20Implements%20the%20functional%20requirements%20from%20Story-5-BalanceEnquiry.md",
+        "prevChunkIds": []
+      },
+      "12": {
+        "chunkId": "baa2bb",
+        "hash": "caaefa0e",
+        "encoded": "*/",
+        "prevChunkIds": []
+      },
+      "13": {
+        "chunkId": "baa2bb",
+        "hash": "9a0ddf69",
+        "encoded": "const%20BalanceEnquiryPage%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "baa2bb",
+        "hash": "087186f0",
+        "encoded": "const%20navigate%20=%20useNavigate();",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "baa2bb",
+        "hash": "b1cef709",
+        "encoded": "const%20%5Bbalances,%20setBalances%5D%20=%20useState(null);",
+        "prevChunkIds": []
+      },
+      "16": {
+        "chunkId": "baa2bb",
+        "hash": "59c63635",
+        "encoded": "const%20%5Bloading,%20setLoading%5D%20=%20useState(true);",
+        "prevChunkIds": []
+      },
+      "17": {
+        "chunkId": "baa2bb",
+        "hash": "d193e100",
+        "encoded": "const%20%5Berror,%20setError%5D%20=%20useState(null);",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "baa2bb",
+        "hash": "2aff5e5e",
+        "encoded": "const%20%5BpersonalizedTip,%20setPersonalizedTip%5D%20=%20useState(null);",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "baa2bb",
+        "hash": "034eddbb",
+        "encoded": "//%20Fetch%20account%20balances%20from%20Core%20Banking%20Service",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "baa2bb",
+        "hash": "4a6aea3f",
+        "encoded": "useEffect(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "baa2bb",
+        "hash": "e7536863",
+        "encoded": "const%20fetchBalances%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "baa2bb",
+        "hash": "ed34a8fb",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "baa2bb",
+        "hash": "610205e5",
+        "encoded": "setLoading(true);",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "baa2bb",
+        "hash": "cba468d0",
+        "encoded": "//%20Call%20the%20banking%20service%20to%20get%20account%20balances",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "baa2bb",
+        "hash": "0c250d04",
+        "encoded": "const%20response%20=%20await%20getAccountBalances();",
+        "prevChunkIds": []
+      },
+      "29": {
+        "chunkId": "baa2bb",
+        "hash": "c4fed0e8",
+        "encoded": "if%20(response.success%20&&%20response.accounts)%20%7B",
+        "prevChunkIds": []
+      },
+      "30": {
+        "chunkId": "baa2bb",
+        "hash": "59335dad",
+        "encoded": "setBalances(response.accounts);",
+        "prevChunkIds": []
+      },
+      "31": {
+        "chunkId": "baa2bb",
+        "hash": "510c96b5",
+        "encoded": "setError(null);",
+        "prevChunkIds": []
+      },
+      "32": {
+        "chunkId": "baa2bb",
+        "hash": "a2a299fd",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": []
+      },
+      "33": {
+        "chunkId": "baa2bb",
+        "hash": "720c3168",
+        "encoded": "throw%20new%20Error('Failed%20to%20retrieve%20account%20balances');",
+        "prevChunkIds": []
+      },
+      "34": {
+        "chunkId": "baa2bb",
+        "hash": "b8d59d8e",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "35": {
+        "chunkId": "baa2bb",
+        "hash": "93658420",
+        "encoded": "%7D%20catch%20(err)%20%7B",
+        "prevChunkIds": []
+      },
+      "36": {
+        "chunkId": "baa2bb",
+        "hash": "6503cdc8",
+        "encoded": "console.error('Failed%20to%20fetch%20balances:',%20err);",
+        "prevChunkIds": []
+      },
+      "37": {
+        "chunkId": "baa2bb",
+        "hash": "84112f50",
+        "encoded": "setError(err.message%20%7C%7C%20'We%20could%20not%20retrieve%20your%20account%20balance%20at%20this%20time.%20Please%20try%20again%20later.');",
+        "prevChunkIds": []
+      },
+      "38": {
+        "chunkId": "baa2bb",
+        "hash": "3e0e0f21",
+        "encoded": "%7D%20finally%20%7B",
+        "prevChunkIds": []
+      },
+      "39": {
+        "chunkId": "baa2bb",
+        "hash": "0632fc3e",
+        "encoded": "setLoading(false);",
+        "prevChunkIds": []
+      },
+      "40": {
+        "chunkId": "baa2bb",
+        "hash": "792377b1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "41": {
+        "chunkId": "baa2bb",
+        "hash": "d54d591a",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "43": {
+        "chunkId": "baa2bb",
+        "hash": "83536a21",
+        "encoded": "fetchBalances();",
+        "prevChunkIds": []
+      },
+      "44": {
+        "chunkId": "baa2bb",
+        "hash": "ba437655",
+        "encoded": "%7D,%20%5B%5D);",
+        "prevChunkIds": []
+      },
+      "46": {
+        "chunkId": "baa2bb",
+        "hash": "64e7fe03",
+        "encoded": "//%20Mock%20Personalized%20AI%20Nudge%20Engine%20call",
+        "prevChunkIds": []
+      },
+      "47": {
+        "chunkId": "baa2bb",
+        "hash": "0ab3fcf4",
+        "encoded": "useEffect(()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "48": {
+        "chunkId": "baa2bb",
+        "hash": "9f5ad505",
+        "encoded": "const%20fetchPersonalizedTip%20=%20async%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "49": {
+        "chunkId": "baa2bb",
+        "hash": "a7c59153",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "50": {
+        "chunkId": "baa2bb",
+        "hash": "34768a5d",
+        "encoded": "//%20Simulate%20AI%20tip%20generation%20(under%20200ms%20as%20per%20requirements)",
+        "prevChunkIds": []
+      },
+      "51": {
+        "chunkId": "baa2bb",
+        "hash": "4add2928",
+        "encoded": "await%20new%20Promise(resolve%20=%3E%20setTimeout(resolve,%20150));",
+        "prevChunkIds": []
+      },
+      "53": {
+        "chunkId": "baa2bb",
+        "hash": "bfe30064",
+        "encoded": "//%20Mock%20personalized%20tip%20based%20on%20balance%20data",
+        "prevChunkIds": []
+      },
+      "54": {
+        "chunkId": "baa2bb",
+        "hash": "c08048ff",
+        "encoded": "const%20tips%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "55": {
+        "chunkId": "baa2bb",
+        "hash": "f29bb110",
+        "encoded": "'Consider%20setting%20up%20a%20recurring%20transfer%20to%20your%20savings%20account.',",
+        "prevChunkIds": []
+      },
+      "56": {
+        "chunkId": "baa2bb",
+        "hash": "ecd9930c",
+        "encoded": "'Your%20spending%20this%20month%20is%2015%25%20lower%20than%20last%20month.%20Great%20job!',",
+        "prevChunkIds": []
+      },
+      "57": {
+        "chunkId": "baa2bb",
+        "hash": "0fe1119a",
+        "encoded": "'You%20could%20earn%20more%20interest%20by%20upgrading%20to%20our%20premium%20savings%20account.',",
+        "prevChunkIds": []
+      },
+      "58": {
+        "chunkId": "baa2bb",
+        "hash": "80fa4592",
+        "encoded": "'Set%20up%20automatic%20bill%20payments%20to%20avoid%20late%20fees.'",
+        "prevChunkIds": []
+      },
+      "59": {
+        "chunkId": "baa2bb",
+        "hash": "925248ca",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "61": {
+        "chunkId": "baa2bb",
+        "hash": "e049441a",
+        "encoded": "const%20randomTip%20=%20tips%5BMath.floor(Math.random()%20*%20tips.length)%5D;",
+        "prevChunkIds": []
+      },
+      "62": {
+        "chunkId": "baa2bb",
+        "hash": "5cba24dd",
+        "encoded": "setPersonalizedTip(randomTip);",
+        "prevChunkIds": []
+      },
+      "63": {
+        "chunkId": "baa2bb",
+        "hash": "a959f08d",
+        "encoded": "%7D%20catch%20(err)%20%7B",
+        "prevChunkIds": []
+      },
+      "64": {
+        "chunkId": "baa2bb",
+        "hash": "6923c992",
+        "encoded": "//%20Fallback%20to%20default%20tip",
+        "prevChunkIds": []
+      },
+      "65": {
+        "chunkId": "baa2bb",
+        "hash": "982e3101",
+        "encoded": "setPersonalizedTip('Did%20you%20know%20you%20can%20transfer%20funds%20between%20your%20accounts?');",
+        "prevChunkIds": []
+      },
+      "66": {
+        "chunkId": "baa2bb",
+        "hash": "f706ff69",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "67": {
+        "chunkId": "baa2bb",
+        "hash": "f74f24ea",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "baa2bb",
+        "hash": "b8402272",
+        "encoded": "fetchPersonalizedTip();",
+        "prevChunkIds": []
+      },
+      "70": {
+        "chunkId": "baa2bb",
+        "hash": "b5a9dbe0",
+        "encoded": "%7D,%20%5B%5D);",
+        "prevChunkIds": []
+      },
+      "72": {
+        "chunkId": "baa2bb",
+        "hash": "b7cf128b",
+        "encoded": "const%20handleWithdraw%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "73": {
+        "chunkId": "baa2bb",
+        "hash": "c5d2b242",
+        "encoded": "//%20Navigate%20to%20ATM%20Cash%20Withdrawal%20Screen%20(Light%20Theme)",
+        "prevChunkIds": []
+      },
+      "74": {
+        "chunkId": "baa2bb",
+        "hash": "15fdabee",
+        "encoded": "console.log('Navigate%20to%20ATM%20Cash%20Withdrawal');",
+        "prevChunkIds": []
+      },
+      "75": {
+        "chunkId": "baa2bb",
+        "hash": "af48e4e0",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "76": {
+        "chunkId": "baa2bb",
+        "hash": "a1ca373d",
+        "encoded": "navigate('/cash-withdrawal');",
+        "prevChunkIds": []
+      },
+      "77": {
+        "chunkId": "baa2bb",
+        "hash": "545fa94e",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "78": {
+        "chunkId": "baa2bb",
+        "hash": "7dc1a3c3",
+        "encoded": "console.error('Navigation%20error:',%20error);",
+        "prevChunkIds": []
+      },
+      "79": {
+        "chunkId": "baa2bb",
+        "hash": "12210a8d",
+        "encoded": "alert('We%5C're%20sorry,%20we%20couldn%5C't%20load%20that%20screen%20right%20now.%20Please%20try%20again.');",
+        "prevChunkIds": []
+      },
+      "80": {
+        "chunkId": "baa2bb",
+        "hash": "a2f26355",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "81": {
+        "chunkId": "baa2bb",
+        "hash": "93e776f6",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "83": {
+        "chunkId": "baa2bb",
+        "hash": "551ab8ed",
+        "encoded": "const%20handleDeposit%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "84": {
+        "chunkId": "baa2bb",
+        "hash": "a78eb743",
+        "encoded": "//%20Navigate%20to%20Cash%20Deposit%20Screen%20(Dark%20Theme)",
+        "prevChunkIds": []
+      },
+      "85": {
+        "chunkId": "baa2bb",
+        "hash": "c8a18cc6",
+        "encoded": "console.log('Navigate%20to%20Cash%20Deposit');",
+        "prevChunkIds": []
+      },
+      "86": {
+        "chunkId": "baa2bb",
+        "hash": "bcaa890c",
+        "encoded": "try%20%7B",
+        "prevChunkIds": []
+      },
+      "87": {
+        "chunkId": "baa2bb",
+        "hash": "416e0556",
+        "encoded": "navigate('/cash-deposit');",
+        "prevChunkIds": []
+      },
+      "88": {
+        "chunkId": "baa2bb",
+        "hash": "8669b9e3",
+        "encoded": "%7D%20catch%20(error)%20%7B",
+        "prevChunkIds": []
+      },
+      "89": {
+        "chunkId": "baa2bb",
+        "hash": "585b1eb1",
+        "encoded": "console.error('Navigation%20error:',%20error);",
+        "prevChunkIds": []
+      },
+      "90": {
+        "chunkId": "baa2bb",
+        "hash": "38e7407a",
+        "encoded": "alert('We%5C're%20sorry,%20we%20couldn%5C't%20load%20that%20screen%20right%20now.%20Please%20try%20again.');",
+        "prevChunkIds": []
+      },
+      "91": {
+        "chunkId": "baa2bb",
+        "hash": "70416dc1",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "92": {
+        "chunkId": "baa2bb",
+        "hash": "4e10f646",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "94": {
+        "chunkId": "baa2bb",
+        "hash": "6aad7bad",
+        "encoded": "const%20handleTipClick%20=%20(tipId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "95": {
+        "chunkId": "baa2bb",
+        "hash": "586acab1",
+        "encoded": "console.log('Tip%20clicked:',%20tipId);",
+        "prevChunkIds": []
+      },
+      "96": {
+        "chunkId": "baa2bb",
+        "hash": "23a61916",
+        "encoded": "//%20TODO:%20Implement%20tip%20navigation/actions",
+        "prevChunkIds": []
+      },
+      "97": {
+        "chunkId": "baa2bb",
+        "hash": "b25cd696",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "99": {
+        "chunkId": "baa2bb",
+        "hash": "904d82d5",
+        "encoded": "const%20handleBackToDashboard%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "100": {
+        "chunkId": "baa2bb",
+        "hash": "d3d649f1",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": []
+      },
+      "101": {
+        "chunkId": "baa2bb",
+        "hash": "221f9e4d",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "103": {
+        "chunkId": "baa2bb",
+        "hash": "783d910b",
+        "encoded": "const%20handleTabChange%20=%20(tabIndex,%20tabId)%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "baa2bb",
+        "hash": "ff174990",
+        "encoded": "console.log('Tab%20changed:',%20tabIndex,%20tabId);",
+        "prevChunkIds": []
+      },
+      "105": {
+        "chunkId": "baa2bb",
+        "hash": "37368906",
+        "encoded": "//%20Implement%20tab%20navigation",
+        "prevChunkIds": []
+      },
+      "106": {
+        "chunkId": "baa2bb",
+        "hash": "ed3be4bc",
+        "encoded": "switch%20(tabId)%20%7B",
+        "prevChunkIds": []
+      },
+      "107": {
+        "chunkId": "baa2bb",
+        "hash": "decb6194",
+        "encoded": "case%20'home':",
+        "prevChunkIds": []
+      },
+      "108": {
+        "chunkId": "baa2bb",
+        "hash": "268b21de",
+        "encoded": "navigate('/dashboard');",
+        "prevChunkIds": []
+      },
+      "109": {
+        "chunkId": "baa2bb",
+        "hash": "096e51c1",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "110": {
+        "chunkId": "baa2bb",
+        "hash": "be9cf383",
+        "encoded": "case%20'transactions':",
+        "prevChunkIds": []
+      },
+      "111": {
+        "chunkId": "baa2bb",
+        "hash": "42b5fa3c",
+        "encoded": "//%20TODO:%20Implement%20when%20transactions%20page%20is%20available",
+        "prevChunkIds": []
+      },
+      "112": {
+        "chunkId": "baa2bb",
+        "hash": "e6628349",
+        "encoded": "console.log('Transactions%20page%20not%20yet%20implemented');",
+        "prevChunkIds": []
+      },
+      "113": {
+        "chunkId": "baa2bb",
+        "hash": "8718af54",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "114": {
+        "chunkId": "baa2bb",
+        "hash": "14136010",
+        "encoded": "case%20'transfer':",
+        "prevChunkIds": []
+      },
+      "115": {
+        "chunkId": "baa2bb",
+        "hash": "ed36622e",
+        "encoded": "navigate('/transfer-funds');",
+        "prevChunkIds": []
+      },
+      "116": {
+        "chunkId": "baa2bb",
+        "hash": "16967136",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "117": {
+        "chunkId": "baa2bb",
+        "hash": "23c2c11b",
+        "encoded": "case%20'settings':",
+        "prevChunkIds": []
+      },
+      "118": {
+        "chunkId": "baa2bb",
+        "hash": "eb375ee8",
+        "encoded": "//%20TODO:%20Implement%20when%20settings%20page%20is%20available",
+        "prevChunkIds": []
+      },
+      "119": {
+        "chunkId": "baa2bb",
+        "hash": "222635e3",
+        "encoded": "console.log('Settings%20page%20not%20yet%20implemented');",
+        "prevChunkIds": []
+      },
+      "120": {
+        "chunkId": "baa2bb",
+        "hash": "2d03736c",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "121": {
+        "chunkId": "baa2bb",
+        "hash": "3388d867",
+        "encoded": "case%20'profile':",
+        "prevChunkIds": []
+      },
+      "122": {
+        "chunkId": "baa2bb",
+        "hash": "c656b7a2",
+        "encoded": "//%20TODO:%20Implement%20when%20profile%20page%20is%20available",
+        "prevChunkIds": []
+      },
+      "123": {
+        "chunkId": "baa2bb",
+        "hash": "763cda29",
+        "encoded": "console.log('Profile%20page%20not%20yet%20implemented');",
+        "prevChunkIds": []
+      },
+      "124": {
+        "chunkId": "baa2bb",
+        "hash": "619ca3ed",
+        "encoded": "break;",
+        "prevChunkIds": []
+      },
+      "125": {
+        "chunkId": "baa2bb",
+        "hash": "ba0feb69",
+        "encoded": "default:",
+        "prevChunkIds": []
+      },
+      "126": {
+        "chunkId": "baa2bb",
+        "hash": "82ccfd5f",
+        "encoded": "console.log('Unknown%20tab:',%20tabId);",
+        "prevChunkIds": []
+      },
+      "127": {
+        "chunkId": "baa2bb",
+        "hash": "b945986d",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "128": {
+        "chunkId": "baa2bb",
+        "hash": "6e39acab",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "130": {
+        "chunkId": "baa2bb",
+        "hash": "2388ea7d",
+        "encoded": "//%20Format%20balance%20for%20display",
+        "prevChunkIds": []
+      },
+      "131": {
+        "chunkId": "baa2bb",
+        "hash": "4d3915c9",
+        "encoded": "const%20getFormattedBalance%20=%20()%20=%3E%20%7B",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "baa2bb",
+        "hash": "0f43c98b",
+        "encoded": "if%20(!balances%20%7C%7C%20balances.length%20===%200)%20return%20'$0.00';",
+        "prevChunkIds": []
+      },
+      "134": {
+        "chunkId": "baa2bb",
+        "hash": "ba89944d",
+        "encoded": "//%20Display%20primary%20account%20balance%20(usually%20first%20account%20or%20savings)",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "baa2bb",
+        "hash": "bfa27cb1",
+        "encoded": "const%20primaryAccount%20=%20balances.find(account%20=%3E%20account.type%20===%20'savings')%20%7C%7C%20balances%5B0%5D;",
+        "prevChunkIds": []
+      },
+      "136": {
+        "chunkId": "baa2bb",
+        "hash": "1e94bf74",
+        "encoded": "return%20new%20Intl.NumberFormat('en-US',%20%7B",
+        "prevChunkIds": []
+      },
+      "137": {
+        "chunkId": "baa2bb",
+        "hash": "a8574da6",
+        "encoded": "style:%20'currency',",
+        "prevChunkIds": []
+      },
+      "138": {
+        "chunkId": "baa2bb",
+        "hash": "b13d3338",
+        "encoded": "currency:%20'USD'",
+        "prevChunkIds": []
+      },
+      "139": {
+        "chunkId": "baa2bb",
+        "hash": "0003027c",
+        "encoded": "%7D).format(primaryAccount.balance);",
+        "prevChunkIds": []
+      },
+      "140": {
+        "chunkId": "baa2bb",
+        "hash": "b7fd9db4",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "142": {
+        "chunkId": "baa2bb",
+        "hash": "5c125e53",
+        "encoded": "//%20Enhanced%20tips%20with%20personalized%20tip%20if%20available",
+        "prevChunkIds": []
+      },
+      "143": {
+        "chunkId": "baa2bb",
+        "hash": "ab36bd81",
+        "encoded": "const%20tips%20=%20%5B",
+        "prevChunkIds": []
+      },
+      "144": {
+        "chunkId": "baa2bb",
+        "hash": "bb304315",
+        "encoded": "...(personalizedTip%20?%20%5B%7B%20id:%20'personalized',%20title:%20personalizedTip,%20iconName:%20'lightbulb'%20%7D%5D%20:%20%5B%5D),",
+        "prevChunkIds": []
+      },
+      "145": {
+        "chunkId": "baa2bb",
+        "hash": "3ec18760",
+        "encoded": "%7B%20id:%20'interest',%20title:%20'Understanding%20interest%20rates',%20iconName:%20'info'%20%7D,",
+        "prevChunkIds": []
+      },
+      "146": {
+        "chunkId": "baa2bb",
+        "hash": "b027a4ce",
+        "encoded": "%7B%20id:%20'budgeting',%20title:%20'Budgeting%20tips',%20iconName:%20'chart'%20%7D,",
+        "prevChunkIds": []
+      },
+      "147": {
+        "chunkId": "baa2bb",
+        "hash": "22fa100f",
+        "encoded": "%7B%20id:%20'customer-care',%20title:%20'Contact%20Customer%20Care',%20iconName:%20'phone'%20%7D,",
+        "prevChunkIds": []
+      },
+      "148": {
+        "chunkId": "baa2bb",
+        "hash": "9d56965a",
+        "encoded": "%7B%20id:%20'security',%20title:%20'Security%20tips',%20iconName:%20'shield'%20%7D",
+        "prevChunkIds": []
+      },
+      "149": {
+        "chunkId": "baa2bb",
+        "hash": "8a99ca00",
+        "encoded": "%5D;",
+        "prevChunkIds": []
+      },
+      "151": {
+        "chunkId": "baa2bb",
+        "hash": "5a1fcf82",
+        "encoded": "return%20(",
+        "prevChunkIds": []
+      },
+      "152": {
+        "chunkId": "baa2bb",
+        "hash": "52f628d6",
+        "encoded": "%3Cdiv%20className=%22min-h-screen%20bg-%5B#FBFEFC%5D%20flex%20flex-col%22%3E",
+        "prevChunkIds": []
+      },
+      "153": {
+        "chunkId": "baa2bb",
+        "hash": "71bb70ab",
+        "encoded": "%7B/*%20Header%20*/%7D",
+        "prevChunkIds": []
+      },
+      "154": {
+        "chunkId": "baa2bb",
+        "hash": "8ffee3df",
+        "encoded": "%3CHeader",
+        "prevChunkIds": []
+      },
+      "155": {
+        "chunkId": "baa2bb",
+        "hash": "3ece2f21",
+        "encoded": "title=%22Balance%20Enquiry%22",
+        "prevChunkIds": []
+      },
+      "156": {
+        "chunkId": "baa2bb",
+        "hash": "06046984",
+        "encoded": "className=%22bg-%5B#FBFEFC%5D%22",
+        "prevChunkIds": []
+      },
+      "157": {
+        "chunkId": "baa2bb",
+        "hash": "17121b61",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "159": {
+        "chunkId": "baa2bb",
+        "hash": "2827583e",
+        "encoded": "%7B/*%20Back%20to%20Dashboard%20Link%20*/%7D",
+        "prevChunkIds": []
+      },
+      "160": {
+        "chunkId": "baa2bb",
+        "hash": "77e5f970",
+        "encoded": "%3Cdiv%20className=%22px-%5B18px%5D%20pt-4%20pb-2%22%3E",
+        "prevChunkIds": []
+      },
+      "161": {
+        "chunkId": "baa2bb",
+        "hash": "90d319fa",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "162": {
+        "chunkId": "baa2bb",
+        "hash": "507472a2",
+        "encoded": "onClick=%7BhandleBackToDashboard%7D",
+        "prevChunkIds": []
+      },
+      "163": {
+        "chunkId": "baa2bb",
+        "hash": "27272454",
+        "encoded": "className=%22flex%20items-center%20gap-2%20text-%5B#1B281E%5D%20hover:text-%5B#277C3D%5D%20transition-colors%22",
+        "prevChunkIds": []
+      },
+      "164": {
+        "chunkId": "baa2bb",
+        "hash": "bce511df",
+        "encoded": "aria-label=%22Back%20to%20Dashboard%22",
+        "prevChunkIds": []
+      },
+      "165": {
+        "chunkId": "baa2bb",
+        "hash": "98941a6a",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "166": {
+        "chunkId": "baa2bb",
+        "hash": "bfb406ae",
+        "encoded": "%3Csvg%20width=%2216%22%20height=%2216%22%20viewBox=%220%200%2016%2016%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E",
+        "prevChunkIds": []
+      },
+      "167": {
+        "chunkId": "baa2bb",
+        "hash": "78935ee5",
+        "encoded": "%3Cpath%20d=%22M10%2012L6%208L10%204%22%20stroke=%22currentColor%22%20strokeWidth=%222%22%20strokeLinecap=%22round%22%20strokeLinejoin=%22round%22/%3E",
+        "prevChunkIds": []
+      },
+      "168": {
+        "chunkId": "baa2bb",
+        "hash": "576f7b13",
+        "encoded": "%3C/svg%3E",
+        "prevChunkIds": []
+      },
+      "169": {
+        "chunkId": "baa2bb",
+        "hash": "f5a012e8",
+        "encoded": "%3Cspan%20className=%22font-%5B'Plus_Jakarta_Sans'%5D%20font-medium%20text-%5B16px%5D%22%3EBack%20to%20Dashboard%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "170": {
+        "chunkId": "baa2bb",
+        "hash": "ea079d5c",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "171": {
+        "chunkId": "baa2bb",
+        "hash": "84d15a15",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "173": {
+        "chunkId": "baa2bb",
+        "hash": "9a9827ca",
+        "encoded": "%7B/*%20Main%20Content%20*/%7D",
+        "prevChunkIds": []
+      },
+      "174": {
+        "chunkId": "baa2bb",
+        "hash": "16583ec1",
+        "encoded": "%3Cmain%20className=%22flex-1%20flex%20flex-col%20w-full%22%3E",
+        "prevChunkIds": []
+      },
+      "175": {
+        "chunkId": "baa2bb",
+        "hash": "463410b3",
+        "encoded": "%7B/*%20Balance%20Card%20Section%20*/%7D",
+        "prevChunkIds": []
+      },
+      "176": {
+        "chunkId": "baa2bb",
+        "hash": "2a3aa072",
+        "encoded": "%3Cdiv%20className=%22flex%20flex-col%20p-%5B18px%5D%20w-full%22%3E",
+        "prevChunkIds": []
+      },
+      "177": {
+        "chunkId": "baa2bb",
+        "hash": "b1c8db6d",
+        "encoded": "%7Bloading%20?%20(",
+        "prevChunkIds": []
+      },
+      "178": {
+        "chunkId": "baa2bb",
+        "hash": "a0a4da68",
+        "encoded": "%3Cdiv%20className=%22bg-%5B#FDFEFD%5D%20rounded-%5B18px%5D%20shadow-%5B0px_2px_7px_rgba(0,0,0,0.08)%5D%20flex%20items-center%20justify-center%20h-48%20w-full%22%3E",
+        "prevChunkIds": []
+      },
+      "179": {
+        "chunkId": "baa2bb",
+        "hash": "15a6467a",
+        "encoded": "%3Cdiv%20className=%22flex%20items-center%20gap-3%22%3E",
+        "prevChunkIds": []
+      },
+      "180": {
+        "chunkId": "baa2bb",
+        "hash": "19e5f255",
+        "encoded": "%3Cdiv%20className=%22w-6%20h-6%20border-2%20border-%5B#1B281E%5D%20border-t-transparent%20rounded-full%20animate-spin%22%20/%3E",
+        "prevChunkIds": []
+      },
+      "181": {
+        "chunkId": "baa2bb",
+        "hash": "4280cfb8",
+        "encoded": "%3Cspan%20className=%22font-%5B'Plus_Jakarta_Sans'%5D%20text-%5B#1B281E%5D%22%3ELoading%20balance...%3C/span%3E",
+        "prevChunkIds": []
+      },
+      "182": {
+        "chunkId": "baa2bb",
+        "hash": "a9e8cfa0",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "183": {
+        "chunkId": "baa2bb",
+        "hash": "10e61c9c",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "184": {
+        "chunkId": "baa2bb",
+        "hash": "c3ed5792",
+        "encoded": ")%20:%20error%20?%20(",
+        "prevChunkIds": []
+      },
+      "185": {
+        "chunkId": "baa2bb",
+        "hash": "a7e26b96",
+        "encoded": "%3Cdiv%20className=%22bg-%5B#FDFEFD%5D%20rounded-%5B18px%5D%20shadow-%5B0px_2px_7px_rgba(0,0,0,0.08)%5D%20flex%20items-center%20justify-center%20h-48%20w-full%22%3E",
+        "prevChunkIds": []
+      },
+      "186": {
+        "chunkId": "baa2bb",
+        "hash": "41755c08",
+        "encoded": "%3Cdiv%20className=%22text-center%20p-6%22%3E",
+        "prevChunkIds": []
+      },
+      "187": {
+        "chunkId": "baa2bb",
+        "hash": "048f1a54",
+        "encoded": "%3Cp%20className=%22font-%5B'Plus_Jakarta_Sans'%5D%20text-%5B#1B281E%5D%20mb-4%22%3E%7Berror%7D%3C/p%3E",
+        "prevChunkIds": []
+      },
+      "188": {
+        "chunkId": "baa2bb",
+        "hash": "b0b3f4ad",
+        "encoded": "%3Cbutton",
+        "prevChunkIds": []
+      },
+      "189": {
+        "chunkId": "baa2bb",
+        "hash": "7f2aaa92",
+        "encoded": "onClick=%7B()%20=%3E%20window.location.reload()%7D",
+        "prevChunkIds": []
+      },
+      "190": {
+        "chunkId": "baa2bb",
+        "hash": "45df73c8",
+        "encoded": "className=%22bg-%5Brgba(39,124,61,0.09)%5D%20text-%5B#1B281E%5D%20px-4%20py-2%20rounded-%5B48px%5D%20font-%5B'Plus_Jakarta_Sans'%5D%20font-medium%20hover:bg-%5Brgba(39,124,61,0.15)%5D%20transition-colors%22",
+        "prevChunkIds": []
+      },
+      "191": {
+        "chunkId": "baa2bb",
+        "hash": "e92d7efd",
+        "encoded": "%3E",
+        "prevChunkIds": []
+      },
+      "192": {
+        "chunkId": "baa2bb",
+        "hash": "20bcfc5f",
+        "encoded": "Try%20Again",
+        "prevChunkIds": []
+      },
+      "193": {
+        "chunkId": "baa2bb",
+        "hash": "786b2d1e",
+        "encoded": "%3C/button%3E",
+        "prevChunkIds": []
+      },
+      "194": {
+        "chunkId": "baa2bb",
+        "hash": "ecee1159",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "195": {
+        "chunkId": "baa2bb",
+        "hash": "1c304c3c",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "196": {
+        "chunkId": "baa2bb",
+        "hash": "ce0f2624",
+        "encoded": ")%20:%20(",
+        "prevChunkIds": []
+      },
+      "197": {
+        "chunkId": "baa2bb",
+        "hash": "6e9377cf",
+        "encoded": "%3CBalanceCard",
+        "prevChunkIds": []
+      },
+      "198": {
+        "chunkId": "baa2bb",
+        "hash": "a99de92a",
+        "encoded": "balance=%7BgetFormattedBalance()%7D",
+        "prevChunkIds": []
+      },
+      "199": {
+        "chunkId": "baa2bb",
+        "hash": "9dc4b8cb",
+        "encoded": "onWithdraw=%7BhandleWithdraw%7D",
+        "prevChunkIds": []
+      },
+      "200": {
+        "chunkId": "baa2bb",
+        "hash": "87b96100",
+        "encoded": "onDeposit=%7BhandleDeposit%7D",
+        "prevChunkIds": []
+      },
+      "201": {
+        "chunkId": "baa2bb",
+        "hash": "9ec3d561",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "202": {
+        "chunkId": "baa2bb",
+        "hash": "4d6b2011",
+        "encoded": ")%7D",
+        "prevChunkIds": []
+      },
+      "203": {
+        "chunkId": "baa2bb",
+        "hash": "3a6e46c2",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "205": {
+        "chunkId": "baa2bb",
+        "hash": "8177f137",
+        "encoded": "%7B/*%20Helpful%20Tips%20Section%20*/%7D",
+        "prevChunkIds": []
+      },
+      "206": {
+        "chunkId": "baa2bb",
+        "hash": "392a357d",
+        "encoded": "%3CHelpfulTipsSection",
+        "prevChunkIds": []
+      },
+      "207": {
+        "chunkId": "baa2bb",
+        "hash": "e3e620d7",
+        "encoded": "tips=%7Btips%7D",
+        "prevChunkIds": []
+      },
+      "208": {
+        "chunkId": "baa2bb",
+        "hash": "ad67cfe0",
+        "encoded": "onTipClick=%7BhandleTipClick%7D",
+        "prevChunkIds": []
+      },
+      "209": {
+        "chunkId": "baa2bb",
+        "hash": "9ee04f31",
+        "encoded": "className=%22bg-%5B#FBFEFC%5D%22",
+        "prevChunkIds": []
+      },
+      "210": {
+        "chunkId": "baa2bb",
+        "hash": "135fbefe",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "211": {
+        "chunkId": "baa2bb",
+        "hash": "d73903b1",
+        "encoded": "%3C/main%3E",
+        "prevChunkIds": []
+      },
+      "213": {
+        "chunkId": "baa2bb",
+        "hash": "be1bc516",
+        "encoded": "%7B/*%20Bottom%20Tab%20Bar%20*/%7D",
+        "prevChunkIds": []
+      },
+      "214": {
+        "chunkId": "baa2bb",
+        "hash": "e897c10b",
+        "encoded": "%3CBottomTabBar",
+        "prevChunkIds": []
+      },
+      "215": {
+        "chunkId": "baa2bb",
+        "hash": "7e58c312",
+        "encoded": "activeTab=%7B1%7D%20//%20Assuming%20Balance%20Enquiry%20is%20the%20second%20tab",
+        "prevChunkIds": []
+      },
+      "216": {
+        "chunkId": "baa2bb",
+        "hash": "a2c7c647",
+        "encoded": "onTabChange=%7BhandleTabChange%7D",
+        "prevChunkIds": []
+      },
+      "217": {
+        "chunkId": "baa2bb",
+        "hash": "74f77519",
+        "encoded": "/%3E",
+        "prevChunkIds": []
+      },
+      "218": {
+        "chunkId": "baa2bb",
+        "hash": "76890218",
+        "encoded": "%3C/div%3E",
+        "prevChunkIds": []
+      },
+      "219": {
+        "chunkId": "baa2bb",
+        "hash": "17a813d8",
+        "encoded": ");",
+        "prevChunkIds": []
+      },
+      "220": {
+        "chunkId": "baa2bb",
+        "hash": "445dbb34",
+        "encoded": "%7D;",
+        "prevChunkIds": []
+      },
+      "222": {
+        "chunkId": "baa2bb",
+        "hash": "4860b744",
+        "encoded": "export%20default%20BalanceEnquiryPage;",
+        "prevChunkIds": []
+      }
+    }
+  }
+}
