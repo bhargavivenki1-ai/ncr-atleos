@@ -25,11 +25,5 @@ jobs:
       - name: Ensure react-scripts@5.0.1 is installed
         run: npm install react-scripts@5.0.1
 
-      - name: Audit and fix non-breaking vulnerabilities
-        run: npm audit fix
-
-      - name: Print audit report (for visibility)
-        run: npm audit || true
-
       - name: Run npm build
         run: npm run build
